@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Texts;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -52,6 +53,34 @@ class SiteController extends Controller
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
+    }
+
+
+    public function beforeAction($action)
+    {
+        if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
+            setcookie('language', 'hy', time() + (365 * 24 * 60 * 60));
+            $this->refresh();
+            Yii::$app->end();
+            return false;
+        }
+        $lng = $_COOKIE['language'] ?? 'am';
+        if($lng !== 'am' && $lng !== 'ru' && $lng !== 'en'){
+            setcookie('language', 'hy', time() + (365 * 24 * 60 * 60));
+            $this->refresh();
+            Yii::$app->end();
+            return false;
+        }
+        $txt = Texts::find()->select(['text_'.$lng.' as text'] )->asArray()->indexBy('slug')->column();
+        $GLOBALS['text'] = $txt;
+        $this->enableCsrfValidation = false;
+        return parent::beforeAction($action);
+    }
+
+    public function actionSwitchLanguage($lang)
+    {
+        setcookie('language', $lang, time() + (365 * 24 * 60 * 60),"/");
+        return $this->goBack(Yii::$app->request->referrer);
     }
 
     /**

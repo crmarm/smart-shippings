@@ -1,4 +1,4 @@
-
+<?php $GLOBALS['AAA']; ?>
 <a  data-aos="fade-right" data-aos-duration="2000" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
@@ -506,8 +506,8 @@
                 <p>Please feel free to get in touch with us and we will get back to you as soon as possible.</p>
             </div>
             <div class="contact-info   " >
-                <button  type="submit">
-                    <a href="#">
+                <button>
+                    <a href="/contact">
                         Contact Us Now
                     </a>
                 </button>

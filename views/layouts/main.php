@@ -5,19 +5,27 @@
 
 use app\assets\AppAsset;
 use app\widgets\Alert;
-use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
-use yii\bootstrap5\Nav;
-use yii\bootstrap5\NavBar;
 
 AppAsset::register($this);
 
 $this->registerCsrfMetaTags();
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
-$this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1']);//, shrink-to-fit=no
+$this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, maximum-scale=1, initial-scale=1']);//, shrink-to-fit=no
 //$this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
 //$this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
+$lan_imgs = [];
+$lan_imgs['am'] = '../Images/hy-img.png';
+$lan_imgs['ru'] = '../Images/ru_RU.png';
+$lan_imgs['en'] = '../images/en_US.png';
+
+$lan_imgs['text']['am'] = 'Armenian';
+$lan_imgs['text']['ru'] = 'Russian';
+$lan_imgs['text']['en'] = 'English';
+
+$controller = Yii::$app->controller->id;
+$action = Yii::$app->controller->action->id;
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -34,30 +42,35 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             <div class="language position-fixed end-10 top-0 z-2   ">
                 <div class="selected-lang ">
                     <div class="lang-item-child d-flex justify-content-between align-items-center gap-1 pb-2">
-                        <img src="../images/en_US.png" alt="">
-                        <span>English</span>
+                        <img src="<?= $lan_imgs[$_COOKIE['language']]  ?>" alt="">
+                        <span> <?= $lan_imgs['text'][$_COOKIE['language']]  ?></span>
                     </div>
                 </div>
                 <div class="lang-list  z-3">
-
-                    <div class="lang-item  selected">
+                    <div class="lang-item selected">
                         <div class="lang-item-child d-flex justify-content-between align-items-center gap-1">
-                            <img src="../images/en_US.png" alt="">
-                            <span>English</span>
+                            <a href="/switch-language?lang=en">
+                                <img src="../images/en_US.png" alt="">
+                                <span>English</span>
+                            </a>
                         </div>
                     </div>
 
                     <div class="lang-item">
                         <div  class="lang-item-child d-flex justify-content-between align-items-center gap-1">
-                            <img src="../Images/hy-img.png" width="50 " alt="">
-                            <span>Armenian</span>
+                            <a href="/switch-language?lang=am" style="display: contents;">
+                                <img src="../Images/hy-img.png" width="50 " alt="">
+                                <span>Armenian</span>
+                            </a>
                         </div>
                     </div>
 
                     <div class="lang-item">
                         <div  class="lang-item-child d-flex justify-content-between align-items-center gap-1">
-                            <img src="../Images/ru_RU.png" width="50" alt="">
-                            <span>Russian</span>
+                            <a href="/switch-language?lang=ru" style="display: contents;">
+                                <img src="../Images/ru_RU.png" width="50" alt="">
+                                <span>Russian</span>
+                            </a>
                         </div>
                     </div>
 
@@ -102,10 +115,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <div class="navbar-search">
                         <ul class="navbar d-flex">
                             <li class="nav-item">
-                                <a class="nav-link" href="/">HOME</a>
+                                <a class="nav-link <?= $action === 'index' ? 'active-linkPage' : '' ?>" href="/"><?= $GLOBALS['text']['__home__'] ?></a>
                             </li>
                             <li class="nav-item d-flex align-items-center">
-                                <a class="nav-link" href="/services">SERVICES</a>
+                                <a class="nav-link <?= $action === 'services' ? 'active-linkPage' : '' ?>" href="/services "><?= $GLOBALS['text']['__SERVICES__'] ?></a>
                                 <i class='bx bx-chevron-down'></i>
                                 <div class="drop-div">
                                     <ul class="drop-menu">
@@ -135,7 +148,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                                                         <a href="/customsbrokerage" class="drop-link-3">Customs Brokerage</a>
                                                     </li>
                                                     <li class="drop-item-3 pb-1">
-                                                        <a href="/Cargoinsurance" class="drop-link-3">Cargo Insurance</a>
+                                                        <a href="/cargoinsurance" class="drop-link-3">Cargo Insurance</a>
                                                     </li>
                                                     <li class="drop-item-3 pb-1">
                                                         <a href="/warehousing" class="drop-link-3">Warehousing& Distribution</a>
@@ -148,16 +161,16 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/about">ABOUT US</a>
+                                <a class="nav-link <?= $action === 'about' ? 'active-linkPage' : '' ?>" href="/about">ABOUT US</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/gallery">GALLERY</a>
+                                <a class="nav-link <?= $action === 'gallery' ? 'active-linkPage' : '' ?>" href="/gallery">GALLERY</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/contact">CONTACT US</a>
+                                <a class="nav-link <?= $action === 'contact' ? 'active-linkPage' : '' ?>" href="/contact">CONTACT US</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/shippment">TRACK YOUR SHIPPMENT</a>
+                                <a class="nav-link <?= $action === 'shippment' ? 'active-linkPage' : '' ?>" href="/shippment">TRACK YOUR SHIPPMENT</a>
                             </li>
                         </ul>
                         <div class="nav-menu">
@@ -177,10 +190,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             <!-- Your navigation menu -->
             <ul class="navbar-mobile ">
                 <li class="nav-mob-item">
-                    <a class="nav-mob-link py-4" href="/home">HOME</a>
+                    <a class="nav-mob-link py-4" href="/home"><?= $GLOBALS['text']['__home__'] ?></a>
                 </li>
                 <li class="nav-mob-item " id="dropMobItem">
-                    <a class="nav-mob-link py-4" href="/services">SERVICES</a>
+                    <a class="nav-mob-link py-4" href="/services"><?= $GLOBALS['text']['__SERVICES__'] ?></a>
                     <div class="drop-mob-div">
                         <ul class="drop-mob-menu">
                             <li class="drop-mob-item"><a class="drop-mob-link" href="#"><i class='bx bx-chevron-right'></i>Freight Forwarding</a>
@@ -239,10 +252,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             </div>
         </div>
     </nav>
-    <?php
-    $controller = Yii::$app->controller->id;
-    $action = Yii::$app->controller->action->id;
-    ?>
     <?php if($action === 'index' && $controller === 'site'){ ?>
         <div class="headerSlider">
             <div class="swiper  headerSwiper">
@@ -301,7 +310,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             <div class="container">
                 <div class="title-div">
                     <h1><?= $this->params['title'] ?> </h1>
-                    <p><a href="/">Home</a><!-- / <span> Services</span>--></p>
+                    <p><a href="/"><?= $GLOBALS['text']['__home__'] ?></a><!-- / <span> Services</span>--></p>
                 </div>
             </div>
         </div>
@@ -315,124 +324,125 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         <?= Alert::widget() ?>
         <?= $content ?>
 </main>
+<?php if($action !== 'shippment'){ ?>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-con col-lg-6 col-md-6">
+                    <h6>CONTACT US</h6>
+                    <p>Smart Shippings LLC<br>
+                        Address: 45/2 Margharyan str., 0078 <br>
+                        Yerevan Armenia<br>
+                        Working days: from Monday to Friday<br>
+                        9.00 am to 18:00 pm
+                    </p>
+                    <ul class="footer-con-info">
+                        <li class="phone-info">
+                            <i class="bi bi-telephone"></i>
+                            <a href="">+374919122</a>
+                        </li>
+                        <li class="email-info">
+                            <i class="fa-sharp fa-thin fa-at"></i>
+                            <a href="">h.hovhannisyan@smartshippings.com</a>
+                        </li>
+                    </ul>
+                    <ul class="social-icons px-0 d-flex justify-content-start gap-2">
+                        <li>
+                            <a href="">
+                                <i class='bx bxl-facebook'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class='bx bxl-twitter' ></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class='bx bxl-google-plus'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class='bx bxl-linkedin' ></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class='bx bx-envelope'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="footer-con col-lg-6 col-md-6">
-                <h6>CONTACT US</h6>
-                <p>Smart Shippings LLC<br>
-                    Address: 45/2 Margharyan str., 0078 <br>
-                    Yerevan Armenia<br>
-                    Working days: from Monday to Friday<br>
-                    9.00 am to 18:00 pm
-                </p>
-                <ul class="footer-con-info">
-                    <li class="phone-info">
-                        <i class="bi bi-telephone"></i>
-                        <a href="">+374919122</a>
-                    </li>
-                    <li class="email-info">
-                        <i class="fa-sharp fa-thin fa-at"></i>
-                        <a href="">h.hovhannisyan@smartshippings.com</a>
-                    </li>
-                </ul>
-                <ul class="social-icons px-0 d-flex justify-content-start gap-2">
-                    <li>
-                        <a href="">
-                            <i class='bx bxl-facebook'></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class='bx bxl-twitter' ></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class='bx bxl-google-plus'></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class='bx bxl-linkedin' ></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class='bx bx-envelope'></i>
-                        </a>
-                    </li>
-                </ul>
+                <div class="footer-serv col-lg-3 col-md-6 ">
+                    <h6>SERVICES</h6>
+                    <ul class="px-0">
+                        <li>
+                            <a href="/airfreght">
+                                Air Freghit
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/seafreght">
+                                Sea Freghit
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/roadfreght">
+                                Raod Freight
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/railfreght">
+                                Rail Freghit
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/customsbrokerage">
+                                Customs Brokerage
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/cargoinsurance">
+                                Cargo Insurance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="warehousing">
+                                Warehousing & Distribution
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/projectlogistics">
+                                Project Logistics
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-subcribe col-lg-3 col-md-6">
+                    <h6>SUBSCRIBE</h6>
+                    <p>Sign up to get exclusive offers
+                        and news you wont find anywhere
+                        else straight to your inbox!
+                    </p>
+                    <form class="d-flex flex-column align-items-start">
+                        <input class="w-100"  placeholder="Enter your email addres">
+                        <button  type="submit">Sign Up</button>
+                    </form>
+                </div>
             </div>
-
-            <div class="footer-serv col-lg-3 col-md-6 ">
-                <h6>SERVICES</h6>
-                <ul class="px-0">
-                    <li>
-                        <a href="/airfreght">
-                            Air Freghit
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/seafreght">
-                            Sea Freghit
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/roadfreght">
-                            Raod Freight
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/railfreght">
-                            Rail Freghit
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/customsbrokerage">
-                            Customs Brokerage
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/cargoinsurance">
-                            Cargo Insurance
-                        </a>
-                    </li>
-                    <li>
-                        <a href="warehousing">
-                            Warehousing & Distribution
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/projectlogistics">
-                            Project Logistics
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-subcribe col-lg-3 col-md-6">
-                <h6>SUBSCRIBE</h6>
-                <p>Sign up to get exclusive offers
-                    and news you wont find anywhere
-                    else straight to your inbox!
-                </p>
-                <form class="d-flex flex-column align-items-start">
-                    <input class="w-100"  placeholder="Enter your email addres">
-                    <button  type="submit">Sign Up</button>
-                </form>
+            <div class="row">
+                <div class=" footer-con-copyright col-lg-12">
+                    <p>
+                        Copyright Expeditor © 2019. All Rights Reserved
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class=" footer-con-copyright col-lg-12">
-                <p>
-                    Copyright Expeditor © 2019. All Rights Reserved
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
+<?php }  ?>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

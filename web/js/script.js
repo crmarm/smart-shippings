@@ -24,14 +24,14 @@ $(document).ready(function() {
 
 // active nav link
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     const activeNavItem = window.location.pathname;
     $('.nav-down a').each(function() {
         if ($(this).attr('href').includes(activeNavItem)) {
             $(this).addClass('active-linkPage');
         }
     });
-});
+});*/
 
 
 

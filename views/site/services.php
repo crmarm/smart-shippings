@@ -27,7 +27,7 @@
                         <p>Our Air Freight Services Include:
                             complete Logistics Programs (pick,…
                         </p>
-                        <a href="" >READ MORE</a>
+                        <a href="airfreght" >READ MORE</a>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                             FCL and LCL import and export,
                             …
                         </p>
-                        <a href="">READ MORE</a>
+                        <a href="/seafreght">READ MORE</a>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                         <p>When rail freight is the best option available.
                             When shipping inland…
                         </p>
-                        <a href="">READ MORE</a>
+                        <a href="/railfreght">READ MORE</a>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                         <p>Our Road Transportation Services Include:
                             transportation of LTL, FTL…
                         </p>
-                        <a href="">READ MORE</a>
+                        <a href="/roadfreght">READ MORE</a>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                         <h5>Customs Brokerage</h5>
                         <p>Customs Services include: import/export customs clearance service.…
                         </p>
-                        <a href="" >READ MORE</a>
+                        <a href="/customsbrokerage" >READ MORE</a>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                         <h5>Cargo Insurance</h5>
                         <p>Our Cargo Insurance service includes: "All Risk" cargo and marine insurance, auto…
                         </p>
-                        <a href="">READ MORE</a>
+                        <a href="/cargoinsurance">READ MORE</a>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                         <h5>Warehousing</h5>
                         <p>Our Warehousing Services include: short and long term storage, cargo…
                         </p>
-                        <a href="">READ MORE</a>
+                        <a href="/warehousing">READ MORE</a>
                     </div>
                 </div>
             </div>
@@ -110,7 +110,7 @@
                         <h5>Project Logistics</h5>
                         <p>Our Project Logistics Services Includes: project logistics feasibility…
                         </p>
-                        <a href="">READ MORE</a>
+                        <a href="/projectlogistics">READ MORE</a>
                     </div>
                 </div>
             </div>
@@ -197,8 +197,8 @@
                         Get a Free Quote
                     </a>
                 </button>
-                <button  type="submit">
-                    <a href="#">
+                <button >
+                    <a href="/contact">
                         Contact Us Now
                     </a>
                 </button>
