@@ -113,64 +113,99 @@ $action = Yii::$app->controller->action->id;
                         </a>
                     </div>
                     <div class="navbar-search">
-                        <ul class="navbar d-flex">
+                        <ul class="navbar d-flex" style="<?php if ($_COOKIE['language'] == 'am') { echo "gap: 20px"; }?>" >
                             <li class="nav-item">
                                 <a class="nav-link <?= $action === 'index' ? 'active-linkPage' : '' ?>" href="/"><?= $GLOBALS['text']['__home__'] ?></a>
                             </li>
                             <li class="nav-item d-flex align-items-center">
-                                <a class="nav-link <?= $action === 'services' ? 'active-linkPage' : '' ?>" href="/services "><?= $GLOBALS['text']['__SERVICES__'] ?></a>
+                                <a class="nav-link <?= $action === 'services' ? 'active-linkPage' : '' ?>" href="/services "><?= $GLOBALS['text']['__SERVICES__'] ?>
+                                </a>
                                 <i class='bx bx-chevron-down'></i>
                                 <div class="drop-div">
                                     <ul class="drop-menu">
-                                        <li class="drop-item  pb-2 d-flex  justify-content-center" ><a class="drop-link" href="#" style="padding-right: 20px;">Freight Forwarding</a><i class='bx bx-chevron-right'></i>
+                                        <li class="drop-item  pb-2 d-flex  justify-content-center" >
+                                            <a class="drop-link" href="#" style="padding-right: 20px;">
+                                                <?= $GLOBALS['text']['Freight_Forwarding_'] ?>
+                                                <i class='bx bx-chevron-right'></i>
+                                            </a>
+                                        
                                             <div class="drop-div-2">
                                                 <ul class="drop-menu-2">
                                                     <li class="drop-item-2">
-                                                        <a href="/airfreght" class="drop-link-2">Air Freight</a>
+                                                        <a href="/airfreght" class="drop-link-2">
+                                                          <?= $GLOBALS['text']['Air_Freight_'] ?>
+                                                        </a>
                                                     </li>
                                                     <li class="drop-item-2 ">
-                                                        <a href="/seafreght" class="drop-link-2">Sea Freght</a>
+                                                        <a href="/seafreght" class="drop-link-2">
+                                                            <?= $GLOBALS['text']['Sea_Freight_'] ?>
+                                                        </a>
                                                     </li>
                                                     <li class="drop-item-2 ">
-                                                        <a href="/railfreght" class="drop-link-2">Rail Freight</a>
+                                                        <a href="/railfreght" class="drop-link-2">
+                                                            <?= $GLOBALS['text']['Rail_Freight_'] ?>
+                                                        </a>
                                                     </li>
                                                     <li class="drop-item-2">
-                                                        <a href="/roadfreght" class="drop-link-2">Road Freight</a>
+                                                        <a href="/roadfreght" class="drop-link-2">
+                                                            <?= $GLOBALS['text']['Road_Freight_'] ?>
+                                                        </a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </li>
                                         <li class="drop-item pb-2 d-flex justify-content-center">
-                                            <a class="drop-link" href="#" style="padding-right: 2px;">Value-added Services</a><i class='bx bx-chevron-right'></i>
+                                            <a class="drop-link" href="#" style="padding-right: 2px;">
+                                                <?= $GLOBALS['text']['Value_added_Services'] ?>
+                                            </a>
+                                            <i class='bx bx-chevron-right'></i>
                                             <div class="drop-div-3">
                                                 <ul class="drop-menu-3">
                                                     <li class="drop-item-3 pb-1">
-                                                        <a href="/customsbrokerage" class="drop-link-3">Customs Brokerage</a>
+                                                        <a href="/customsbrokerage" class="drop-link-3">
+                                                            <?= $GLOBALS['text']['Customs_Brokerag_'] ?>
+                                                        </a>
                                                     </li>
                                                     <li class="drop-item-3 pb-1">
-                                                        <a href="/cargoinsurance" class="drop-link-3">Cargo Insurance</a>
+                                                        <a href="/cargoinsurance" class="drop-link-3">
+                                                            <?= $GLOBALS['text']['Cargo_Insurance_'] ?>
+                                                        </a>
                                                     </li>
                                                     <li class="drop-item-3 pb-1">
-                                                        <a href="/warehousing" class="drop-link-3">Warehousing& Distribution</a>
+                                                        <a href="/warehousing" class="drop-link-3">
+                                                            <?= $GLOBALS['text']['Warehousing&_Distribution_'] ?>
+                                                        </a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li class="drop-item d-flex pb-1"><a class="drop-link" href="/projectlogistics">Project Logistics</a></li>
+                                        <li class="drop-item d-flex pb-1">
+                                            <a class="drop-link" href="/projectlogistics">
+                                                <?= $GLOBALS['text']['Project_Logistics_'] ?>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <?= $action === 'about' ? 'active-linkPage' : '' ?>" href="/about">ABOUT US</a>
+                                <a class="nav-link <?= $action === 'about' ? 'active-linkPage' : '' ?>" href="/about">
+                                    <?= $GLOBALS['text']['ABOUT_US'] ?>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <?= $action === 'gallery' ? 'active-linkPage' : '' ?>" href="/gallery">GALLERY</a>
+                                <a class="nav-link <?= $action === 'gallery' ? 'active-linkPage' : '' ?>" href="/gallery">
+                                    <?= $GLOBALS['text']['GALLERY_'] ?>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <?= $action === 'contact' ? 'active-linkPage' : '' ?>" href="/contact">CONTACT US</a>
+                                <a class="nav-link <?= $action === 'contact' ? 'active-linkPage' : '' ?>" href="/contact">
+                                    <?= $GLOBALS['text']['CONTACT_'] ?>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <?= $action === 'shippment' ? 'active-linkPage' : '' ?>" href="/shippment">TRACK YOUR SHIPPMENT</a>
+                                <a class="nav-link <?= $action === 'shippment' ? 'active-linkPage' : '' ?>" href="/shippment">
+                                    <?= $GLOBALS['text']['TRACK_YOUR_SHIPPMENT'] ?>
+                                </a>
                             </li>
                         </ul>
                         <div class="nav-menu">
@@ -185,65 +220,122 @@ $action = Yii::$app->controller->action->id;
                 </div>
             </div>
         </div>
-        <div class="sidebar" id="sidebar">
 
+        <div class="sidebar" id="sidebar">
             <!-- Your navigation menu -->
             <ul class="navbar-mobile ">
                 <li class="nav-mob-item">
-                    <a class="nav-mob-link py-4" href="/home"><?= $GLOBALS['text']['__home__'] ?></a>
+                    <div class="py-2">
+                        <a class="nav-mob-link py-4" href="/home"><?= $GLOBALS['text']['__home__'] ?></a>
+                    </div>
                 </li>
                 <li class="nav-mob-item " id="dropMobItem">
-                    <a class="nav-mob-link py-4" href="/services"><?= $GLOBALS['text']['__SERVICES__'] ?></a>
+                    <div class="py-2">
+                        <a class="nav-mob-link" href="/services"><?= $GLOBALS['text']['__SERVICES__'] ?></a>
+                    </div>
+                    
                     <div class="drop-mob-div">
                         <ul class="drop-mob-menu">
-                            <li class="drop-mob-item"><a class="drop-mob-link" href="#"><i class='bx bx-chevron-right'></i>Freight Forwarding</a>
+                            <li class="drop-mob-item">
+                                <a  class="drop-mob-link" href="#">
+                                    
+                                    <?= $GLOBALS['text']['Freight_Forwarding_'] ?>
+                                </a>
+                                <i class='bx bx-chevron-right'></i>
                                 <div class="drop-mob-div-2">
                                     <ul class="drop-mob-menu-2">
                                         <li class="drop-mob-item-2">
-                                            <a href="/airfreght" class="drop-mob-link-2"><i class='bx bx-chevron-right'></i>Air Freight</a>
+                                            <a href="/airfreght" class="drop-mob-link-2">
+                                                <i class='bx bx-chevron-right'></i>
+                                                <?= $GLOBALS['text']['Air_Freight_'] ?>
+                                            </a>
                                         </li>
                                         <li class="drop-mob-item-2 ">
-                                            <a href="/Seafreght" class="drop-mob-link-2"><i class='bx bx-chevron-right'></i>Sea Freght</a>
+                                            <a href="/Seafreght" class="drop-mob-link-2">
+                                                <i class='bx bx-chevron-right'></i>
+                                                <?= $GLOBALS['text']['Sea_Freight_'] ?>
+                                            </a>
                                         </li>
                                         <li class="drop-mob-item-2 ">
-                                            <a href="/railfreight" class="drop-mob-link-2"><i class='bx bx-chevron-right'></i>Rail Freight</a>
+                                            <a href="/railfreight" class="drop-mob-link-2">
+                                                <i class='bx bx-chevron-right'></i>
+                                                <?= $GLOBALS['text']['Rail_Freight_'] ?>
+                                            </a>
                                         </li>
                                         <li class="drop-mob-item-2">
-                                            <a href="/roadfreight" class="drop-mob-link-2"><i class='bx bx-chevron-right'></i>Road Freight</a>
+                                            <a href="/roadfreight" class="drop-mob-link-2">
+                                                <i class='bx bx-chevron-right'></i>
+                                                <?= $GLOBALS['text']['Road_Freight_'] ?>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                            <li class="drop-mob-item "><a class="drop-mob-link" href="#"><i class='bx bx-chevron-right'></i>Value-added Services</a>
+                            <li class="drop-mob-item ">
+                                <a class="drop-mob-link" href="#">
+                                    <i class='bx bx-chevron-right'></i>
+                                    <?= $GLOBALS['text']['Value_added_Services'] ?>
+                                </a>
                                 <div class="drop-mob-div-3">
                                     <ul class="drop-mob-menu-3">
                                         <li class="drop-mob-item-3 ">
-                                            <a href="/customs" class="drop-mob-link-3"><i class='bx bx-chevron-right'></i>Customs Brokerage</a>
+                                            <a href="/customs" class="drop-mob-link-3">
+                                                <i class='bx bx-chevron-right'></i>
+                                                <?= $GLOBALS['text']['Customs_Brokerag_'] ?>
+                                            </a>
                                         </li>
                                         <li class="drop-mob-item-3 ">
-                                            <a href="/customs" class="drop-mob-link-3"><i class='bx bx-chevron-right'></i>Cargo Insurance</a>
+                                            <a href="/customs" class="drop-mob-link-3">
+                                                <i class='bx bx-chevron-right'></i>
+                                                <?= $GLOBALS['text']['Cargo_Insurance_'] ?>
+                                            </a>
                                         </li>
                                         <li class="drop-mob-item-3">
-                                            <a href="/warehousing" class="drop-mob-link-3"><i class='bx bx-chevron-right'></i>Warehousing& Distribution</a>
+                                            <a href="/warehousing" class="drop-mob-link-3">
+                                                <i class='bx bx-chevron-right'></i>
+                                                <?= $GLOBALS['text']['Warehousing&_Distribution_'] ?>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                            <li class="drop-mob-item d-flex "><a class="drop-mob-link" href="/projectlogistics"><i class='bx bx-chevron-right'></i>Project Logistics</a></li>
+                            <li class="drop-mob-item d-flex ">
+                                <a class="drop-mob-link" href="/projectlogistics">
+                                    <i class='bx bx-chevron-right'></i>
+                                     <?= $GLOBALS['text']['Project_Logistics_'] ?>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-mob-item">
-                    <a class="nav-mob-link" href="/about">ABOUT US</a>
+                    <div class="py-2">
+                         <a class="nav-mob-link" href="/about">
+                             <?= $GLOBALS['text']['ABOUT_US'] ?>
+                         </a>
+                    </div>
                 </li>
                 <li class="nav-mob-item">
-                    <a class="nav-mob-link" href="/gallery">GALLERY</a>
+                    <div class="py-2">
+                        <a class="nav-mob-link" href="/gallery">
+                            <?= $GLOBALS['text']['GALLERY_'] ?>
+                        </a>
+                    </div>
                 </li>
                 <li class="nav-mob-item">
-                    <a class="nav-mob-link" href="/contact">CONTACT US</a>
+                    <div class="py-2">
+                        <a class="nav-mob-link" href="/contact">
+                            <?= $GLOBALS['text']['CONTACT_'] ?>
+                        </a>
+                    </div>
                 </li>
                 <li class="nav-mob-item">
-                    <a class="nav-mob-link" href="/shippment">TRACK YOUR SHIPPMENT</a>
+                    <div class="py-2">
+                        <a class="nav-mob-link" href="/shippment">
+                            <?= $GLOBALS['text']['TRACK_YOUR_SHIPPMENT'] ?>
+                        </a>
+                    </div>
+              
                 </li>
             </ul>
             <!-- Close button for sidebar -->
@@ -259,14 +351,20 @@ $action = Yii::$app->controller->action->id;
                     <div class="swiper-slide" style="background-image: url(../images/header-slide-img1.jpg);">
                         <div class="container">
                             <div class="header-title header-title-1 d-flex flex-column align-items-end text-white ">
-                                <h1 data-aos="fade-up" data-aos-duration="1000" class="first-h1 " >ACCELERATE</h1><br>
-                                <h2 data-aos="fade-up" data-aos-duration="1500">YOUR FREGHIT WITH</h2><br>
-                                <h1 data-aos="fade-up" data-aos-duration="2000" class="second-h1" >AIR FREIGHT!</h1>
-                                <p data-aos="fade-up" data-aos-duration="2000">Trust us your air freight forwarding, it's fast<br>
-                                    easy and convenient with us.
+                                <h1 data-aos="fade-up" data-aos-duration="1000" class="first-h1 " >
+                                    <?= $GLOBALS['text']['ACCELERATE_'] ?>
+                                </h1><br>
+                                <h2 data-aos="fade-up" data-aos-duration="1500">
+                                    <?= $GLOBALS['text']['YOUR_FREGHIT_WITH'] ?>
+                                </h2><br>
+                                <h1 data-aos="fade-up" data-aos-duration="2000" class="second-h1" >
+                                     <?= $GLOBALS['text']['Air_Freight_'] ?>
+                                </h1>
+                                <p data-aos="fade-up" data-aos-duration="2000">
+                                    <?= $GLOBALS['text']['Trust_us_your_'] ?>       
                                 </p>
                                 <button data-aos="fade-right" data-aos-duration="2500" type="button" class="btn-lg">
-                                    Read More
+                                    <?= $GLOBALS['text']['Read_More_'] ?>
                                 </button>
                             </div>
                         </div>
@@ -274,13 +372,17 @@ $action = Yii::$app->controller->action->id;
                     <div class="swiper-slide" style="background-image: url(../images/header-slide-img2.jpg);">
                         <div class="container">
                             <div class="header-title header-title-2 d-flex flex-column align-items-start text-white ">
-                                <h1>SEA FREIGHTS</h1><br>
-                                <h2>Global Solutions For Your Business</h2><br>
-                                <p class=" pt-0 text-start">Are you looking for a cost-effective freight forwarding service, then<br>
-                                    our sea freight service is for YOU!
+                                <h1>
+                                    <?= $GLOBALS['text']['Sea_Freight_'] ?>
+                                </h1><br>
+                                <h2>
+                                    <?= $GLOBALS['text']['Global_Solutions__'] ?>
+                                </h2><br>
+                                <p class=" pt-0 text-start">
+                                    <?= $GLOBALS['text']['Are_you_looking_'] ?>
                                 </p>
-                                <button type="button" class="btn-lg btn-animate">
-                                    Read More
+                                <button type="button" class="btn-lg ">
+                                    <?= $GLOBALS['text']['Read_More_'] ?>
                                 </button>
                             </div>
                         </div>
@@ -288,13 +390,17 @@ $action = Yii::$app->controller->action->id;
                     <div class="swiper-slide" style="background-image: url(../images/header-slide-img3.jpg);">
                         <div class="container">
                             <div class="header-title header-title-3 d-flex flex-column align-items-end text-white ">
-                                <h1>ROAD FREIGHT</h1><br>
-                                <h2>Shortens Transit Times</h2><br>
-                                <p class="text-end pt-0 mt-0">Choose our road freight service for your freight forwarding. It's fast,<br>
-                                    flexible and cost-effective.
+                                <h1>
+                                    <?= $GLOBALS['text']['Road_Freight_'] ?>
+                                </h1><br>
+                                <h2>
+                                    <?= $GLOBALS['text']['Shortens_Transit__'] ?>
+                                </h2><br>
+                                <p class="text-end pt-0 mt-0">
+                                    <?= $GLOBALS['text']['Choose_our_road_'] ?>
                                 </p>
-                                <button type="button" class="btn-lg  btn-animate">
-                                    Read More
+                                <button type="button" class="btn-lg ">
+                                    <?= $GLOBALS['text']['Read_More_'] ?>
                                 </button>
                             </div>
                         </div>
@@ -329,17 +435,18 @@ $action = Yii::$app->controller->action->id;
         <div class="container">
             <div class="row">
                 <div class="footer-con col-lg-6 col-md-6">
-                    <h6>CONTACT US</h6>
-                    <p>Smart Shippings LLC<br>
-                        Address: 45/2 Margharyan str., 0078 <br>
-                        Yerevan Armenia<br>
-                        Working days: from Monday to Friday<br>
-                        9.00 am to 18:00 pm
+                    <h6>
+                        <?= $GLOBALS['text']['CONTACT_US'] ?>
+                    </h6>
+                    <p><?= $GLOBALS['text']['Smart_Shippings_LLC_'] ?><br>
+                        <?= $GLOBALS['text']['Address:__'] ?>
+                        <?= $GLOBALS['text']['Working_days:_'] ?><br>
+                        <?= $GLOBALS['text']['9.00_am_to_'] ?>
                     </p>
                     <ul class="footer-con-info">
                         <li class="phone-info">
                             <i class="bi bi-telephone"></i>
-                            <a href="">+374919122</a>
+                            <a href="">+374 919122</a>
                         </li>
                         <li class="email-info">
                             <i class="fa-sharp fa-thin fa-at"></i>
@@ -380,69 +487,111 @@ $action = Yii::$app->controller->action->id;
                     <ul class="px-0">
                         <li>
                             <a href="/airfreght">
-                                Air Freghit
+                                <?= $GLOBALS['text']['Air_Freight_'] ?>
                             </a>
                         </li>
                         <li>
                             <a href="/seafreght">
-                                Sea Freghit
+                                <?= $GLOBALS['text']['Sea_Freight_'] ?>
                             </a>
                         </li>
                         <li>
                             <a href="/roadfreght">
-                                Raod Freight
+                                <?= $GLOBALS['text']['Road_Freight_'] ?>
                             </a>
                         </li>
                         <li>
                             <a href="/railfreght">
-                                Rail Freghit
-                            </a>
+                                <?= $GLOBALS['text']['Rail_Freight_']?>
                         </li>
                         <li>
                             <a href="/customsbrokerage">
-                                Customs Brokerage
+                                <?= $GLOBALS['text']['Customs_Brokerag_'] ?>
                             </a>
                         </li>
                         <li>
                             <a href="/cargoinsurance">
-                                Cargo Insurance
+                                <?= $GLOBALS['text']['Cargo_Insurance_'] ?>
                             </a>
                         </li>
                         <li>
                             <a href="warehousing">
-                                Warehousing & Distribution
+                                <?= $GLOBALS['text']['Air_Freight_'] ?>
                             </a>
                         </li>
                         <li>
                             <a href="/projectlogistics">
-                                Project Logistics
+                                <?= $GLOBALS['text']['Warehousing&_Distribution_'] ?>
                             </a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="footer-subcribe col-lg-3 col-md-6">
-                    <h6>SUBSCRIBE</h6>
-                    <p>Sign up to get exclusive offers
-                        and news you wont find anywhere
-                        else straight to your inbox!
+                    <h6>
+                        <?= $GLOBALS['text']['SUBSCRIBE__'] ?>
+                    </h6>
+                    <p>
+                     <?= $GLOBALS['text']['Sign_Up_to'] ?>
                     </p>
                     <form class="d-flex flex-column align-items-start">
-                        <input class="w-100"  placeholder="Enter your email addres">
-                        <button  type="submit">Sign Up</button>
+                        <input class="w-100"  placeholder="<?= $GLOBALS['text']['Enter_your_email_'] ?>">
+                        <button  type="submit">
+                            <?= $GLOBALS['text']['Sign_Up_'] ?>
+                        </button>
                     </form>
                 </div>
             </div>
             <div class="row">
                 <div class=" footer-con-copyright col-lg-12">
                     <p>
-                        Copyright Expeditor © 2019. All Rights Reserved
+                        <?= $GLOBALS['text']['Copyright_Expeditor_'] ?>
                     </p>
                 </div>
             </div>
         </div>
     </footer>
+
 <?php }  ?>
+       <?php 
+        if($_COOKIE['language'] == "am") {
+        ?>
+            <script>
+                (function(w,d,u){
+                    var s=d.createElement('script');
+                    s.async=true;
+                    s.src=u+'?'+(Date.now()/60000|0);
+                    var h=d.getElementsByTagName('script')[0];
+                    h.parentNode.insertBefore(s,h);
+                })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/site_button/loader_6_m4suvh.js');
+            </script>
+        <?php 
+        } elseif ($_COOKIE['language'] == 'ru') {
+        ?>
+            <script>
+                (function(w,d,u){
+                    var s=d.createElement('script');
+                    s.async=true;
+                    s.src=u+'?'+(Date.now()/60000|0);
+                    var h=d.getElementsByTagName('script')[0];
+                    h.parentNode.insertBefore(s,h);
+                })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/site_button/loader_2_muyflr.js');
+            </script>
+        <?php 
+        } elseif ($_COOKIE['language'] == 'en') {
+        ?>
+            <script>
+                (function(w,d,u){
+                    var s=d.createElement('script');
+                    s.async=true;
+                    s.src=u+'?'+(Date.now()/60000|0);
+                    var h=d.getElementsByTagName('script')[0];
+                    h.parentNode.insertBefore(s,h);
+                })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/site_button/loader_4_1bahbi.js');
+            </script>
+        <?php 
+        }
+        ?>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

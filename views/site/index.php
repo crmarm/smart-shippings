@@ -401,36 +401,39 @@
                     </h2>
                 </div>
                 <div class="requestForm ">
-                    <form class="d-flex flex-column gap-4" >
-                        <div class="col-lg-12 d-flex justify-content-between gap-4">
-                            <input type="text" placeholder="Your Name">
-                            <input type="email" placeholder="Email">
-                        </div>
-                        <div class="col-lg-12 d-flex justify-content-between gap-4">
-                            <input type="text" placeholder="Loading place">
-                            <input type="text" placeholder="Unloading place">
-                        </div>
-                        <div class="col-lg-12 d-flex justify-content-between gap-4">
-                            <input type="text" placeholder="Payload in kg">
-                            <input type="text" placeholder="Dimensions">
-                        </div>
-                        <div class="sel-input col-lg-12 d-flex justify-content-between gap-4">
-                            <input type="text" placeholder="Type of Cargo">
-                            <select class="select-box">
-                                <option value="Air Freight" selected>Air Freight </option>
-                                <option value="Sea Freight">Sea Freight </option>
-                                <option value="Road Freghit">Road Freghit </option>
-                                <option value="Rail Freghit">Railc Freight </option>
-                            </select>
-                            <div class="icon-con">
-                                <i class="bi bi-caret-down-fill"></i>
-                            </div>
-                        </div>
-                        <div class=" col-lg-12 d-flex justify-content-between gap-4">
-                            <textarea  cols="100" rows="5" placeholder="Message"></textarea>
-                        </div>
-                        <button class="col-lg-3" type="submit">Submit Your Quote</button>
-                    </form>
+                    <?php 
+                    if($_COOKIE['language'] == "am") {
+                    ?>
+                        <script data-b24-form="inline/18/gbwpq5" data-skip-moving="true">
+                            (function(w,d,u){var s=d.createElement('script');
+                                s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                                var h=d.getElementsByTagName('script')[0];
+                                h.parentNode.insertBefore(s,h);
+                            })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/form/loader_18.js');
+                        </script>
+                    <?php 
+                    } elseif ($_COOKIE['language'] == 'ru') {
+                    ?>
+                        <script data-b24-form="inline/20/yhrhyr" data-skip-moving="true">
+                            (function(w,d,u){var s=d.createElement('script');
+                                s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                                var h=d.getElementsByTagName('script')[0];
+                                h.parentNode.insertBefore(s,h);
+                            })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/form/loader_20.js');
+                        </script>
+                    <?php 
+                    } elseif ($_COOKIE['language'] == 'en') {
+                    ?>
+                        <script data-b24-form="inline/16/7h1b1h" data-skip-moving="true">
+                            (function(w,d,u){var s=d.createElement('script');
+                                s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                                var h=d.getElementsByTagName('script')[0];
+                                h.parentNode.insertBefore(s,h);
+                            })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/form/loader_16.js');
+                        </script>
+                    <?php 
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -517,7 +520,7 @@
     </div>
 </section>
 
-<script>
+<!-- <script>
     AOS.init();
 </script>
-
+ -->

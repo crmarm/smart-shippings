@@ -29,7 +29,6 @@ a {
     border-radius: 3px;
     width: 42px;
     height: 42px;
-   
     border: none;
     background-color: rgba(42, 44, 50, 0.8);
 }
@@ -90,7 +89,7 @@ a {
     flex-direction: column-reverse; 
     position: absolute;
     top:0;
-    right: 0;
+    right: 0px;
     background-color: #2a2c32;
     border-radius: 0 0 5px 5px;
     box-shadow: 0px 0px 12px 0px rgba(42,44,50,0.75);
@@ -114,13 +113,6 @@ a {
 
 .lang-item:hover {
     background-color: #424242;
-}
-
-
-.lang-item.selected {
-    pointer-events: none;
-    cursor: default;
-    background-color: transparent;
 }
 
 .lang-item img {
@@ -327,7 +319,7 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     left: -50px;
     top: 180%;
     background-color: #f2f3f6;
-    max-width: 185px;
+/*    max-width: 205px;*/
     border-radius: 3px;
     padding: 15px 0;
     opacity: 0;
@@ -389,9 +381,9 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     position: relative;
 }
 
-.navbar .drop-link {
+.navbar .drop-menu .drop-link {
     font-family: 'Heebo', sans-serif;
-    white-space: pre;
+    white-space: nowrap; !important;
     position: relative;
     font-size: 14px;
     line-height: 1rem;
@@ -424,7 +416,7 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     left: 160px;
     top: 0%;
     background-color: #f2f3f6;
-    max-width: 185px;
+/*    max-width: 185px;*/
     border-radius: 3px;
     padding: 15px 0;
     opacity: 0;
@@ -439,7 +431,7 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 .navbar .drop-item:hover .drop-div-2 {
     display: block;
     top: -45%;
-    left: 190px;
+    left: 195px;
     opacity: 1;
     /* Fade in */
     visibility: visible;
@@ -489,12 +481,12 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 
 .navbar .drop-link-2 {
     font-family: 'Heebo', sans-serif;
-    white-space: pre;
+    white-space: nowrap;
     position: relative;
     font-size: 14px;
     line-height: 1rem;
     color: #2a2c32;
-    vertical-align: baseline;
+    
     --webkit-transition: all 5s ease;
 }
 
@@ -531,7 +523,7 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     position: absolute;
     display: block;
     top: -60%;
-    left: 190px;
+    left: 195px;
     animation: fadeInLeft 0.3s ease forwards;
     /* Apply fade-in animation */
 }
@@ -552,7 +544,7 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 
 .navbar .drop-link-3 {
     font-family: 'Heebo', sans-serif;
-    white-space: pre;
+    white-space: nowrap;
     font-size: 14px;
     line-height: 1rem;
     color: #2a2c32;
@@ -580,7 +572,7 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 .navbar .drop-menu .drop-link {
     font-family: 'Heebo', sans-serif;
     display: block;
-    white-space: pre;
+    white-space: nowrap;
     position: relative;
     font-size: 14px;
     line-height: 1rem;
@@ -671,7 +663,7 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     margin: 0;
     white-space: nowrap;
     text-align: right;
-    width: 377px;
+    width:100%;
     height: auto;
     padding-top: 50px;
     /* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
@@ -886,10 +878,10 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 
 header .headerSwiper .header-pagination {
     opacity: 1 !important;
-    visibility: inherit !important;
+    /*visibility: inherit !important;*/
     z-index: 1 !important;
     overflow: visible;
-    transform: translateY(0) !important;
+   
 }
 
 .header-pagination .swiper-pagination-bullet {
@@ -951,8 +943,9 @@ header .headerSwiper .header-pagination {
 
 .header-pagination {
     text-align: center;
-    margin-top: -40px;
+    
     position: absolute !important;
+    bottom: 0 !important;
 }
 
 /* header slide finish */
@@ -1401,6 +1394,8 @@ header .headerSwiper .header-pagination {
 .who-we-are .who-we-are-dis {
     padding-top: 70px;
     padding-bottom: 30px;
+    padding-left: 0;
+    margin-left: 0;
 }
 .who-we-are .who-we-are-dis h2 {
     margin-bottom: 30px;
@@ -1722,9 +1717,18 @@ header .headerSwiper .header-pagination {
     letter-spacing: 0;
 }
 
+.advantages-sec .advanList {
+    gap: 5rem !important;
+}
+
 .advantages-sec .advanList .advanItem p {
     color: #e9f4e2;
     font-family: 'Assistant', sans-serif;
+    font-size: 14px;
+}
+
+.advantages-sec .advanList .advanItem i:not(.advantages-sec .advanList .advanItem i:last-of-type) {
+    padding-bottom: 50px;
 }
 
 /* question answer */
@@ -1973,6 +1977,7 @@ header .headerSwiper .header-pagination {
     width: 100%;
     height: 100%;
     cursor: pointer;
+    background-color: #F8F9FB;
 }
 
 .brands .swiper-slide {
@@ -2004,11 +2009,13 @@ header .headerSwiper .header-pagination {
 }
 
 .brands .swiper-button-next {
-    right: 150px; /* Adjust this value as needed */
+    right: 130px; /* Adjust this value as needed */
+    padding-left: 20px;
 }
 
 .brands .swiper-button-prev {
-    left: 150px; /* Adjust this value as needed */
+    left: 130px; /* Adjust this value as needed */
+    padding-right: 20px;
 }
 
 .brands .brandsSwiper .swiper-slide  {
@@ -2730,8 +2737,8 @@ footer .footer-subcribe p {
     line-height: 1.25;
     color: #2a2c32;
     font-family: 'Assistant', sans-serif;
-}
 
+}
 .services-drop-pages-sec .second-div h6 {
     padding-top: 5px;
     margin-bottom: 18px;
@@ -2765,6 +2772,57 @@ footer .footer-subcribe p {
 
 /* Servcies-drop-pages finish */
 
+@media (min-width:1750px) and (max-width:1921px) {
+
+    .who-we-are {
+        display: flex;
+    }
+
+    .who-we-are-img-2 {
+       display: block;
+       width: 100% !important;
+    }
+
+    .who-we-are-img-2 img {
+        width:100%;
+        height: 520px!important;
+    }
+
+    .who-we-are-img {
+        display: none;
+    }
+
+    .who-we-are .container {
+        margin-left: 0px;
+    }
+
+    .who-we-are .who-we-are-dis {
+        padding-top: 70px;
+        padding-bottom: 0px;
+        padding-left: 0;
+        margin-left: 300px;
+        padding-right: 50px;
+        width: 100%;
+    }
+
+    .who-we-are-dis p {
+        width: 540px!important;
+    }
+}
+
+@media (min-width:1550px) and (max-width:1750px) {
+
+     .who-we-are .who-we-are-dis {
+        margin-left: -100px !important;
+/*        padding-right: 50px;*/
+    }
+
+    .who-we-are-dis p {
+        width: 500px !important;
+    }
+}
+
+
 @media (max-width: 1496px) {
     .headerSwiper {
         height: 90vh;
@@ -2775,7 +2833,7 @@ footer .footer-subcribe p {
     }
 
     .header-pagination {
-        transform: translateY(100px) !important;
+        bottom: -80px !important;
     }
 }
 
@@ -2797,13 +2855,16 @@ footer .footer-subcribe p {
             'd d d';
     }
 
-    .Departure .first-div .second-p {
-        width: 100%;
+    .Departure .first-div p {
+        width: 100% !important;
     }
+
+
 
     .Departure-div .first-div {
         grid-area: a;
         margin-bottom: 20px;
+        width: 100% !important;
 
     }
 
@@ -2874,8 +2935,29 @@ footer .footer-subcribe p {
         width: 340px;
     }
 
+/*  about page res  */
+
+    .who-we-are-dis {
+        padding-right: 50px;
+    }
+    
+/*  about page res finish  */
+
 
     /* gallery page res finish */
+}
+
+
+@media (max-width:1290px) {
+    .brands .swiper-button-next {
+        right: 80px; /* Adjust this value as needed */
+        padding-left: 20px;
+    }
+
+    .brands .swiper-button-prev {
+        left: 80px; /* Adjust this value as needed */
+        padding-right: 20px;
+    }
 }
 
 @media (max-width:1200px) {
@@ -2922,7 +3004,17 @@ footer .footer-subcribe p {
     /* contact page res finish */
 }
 
+@media (max-width:1090px) {
+    .brands .swiper-button-next {
+        right: 50px; /* Adjust this value as needed */
+        padding-left: 20px;
+    }
 
+    .brands .swiper-button-prev {
+        left: 50px; /* Adjust this value as needed */
+        padding-right: 20px;
+    }
+}
 
 @media (max-width:992px) {
     .container {
@@ -2996,7 +3088,7 @@ footer .footer-subcribe p {
 
     .sidebar .drop-mob-link{
         font-family: 'Heebo', sans-serif;
-        white-space: pre;
+/*        white-space: pre;*/
         font-size: 14px;
         line-height: 1em;
         padding: 15px 0 15px 30px !important;
@@ -3008,7 +3100,7 @@ footer .footer-subcribe p {
     .sidebar .drop-mob-link-2,
     .sidebar .drop-mob-link-3 {
         font-family: 'Heebo', sans-serif;
-        white-space: pre;
+/*        white-space: pre;*/
         font-size: 14px;
         line-height: 1em;
         padding: 11px 0 11px 50px !important;
@@ -3046,11 +3138,14 @@ footer .footer-subcribe p {
 
     .drop-mob-div {
         display: none;
-        transition: 0.3s ease-in-out;
+        transition: all .3s ease;
     }
+
+
 
     .drop-mob-div.open {
         display: block;
+
     }
 
     .navbar-search .nav-menu i {
@@ -3062,6 +3157,10 @@ footer .footer-subcribe p {
     .navbar-div {
         display: flex;
         align-items: center;
+    }
+
+    .header-pagination {
+        bottom: -60px !important;
     }
 
     .Departure-div .first-div {
@@ -3087,7 +3186,7 @@ footer .footer-subcribe p {
     .Our-Services-sec .iconsItems {
         flex-wrap: wrap;
         column-gap: 30px !important;
-        row-gap: 30px !important;
+        grid-row: : 30px !important;
         justify-content: center !important;
     }
 
@@ -3262,6 +3361,31 @@ footer .footer-subcribe p {
     /* services-drop-pages res finsih */
 }
 
+@media (max-width:860px) {
+
+    .brands .swiper-slide {
+        margin-right: 0;
+        flex-shrink: 1;
+    }
+
+    .brands .swiper-slide img {
+        width: 120px;
+    }
+    .brandsSwipe {
+        grid-gap: 0 !important;
+    }
+
+     .brands .swiper-button-next {
+        right: 25px; /* Adjust this value as needed */
+       
+    }
+
+    .brands .swiper-button-prev {
+        left: 10px; /* Adjust this value as needed */
+        
+    }
+}
+
 @media (max-width:768px) {
 
     .container {
@@ -3284,7 +3408,7 @@ footer .footer-subcribe p {
     } 
 
     .header-pagination {
-        transform: translateY(130px) !important;
+        bottom: -100px !important;
     }
 
     .Departure-div .second-div {
@@ -3313,6 +3437,16 @@ footer .footer-subcribe p {
 
     .Our-Advantages .advantages-sec .advanList .advanItem:first-child {
         padding-right: 45px;
+    }
+
+       
+    .brands .swiper-button-next,
+    .brands .swiper-button-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(0, -50%);
+        z-index: -1;
+        display: none;
     }
 
     footer .footer-serv {
@@ -3604,9 +3738,13 @@ footer .footer-subcribe p {
     nav .contact-info {
         flex-direction: column;
         margin-bottom: 0;
-        gap: 0 !important;
+        grid-gap: 0 !important;
     }
 
+
+    .header-pagination {
+        bottom: -130px !important;
+    }
 
    .Departure .second-div p {
     width: 100%;
@@ -3703,32 +3841,22 @@ footer .footer-subcribe p {
     }
     
     .Departure .second-div {
-        width: 99% !important;
+        width: 100% !important;
         height: auto !important;
     }
 
     .Departure .third-div {
-        width: 99% !important;
+        width: 100% !important;
         height: auto !important;
     }
     .Departure .fourth-div {
-        width: 99% !important ;
+        width: 100% !important ;
         height: auto !important;
     }
 }
 
 @media (max-width:380px) {
 
-    /* .Departure .second-div {
-        width: 97.5% !important;
-    }
-
-    .Departure .third-div {
-        width: 97.5% !important;
-    }
-    .Departure .fourth-div {
-        width: 97.5% !important ;
-    } */
 /* services page res */
 
 .ser-page-contact-us .contact-info button:first-child {
@@ -3741,6 +3869,20 @@ footer .footer-subcribe p {
 }
 /* services page res finish */
 
+}
+
+@media (max-width:340px) {
+    .header-title-1 .first-h1 {
+        font-size: 30px !important;
+        line-height: 0 !important;
+        margin: 0;
+    }
+    
+    .header-title-1 .second-h1 {
+        font-size: 35px !important;
+        line-height: 0 !important;
+        letter-spacing: 0;
+    }
 }
 
 

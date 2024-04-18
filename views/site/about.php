@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    <div class="who-we-are-img-2">
+    <div class="who-we-are-img-2 ">
         <img  src="../images/aboutImg.png" alt="">
     </div>
 </section>

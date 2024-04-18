@@ -40,21 +40,45 @@
                     <p>Feel free to get in touch with us. We are always here to answer your
                         question, to read your suggestions and to support you.</p>
                 </div>
-                <form class="d-flex flex-column gap-4 " >
-                    <div class="name-lastName-inputs d-flex justify-content-start gap-4">
-                        <input type="text" placeholder="First Name">
-                        <input type="text" placeholder="Last Name">
-                    </div>
-                    <div class="email-phone-inputs d-flex justify-content-start gap-4">
-                        <input type="email" placeholder="Email">
-                        <input type="text" placeholder="Phone Number">
-                    </div>
-
-                    <div class="d-flex justify-content-start gap-4">
-                        <textarea  cols="100" rows="5" placeholder="Message"></textarea>
-                    </div>
-                    <button class="col-lg-3" type="submit">Send Message</button>
-                </form>
+                <?php 
+                    if($_COOKIE['language'] == "am") {
+                ?>
+                    <script data-b24-form="inline/14/h29flh" data-skip-moving="true">
+                         (function(w,d,u){
+                            var s=d.createElement('script');
+                            s.async=true;
+                            s.src=u+'?'+(Date.now()/180000|0);
+                            var h=d.getElementsByTagName('script')[0];
+                            h.parentNode.insertBefore(s,h);
+                            })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/form/loader_14.js');
+                    </script>
+                <?php 
+                     } elseif ($_COOKIE['language'] == 'ru') {
+                ?>
+                            <script data-b24-form="inline/12/a8kmpb" data-skip-moving="true">
+                                (function(w,d,u){
+                                    var s=d.createElement('script');
+                                    s.async=true;
+                                    s.src=u+'?'+(Date.now()/180000|0);
+                                    var h=d.getElementsByTagName('script')[0];
+                                    h.parentNode.insertBefore(s,h);
+                                })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/form/loader_12.js');
+                            </script>
+                    <?php 
+                        } elseif ($_COOKIE['language'] == 'en') {
+                    ?>
+                            <script data-b24-form="inline/2/t0gdke" data-skip-moving="true">
+                                (function(w,d,u){
+                                    var s=d.createElement('script');
+                                    s.async=true;
+                                    s.src=u+'?'+(Date.now()/180000|0);
+                                    var h=d.getElementsByTagName('script')[0];
+                                    h.parentNode.insertBefore(s,h);
+                                })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/form/loader_2.js');
+                            </script>
+                    <?php 
+                        }
+                    ?>
             </div>
             <div class="con-page-img">
                 <img src="../images/contact-page-img.png" alt="">

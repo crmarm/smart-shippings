@@ -47,7 +47,7 @@ $(document).ready(function() {
     });
 
     $('#dropMobItem').click(function() {
-        $('.drop-mob-div').toggleClass('open')
+        $('.drop-mob-div').toggleClass('open');
     })
 });
 
@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded",function() {
           el: ".header-pagination",
           clickable: true,      
         },
+
         // autoplay: {
         //     delay: 5000, 
         // },
