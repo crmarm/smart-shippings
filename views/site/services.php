@@ -1,4 +1,4 @@
-<?php $this->params['title'] = 'Services'; ?>
+<?php $this->params['title'] = $GLOBALS['text']['Services_Title']; ?>
 <a  data-aos="fade-right" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
@@ -7,40 +7,46 @@
 <section class="Our-Services-sec Services serv-page-first-sec">
     <div class="container">
         <div class="title-div">
-            <h2>Services and Solutions Built Around You</h2>
+            <h2>
+                <?= $GLOBALS['text']['Services_Solution_'] ?>
+            </h2>
             <p>
-                We are always here to provide you with the
-                best logistic services.
+                <?= $GLOBALS['text']['We_Are_Always_Here'] ?>
             </p>
             <p>
-                You benefit from every innovation, whether it involves a simple
-                extension to our Air and Sea Freight products, whether it means a
-                development in warehousing.
+                <?= $GLOBALS['text']['You_Benefit_From'] ?>
             </p>
         </div>
         <div class=" iconsItems d-flex justify-content-between gap-4">
-            <div class="iconsItem  ">
+            <div class="iconsItem">
                 <div class="iconsItemChild">
                     <div>
                         <i class="bi bi-airplane"></i>
-                        <h5>Air Freight</h5>
-                        <p>Our Air Freight Services Include:
-                            complete Logistics Programs (pick,…
+                        <h5>  
+                            <?= $GLOBALS['text']['Air_Freight'] ?>
+                        </h5>
+                        <p>
+                            <?= $GLOBALS['text']['Our_Air_'] ?>
                         </p>
-                        <a href="airfreght" >READ MORE</a>
+                        <a href="" >
+                            <?= $GLOBALS['text']['READ_MORE__'] ?>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="iconsItem  ">
+            <div class="iconsItem">
                 <div class="iconsItemChild">
                     <div>
                         <i class='bx bxs-ship'></i>
-                        <h5>Sea Freight</h5>
-                        <p>Our Sea Freight Services Include:
-                            FCL and LCL import and export,
-                            …
+                        <h5>
+                            <?= $GLOBALS['text']['Sea_Freight__'] ?>
+                        </h5>
+                        <p>
+                            <?= $GLOBALS['text']['Our_Sea_'] ?>
                         </p>
-                        <a href="/seafreght">READ MORE</a>
+                        <a href="/seafreght">
+                            <?= $GLOBALS['text']['READ_MORE__'] ?>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -48,23 +54,31 @@
                 <div class="iconsItemChild">
                     <div>
                         <i class='bx bx-train'></i>
-                        <h5>Rail Freight</h5>
-                        <p>When rail freight is the best option available.
-                            When shipping inland…
+                        <h5>
+                            <?= $GLOBALS['text']['Rail_Freight__'] ?>
+                        </h5>
+                        <p>
+                            <?= $GLOBALS['text']['When_rail_'] ?>
                         </p>
-                        <a href="/railfreght">READ MORE</a>
+                        <a href="/railfreght">
+                            <?= $GLOBALS['text']['READ_MORE__'] ?>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="iconsItem ">
                 <div class="iconsItemChild">
                     <div>
-                        <i class="fas fa-hand-holding-usd"></i>
-                        <h5>Road Freight</h5>
-                        <p>Our Road Transportation Services Include:
-                            transportation of LTL, FTL…
+                        <img src="../images/road-img.png" alt="">
+                        <h5>
+                            <?= $GLOBALS['text']['Road_Freight_'] ?>
+                        </h5>
+                        <p>
+                            <?= $GLOBALS['text']['Our_Road__'] ?>
                         </p>
-                        <a href="/roadfreght">READ MORE</a>
+                        <a href="/roadfreght">
+                            <?= $GLOBALS['text']['READ_MORE__'] ?>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -74,10 +88,15 @@
                 <div class="iconsItemChild">
                     <div>
                         <i class="bi bi-cash-coin"></i>
-                        <h5>Customs Brokerage</h5>
-                        <p>Customs Services include: import/export customs clearance service.…
+                        <h5>
+                            <?= $GLOBALS['text']['Customs_Brokerage__'] ?>
+                        </h5>
+                        <p>
+                            <?= $GLOBALS['text']['Customs_Services__'] ?>
                         </p>
-                        <a href="/customsbrokerage" >READ MORE</a>
+                        <a href="/customsbrokerage" >
+                            <?= $GLOBALS['text']['READ_MORE__'] ?>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -85,10 +104,15 @@
                 <div class="iconsItemChild">
                     <div>
                         <i class="bi bi-shield-check"></i>
-                        <h5>Cargo Insurance</h5>
-                        <p>Our Cargo Insurance service includes: "All Risk" cargo and marine insurance, auto…
+                        <h5>
+                            <?= $GLOBALS['text']['Cargo_Insurance_'] ?>
+                        </h5>
+                        <p>
+                            <?= $GLOBALS['text']['Our_Cargo__'] ?>
                         </p>
-                        <a href="/cargoinsurance">READ MORE</a>
+                        <a href="/cargoinsurance">
+                            <?= $GLOBALS['text']['READ_MORE__'] ?>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -96,10 +120,15 @@
                 <div class="iconsItemChild">
                     <div>
                         <i class="bi bi-archive"></i>
-                        <h5>Warehousing</h5>
-                        <p>Our Warehousing Services include: short and long term storage, cargo…
+                        <h5>
+                            <?= $GLOBALS['text']['Warehousing__'] ?>
+                        </h5>
+                        <p>
+                            <?= $GLOBALS['text']['Our_Warehousing__'] ?>
                         </p>
-                        <a href="/warehousing">READ MORE</a>
+                        <a href="/warehousing">
+                            <?= $GLOBALS['text']['READ_MORE__'] ?>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -107,10 +136,15 @@
                 <div class="iconsItemChild">
                     <div>
                         <i class="bi bi-gear"></i>
-                        <h5>Project Logistics</h5>
-                        <p>Our Project Logistics Services Includes: project logistics feasibility…
+                        <h5>
+                            <?= $GLOBALS['text']['Project_Logistics_'] ?>
+                        </h5>
+                        <p>
+                            <?= $GLOBALS['text']['Our_Project__'] ?>
                         </p>
-                        <a href="/projectlogistics">READ MORE</a>
+                        <a href="/projectlogistics">
+                            <?= $GLOBALS['text']['READ_MORE__'] ?>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -121,7 +155,9 @@
 <section class="brands">
     <div class="container">
         <div class="title-div">
-            <h2>Our Partners</h2>
+            <h2>
+                <?= $GLOBALS['text']['Our_Partners'] ?>
+            </h2>
         </div>
         <div class="swiper brandsSwiper">
             <div class="swiper-wrapper">
@@ -188,21 +224,25 @@
     <div class="container">
         <div class=" contact-sec text-center ">
             <div class="contact-dis " >
-                <h3>Let Us Help You to Find a Solution That Meets Your Needs</h3>
-                <p>Please feel free to get in touch with us and we will get back to you as soon as possible.</p>
+                <h3>
+                    <?= $GLOBALS['text']['Let_Us_Help'] ?>
+                </h3>
+                <p>
+                    <?= $GLOBALS['text']['Please_feel__'] ?>
+                </p>
             </div>
             <div class="contact-info   " >
                 <button  type="submit">
                     <a href="#">
-                        Get a Free Quote
+                        <?= $GLOBALS['text']['Get_a_Free_'] ?>
                     </a>
                 </button>
                 <button >
                     <a href="/contact">
-                        Contact Us Now
+                        <?= $GLOBALS['text']['Contact_Us_Now_'] ?>
                     </a>
                 </button>
-                <p >Or Call <span>+374 91 919188</span></p>
+                <p ><?= $GLOBALS['text']['Or_Call_'] ?> <span>+374 91 919188</span></p>
             </div>
         </div>
     </div>

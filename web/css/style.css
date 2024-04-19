@@ -285,6 +285,10 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 
 }
 
+.am .nav-down .navbar {
+    gap: 15px !important;
+}
+
 .nav-down .nav-item {
     cursor: pointer;
     font-size: 16px;
@@ -383,9 +387,9 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 
 .navbar .drop-menu .drop-link {
     font-family: 'Heebo', sans-serif;
-    white-space: nowrap; !important;
+    white-space: nowrap !important;
     position: relative;
-    font-size: 14px;
+    font-size: 14px;    
     line-height: 1rem;
     color: #2a2c32;
     transition: 0.1s ease;
@@ -616,6 +620,19 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     width: 100%;
 }
 
+.am .header-title-1 .first-h1 {
+    font-size: 80px;
+}
+
+.am .header-title-1 h2 {
+    padding: 10px 0 0 0;
+}
+
+.ru .header-title-1 h2 {
+    padding-bottom: 5px;
+}
+
+
 .header-title-1 .first-h1 {
     height: auto;
     width: auto;
@@ -629,13 +646,13 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 
 .header-title-1 .second-h1 {
     line-height: 0;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-weight: 700;
     font-size: 70px;
     margin: 0;
     padding: 0;
     color: white;
-
+    font-family: 'Assistant', sans-serif;
 }
 
 .header-title-1 h2 {
@@ -1009,6 +1026,18 @@ header .headerSwiper .header-pagination {
     font-family: 'Assistant', sans-serif;
     font-size: 14px;
     font-weight: 700;
+    transition:  0.3s ease !important;
+    position: relative;
+}
+
+.Departure .first-div a:hover::after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -2px;
+    width: 100%;
+    height: 0.5px;
+    background-color: #038ed3;
 }
 
 .Departure .second-div {
@@ -1073,6 +1102,30 @@ header .headerSwiper .header-pagination {
     z-index: -1;
 }
 
+.am .Departure .second-div .licon-quote::before {
+    content: '66';
+    position: absolute;
+    color: #d7e8f2;
+    font-size: 180px;
+    height: 400px;
+    right: -40px;
+    top: 50px;
+    transform: rotate(5deg);
+    z-index: -1;
+}
+
+.ru .Departure .second-div .licon-quote::before {
+    content: '66';
+    position: absolute;
+    color: #d7e8f2;
+    font-size: 180px;
+    height: 400px;
+    right: -40px;
+    top: 80px;
+    transform: rotate(5deg);
+    z-index: -1;
+}
+
 .Departure .third-div {
     width: 360px;
     height: auto;
@@ -1093,6 +1146,26 @@ header .headerSwiper .header-pagination {
     height: 400px;
     right: -40px;
     top: 50px;
+    z-index: -1;
+}
+
+.am .Departure .third-div i {
+    position: absolute;
+    color: #d7e8f2;
+    font-size: 180px;
+    height: 400px;
+    right: -40px;
+    top: 70px;
+    z-index: -1;
+}
+
+.ru .Departure .third-div i {
+    position: absolute;
+    color: #d7e8f2;
+    font-size: 180px;
+    height: 400px;
+    right: -40px;
+    top: 95px;
     z-index: -1;
 }
 
@@ -1212,8 +1285,9 @@ header .headerSwiper .header-pagination {
     color: white;
 }
 
-.Services .iconsItems .iconsItem:hover i {
-    color: white;
+.Services .iconsItems .iconsItem:hover i, 
+.Services .iconsItems .iconsItem:hover img {
+    color: white !important;
 }
 
 
@@ -1233,7 +1307,6 @@ header .headerSwiper .header-pagination {
 .Services .iconsItem i,
 .Services .iconsItem img {
     width: 35px;
-    mix-blend-mode: darken;
     margin-bottom: 25px;
     font-size: 36px;
     color: #aab3b6;
@@ -1350,6 +1423,11 @@ header .headerSwiper .header-pagination {
 
 .ser-page-contact-us .contact-info button:first-child {
     margin-right: 8px;
+}
+
+.am .ser-page-contact-us .contact-info p br,
+.ru .ser-page-contact-us .contact-info p br {
+    display: none !important;
 }
 
 
@@ -1763,7 +1841,7 @@ header .headerSwiper .header-pagination {
 
 
 .quest-ans-item {
-    border: 1px solid #f2f3f6;
+    border: 2px solid #f2f3f6;
     border-radius: 2px;
 }
 
@@ -1829,140 +1907,13 @@ header .headerSwiper .header-pagination {
 
 /* question answer finish */
 
-/* request form */
-
-.requestForm input {
-    width: 100% !important;
-    height: 42px;
-    font-size: 14px;
-    padding-left: 20px;
-    color: #7b8285;
-    font-family: inherit;
-    line-height: inherit;
-    border-radius: 3px;
-    border: 2px solid #f2f3f6;
-    font-family: 'Assistant', sans-serif;
-
+.request-div .requestForm .b24-form-header-description {
+    font-size: 18px !important;
 }
 
-.requestForm input::placeholder {
-    transition: 0.3s ease-in;
+.request-div .requestForm .b24-form-field-agreement .b24-form-field-agreement-link {
+    font-size: 16px !important;
 }
-
-.requestForm input:focus::placeholder {
-    opacity: 0;
-    transition: 0.3s ease-in;
-    transform: translateX(100px);
-}
-
-
-.requestForm input:not(:focus)::placeholder {
-    opacity: 1;
-    /* Make it visible again when not focused */
-    transform: translateX(0);
-    /* Reset transform */
-}
-
-.requestForm input:focus,
-.requestForm select:focus,
-.requestForm textarea:focus {
-    border: none !important;
-    outline: 2px solid #6cb2eb !important;
-    box-shadow: 0px 0px 8px #6cb2eb;
-}
-
-.requestForm select {
-    appearance: none;
-    padding-left: 20px;
-    padding-bottom: 5px;
-    width: 100%;
-    color: #7b8285;
-    display: flex;
-    border-radius: 3px;
-    border: 2px solid #f2f3f6;
-    cursor: pointer;
-    font-family: 'Assistant', sans-serif;
-}
-
-.requestForm select::selection {
-    background-color: #038ed3;
-    color: white;
-}
-
-.requestForm select option {
-    padding: 50px !important;
-}
-
-.requestForm .sel-input  {
-    position: relative;
-}
-
-.requestForm .icon-con {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: start;
-}
-
-.requestForm .icon-con i {
-    color: #7b8285;
-    font-size: 10px;
-}
-
-.requestForm textarea {
-    padding-left: 20px;
-    padding-top: 10px;
-    border: 2px solid #f2f3f6;
-    border-radius: 3px;
-    color: #7b8285;
-}
-
-.requestForm textarea::placeholder {
-    transition: 0.3s ease-in;
-}
-
-.requestForm textarea:focus::placeholder {
-    opacity: 0;
-    transition: 0.3s ease-in;
-    transform: translateX(100px);
-}
-
-
-.requestForm textarea:not(:focus)::placeholder {
-    opacity: 1;
-    /* Make it visible again when not focused */
-    transform: translateX(0);
-    /* Reset transform */
-}
-
-.requestForm textarea:focus {
-    border: none !important;
-    outline: 2px solid #6cb2eb !important;
-    box-shadow: 0px 0px 1px #6cb2eb;
-}
-
-.requestForm button {
-    line-height: 24px;
-    padding: 9px 10px;
-    width: 150px;
-    font-size: 15px;
-    font-weight: 500;
-    border: none;
-    background-color: #038ed3;
-    color: white;
-    border-radius: 3px;
-    transition: 0.3s ease-in;
-    font-family: 'Assistant', sans-serif;
-}
-
-.requestForm button:hover {
-    background-color: #80c644;
-}
-
-/* request form finish */
 
 /* brands section */
 
@@ -2050,15 +2001,21 @@ header .headerSwiper .header-pagination {
     text-wrap: balance;
 }
 
+.am .Contact-Us .contact-dis {
+    padding-right: 20px;
+}
+
 .Contact-Us .contact-info button {
     margin-bottom: 3px;
     padding: 14px 20px;
     color: white;
+    white-space: nowrap;
     background-color: #038ed3;
     border: none;
     border-radius: 3px;
     line-height: 24px;
     font-family: 'Assistant', sans-serif;
+    transition: all 0.3s ease;
 }
 
 .Contact-Us .contact-info button:hover {
@@ -2075,6 +2032,14 @@ header .headerSwiper .header-pagination {
     font-size: 15px;
     line-height: 28px;
     font-family: 'Assistant', sans-serif;
+}
+
+.Contact-Us .contact-info {
+    text-align: center !important;
+}
+
+.ru .Contact-Us .contact-info {
+    text-align: center !important;
 }
 
 .Contact-Us .contact-info p span {
@@ -2195,6 +2160,50 @@ footer .footer-con-copyright p {
     font-family: 'Assistant', sans-serif;
 }
 
+footer .footer-about-us {
+    padding-left: 50px;
+}
+
+footer .footer-about-us ul {
+    padding-left: 0;
+}
+
+footer .footer-about-us ul li {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 500;
+    font-family:'Assistant', sans-serif ;
+}
+
+footer .footer-about-us ul li a {
+    color: white;
+    position: relative;
+}
+
+footer .footer-about-us ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1px;
+    background-color: white;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+footer .footer-about-us ul li a:hover::before {
+    transform: scale(1);
+}
+
+footer .footer-serv {
+    padding-left: 100px;
+}
+
+.am footer .footer-serv,
+.ru footer .footer-serv {
+    padding-left: 30px !important;
+}
 
 footer .footer-serv ul li {
     line-height: 30px;
@@ -2236,7 +2245,7 @@ footer .footer-subcribe p {
     height: 42px;
     border-radius: 3px;
     border: none;
-    padding-left: 20px;
+    padding-left: 15px;
     font-size: 14px;
     color: #7b8285;
     border: 5px solid white;
@@ -2266,6 +2275,14 @@ footer .footer-subcribe p {
     /* Make it visible again when not focused */
     transform: translateX(0);
     /* Reset transform */
+}
+
+.am .footer-subcribe form input{
+    padding-left: 15px !important;
+}
+
+.ru .footer-subcribe form input{
+    padding-left: 15px !important;
 }
 
 .footer-subcribe button {
@@ -2419,115 +2436,12 @@ footer .footer-subcribe p {
     gap: 30px;
 }
 
-
-.con-page-form-img-sec .con-page-form-dis h2 {
-    margin-bottom: 20px;
-    color: #2a2c32;
-    font-size: 42px;
-    font-family: 'Assistant', sans-serif;
-    line-height: 1.25;
-    font-weight: normal;
-    
+.con-page-form .b24-form-field-agreement .b24-form-field-agreement-link {
+    font-size: 16px !important;
 }
 
-.con-page-form-img-sec .con-page-form-dis p {
-    margin-bottom: 30px;
-    color: #4b4e50;
-    font-family: 'Assistant', sans-serif;
-    font-size: 14px;   
-    width: 100%; 
-}
-
-.con-page-form-img-sec form input {
-    width: 100% !important;
-    height: 42px;
-    padding-left: 20px;
-    color: #7b8285;
-    font-family: inherit;
-    line-height: inherit;
-    border-radius: 3px;
-    border: 2px solid #f2f3f6;
-    font-family: 'Assistant', sans-serif;
-    font-size: 14px;
-}
-
-.con-page-form-img-sec form input::placeholder {
-    transition: 0.3s ease-in;
-}
-
-.con-page-form-img-sec form input:focus::placeholder {
-    opacity: 0;
-    transition: 0.3s ease-in;
-    transform: translateX(100px);
-}
-
-
-.con-page-form-img-sec form input:not(:focus)::placeholder {
-    opacity: 1;
-    /* Make it visible again when not focused */
-    transform: translateX(0);
-    /* Reset transform */
-}
-
-.con-page-form-img-sec form input:focus,
-.con-page-form-img-sec form textarea:focus {
-    border: none !important;
-    outline: 2px solid #6cb2eb !important;
-    box-shadow: 0px 0px 10px #6cb2eb;
-}
-
-.con-page-form-img-sec form textarea {
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 100%;
-    padding-top: 10px;
-    border: 2px solid #f2f3f6;
-    border-radius: 3px;
-    color: #7b8285;
-    font-family: 'Assistant', sans-serif;
-    font-size: 14px;
-}
-
-.con-page-form-img-sec form textarea::placeholder {
-    transition: 0.3s ease-in;
-}
-
-.con-page-form-img-sec form textarea:focus::placeholder {
-    opacity: 0;
-    transition: 0.3s ease-in;
-    transform: translateX(100px);
-}
-
-
-.con-page-form-img-sec form textarea:not(:focus)::placeholder {
-    opacity: 1;
-    /* Make it visible again when not focused */
-    transform: translateX(0);
-    /* Reset transform */
-}
-
-.con-page-form-img-sec form textarea:focus {
-    border: none !important;
-    border: 1px solid #038ed3 !important;
-    box-shadow: 0px 0px 10px #038ed3;
-}
-
-.con-page-form-img-sec form button {
-    line-height: 24px;
-    padding: 9px 0;
-    width: 130px;
-    font-size: 14px;
-    font-weight: 500;
-    border: none;
-    background-color: #038ed3;
-    color: white;
-    border-radius: 3px;
-    transition: 0.3s ease-in;
-    font-family: 'Assistant', sans-serif;
-}
-
-.con-page-form-img-sec form button:hover {
-    background-color: #80c644;
+.con-page-form .b24-form-header-title  {
+    font-size: 30px !important;
 }
 
 .con-page-form-img-sec .con-page-img img{
@@ -2774,6 +2688,14 @@ footer .footer-subcribe p {
 
 @media (min-width:1750px) and (max-width:1921px) {
 
+    .am .header-title-1 .first-h1 {
+        font-size: 90px !important;
+    }
+
+    .am .header-title-1 h2 {
+        line-height: 1.8 !important;
+    }
+
     .who-we-are {
         display: flex;
     }
@@ -2811,10 +2733,8 @@ footer .footer-subcribe p {
 }
 
 @media (min-width:1550px) and (max-width:1750px) {
-
      .who-we-are .who-we-are-dis {
         margin-left: -100px !important;
-/*        padding-right: 50px;*/
     }
 
     .who-we-are-dis p {
@@ -2835,6 +2755,14 @@ footer .footer-subcribe p {
     .header-pagination {
         bottom: -80px !important;
     }
+
+    .am .header-title {
+        padding-top: 200px;
+    }
+
+    .ru .header-title {
+        padding-top: 200px;
+    }
 }
 
 @media (max-width: 1400px) {
@@ -2845,6 +2773,22 @@ footer .footer-subcribe p {
 
     .nav-down .navbar {
         gap: 20px;
+    }
+
+    .am .nav-down .navbar {
+        gap: 10px !important;
+    }
+
+    .am .header-title-1 .second-h1{
+        font-size: 60px !important;
+    }
+
+    .am .header-title-2 h1 {
+        font-size: 50px;
+    }
+
+    .am .header-title-3 h1 {
+        font-size: 50px;
     }
 
     .Departure-div {
@@ -2905,15 +2849,6 @@ footer .footer-subcribe p {
         gap: 70px !important;
     }
 
-    .advanItem:first-child {
-        flex-direction: column;
-    }
-
-    .advanItem:first-child p {
-        margin-top: -10px !important;
-        /* margin-top: 0 !important; */
-    }
-
     .advantages-sec .advanItem p {
         padding-top: 10px;
     }
@@ -2965,6 +2900,14 @@ footer .footer-subcribe p {
         padding: 0 20px !important;
     }
 
+    .am .header-title-1 .second-h1 {
+        font-size: 50px !important;
+    }
+
+    .ru .nav-down .navbar {
+        gap: 8px !important;
+    }
+
     .nav-down .navbar {
         gap: 10px;
     }
@@ -3002,6 +2945,12 @@ footer .footer-subcribe p {
     }
 
     /* contact page res finish */
+}
+
+@media (max-width:1100px) {
+    .am .header-title-3 h1 {
+        font-size: 40px;
+    }
 }
 
 @media (max-width:1090px) {
@@ -3163,6 +3112,40 @@ footer .footer-subcribe p {
         bottom: -60px !important;
     }
 
+    .am .header-title-1 .second-h1 {
+        font-size: 40px !important;
+    }
+
+
+    .am .header-title-2 h1 {
+        font-size: 40px !important;
+    }
+
+    .am .header-title-2 p br {
+        display: none;
+    } 
+
+     .am .header-title-3 h1 {
+        font-size: 35px;
+    }
+
+    .am .header-title-3 p br {
+        display: none;
+    } 
+
+    .ru .header-title-3 h1 {
+        font-size: 50px;
+    }
+
+    .ru .header-title-2 h1 {
+        font-size: 50px;
+    }
+
+    .ru .header-title-2 h2 {
+        font-size: 30px;
+        white-space: normal;
+    }
+
     .Departure-div .first-div {
         margin-bottom: 80px;
     }
@@ -3186,7 +3169,7 @@ footer .footer-subcribe p {
     .Our-Services-sec .iconsItems {
         flex-wrap: wrap;
         column-gap: 30px !important;
-        grid-row: : 30px !important;
+        gap: 30px !important;
         justify-content: center !important;
     }
 
@@ -3222,24 +3205,22 @@ footer .footer-subcribe p {
     } */
 
 
-    .advanItem:first-child {
-        flex-direction: row !important;
-        padding-right: 42px;
-        gap: 20px !important;
+    /* .advanItem:first-child {      
+    
         font-size: 14px !important;
         margin-top: 0 !important;
-    }
+    } */
 
-    .advantages-sec .advanList .advanItem:nth-child(2) ,
-    .advantages-sec .advanList .advanItem:nth-child(3) ,
-    .advantages-sec .advanList .advanItem:nth-child(4) {
+    .advantages-sec .advanList .advanItem {
         display: flex;
         gap: 20px;
     }
 
-    .advantages-sec .advanList .advanItem:nth-child(2) p,
-    .advantages-sec .advanList .advanItem:nth-child(3) p,
-    .advantages-sec .advanList .advanItem:nth-child(4) p{
+    .advantages-sec .advanList .advanItem:nth-child(2) {
+        padding-left: 45px;
+    }
+
+    .advantages-sec .advanList .advanItem p {
         font-size: 14px !important;
         padding-top: 0 !important;
         /* margin-top: -5px; */
@@ -3269,6 +3250,20 @@ footer .footer-subcribe p {
 
     .contact-dis p br {
         display: none;
+    }
+
+    footer .footer-serv {
+        padding-left: 10px;
+    }
+
+    .am footer .footer-serv, 
+    .ru footer .footer-serv {
+        padding-left: 10px!important;
+    }
+
+    footer .footer-about-us {
+        padding-top: 80px;
+        padding-left: 10px;
     }
 
     footer .footer-subcribe {
@@ -3386,6 +3381,12 @@ footer .footer-subcribe p {
     }
 }
 
+@media (max-width:800px) {
+    .ru .header-title-3 h1 {
+        font-size: 40px !important;
+    }
+}
+
 @media (max-width:768px) {
 
     .container {
@@ -3452,6 +3453,10 @@ footer .footer-subcribe p {
     footer .footer-serv {
         padding-top: 40px;
     }
+    
+    footer .footer-about-us {
+        padding-top: 40px;
+    }
 
     footer .footer-subcribe {
         padding-top: 40px;
@@ -3502,6 +3507,10 @@ footer .footer-subcribe p {
         max-width: 95% !important;
     }
 
+    .headerSlider:hover .header-swiper-arrow {
+        display: none !important;
+    }
+
     .Departure-div .second-div {
         width: 345px !important;
     }
@@ -3520,6 +3529,10 @@ footer .footer-subcribe p {
 
     .Our-Advantages .advantages-sec {
         flex-direction: column;
+    }
+
+    .advantages-sec .advanItem:nth-child(2) {
+        padding-left: 0 !important;
     }
 
     /* gallery page res */
@@ -3589,7 +3602,88 @@ footer .footer-subcribe p {
 
 }
 
+@media (max-width:700px) {
+
+    .am .header-title-1 .first-h1 {
+        font-size: 50px;
+    }
+
+    .am .header-title-1 .second-h1 {
+        font-size: 30px !important;
+    }
+
+    .am .header-title-1 h2 {
+        font-size: 25px !important;
+    }
+
+    .am .header-title-2 h1 {
+        font-size: 30px !important;
+    }
+
+    .am .header-title-2 h2 {
+        font-size: 25px;
+        line-height: 0;
+    }
+
+    .am .header-title-2 p br {
+        display: none;
+    }
+
+    .am .header-title-2 button {
+        margin-top: 30px;
+    }
+
+    .am .header-title-3 h1 {
+        font-size: 30px;
+    }
+
+    .am .header-title-3 h2 {
+        font-size: 25px;
+    }
+
+    .am .header-title-3 p br {
+        display: none;
+    }
+
+    .am .header-title-3 p {
+        height: 0;
+    }
+
+    .am .header-title-3 button {
+        margin-top: 80px !important;
+    }
+
+    .ru .header-title-1 .first-h1 {
+        font-size: 55px;
+    }
+
+    .ru .header-title-1 .second-h1 {
+        font-size: 55px;
+    }
+
+    .ru .header-title-1 h2 {
+        font-size: 35px;
+    }
+
+    .ru .header-title-2 h1  {
+        font-size: 40px;
+    }
+
+    .ru .header-title-2 h2 {
+        font-size: 25px;
+    }
+
+    .ru .header-title-3 h1  {
+        font-size: 35px !important;
+    }
+}
+
+
 @media (max-width:692px) {
+
+    .advantages-sec .advanList {
+        column-gap: 130px !important;
+    }
     
     /* shipment page res */
     
@@ -3611,13 +3705,10 @@ footer .footer-subcribe p {
 @media (max-width:581px) {
     /* contact page res */
         
-    /* nav .nav-down .nav-menu {
-        position: fixed;
-        right: 40px;
-        top: 50px;
-        z-index: 1000;
-
-    } */
+     .am .header-title-3 h1 {
+        font-size: 25px !important;
+    }
+            
     .con-page-form-img-sec .con-page-img img{
         width: 100%;
         height: auto;
@@ -3717,9 +3808,58 @@ footer .footer-subcribe p {
         height: 30px;
     }
 
-
     .header-title-3 p.header-title-2 p br, .header-title-3 p br {
         display: none;
+    }
+
+    .am .header-title-1 .first-h1 {
+        font-size: 50px;
+    }
+
+    .am .header-title-1 .second-h1 {
+        font-size: 30px !important;
+    }
+
+    .am .header-title-1 h2 {
+        padding-top: 0 !important;
+        font-size: 25px !important;
+    }
+
+    .am .header-title-2 h1 {
+        font-size: 30px !important;
+    }
+
+    .am .header-title-2 h2 {
+        font-size: 25px;
+        line-height: 0;
+    }
+
+    .am .header-title-2 p br {
+        display: none;
+    }
+
+    .am .header-title-2 button {
+        margin-top: 30px;
+    }
+
+    .am .header-title-3 h1 {
+        font-size: 30px;
+    }
+
+    .am .header-title-3 h2 {
+        font-size: 25px;
+    }
+
+    .am .header-title-3 p br {
+        display: none;
+    }
+
+    .am .header-title-3 p {
+        height: 0;
+    }
+
+    .am .header-title-3 button {
+    margin-top: 80px !important;
     }
 
     /* shipment page res */
@@ -3732,6 +3872,45 @@ footer .footer-subcribe p {
     /* shipment page res finish */
 
 
+}
+
+@media (max-width:560px) {
+    .am .header-title-1 p {
+        padding-top: 20px !important;
+/*        margin-top: 0 !important;*/
+    }
+
+    .am .header-title-1 .first-h1 {
+        padding-bottom: 10px;
+        font-size: 50px !important;
+    }
+}
+
+@media (max-width:530px) {
+    .am .header-title-1 .first-h1 {
+        font-size: 50px !important;
+        padding-bottom: 10px;
+    }
+
+    .am .header-title-2 h1 {
+        font-size: 25px !important;
+    }
+
+    .am .header-title-2 h2 {
+        font-size: 20px !important;
+    }
+
+    .ru .header-title-2 h1 {
+        font-size: 30px;
+    }
+
+    .ru .header-title-2 h2 {
+        font-size: 25px;
+    }
+
+    .ru .header-title-3 h1 {
+        font-size: 30px !important;
+    }
 }
 
 @media (max-width:500px) {
@@ -3747,11 +3926,39 @@ footer .footer-subcribe p {
     }
 
    .Departure .second-div p {
-    width: 100%;
+        width: 100%;
    }
 
    .Departure .third-div p {
-    width: 100%;
+        width: 100%;
+   }
+
+   .am .header-title-1 .first-h1 {
+        font-size:40px !important ;
+   }
+
+   .am .header-title-1 .second-h1 {
+        font-size:25px !important ;
+   }
+
+   .am .header-title-1 h2 {
+        font-size:20px !important ;
+   }
+
+   .am .header-title-2 h1  {
+        font-size:20px !important ;
+   }
+
+    .am .header-title-2 h2  {
+        font-size:15px !important ;
+   }
+
+   .am .header-title-3 h1 {
+        font-size: 20px !important;
+   }
+
+   .am .header-title-3 h2 {
+        font-size: 20px;
    }
     
 }
@@ -3774,6 +3981,30 @@ footer .footer-subcribe p {
         font-size: 12px;
         width: 100% !important;
         /* width: 100%; */
+    }
+
+    .ru .header-title-1 .first-h1 {
+        font-size: 30px;
+    }
+
+    .ru .header-title-1 .second-h1 {
+        font-size: 40px !important;
+    }
+
+    .ru .header-title-1 h2 {
+        font-size: 25px !important;
+    }
+
+    .ru .header-title-2 h1 {
+        font-size: 27px !important;
+    }
+
+    .ru .header-title-2 h2 {
+        font-size: 17px !important;
+    }
+
+    .ru .header-title-3 h1 {
+        font-size: 25px !important;
     }
 
     .question-answer-request-sec .requestForm div  {
@@ -3808,10 +4039,6 @@ footer .footer-subcribe p {
     /* contact page res finish */
 }
 @media (max-width:430px) {
-    
-    .Our-Advantages .advanList {
-        gap: 20px !important;
-    }
     .Our-Advantages .advanList .advanItem i {
         font-size: 40px !important;
     } 
@@ -3822,7 +4049,24 @@ footer .footer-subcribe p {
 }
 
 @media (max-width:410px) {
-    
+
+    .ru .header-title-1 .first-h1 {
+        font-size: 35px !important;
+    }
+
+    .ru .header-title-1 .second-h1 {
+        font-size: 35px !important;
+    }
+
+    .ru .header-title-1 h2{
+        font-size: 20px !important;
+    }
+
+    .ru .header-title-1 p {
+        width:100% !important;
+        white-space: normal;
+    }
+        
     .Departure .second-div {
         width: 99% !important;
     }
@@ -3836,6 +4080,19 @@ footer .footer-subcribe p {
 }
 
 @media (max-width:400px) {
+
+    .am .header-title-1 .second-h1 {
+        font-size: 20px !important;
+    }
+
+    .am .header-title-2 h1 {
+        font-size: 17px !important;
+    }
+
+    .am .header-title-3 h1 {
+        font-size: 17px !important ;
+    }
+
     .Departure-div {
         width: 100%;
     }
@@ -3857,19 +4114,31 @@ footer .footer-subcribe p {
 
 @media (max-width:380px) {
 
-/* services page res */
+    .am .serv-page-header .title-div h1 {
+        font-size: 30px !important;
+    }
 
-.ser-page-contact-us .contact-info button:first-child {
-    margin-right: 0;
-    margin-bottom: 8px;
-}
+    .ru .header-title-3 h1 {
+        font-size: 20px !important;
+    }
 
-.Map ,.con-page-info-smart .phone-email .email-info a {
-    width: 100%;
-}
-/* services page res finish */
+    .ru .header-title-2 h1 {
+        font-size: 20px !important;
+    }
 
-}
+    /* services page res */
+
+    .ser-page-contact-us .contact-info button:first-child {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+    .Map ,.con-page-info-smart .phone-email .email-info a {
+        width: 100%;
+    }
+    /* services page res finish */
+
+    }
 
 @media (max-width:340px) {
     .header-title-1 .first-h1 {
@@ -3883,6 +4152,7 @@ footer .footer-subcribe p {
         line-height: 0 !important;
         letter-spacing: 0;
     }
+
 }
 
 

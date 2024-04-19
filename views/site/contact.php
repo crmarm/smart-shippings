@@ -35,11 +35,6 @@
     <div class="container">
         <div class="con-page-form-img-sec d-flex justify-content-between">
             <div class="con-page-form">
-                <div class="con-page-form-dis">
-                    <h2>Contact Us</h2>
-                    <p>Feel free to get in touch with us. We are always here to answer your
-                        question, to read your suggestions and to support you.</p>
-                </div>
                 <?php 
                     if($_COOKIE['language'] == "am") {
                 ?>

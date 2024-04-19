@@ -9,42 +9,42 @@
         <div class="Departure-div">
             <div class="first-div">
                 <h2>
-                    From Departure<br>
-                    to Destination!
+                    <?= $GLOBALS['text']['From_Departure_'] ?>
                 </h2>
                 <p class="mb-3">
-                    Our company is established to provide you with the best, fast and
-                    cost-effective freight forwarding services such as air freight, sea
-                    freight, rail freight and road freight.
+                    <?= $GLOBALS['text']['Our_company_'] ?>
                 </p>
                 <p class="mb-3 second-p">
-                    Our clients also benefit from value-added services: customs
-                    brokerage, cargo insurance, warehousing and distribution.
+                    <?= $GLOBALS['text']['Our_clients_'] ?>
                 </p>
                 <p class="mb-3">
-                    Want to know more about us?
+                    <?= $GLOBALS['text']['Want_to_know_'] ?>
                 </p>
-                <a href="">MORE ABOUT US</a>
+                <a href="/about">
+                    <?= $GLOBALS['text']['MORE_ABOUT_US_'] ?>
+                </a>
             </div>
             <div class="second-div">
-                <h5>Get a Free Quote!</h5>
+                <h5>
+                    <?= $GLOBALS['text']['Get_a_Free_'] ?>
+                </h5>
                 <p>
-                    Do you want to get a free quote?<br>
-                    Then press the button and start a quote.
+                    <?= $GLOBALS['text']['Do_you_want_'] ?>
                 </p>
                 <button type="button">
-                    Start a Quote
+                    <?= $GLOBALS['text']['Start_a_Quote_'] ?>
                 </button>
                 <span class="licon-quote"></span>
             </div>
             <div class="third-div">
-                <h5>Have a Question?</h5>
+                <h5>
+                    <?= $GLOBALS['text']['Have_a_Question?'] ?>
+                </h5>
                 <p>
-                    Feel free to get in touch with us and we will get back to you as
-                    soon as possible.
+                    <?= $GLOBALS['text']['Feel_free_'] ?>
                 </p>
                 <button type="button">
-                    Contact Us
+                    <?= $GLOBALS['text']['Contact_Us_'] ?>
                 </button>
                 <i class="bi bi-question-circle"></i>
             </div>
@@ -59,12 +59,16 @@
         <div class="Services">
             <div class="row title-div pb-4">
                 <div class="col-lg-4">
-                    <h6>WHAT WE OFFER</h6>
-                    <h2>Our Services</h2>
+                    <h6>
+                        <?= $GLOBALS['text']['WHAT_WE_OFFER_'] ?>
+                    </h6>
+                    <h2>
+                        <?= $GLOBALS['text']['Our_Services_'] ?>
+                    </h2>
                 </div>
                 <div class="col-lg-8">
                     <p>
-                        We are always here to provide you with the best logistic services. You benefit from every innovation, whether it involves a simple extension to our Air and Sea Freight products, whether it means a development in warehousing
+                        <?= $GLOBALS['text']['We_are_always_'] ?>
                     </p>
                 </div>
             </div>
@@ -73,11 +77,15 @@
                     <div class="iconsItemChild">
                         <div>
                             <i class="bi bi-airplane"></i>
-                            <h5>Air Freight</h5>
-                            <p>Our Air Freight Services Include:
-                                complete Logistics Programs (pick,…
+                            <h5>
+                                <?= $GLOBALS['text']['Air_Freight'] ?>
+                            </h5>
+                            <p>
+                                <?= $GLOBALS['text']['Our_Air_'] ?>
                             </p>
-                            <a href="" >READ MORE</a>
+                            <a href="" >
+                                <?= $GLOBALS['text']['READ_MORE__'] ?>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -85,12 +93,15 @@
                     <div class="iconsItemChild">
                         <div>
                             <i class='bx bxs-ship'></i>
-                            <h5>Sea Freight</h5>
-                            <p>Our Sea Freight Services Include:
-                                FCL and LCL import and export,
-                                …
+                            <h5>
+                                <?= $GLOBALS['text']['Sea_Freight__'] ?>
+                            </h5>
+                            <p>
+                                <?= $GLOBALS['text']['Our_Sea_'] ?>
                             </p>
-                            <a href="">READ MORE</a>
+                            <a href="">
+                                <?= $GLOBALS['text']['READ_MORE__'] ?>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -98,11 +109,15 @@
                     <div class="iconsItemChild">
                         <div>
                             <i class='bx bx-train'></i>
-                            <h5>Rail Freight</h5>
-                            <p>When rail freight is the best option available.
-                                When shipping inland…
+                            <h5>
+                                <?= $GLOBALS['text']['Rail_Freight__'] ?>
+                            </h5>
+                            <p>
+                                <?= $GLOBALS['text']['When_rail_'] ?>
                             </p>
-                            <a href="">READ MORE</a>
+                            <a href="">
+                                <?= $GLOBALS['text']['READ_MORE__'] ?>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -110,11 +125,15 @@
                     <div  class="iconsItemChild">
                         <div>
                             <img src="../images/road-img.png" alt="">
-                            <h5>Road Freight</h5>
-                            <p>Our Road Transportation Services Include:
-                                transportation of LTL, FTL…
+                            <h5>
+                                <?= $GLOBALS['text']['Road_Freight_'] ?>
+                            </h5>
+                            <p>
+                                <?= $GLOBALS['text']['Our_Road__'] ?>
                             </p>
-                            <a href="">READ MORE</a>
+                            <a href="">
+                                <?= $GLOBALS['text']['READ_MORE__'] ?>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -124,10 +143,15 @@
                     <div class="iconsItemChild">
                         <div>
                             <i class="bi bi-cash-coin"></i>
-                            <h5>Customs Brokerage</h5>
-                            <p>Customs Services include: import/export customs clearance service.…
+                            <h5>
+                                <?= $GLOBALS['text']['Customs_Brokerage__'] ?>
+                            </h5>                            
+                            <p>
+                                <?= $GLOBALS['text']['Customs_Services__'] ?>
                             </p>
-                            <a href="" >READ MORE</a>
+                            <a href="" >
+                                <?= $GLOBALS['text']['READ_MORE__'] ?>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -135,10 +159,15 @@
                     <div class="iconsItemChild">
                         <div>
                             <i class="bi bi-shield-check"></i>
-                            <h5>Cargo Insurance</h5>
-                            <p>Our Cargo Insurance service includes: "All Risk" cargo and marine insurance, auto…
+                            <h5>
+                                <?= $GLOBALS['text']['Cargo_Insurance_'] ?>
+                            </h5>
+                            <p>
+                                <?= $GLOBALS['text']['Our_Cargo__'] ?>
                             </p>
-                            <a href="">READ MORE</a>
+                            <a href="">
+                                <?= $GLOBALS['text']['READ_MORE__'] ?>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -146,10 +175,15 @@
                     <div class="iconsItemChild">
                         <div>
                             <i class="bi bi-archive"></i>
-                            <h5>Warehousing</h5>
-                            <p>Our Warehousing Services include: short and long term storage, cargo…
+                            <h5>
+                                <?= $GLOBALS['text']['Warehousing__'] ?>
+                            </h5>
+                            <p>
+                                <?= $GLOBALS['text']['Our_Warehousing__'] ?>
                             </p>
-                            <a href="">READ MORE</a>
+                            <a href="">
+                                <?= $GLOBALS['text']['READ_MORE__'] ?>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -157,10 +191,15 @@
                     <div class="iconsItemChild">
                         <div>
                             <i class="bi bi-gear"></i>
-                            <h5>Project Logistics</h5>
-                            <p>Our Project Logistics Services Includes: project logistics feasibility…
+                            <h5>
+                                <?= $GLOBALS['text']['Project_Logistics_'] ?>
+                            </h5>
+                            <p>
+                                <?= $GLOBALS['text']['Our_Project__'] ?>
                             </p>
-                            <a href="">READ MORE</a>
+                            <a href="">
+                                <?= $GLOBALS['text']['READ_MORE__'] ?>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -173,8 +212,12 @@
         <div class="Clients-sec ">
             <div class="row title-div pb-4">
                 <div class="col-lg-6">
-                    <h6>TESTIMONIALS</h6>
-                    <h2>What Our Clients Say</h2>
+                    <h6>
+                        <?= $GLOBALS['text']['TESTIMONIALS__'] ?>
+                    </h6>
+                    <h2>
+                    <?= $GLOBALS['text']['What_Our_Clients_'] ?>
+                    </h2>
                 </div>
             </div>
             <div class="swiper clients-slide   ">
@@ -183,23 +226,20 @@
                         <div class="clientBox armen-box">
                             <div class="clinetDis">
                                 <h6 class="text-white fs-5 pt-0 mt-0 pb-3">
-                                    Easy and Reliable
+                                    <?= $GLOBALS['text']['Easy_and__'] ?>
                                 </h6>
                                 <p class="text-white" style="width: 570px;" >
-                                    We were previously using an
-                                    unreliable company with a very complicated
-                                    registration and transfer process. Then we found
-                                    Smart Logistics and that's the…
+                                    <?= $GLOBALS['text']['We_were_previously_'] ?>
                                 </p>
                             </div>
                             <div class="client-img-name d-flex align-items-center">
                                 <img src="../images/armen-120x120.png" alt="">
                                 <ul class="pt-3">
                                     <li class="text-white">
-                                        Armen Karapetyan
+                                        <?= $GLOBALS['text']['Armen_Karapetyan_'] ?>
                                     </li>
                                     <li class="clientsCity">
-                                        Yerevan
+                                        <?= $GLOBALS['text']['Yerevan_'] ?>
                                     </li>
                                 </ul>
                             </div>
@@ -210,22 +250,20 @@
                         <div class="clientBox">
                             <div class="clinetDis ">
                                 <h6 class="text-white fs-5 pt-0 pb-3">
-                                    Excellent Service
+                                    <?= $GLOBALS['text']['Excellent_Service__'] ?>
                                 </h6>
                                 <p class="text-white">
-                                    Excellent service, competitive
-                                    pricing and customer support. They know what their
-                                    clients need.
+                                    <?= $GLOBALS['text']['Excellent_service_'] ?>
                                 </p>
                             </div>
                             <div class="client-img-name d-flex align-items-center">
                                 <img src="../images/ani-120x120.png" alt="">
                                 <ul class="pt-3">
                                     <li class="text-white">
-                                        Ani Harutyunyan
+                                        <?= $GLOBALS['text']['Ani_Harutyunyan_'] ?>
                                     </li>
                                     <li class="clientsCity">
-                                        Yerevan
+                                        <?= $GLOBALS['text']['Yerevan_'] ?>
                                     </li>
                                 </ul>
                             </div>
@@ -236,23 +274,20 @@
                         <div class="clientBox arimne-box">
                             <div class="clinetDis">
                                 <h6 class="text-white fs-5 pt-0 pb-3">
-                                    High Customer Service
+                                    <?= $GLOBALS['text']['High_Customer__'] ?>
                                 </h6>
                                 <p class="text-white">
-                                    I’ve been happy with the
-                                    services provided by Smart Shippings LLC. They ha e
-                                    returned my calls quickly, and answered all my
-                                    questions!
+                                    <?= $GLOBALS['text']['I’ve_been__'] ?>
                                 </p>
                             </div>
                             <div class="client-img-name d-flex align-items-center">
                                 <img src="../images/armine-120x120.png" alt="">
                                 <ul  class="pt-3">
                                     <li class="text-white">
-                                        Armine Hovhannisyan
+                                        <?= $GLOBALS['text']['Armine_Hovhannisyan_'] ?>
                                     </li>
                                     <li class="clientsCity">
-                                        Yerevan
+                                        <?= $GLOBALS['text']['Yerevan_'] ?>
                                     </li>
                                 </ul>
                             </div>
@@ -263,22 +298,20 @@
                         <div class="clientBox">
                             <div class="clinetDis">
                                 <h6 class="text-white fs-5 pt-0 pb-3">
-                                    Highly Recommend
+                                    <?= $GLOBALS['text']['Highly_Recommend__'] ?>
                                 </h6>
                                 <p class="text-white ">
-                                    I am happy to find Smart
-                                    Shippings. They are trustful and have good customer
-                                    service. So I highly recommend them.
+                                    <?= $GLOBALS['text']['I_am_happy_to_'] ?>
                                 </p>
                             </div>
                             <div class="client-img-name d-flex align-items-center">
                                 <img src="../images/anna-120x120.png" alt="">
                                 <ul class="pt-3">
                                     <li class="clientsName text-white">
-                                        Anna Martirosyan
+                                        <?= $GLOBALS['text']['Anna_Martirosyan_'] ?>
                                     </li>
                                     <li class="clientsCity">
-                                        Yerevan
+                                        <?= $GLOBALS['text']['Yerevan_'] ?>
                                     </li>
                                 </ul>
                             </div>
@@ -294,25 +327,37 @@
     <div class="container">
         <div class="advantages-sec d-flex justify-content-start  ">
             <div class="title-div">
-                <h6>WHY CHOOSE US</h6>
-                <h2>Our Advantages</h2>
+                <h6>
+                    <?= $GLOBALS['text']['WHY_CHOOSE_US_'] ?>
+                </h6>
+                <h2>
+                    <?= $GLOBALS['text']['Our_Advantages__'] ?>
+                </h2>
             </div>
             <div class="advanList d-flex align-items-start gap-5">
-                <div class="advanItem  d-flex gap-3 ">
+                <div class="advanItem ">
                     <i class="fas fa-hand-holding-usd fs-1 text-white"></i>
-                    <p >cost-effective</p>
+                    <p>
+                       <?= $GLOBALS['text']['cost_effective__'] ?>  
+                    </p>
                 </div>
                 <div class="advanItem">
                     <i class="fas fa-user-shield fs-1 text-white"></i>
-                    <p>safe and secure</p>
+                    <p>
+                        <?= $GLOBALS['text']['safe_and_secure_'] ?>
+                    </p>
                 </div>
                 <div class="advanItem">
                     <i class="fas fa-shipping-fast fs-1 text-white"></i>
-                    <p>fast and convenient</p>
+                    <p>
+                        <?= $GLOBALS['text']['fast_and_convenient_'] ?>
+                    </p>
                 </div>
                 <div class="advanItem">
                     <i class="fas fa-headset fs-1 text-white"></i>
-                    <p>high quality service</p>
+                    <p>
+                        <?= $GLOBALS['text']['high_quality_service_'] ?>
+                    </p>
                 </div>
             </div>
         </div>
@@ -324,16 +369,18 @@
             <div class="question-answer-div col-lg-6 col-md-12 col-sm-12">
                 <div class="title-div">
                     <h6>
-                        QUESTIONS & ASNWERS
+                        <?= $GLOBALS['text']['QUESTIONS_&_ANSWERS_'] ?>
                     </h6>
                     <h2>
-                        Frequently Asked Questions
+                        <?= $GLOBALS['text']['Frequently_Asked_'] ?>
                     </h2>
                 </div>
                 <div class="question-answer">
                     <div class="quest-ans-item">
                         <div class="question">
-                            <span>How I should pack my goods?</span>
+                            <span>
+                                <?= $GLOBALS['text']['How_I_should__'] ?>
+                            </span>
 
                             <div class="plus">
                                 <i class=" bi bi-plus-lg"></i>
@@ -341,65 +388,54 @@
 
                         </div>
                         <p class="answer">
-                            It is important to pack(wrap) your goods
-                            properly. If a shipment is not properly
-                            packed, there is a risk of getting damaged.
-                            Also, it can damage other goods.
+                            <?= $GLOBALS['text']['It_is_important_'] ?>
                         </p>
                     </div>
 
                     <div class="quest-ans-item">
                         <div class="question">
-                            <span>What should I do if my shipment arrived damaged?</span>
+                            <span>
+                                <?= $GLOBALS['text']['What_should_I_'] ?>
+                            </span>
                             <div class="plus">
                                 <i class="bi bi-plus-lg"></i>
                             </div>
-                        </div>
+                        </div>  
                         <p class="answer">
-                            If goods are lost or damaged during transport
-                            and damage is visible, please make a note on
-                            the waybill or transfer documents when your
-                            shipment is received. Also, contact us.
+                            <?= $GLOBALS['text']['If_Good_Are_'] ?>
                         </p>
                     </div>
 
                     <div class="quest-ans-item">
                         <div class="question">
-                            <span>How long will transportation by road take?</span>
+                            <span>
+                                <?= $GLOBALS['text']['How_long_will_'] ?>
+                            </span>
                             <div class="plus">
                                 <i class="bi bi-plus-lg"></i>
                             </div>
                         </div>
                         <p class="answer">
-                            The transit times can vary depending on your
-                            goods freight forwarding departure and
-                            destination points.
+                            <?= $GLOBALS['text']['The_Transit_Time_'] ?>
                         </p>
                     </div>
 
                     <div class="quest-ans-item">
                         <div class="question">
-                            <span>How can I get a quote from you ?</span>
+                            <span>
+                                <?= $GLOBALS['text']['How_can_I__'] ?>
+                            </span>
                             <div class="plus">
                                 <i class="bi bi-plus-lg"></i>
                             </div>
                         </div>
                         <p class="answer">
-                            Simply leave us a message via our
-                            contact&nbsp;quote form.
+                            <?= $GLOBALS['text']['Simply_Leave_Us_'] ?>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="request-div col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="title-div">
-                    <h6>
-                        GET A QUOTATION
-                    </h6>
-                    <h2>
-                        Request a Free Quote!
-                    </h2>
-                </div>
                 <div class="requestForm ">
                     <?php 
                     if($_COOKIE['language'] == "am") {
@@ -505,16 +541,20 @@
     <div class="container">
         <div class=" contact-sec  d-flex justify-content-between">
             <div class="contact-dis " >
-                <h3>Let Us Help You to Find a Solution That Meets Your<br> Needs</h3>
-                <p>Please feel free to get in touch with us and we will get back to you as soon as possible.</p>
+                <h3>
+                    <?= $GLOBALS['text']['Let_Us_Help'] ?>
+                </h3>
+                <p>
+                    <?= $GLOBALS['text']['Please_feel__'] ?>
+                </p>
             </div>
             <div class="contact-info   " >
                 <button>
                     <a href="/contact">
-                        Contact Us Now
+                        <?= $GLOBALS['text']['Contact_Us_Now_'] ?>
                     </a>
                 </button>
-                <p >Or Call <span>+374 91 919188</span></p>
+                <p><?= $GLOBALS['text']['Or_Call_'] ?> <span>+374 91 919188</span></p>
             </div>
         </div>
     </div>

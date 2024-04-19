@@ -34,7 +34,7 @@ $action = Yii::$app->controller->action->id;
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100  <?= $_COOKIE['language'] ?>">
 <?php $this->beginBody() ?>
 <div class="language-sec ">
     <div class="container position-relative ">
@@ -114,22 +114,29 @@ $action = Yii::$app->controller->action->id;
                     </div>
                     <div class="navbar-search">
                         <ul class="navbar d-flex" style="<?php if ($_COOKIE['language'] == 'am') { echo "gap: 20px"; }?>" >
-                            <li class="nav-item">
-                                <a class="nav-link <?= $action === 'index' ? 'active-linkPage' : '' ?>" href="/"><?= $GLOBALS['text']['__home__'] ?></a>
-                            </li>
+                        
                             <li class="nav-item d-flex align-items-center">
                                 <a class="nav-link <?= $action === 'services' ? 'active-linkPage' : '' ?>" href="/services "><?= $GLOBALS['text']['__SERVICES__'] ?>
                                 </a>
                                 <i class='bx bx-chevron-down'></i>
+                                
                                 <div class="drop-div">
                                     <ul class="drop-menu">
                                         <li class="drop-item  pb-2 d-flex  justify-content-center" >
-                                            <a class="drop-link" href="#" style="padding-right: 20px;">
+                                            <a class="drop-link" href="#" style="<?php if($_COOKIE['language'] == 'am') { echo 'padding-right: 100px !important;';}; ?> <?php if ($_COOKIE['language'] == 'ru') {
+                                                echo "padding-right: 125px !important";
+                                            } ?> <?php if ($_COOKIE['language'] == 'en') {
+                                                echo "padding-right: 20px !important";
+                                            } ?>">
                                                 <?= $GLOBALS['text']['Freight_Forwarding_'] ?>
-                                                <i class='bx bx-chevron-right'></i>
                                             </a>
-                                        
-                                            <div class="drop-div-2">
+                                            <i class='bx bx-chevron-right'></i>
+                                            
+                                            <div class="drop-div-2" style="<?php if ($_COOKIE['language'] == 'am') {
+                                                echo "position: absolute !important; left: 303px !important; ";
+                                            } ?> <?php if ($_COOKIE['language'] == 'ru') {
+                                                echo "position: absolute !important; left: 335px !important";
+                                            } ?>">
                                                 <ul class="drop-menu-2">
                                                     <li class="drop-item-2">
                                                         <a href="/airfreght" class="drop-link-2">
@@ -155,11 +162,18 @@ $action = Yii::$app->controller->action->id;
                                             </div>
                                         </li>
                                         <li class="drop-item pb-2 d-flex justify-content-center">
-                                            <a class="drop-link" href="#" style="padding-right: 2px;">
+                                            <a class="drop-link" href="#" style="padding-right: 2px; <?php if (@$_COOKIE['language'] == 'ru'){echo "padding-right: 55px";} {
+                                                // code...
+                                            } ?>">
                                                 <?= $GLOBALS['text']['Value_added_Services'] ?>
                                             </a>
                                             <i class='bx bx-chevron-right'></i>
-                                            <div class="drop-div-3">
+                                            
+                                            <div class="drop-div-3" style="<?php if ($_COOKIE['language'] == 'am' ) {
+                                                echo "position: absolute !important; left: 303px !important; ";
+                                            } ?> <?php if ($_COOKIE['language'] == 'ru') {
+                                                echo "position: absolute !important; left: 335px !important";
+                                            } ?>" >
                                                 <ul class="drop-menu-3">
                                                     <li class="drop-item-3 pb-1">
                                                         <a href="/customsbrokerage" class="drop-link-3">
@@ -190,6 +204,11 @@ $action = Yii::$app->controller->action->id;
                             <li class="nav-item">
                                 <a class="nav-link <?= $action === 'about' ? 'active-linkPage' : '' ?>" href="/about">
                                     <?= $GLOBALS['text']['ABOUT_US'] ?>
+                                </a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link <?= $action === 'news' ? 'active-linkPage' : '' ?>" href="/news">
+                                   <?= $GLOBALS['text']['__NEWS__'] ?>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -237,7 +256,7 @@ $action = Yii::$app->controller->action->id;
                     <div class="drop-mob-div">
                         <ul class="drop-mob-menu">
                             <li class="drop-mob-item">
-                                <a  class="drop-mob-link" href="#">
+                                <a class="drop-mob-link" href="#">
                                     
                                     <?= $GLOBALS['text']['Freight_Forwarding_'] ?>
                                 </a>
@@ -357,8 +376,8 @@ $action = Yii::$app->controller->action->id;
                                 <h2 data-aos="fade-up" data-aos-duration="1500">
                                     <?= $GLOBALS['text']['YOUR_FREGHIT_WITH'] ?>
                                 </h2><br>
-                                <h1 data-aos="fade-up" data-aos-duration="2000" class="second-h1" >
-                                     <?= $GLOBALS['text']['Air_Freight_'] ?>
+                                <h1 data-aos="fade-up" data-aos-duration="2000" class="second-h1">
+                                     <?= $GLOBALS['text']['Title_Air_Freight_'] ?>
                                 </h1>
                                 <p data-aos="fade-up" data-aos-duration="2000">
                                     <?= $GLOBALS['text']['Trust_us_your_'] ?>       
@@ -379,7 +398,7 @@ $action = Yii::$app->controller->action->id;
                                     <?= $GLOBALS['text']['Global_Solutions__'] ?>
                                 </h2><br>
                                 <p class=" pt-0 text-start">
-                                    <?= $GLOBALS['text']['Are_you_looking_'] ?>
+                                    <?= $GLOBALS['text']['Are_you_looking'] ?>
                                 </p>
                                 <button type="button" class="btn-lg ">
                                     <?= $GLOBALS['text']['Read_More_'] ?>
@@ -397,7 +416,7 @@ $action = Yii::$app->controller->action->id;
                                     <?= $GLOBALS['text']['Shortens_Transit__'] ?>
                                 </h2><br>
                                 <p class="text-end pt-0 mt-0">
-                                    <?= $GLOBALS['text']['Choose_our_road_'] ?>
+                                    <?= $GLOBALS['text']['Choose_our_road'] ?>
                                 </p>
                                 <button type="button" class="btn-lg ">
                                     <?= $GLOBALS['text']['Read_More_'] ?>
@@ -425,7 +444,7 @@ $action = Yii::$app->controller->action->id;
 <main id="main" class="flex-shrink-0" role="main">
 
         <?php if (!empty($this->params['breadcrumbs'])): ?>
-            <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
+            <?= ''// Breadcrumbs::widget(['links' => @$this->params['breadcrumbs']]) ?>
         <?php endif ?>
         <?= Alert::widget() ?>
         <?= $content ?>
@@ -434,7 +453,7 @@ $action = Yii::$app->controller->action->id;
     <footer>
         <div class="container">
             <div class="row">
-                <div class="footer-con col-lg-6 col-md-6">
+                <div class="footer-con col-lg-3 col-md-6">
                     <h6>
                         <?= $GLOBALS['text']['CONTACT_US'] ?>
                     </h6>
@@ -482,7 +501,7 @@ $action = Yii::$app->controller->action->id;
                     </ul>
                 </div>
 
-                <div class="footer-serv col-lg-3 col-md-6 ">
+                <div class="footer-serv col-lg-3 col-md-6" >
                     <h6>SERVICES</h6>
                     <ul class="px-0">
                         <li>
@@ -527,6 +546,27 @@ $action = Yii::$app->controller->action->id;
                     </ul>
                 </div>
 
+                <div class="footer-about-us col-lg-3 col-md-6">
+                    <h6>COMPANY</h6>
+                    <ul>
+                        <li>
+                            <a href="/about">
+                                <?= $GLOBALS['text']['About_Us_Footer'] ?>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/news">
+                                <?= $GLOBALS['text']['News_Footer'] ?>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gallery">
+                                <?= $GLOBALS['text']['Gallery_Footer'] ?>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
                 <div class="footer-subcribe col-lg-3 col-md-6">
                     <h6>
                         <?= $GLOBALS['text']['SUBSCRIBE__'] ?>
@@ -535,7 +575,7 @@ $action = Yii::$app->controller->action->id;
                      <?= $GLOBALS['text']['Sign_Up_to'] ?>
                     </p>
                     <form class="d-flex flex-column align-items-start">
-                        <input class="w-100"  placeholder="<?= $GLOBALS['text']['Enter_your_email_'] ?>">
+                        <input class="w-100"  placeholder="<?= $GLOBALS['text']['Enter_your_email'] ?>">
                         <button  type="submit">
                             <?= $GLOBALS['text']['Sign_Up_'] ?>
                         </button>
