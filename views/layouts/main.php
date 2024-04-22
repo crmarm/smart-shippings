@@ -16,8 +16,8 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 //$this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
 $lan_imgs = [];
-$lan_imgs['am'] = '../Images/hy-img.png';
-$lan_imgs['ru'] = '../Images/ru_RU.png';
+$lan_imgs['am'] = '../images/hy-img.png';
+$lan_imgs['ru'] = '../images/ru_RU.png';
 $lan_imgs['en'] = '../images/en_US.png';
 
 $lan_imgs['text']['am'] = 'Armenian';
@@ -59,21 +59,19 @@ $action = Yii::$app->controller->action->id;
                     <div class="lang-item">
                         <div  class="lang-item-child d-flex justify-content-between align-items-center gap-1">
                             <a href="/switch-language?lang=am" style="display: contents;">
-                                <img src="../Images/hy-img.png" width="50 " alt="">
+                                <img src="../images/hy-img.png" width="50 " alt="">
                                 <span>Armenian</span>
                             </a>
                         </div>
                     </div>
-
                     <div class="lang-item">
                         <div  class="lang-item-child d-flex justify-content-between align-items-center gap-1">
                             <a href="/switch-language?lang=ru" style="display: contents;">
-                                <img src="../Images/ru_RU.png" width="50" alt="">
+                                <img src="../images/ru_RU.png" width="50" alt="">
                                 <span>Russian</span>
                             </a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -572,7 +570,7 @@ $action = Yii::$app->controller->action->id;
                         <?= $GLOBALS['text']['SUBSCRIBE__'] ?>
                     </h6>
                     <p>
-                     <?= $GLOBALS['text']['Sign_Up_to'] ?>
+                     <?= @$GLOBALS['text']['Sign_Up_to'] ?>
                     </p>
                     <form class="d-flex flex-column align-items-start">
                         <input class="w-100"  placeholder="<?= $GLOBALS['text']['Enter_your_email'] ?>">
