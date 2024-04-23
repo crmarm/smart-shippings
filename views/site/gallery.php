@@ -1,4 +1,5 @@
-<?php $this->params['title'] = 'Gallery'; ?>
+<?php $this->params['title'] = $GLOBALS['text']['Gallery_Title']; ; ?>
+
 <a  data-aos="fade-right" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>

@@ -1,4 +1,4 @@
-<?php $this->params['title'] = 'Warehousing'; ?>
+<?php $this->params['title'] = $GLOBALS['text']['Warehousing&_Distribution_']; ?>
 <a  data-aos="fade-right" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
@@ -14,85 +14,91 @@
                     </div>
                     <div class="p-under-img">
                         <p>
-                            Smart Sippings warehouses are among the safest places
-                            to deposit your goods. Our extensive warehousing and
-                            distribution system will pick, pack, store and distribute
-                            consignments  by efficient modes of transport. Special
-                            warehousing facilities for household goods and personal
-                            effects are also available.
+                            <?= $GLOBALS['text']['Smart_Sippings_warehouses_'] ?>
                         </p>
                     </div>
                     <div class="green-box text-white d-flex justify-content-between ">
                         <div class="green-box-item">
                             <h5>
-                                Easy &amp;
-                                Convenient
+                                <?= $GLOBALS['text']['Easy_&_Convenient__'] ?>
                             </h5>
                             <p>
-                                You’ll find the team of outstanding support
-                                at Smart Shippings ready to apply their
-                                passion for solutions in support of your
-                                business.
+                                <?= $GLOBALS['text']['You’ll_find__'] ?>
                             </p>
                         </div>
                         <div class="green-box-item">
                             <h5>
-                                Safe &amp;
-                                Secure
+                                <?= $GLOBALS['text']['Save_Secure'] ?>
                             </h5>
                             <p>
-                                You benefit from our experience in delivering
-                                effective, safe and secure solutions for you
-                                and your business.
+                                <?= $GLOBALS['text']['You_benefit_from_'] ?>
                             </p>
                         </div>
                     </div>
                     <div class="services-include">
                         <h4>
-                            Our Warehousing Services include:
+                            <?= $GLOBALS['text']['Our_Warehousing__'] ?>
                         </h4>
                         <ul class="px-0">
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>short and long term storage,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['short_and_long '] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>cargo loading and unloading,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['cargo_loading '] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>cargo labeling and packing,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['cargo_labeling'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>fumigation and Pest control,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['fumigation_Pest_control'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>packing and crating services,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['packing_and_crating '] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>cargo distribution,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['cargo_distribution'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>POD reporting.</p>
+                                <p>
+                                    <?= $GLOBALS['text']['POD_reporting'] ?>
+                                </p>
                             </li>
 
                         </ul>
                         <button class="border-0"  type="submit">
-                            <a href="../Html/contact.html">
-                                Contact Us
+                            <a href="/contact">
+                                <?= $GLOBALS['text']['Contact_Us_Title'] ?>
                             </a>
                         </button>
                     </div>
                 </div>
             </div>
             <div class="second-div">
-                <h5>Contact Us</h5>
-                <h6><a href="#">Smart Shippings LLC</a></h6>
+                <h5>
+                    <?= $GLOBALS['text']['Contact_Us_Title'] ?>
+                </h5>
+                <h6><a href="#">
+                    <?= $GLOBALS['text']['Smart_Shippings_LLC_'] ?>
+                </a></h6>
                 <ul class="phone-email  px-0 gap-4">
                     <li class="phone-info">
                         <i class="bi bi-telephone"></i>

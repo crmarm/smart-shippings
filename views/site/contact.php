@@ -1,4 +1,4 @@
-<?php $this->params['title'] = 'Contact Us'; ?>
+<?php $this->params['title'] = $GLOBALS['text']['Contact-Us_Title']; ?>
 <a  data-aos="fade-right" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
@@ -9,12 +9,12 @@
     <div style="background-color: #f8f9fa;">
         <div class="container">
             <div  class="con-page-info-smart">
-                <h5>Smart Shippings LLC</h5>
+                <h5><?= $GLOBALS['text']['Smart_Shippings_LLC_'] ?></h5>
                 <p>
-                    Address: 45/2 Margharyan str., 0078 Yerevan Armenia<br>
-                    www.smartshippings.com<br>
-                    Working days: from Monday to Friday<br>
-                    9.00 am to 18:00 pm
+                    <?= $GLOBALS['text']['Smart_Shippings_LLC_'] ?><br>
+                    <?= $GLOBALS['text']['Address:__'] ?>
+                    <?= $GLOBALS['text']['Working_days:_'] ?><br>
+                    <?= $GLOBALS['text']['9.00_am_to_'] ?>
                 </p>
                 <ul class="phone-email d-flex px-0 gap-4">
                     <li class="phone-info">

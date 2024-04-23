@@ -1,4 +1,4 @@
-<?php $this->params['title'] = 'Project Logistics'; ?>
+<?php $this->params['title'] = $GLOBALS['text']['Project_Logistics_']; ?>
 <a  data-aos="fade-right" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
@@ -14,96 +14,114 @@
                     </div>
                     <div class="p-under-img">
                         <p>
-                            Managing complex transportation for large scale projects requires experienced, intelligent and knowledgeable personnel who are committed to researching all options, surveying, potential problems, physical and non-physical obstacles and reacting to extraordinary circumstances with quick and decisive actions. Our approach is to break down project logistics and transport into essential elements, and then to assign direct supervision over each
+                         <?= $GLOBALS['text']['Managing_Complex'] ?>
                         </p>
                     </div>
                     <div class="green-box text-white d-flex justify-content-between ">
                         <div class="green-box-item">
                             <h5>
-                                Easy &amp;
-                                Convenient
+                                <?= $GLOBALS['text']['Easy_&_Convenient__'] ?>
                             </h5>
                             <p>
-                                You’ll find the team of outstanding support
-                                at Smart Shippings ready to apply their
-                                passion for solutions in support of your
-                                business.
+                                <?= $GLOBALS['text']['You’ll_find__'] ?>
                             </p>
                         </div>
                         <div class="green-box-item">
                             <h5>
-                                Safe &amp;
-                                Secure
+                                <?= $GLOBALS['text']['Save_Secure'] ?>
                             </h5>
                             <p>
-                                You benefit from our experience in delivering
-                                effective, safe and secure solutions for you
-                                and your business.
+                                <?= $GLOBALS['text']['You_benefit_from_'] ?>
                             </p>
                         </div>
                     </div>
                     <div class="services-include">
                         <h4>
-                            Our Project
-                            Logistics Services Include:
+                            <?= $GLOBALS['text']['Our_Project__'] ?>
                         </h4>
                         <ul class="px-0">
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Project logistics feasibility studies,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['project_logistics'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Road studies,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['road_studies__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Project logistics budget and planning,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['project_logistics__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Project flow descriptions,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['project_flow__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Cargo supervision during loading and unloading, as well as in transit,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['cargo_supervision__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Full/Partial charter by ocean and air,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['full_partial__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Consolidation, packing, crating and containerization,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['consolidation_packing__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Transport Insurance,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['transport_insurance__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Oversize cargoes transportation,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['oversize_cargoes__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Heavy loads,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['heavy_loads__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Pre shipment inspection,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['pre_shipment_inspection_'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Cargo surveying,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['cargo_surveying__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Customs and shipping documentation.</p>
+                                <p>
+                                    <?= $GLOBALS['text']['customs_and__'] ?>
+                                </p>
                             </li>
                         </ul>
                         <button class="border-0"  type="submit">
                             <a href="../Html/contact.html">
-                                Contact Us
+                                <?= $GLOBALS['text']['Contact_Us_Title'] ?>
                             </a>
                         </button>
                     </div>

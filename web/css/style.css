@@ -1773,7 +1773,7 @@ header .headerSwiper .header-pagination {
 }
 
 .advantages-sec {
-    gap: 130px;
+    gap: 110px;
 }
 
 .advantages-sec .title-div h6 {
@@ -1889,6 +1889,7 @@ header .headerSwiper .header-pagination {
     border: 1.5px solid #4b4e50b0;
     transition: transform 0.5s ease-in;
     border-radius: 2px;
+    margin-right: 5px;
 }
 
 .plus i {
@@ -2941,7 +2942,7 @@ footer .footer-subcribe p {
 
     .con-page-form-img-sec .con-page-img {
         display: flex !important;
-        justify-content: end !important;
+        justify-content: center !important;
     }
 
     /* contact page res finish */
@@ -3874,6 +3875,12 @@ footer .footer-subcribe p {
 
 }
 
+@media (max-width:570px){
+    .am .Services-drop-pages-header .title-div h1 {
+        font-size: 30px  !important;
+    }
+}
+
 @media (max-width:560px) {
     .am .header-title-1 p {
         padding-top: 20px !important;
@@ -4035,6 +4042,7 @@ footer .footer-subcribe p {
     /* contact page res */
     .Map .con-page-info-smart .phone-email {
         flex-direction: column;
+        gap: 5px !important;
     }
     /* contact page res finish */
 }

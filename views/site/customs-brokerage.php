@@ -1,4 +1,4 @@
-<?php $this->params['title'] = 'Customs Brokerage'; ?>
+<?php $this->params['title'] = $GLOBALS['text']['Customs_Brokerag_'] ; ?>
 <a  data-aos="fade-right" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
@@ -14,100 +14,109 @@
                     </div>
                     <div class="p-under-img">
                         <p>
-                            In the global market place, rapidly changing demands
-                            on production and delivery schedules have placed increased
-                            responsibility on Customs House Brokers to provide expert
-                            Customs Clearance Services. Smart Shippings customs brokers
-                            are comprehensively trained to understand complex customs
-                            procedures of each specific area of operation. Our customs
-                            brokerage team will take full and complete responsibility
-                            to ensure that the correct documentation is prepared well
-                            in advance of all import and export deadlines in order to
-                            avoid expensive and time consuming delays.                          </p>
+                             <?= $GLOBALS['text']['In_the_global_'] ?>
+                        </p>
                     </div>
                     <div class="green-box text-white d-flex justify-content-between ">
                         <div class="green-box-item">
                             <h5>
-                                Easy &amp;
-                                Convenient
+                                <?= $GLOBALS['text']['Easy_&_Convenient__'] ?>
                             </h5>
                             <p>
-                                You’ll find the team of outstanding support
-                                at Smart Shippings ready to apply their
-                                passion for solutions in support of your
-                                business.
+                                <?= $GLOBALS['text']['You’ll_find__'] ?>
                             </p>
                         </div>
                         <div class="green-box-item">
                             <h5>
-                                Safe &amp;
-                                Secure
+                                <?= $GLOBALS['text']['Save_Secure'] ?>
                             </h5>
                             <p>
-                                You benefit from our experience in delivering
-                                effective, safe and secure solutions for you
-                                and your business.
+                                <?= $GLOBALS['text']['You_benefit_from_'] ?>
                             </p>
                         </div>
                     </div>
                     <div class="services-include">
                         <h4>
-                            Customs Services include:
+                             <?= $GLOBALS['text']['Customs_Services__'] ?>
                         </h4>
                         <ul class="px-0">
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Import / export customs clearance service,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['Import_export '] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Classification of HS Codes,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['Classification_HS_Codes'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Classification of goods,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['Classification_of_goods'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Customs surveying,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['Customs_surveying'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Import / export permissions of controlled goods,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['Import_export_permissions'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Payment of custom duties on customers behalf,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['Payment_of_custom'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Temporary import/export procedures,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['Temporary_import_export'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Permanent import/export procedures,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['Permanent_import_export_procedures'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Consultancy services,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['Consultancy_services'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Customs bonded carriage.</p>
+                                <p>
+                                    <?= $GLOBALS['text']['Customs_bonded_carriage'] ?>
+                                </p>
                             </li>
 
                         </ul>
                         <button class="border-0"  type="submit">
                             <a href="../Html/contact.html">
-                                Contact Us
+                                <?= $GLOBALS['text']['Contact_Us_Title'] ?>
                             </a>
                         </button>
                     </div>
                 </div>
             </div>
             <div class="second-div">
-                <h5>Contact Us</h5>
-                <h6><a href="#">Smart Shippings LLC</a></h6>
+                <h5>
+                    <?= $GLOBALS['text']['Contact_Us_Title'] ?>
+                </h5>
+                <h6><a href="#">
+                    <?= $GLOBALS['text']['Smart_Shippings_LLC_'] ?>
+                </a></h6>
                 <ul class="phone-email  px-0 gap-4">
                     <li class="phone-info">
                         <i class="bi bi-telephone"></i>

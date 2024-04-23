@@ -80,8 +80,8 @@ $action = Yii::$app->controller->action->id;
 <header>
     <div class="search-up d-flex align-items-center " id="searchUpForm">
         <div class="container ">
-            <form class="input-group form-search w-50 my-3 m-auto d-flex justify-content-center"  >
-                <input type="text" class="input-search w-100 p-2 border-0" placeholder="Search"  aria-describedby="button-addon2">
+            <form class="input-group form-search w-50 my-3 m-auto d-flex justify-content-center">   
+                <input type="text" class="input-search w-100 p-2 border-0" placeholder="<?= $GLOBALS['text']['Search'] ?>"  aria-describedby="button-addon2">
                 <button class="submit-search border-0 bg-transparent " type="submit" id="button-addon2"><i class='bx bx-search'></i></button>
             </form>
         </div>
@@ -241,11 +241,6 @@ $action = Yii::$app->controller->action->id;
         <div class="sidebar" id="sidebar">
             <!-- Your navigation menu -->
             <ul class="navbar-mobile ">
-                <li class="nav-mob-item">
-                    <div class="py-2">
-                        <a class="nav-mob-link py-4" href="/home"><?= $GLOBALS['text']['__home__'] ?></a>
-                    </div>
-                </li>
                 <li class="nav-mob-item " id="dropMobItem">
                     <div class="py-2">
                         <a class="nav-mob-link" href="/services"><?= $GLOBALS['text']['__SERVICES__'] ?></a>
@@ -256,9 +251,9 @@ $action = Yii::$app->controller->action->id;
                             <li class="drop-mob-item">
                                 <a class="drop-mob-link" href="#">
                                     
+                                    <i class='bx bx-chevron-right'></i>
                                     <?= $GLOBALS['text']['Freight_Forwarding_'] ?>
                                 </a>
-                                <i class='bx bx-chevron-right'></i>
                                 <div class="drop-mob-div-2">
                                     <ul class="drop-mob-menu-2">
                                         <li class="drop-mob-item-2">
@@ -329,6 +324,13 @@ $action = Yii::$app->controller->action->id;
                     <div class="py-2">
                          <a class="nav-mob-link" href="/about">
                              <?= $GLOBALS['text']['ABOUT_US'] ?>
+                         </a>
+                    </div>
+                </li>
+                <li class="nav-mob-item">
+                    <div class="py-2">
+                         <a class="nav-mob-link" href="/news">
+                             <?= $GLOBALS['text']['__NEWS__'] ?>
                          </a>
                     </div>
                 </li>
@@ -455,7 +457,8 @@ $action = Yii::$app->controller->action->id;
                     <h6>
                         <?= $GLOBALS['text']['CONTACT_US'] ?>
                     </h6>
-                    <p><?= $GLOBALS['text']['Smart_Shippings_LLC_'] ?><br>
+                    <p>
+                        <?= $GLOBALS['text']['Smart_Shippings_LLC_'] ?><br>
                         <?= $GLOBALS['text']['Address:__'] ?>
                         <?= $GLOBALS['text']['Working_days:_'] ?><br>
                         <?= $GLOBALS['text']['9.00_am_to_'] ?>

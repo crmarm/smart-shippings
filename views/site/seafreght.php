@@ -1,4 +1,4 @@
-<?php $this->params['title'] = 'Sea Freight'; ?>
+<?php $this->params['title'] = $GLOBALS['text']['Sea_Freight_'] ; ?>
 <a  data-aos="fade-right" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
@@ -14,94 +14,111 @@
                     </div>
                     <div class="p-under-img">
                         <p>
-                            Smart Shippings is one of the best providers of
-                            sea freight services. The company’s relationship
-                            with customers is moving away from a purely transactional
-                            business to value-added propositions.                           </p>
+                           <?= $GLOBALS['text']['Smart_Shippings_is_'] ?>                           
+                        </p>
                     </div>
                     <div class="green-box text-white d-flex justify-content-between ">
                         <div class="green-box-item">
                             <h5>
-                                Easy &amp;
-                                Convenient
+                                <?= $GLOBALS['text']['Easy_&_Convenient__'] ?>
                             </h5>
                             <p>
-                                You’ll find the team of outstanding support
-                                at Smart Shippings ready to apply their
-                                passion for solutions in support of your
-                                business.
+                                <?= $GLOBALS['text']['You’ll_find__'] ?>
                             </p>
                         </div>
                         <div class="green-box-item">
                             <h5>
-                                Safe &amp;
-                                Secure
+                                <?= $GLOBALS['text']['Save_Secure'] ?>
                             </h5>
                             <p>
-                                You benefit from our experience in delivering
-                                effective, safe and secure solutions for you
-                                and your business.
+                                <?= $GLOBALS['text']['You_benefit_from_'] ?>
                             </p>
                         </div>
                     </div>
                     <div class="services-include">
                         <h4>
-                            Our Sea Freight Services Include:
+                        <?= $GLOBALS['text']['Our_Sea_Freight_'] ?>
                         </h4>
                         <ul class="px-0">
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>FCL and LCL import and export,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['FCL_and_LCL'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>issuance and verification of shipping documentation,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['issuance_and__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>export and import customs clearance,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['export_and__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>certified industrial packing and crating,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['certified_industrial__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>warehousing, assembly and distribution logistics,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['warehousing_assembly__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>part & full vessel charter,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['part_&_full__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>conventional shipments (break-bulk, dry & liquid bulk),</p>
+                                <p>
+                                    <?= $GLOBALS['text']['conventional_shipments__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Sea/Air transportation</p>
+                                <p>
+                                    <?= $GLOBALS['text']['Sea/Air__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Sea/Road and Sea/Rail Intermodal Services,</p>
+                                <p>
+                                    <?= $GLOBALS['text']['Sea/Road_and__'] ?>
+                                </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
-                                <p>Transport and Marina Insurance.</p>
+                                <p>
+                                    <?= $GLOBALS['text']['Transport_and_Marina_'] ?>
+                                </p>
                             </li>
 
                         </ul>
                         <button class="border-0"  type="submit">
                             <a href="../Html/contact.html">
-                                Contact Us
+                                <?= $GLOBALS['text']['Contact-Us_Title'] ?>
                             </a>
                         </button>
                     </div>
                 </div>
             </div>
             <div class="second-div">
-                <h5>Contact Us</h5>
-                <h6><a href="#">Smart Shippings LLC</a></h6>
+                <h5>
+                    <?= $GLOBALS['text']['Contact-Us_Title'] ?>
+                </h5>
+                <h6>
+                    <a href="#">
+                        <?= $GLOBALS['text']['Smart_Shippings_LLC_'] ?>
+                    </a>
+                </h6>
                 <ul class="phone-email  px-0 gap-4">
                     <li class="phone-info">
                         <i class="bi bi-telephone"></i>
