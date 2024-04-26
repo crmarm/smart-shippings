@@ -48,6 +48,8 @@ $config = [
             'rules' => [
                 'switch-language' => 'site/switch-language',
                 '<action:\w+>' => 'site/<action>',
+                'news' => 'site/news',
+                'news/<url:\w+>' => 'site/news',
             ],
         ],
         'assetManager' => [

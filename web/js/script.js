@@ -193,3 +193,25 @@ var swiper = new Swiper('.brandsSwiper', {
 });
 
 
+
+
+$('body').on('click', '#editeBlog', function(e) {
+    e.preventDefault(e);
+    var id = $('.sortableTable tr.active').attr('data-id');
+    editeBlog(id);
+});
+function editeBlog(id) {
+    if (id) {
+        jQuery.ajax({
+            url: "/admin/news-edite?id=" + id,
+            success: function(result) {
+                jQuery(".modals").html(result);
+            }
+        });
+    }
+}
+$('body').on('click','.table tr',function(){
+    $('body').find('.table-bordered').find('tr').removeClass('active');
+    $(this).addClass('active');
+})
+

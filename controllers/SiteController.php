@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\SmNews;
 use app\models\Texts;
 use Yii;
 use yii\filters\AccessControl;
@@ -71,7 +72,7 @@ class SiteController extends Controller
             Yii::$app->end();
             return false;
         }
-        $txt = Texts::find()->select(['text_'.$lng.' as text'] )->asArray()->indexBy('slug')->column();
+        $txt = Texts::find()->select(['text_'.$lng.' as text'])->asArray()->indexBy('slug')->column();
         $GLOBALS['text'] = $txt;
         $this->enableCsrfValidation = false;
         return parent::beforeAction($action);
@@ -199,5 +200,16 @@ class SiteController extends Controller
     public function actionProjectlogistics()
     {
         return $this->render('project-logistics');
+    }
+
+    public function actionNews($url = null)
+    {
+        if($url){
+            $news = SmNews::find()->where(['url'=>$url])->one();
+            return $this->render('news-block', ['item' => $news]);
+        }else{
+            $news = SmNews::find()->all();
+            return $this->render('news', ['news' => $news]);
+        }
     }
 }
