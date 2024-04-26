@@ -91,10 +91,10 @@ $action = Yii::$app->controller->action->id;
             <div class="container d-flex">
                 <div class=" d-flex align-items-center justify-content-start pt-0 ">
                     <ul class="contact-info d-flex list-unstyled" >
-                        <li>Phone:
+                        <li><?= $GLOBALS['text']['Phone__'] ?>:
                             <a class="text-decoration-none" href="#"> +37491919122</a>
                         </li>
-                        <li>Email:
+                        <li><?= $GLOBALS['text']['Email__'] ?>:
                             <a class="text-decoration-none" href="#"> h.hovhannisyan@smartshippings.com</a>
                         </li>
                     </ul>
@@ -369,7 +369,7 @@ $action = Yii::$app->controller->action->id;
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" style="background-image: url(../images/header-slide-img1.jpg);">
                         <div class="container">
-                            <div class="header-title header-title-1 d-flex flex-column align-items-end text-white ">
+                            <div class="header-title header-title-1 d-flex flex-column align-items-end text-white">
                                 <h1 data-aos="fade-up" data-aos-duration="1000" class="first-h1 " >
                                     <?= $GLOBALS['text']['ACCELERATE_'] ?>
                                 </h1><br>
@@ -503,7 +503,9 @@ $action = Yii::$app->controller->action->id;
                 </div>
 
                 <div class="footer-serv col-lg-3 col-md-6" >
-                    <h6>SERVICES</h6>
+                    <h6>
+                        <?= $GLOBALS['text']['__SERVICES__'] ?>
+                    </h6>
                     <ul class="px-0">
                         <li>
                             <a href="/airfreght">
@@ -548,7 +550,9 @@ $action = Yii::$app->controller->action->id;
                 </div>
 
                 <div class="footer-about-us col-lg-3 col-md-6">
-                    <h6>COMPANY</h6>
+                    <h6>
+                        <?= $GLOBALS['text']['__COMPANY__'] ?>
+                    </h6>
                     <ul>
                         <li>
                             <a href="/about">

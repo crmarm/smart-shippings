@@ -25,7 +25,7 @@
             </div>
             <div class="second-div">
                 <h5>
-                    <?= @$GLOBALS['text']['Get_a_Free_'] ?>
+                    <?= @$GLOBALS['text']['Get_a_Free__'] ?>
                 </h5>
                 <p>
                     <?= @$GLOBALS['text']['Do_you_want_'] ?>
@@ -72,21 +72,24 @@
                 </div>
             </div>
             <div class=" iconsItems d-flex justify-content-between gap-4">
-                <div class="iconsItem  ">
-                    <div class="iconsItemChild">
-                        <div>
-                            <i class="bi bi-airplane"></i>
-                            <h5>
-                                <?= @$GLOBALS['text']['Air_Freight'] ?>
-                            </h5>
-                            <p>
-                                <?= @$GLOBALS['text']['Our_Air_'] ?>
-                            </p>
-                            <a href="" >
-                                <?= @$GLOBALS['text']['READ_MORE__'] ?>
-                            </a>
+                <div  >
+                    <div class="iconsItem" >
+                        <div class="iconsItemChild">
+                            <div>
+                                <i class="bi bi-airplane"></i>
+                                <h5>
+                                    <?= @$GLOBALS['text']['Air_Freight'] ?>
+                                </h5>
+                                <p>
+                                    <?= @$GLOBALS['text']['Our_Air_'] ?>
+                                </p>
+                                <a href="" >
+                                    <?= @$GLOBALS['text']['READ_MORE__'] ?>
+                                </a>
+                            </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="iconsItem  ">
                     <div class="iconsItemChild">
@@ -146,7 +149,7 @@
                                 <?= @$GLOBALS['text']['Customs_Brokerage__'] ?>
                             </h5>                            
                             <p>
-                                <?= @$GLOBALS['text']['Customs_Services__'] ?>
+                                <?= @$GLOBALS['text']['Customs_Services_'] ?>
                             </p>
                             <a href="" >
                                 <?= @$GLOBALS['text']['READ_MORE__'] ?>

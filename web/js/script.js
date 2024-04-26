@@ -24,16 +24,17 @@ $(document).ready(function() {
 
 // active nav link
 
-/*$(document).ready(function() {
-    const activeNavItem = window.location.pathname;
-    $('.nav-down a').each(function() {
-        if ($(this).attr('href').includes(activeNavItem)) {
-            $(this).addClass('active-linkPage');
+$(document).ready(function() {
+    let nav = $(".navbar");
+    let navLinks = $("li");
+    let currentUrl = window.location.href;
+
+    navLinks.each(function() {
+        if ($(this).find("a").attr("href") === currentUrl) {
+            $(this).addClass("activeLink");
         }
     });
-});*/
-
-
+});
 
 // mobile menu
 

@@ -1,4 +1,4 @@
-<?php $this->params['title'] = $GLOBALS['text']['Cargo_Insurance_']; ?>
+<?php $this->params['title'] = $GLOBALS['text']['Air_Freight']; ?>
 <a  data-aos="fade-right" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
@@ -67,7 +67,7 @@
 
                         </ul>
                         <button class="border-0"  type="submit">
-                            <a href="../Html/contact.html">
+                            <a href="/contact">
                                 <?= $GLOBALS['text']['Contact_Us_Title'] ?>
                             </a>
                         </button>

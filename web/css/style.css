@@ -195,16 +195,22 @@ nav .navbar li {
     transition: 0.1s ease;
 }
 
-nav .navbar li:hover {
+.navbar li:hover,
+.navbar li.activeLink{
+    color: #038ed3;
+    background-color: white;
+}
+
+.navbar li a.activeLink {
     color: #038ed3;
 }
 
-nav .nav-down a:is(:link , :active, :visited).active-linkPage {
-    color: #038ed3;
-}
+.navbar .drop-div .drop-link
 
-nav .nav-down a:is(:link , :active, :visited).active-linkPage {
-    color: #038ed3;
+.navbar .drop-div .drop-item.activeLink,
+.navbar .drop-div .drop-item-2.activeLink,
+.navbar .drop-div .drop-item-3.activeLink {
+ background-color: white;
 }
 
 
@@ -236,7 +242,6 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 .nav-up .contact-info li  a {
     color: black;
     transition: 0.3s ease;
-    
 }
 
 .nav-up .contact-info li a:hover {
@@ -282,11 +287,10 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 .nav-down .navbar {
     gap: 32px;
     position: relative;
-
 }
 
 .am .nav-down .navbar {
-    gap: 15px !important;
+    gap: 20px !important;
 }
 
 .nav-down .nav-item {
@@ -323,13 +327,10 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     left: -50px;
     top: 180%;
     background-color: #f2f3f6;
-/*    max-width: 205px;*/
     border-radius: 3px;
     padding: 15px 0;
     opacity: 0;
-    /* Start with opacity 0 */
     visibility: hidden;
-    /* Initially hidden */
     transition: opacity 0.3s ease;
     z-index: 1000;
 }
@@ -340,9 +341,7 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     top: 110%;
     left: -20px;
     opacity: 1;
-    /* Fade in */
     visibility: visible;
-    /* Make visible */
     animation: fadeInLeft 0.3s ease forwards;
 }
 
@@ -356,12 +355,9 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     }
 }
 
-/* Apply fade-out animation when not hovered */
 .navbar .nav-item:not(:hover) .drop-div {
     opacity: 0;
-    /* Fade out */
     visibility: hidden;
-    /* Hide */
     animation: fadeOutLeft 0.3s ease forwards;
 }
 
@@ -369,7 +365,6 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     0% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
     }
@@ -395,14 +390,6 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     transition: 0.1s ease;
 }
 
-.navbar .drop-link:hover {
-    color: #038ed3;
-}
-
-.navbar .drop-link-2:hover {
-    color: #038ed3;
-}
-
 .navbar .drop-div-2::before {
     content: '';
     position: absolute;
@@ -420,15 +407,11 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     left: 160px;
     top: 0%;
     background-color: #f2f3f6;
-/*    max-width: 185px;*/
     border-radius: 3px;
     padding: 15px 0;
     opacity: 0;
-    /* Start with opacity 0 */
     visibility: hidden;
-    /* Initially hidden */
     transition: 0.3s ease, visibility 0.3s ease;
-    /* Add transition for opacity and visibility */
     z-index: 1000;
 }
 
@@ -437,9 +420,7 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     top: -45%;
     left: 195px;
     opacity: 1;
-    /* Fade in */
     visibility: visible;
-    /* Make visible */
     animation: fadeInLeft 0.3s ease;
 }
 
@@ -455,7 +436,6 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     }
 }
 
-
 .navbar .drop-menu-2 {
     padding-left: 0;
 }
@@ -464,24 +444,36 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     padding: 5px 90px 5px 20px;
 }
 
-.navbar .drop-item-2:hover {
-    background-color: white;
-}
-
 .navbar .drop-item:hover,
 .navbar .drop-item-2:hover,
 .navbar .drop-item-3:hover {
     background-color: white;
 }
 
-.navbar .drop-link {
-    transition: 0.3s ease;
+.drop-item:hover .drop-link {
+    color: #038ed3 !important;
 }
 
-.navbar .drop-link:hover {
+.drop-item-2:hover .drop-link-2 {
+    color: #038ed3 !important;
+}
+
+.drop-item-3:hover .drop-link-3 {
+    color: #038ed3 !important;
+}
+
+.navbar .drop-div i {
+    color: #2a2c32;
+}
+
+.navbar .drop-div li:hover i {
     color: #038ed3;
 }
 
+
+.navbar .drop-link {
+    transition: 0.3s ease;
+}
 
 .navbar .drop-link-2 {
     font-family: 'Heebo', sans-serif;
@@ -490,7 +482,6 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     font-size: 14px;
     line-height: 1rem;
     color: #2a2c32;
-    
     --webkit-transition: all 5s ease;
 }
 
@@ -540,11 +531,6 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 .navbar .drop-item-3 {
     padding: 8px 15px 8px 20px;
 }
-
-.navbar .drop-link-3:hover {
-    color: #038ed3;
-}
-
 
 .navbar .drop-link-3 {
     font-family: 'Heebo', sans-serif;
@@ -618,19 +604,16 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 .header-title {
     padding-top: 170px;
     width: 100%;
+    gap: 5px;
 }
 
 .am .header-title-1 .first-h1 {
     font-size: 80px;
 }
 
-.am .header-title-1 h2 {
-    padding: 10px 0 0 0;
-}
-
-.ru .header-title-1 h2 {
+/* .ru .header-title-1 h2 {
     padding-bottom: 5px;
-}
+} */
 
 
 .header-title-1 .first-h1 {
@@ -1268,17 +1251,34 @@ header .headerSwiper .header-pagination {
 }
 
 .Services .iconsItems .iconsItem {
+    position: relative;
     width: 265px;
     background-color: white;
     border: 2px solid transparent;
+    border-radius: 3px;
     border-image: linear-gradient(90deg, #80c645, #048ed2);
     border-image-slice: 1;
-    transition: all 0.5s ease-in !important;
+    z-index:2;
+
 }
 
-.Services .iconsItems .iconsItem:hover {
+.Services .iconsItems .iconsItem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(to right, #80c645 0%, #048ed2 100%), linear-gradient(to right, #80c645 0%, #048ed2 100%);
-    transition: all 0.5s ease-in !important;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.Services .iconsItems .iconsItem:hover::before {
+    opacity: 1;
+    visibility: visible;
 }
 
 .Services .iconsItems .iconsItem:hover h5 {
@@ -1289,7 +1289,6 @@ header .headerSwiper .header-pagination {
 .Services .iconsItems .iconsItem:hover img {
     color: white !important;
 }
-
 
 .Services .iconsItems .iconsItem:hover p {
     color: white;
@@ -1319,22 +1318,21 @@ header .headerSwiper .header-pagination {
 
 
 .Services .iconsItem h5 {
-    display: contents;
+    /* display: contents; */
     font-size: 24px;
     color: #2a2c32;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 25px;
     word-break: break-word;
     word-wrap: break-word;
-    transition: all 0.3s ease-in;
 }
 
 .Services .iconsItem p {
     color: #7b8285;
     margin-top: 15px !important;
     margin-bottom: 15px !important;
-    transition: all 0.3s ease-in;
     font-size: 14px;
+    font-weight: 400;
 }
 
 .Services .iconsItem a {
@@ -1343,19 +1341,15 @@ header .headerSwiper .header-pagination {
     line-height: 1rem;
     padding-top: 10px;
     display: inline-block;
-    /* transition: all 0.3s ease-in; */
 }
 
 .Services .iconsItem a:hover {
     border-bottom: 1px solid white;
     padding-bottom: 2px;
 }
-
 /* services home page finish */
 
 /* services page */
-
-
 .serv-page-header {
     background-image:  linear-gradient(to right, #80c645 0%, #048ed2 100%), linear-gradient(to right, #80c645 0%, #048ed2 100%); 
 }
@@ -1393,14 +1387,21 @@ header .headerSwiper .header-pagination {
     margin-bottom: 20px;
     font-size: 42px;
     font-family: 'Assistant', sans-serif;
-    line-height: 1.25;
+    line-height: 1.25em;
     font-weight: normal;
     color: #2a2c32;
+    white-space: normal;
 }
 
-.serv-page-first-sec .title-div p:first-child {
+.serv-page-first-sec .title-div .first-p {
     margin-bottom: 10px;
     font-size: 18px;
+    line-height: 30px;
+}
+
+.serv-page-first-sec .title-div .second-p {
+    margin-bottom: 10px;
+    font-size: 14px;
     line-height: 30px;
 }
 
@@ -1776,6 +1777,11 @@ header .headerSwiper .header-pagination {
     gap: 110px;
 }
 
+.ru .advantages-sec {
+    gap: 60px !important;
+}
+
+
 .advantages-sec .title-div h6 {
     color: #e9f4e2;
     margin-bottom: 0 !important;
@@ -1795,6 +1801,10 @@ header .headerSwiper .header-pagination {
     letter-spacing: 0;
 }
 
+.ru .advantages-sec .title-div h2 {
+    white-space: nowrap;
+}
+
 .advantages-sec .advanList {
     gap: 5rem !important;
 }
@@ -1805,8 +1815,17 @@ header .headerSwiper .header-pagination {
     font-size: 14px;
 }
 
-.advantages-sec .advanList .advanItem i:not(.advantages-sec .advanList .advanItem i:last-of-type) {
-    padding-bottom: 50px;
+.ru .advantages-sec .advanList .advanItem p {
+    white-space: nowrap;
+}
+
+.am .advantages-sec .advanList .advanItem:nth-child(1) p,
+.am .advantages-sec .advanList .advanItem:nth-child(2) p {
+    white-space: nowrap !important;
+}
+
+.advantages-sec .advanList .advanItem i {
+    padding-bottom: 10px;
 }
 
 /* question answer */
@@ -2094,7 +2113,7 @@ footer .footer-con-info {
 
 footer .footer-con-info li {
     color: white;
-    font-size: 15px !important;
+    font-size: 14px !important;
 }
 
 footer .footer-con-info li i {
@@ -2734,6 +2753,7 @@ footer .footer-subcribe p {
 }
 
 @media (min-width:1550px) and (max-width:1750px) {
+
      .who-we-are .who-we-are-dis {
         margin-left: -100px !important;
     }
@@ -2751,6 +2771,9 @@ footer .footer-subcribe p {
 
     .header-title {
         padding-top: 120px;
+    }
+    .en .header-title {
+        padding-top: 200px !important;
     }
 
     .header-pagination {
@@ -2850,6 +2873,10 @@ footer .footer-subcribe p {
         gap: 70px !important;
     }
 
+    .advantages-sec .advanList {
+        flex-direction: wrap;
+    }
+
     .advantages-sec .advanItem p {
         padding-top: 10px;
     }
@@ -2925,6 +2952,19 @@ footer .footer-subcribe p {
         width: 450px !important;
     }
 
+    .ru .advantages-sec .advanItem p{
+        white-space: normal !important;
+    }
+
+    .ru .advantages-sec .title-div h2{
+        white-space: normal !important;
+    }
+    
+    .am .advantages-sec .advanItem p {
+        white-space: normal !important;
+    }
+
+
     /* gallery page res */
 
         
@@ -2952,6 +2992,13 @@ footer .footer-subcribe p {
     .am .header-title-3 h1 {
         font-size: 40px;
     }
+
+    /* about pages  */
+    .am .Our-Advantages .advantages-sec {
+        gap: 30px !important;
+    }
+    /* about pages res */
+
 }
 
 @media (max-width:1090px) {
@@ -3091,8 +3138,6 @@ footer .footer-subcribe p {
         transition: all .3s ease;
     }
 
-
-
     .drop-mob-div.open {
         display: block;
 
@@ -3178,6 +3223,10 @@ footer .footer-subcribe p {
          width: 345px;
     }
 
+    .Our-Services-sec .iconsItems .iconsItem p br {
+        display: none;
+    }
+
     .Our-Clients {
         height: 85vh !important;
     }
@@ -3201,20 +3250,12 @@ footer .footer-subcribe p {
         gap: 50px !important;
     }
 
-    /* .advantages-sec {
-        gap: 80px !important;
-    } */
+    .am .Our-Advantages .advantages-sec {
+        gap: 50px !important;
+    }
 
-
-    /* .advanItem:first-child {      
-    
-        font-size: 14px !important;
-        margin-top: 0 !important;
-    } */
-
-    .advantages-sec .advanList .advanItem {
-        display: flex;
-        gap: 20px;
+    .ru .Our-Advantages .advanList .advanItem:nth-child(3){
+        padding-right: 40px;
     }
 
     .advantages-sec .advanList .advanItem:nth-child(2) {
@@ -3353,7 +3394,6 @@ footer .footer-subcribe p {
         font-size: 14px;
     }
 
-
     /* services-drop-pages res finsih */
 }
 
@@ -3434,11 +3474,11 @@ footer .footer-subcribe p {
     }
 
     .advantages-sec {
-        gap: 20px !important;
+        gap: 70px !important;
     }
 
-    .Our-Advantages .advantages-sec .advanList .advanItem:first-child {
-        padding-right: 45px;
+    .am .advantages-sec .advanList {
+        gap: 30px !important;
     }
 
        
@@ -3471,6 +3511,10 @@ footer .footer-subcribe p {
 
     .about-careers-sec {
         flex-direction: column;
+    }
+
+    .about-careers-sec .careers-dis {
+        margin-bottom: 40px;
     }
 
     .about-careers-sec .name-lastname  input {
@@ -3534,6 +3578,10 @@ footer .footer-subcribe p {
 
     .advantages-sec .advanItem:nth-child(2) {
         padding-left: 0 !important;
+    }
+
+    .ru .Our-Advantages .advanList .advanItem:nth-child(3){
+        padding-right:0;
     }
 
     /* gallery page res */
@@ -3685,6 +3733,14 @@ footer .footer-subcribe p {
     .advantages-sec .advanList {
         column-gap: 130px !important;
     }
+
+    .ru .Our-Advantages .advanList .advanItem:nth-child(3){
+        padding-right: 0;
+    }
+
+    .am .advantages-sec .advanList {
+        column-gap: 80px !important;
+    }
     
     /* shipment page res */
     
@@ -3696,12 +3752,14 @@ footer .footer-subcribe p {
 
 }
 
-@media (max-width:656px) {
-    .advantages-sec .advanList   {
-       justify-content: start ;
-       column-gap: 100px !important;
-    }
-}
+@media (max-width:593px) {
+       /* about pages */
+       .am .Our-Advantages .advantages-sec .advanList .advanItem:nth-child(1),
+       .en .Our-Advantages .advantages-sec .advanList .advanItem:nth-child(1) {
+        padding-right: 45px !important;
+    } 
+    /* about pages res */
+} 
 
 @media (max-width:581px) {
     /* contact page res */
@@ -3829,7 +3887,7 @@ footer .footer-subcribe p {
     .am .header-title-2 h1 {
         font-size: 30px !important;
     }
-
+    
     .am .header-title-2 h2 {
         font-size: 25px;
         line-height: 0;
@@ -3838,33 +3896,37 @@ footer .footer-subcribe p {
     .am .header-title-2 p br {
         display: none;
     }
-
+    
     .am .header-title-2 button {
         margin-top: 30px;
     }
-
+    
     .am .header-title-3 h1 {
         font-size: 30px;
     }
-
+    
     .am .header-title-3 h2 {
         font-size: 25px;
     }
-
+    
     .am .header-title-3 p br {
         display: none;
     }
-
+    
     .am .header-title-3 p {
         height: 0;
     }
-
+    
     .am .header-title-3 button {
-    margin-top: 80px !important;
+        margin-top: 80px !important;
+    }
+    
+    .am .Services-drop-pages-header .title-div h1 {
+        font-size: 30px  !important;
     }
 
     /* shipment page res */
-
+    
     .Shipment-page .container {
         padding: 0 !;
         width: 95% !important;
@@ -3873,12 +3935,6 @@ footer .footer-subcribe p {
     /* shipment page res finish */
 
 
-}
-
-@media (max-width:570px){
-    .am .Services-drop-pages-header .title-div h1 {
-        font-size: 30px  !important;
-    }
 }
 
 @media (max-width:560px) {
@@ -4133,6 +4189,19 @@ footer .footer-subcribe p {
     .ru .header-title-2 h1 {
         font-size: 20px !important;
     }
+
+       /* about pages */
+
+    .Our-Advantages .advantages-sec .advanList .advanItem {
+        display: flex;
+        gap: 20px;
+    } 
+
+    .am .advantages-sec .advanList {
+        row-gap: 50px !important;
+    }
+
+    /* about pages res */
 
     /* services page res */
 

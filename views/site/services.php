@@ -10,10 +10,10 @@
             <h2>
                 <?= $GLOBALS['text']['Services_Solution_'] ?>
             </h2>
-            <p>
+            <p class="first-p" >
                 <?= $GLOBALS['text']['We_Are_Always_Here'] ?>
             </p>
-            <p>
+            <p class="second-p">
                 <?= $GLOBALS['text']['You_Benefit_From'] ?>
             </p>
         </div>
@@ -92,7 +92,7 @@
                             <?= $GLOBALS['text']['Customs_Brokerage__'] ?>
                         </h5>
                         <p>
-                            <?= $GLOBALS['text']['Customs_Services__'] ?>
+                            <?= $GLOBALS['text']['Customs_Services_'] ?>
                         </p>
                         <a href="/customsbrokerage" >
                             <?= $GLOBALS['text']['READ_MORE__'] ?>

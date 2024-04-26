@@ -1,5 +1,4 @@
 <?php $this->params['title'] = $GLOBALS['text']['ABOUT_US']; ?>
-
 <a  data-aos="fade-right" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
@@ -9,7 +8,7 @@
     <div class="container" >
         <div class="who-we-are-sec d-flex justify-content-between">
             <div class="who-we-are-dis w-50">
-                <h2 >
+                <h2>
                     <?= $GLOBALS['text']['Who_We_Are_'] ?>
                 </h2>
                 <p>
@@ -80,7 +79,7 @@
     <div class="container">
         <div class="about-careers-sec d-flex justify-content-between">
             <div class="careers-dis">
-                <h6>
+                <h6 >
                     <?= $GLOBALS['text']['CAREERS__'] ?>
                 </h6>
                 <h2>

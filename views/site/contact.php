@@ -4,32 +4,6 @@
         <i class="bi bi-chevron-up"></i>
     </button>
 </a>
-<section class="Map">
-    <iframe style="width: 100%; height: 400px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=791&amp;height=507&amp;hl=en&amp;q=Margaryan%2045/2%20St%20Yerevan+()&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-    <div style="background-color: #f8f9fa;">
-        <div class="container">
-            <div  class="con-page-info-smart">
-                <h5><?= $GLOBALS['text']['Smart_Shippings_LLC_'] ?></h5>
-                <p>
-                    <?= $GLOBALS['text']['Smart_Shippings_LLC_'] ?><br>
-                    <?= $GLOBALS['text']['Address:__'] ?>
-                    <?= $GLOBALS['text']['Working_days:_'] ?><br>
-                    <?= $GLOBALS['text']['9.00_am_to_'] ?>
-                </p>
-                <ul class="phone-email d-flex px-0 gap-4">
-                    <li class="phone-info">
-                        <i class="bi bi-telephone"></i>
-                        <a href="callto:+374 91 919122">+374 91 919122</a>
-                    </li>
-                    <li class="email-info">
-                        <i class="fa-sharp fa-thin fa-at"></i>
-                        <a href="mailto:h.hovhannisyan@smartshippings.com">h.hovhannisyan@smartshippings.com</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="con-page-form-img">
     <div class="container">
@@ -80,4 +54,31 @@
             </div>
         </div>
     </div>
+</section>
+
+<section class="Map">
+    <div style="background-color: #f8f9fa;">
+        <div class="container">
+            <div  class="con-page-info-smart">
+                <h5><?= $GLOBALS['text']['Smart_Shippings_LLC_'] ?></h5>
+                <p>
+                    <?= $GLOBALS['text']['Smart_Shippings_LLC_'] ?><br>
+                    <?= $GLOBALS['text']['Address:__'] ?>
+                    <?= $GLOBALS['text']['Working_days:_'] ?><br>
+                    <?= $GLOBALS['text']['9.00_am_to_'] ?>
+                </p>
+                <ul class="phone-email d-flex px-0 gap-4">
+                    <li class="phone-info">
+                        <i class="bi bi-telephone"></i>
+                        <a href="callto:+374 91 919122">+374 91 919122</a>
+                    </li>
+                    <li class="email-info">
+                        <i class="fa-sharp fa-thin fa-at"></i>
+                        <a href="mailto:h.hovhannisyan@smartshippings.com">h.hovhannisyan@smartshippings.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <iframe style="width: 100%; height: 400px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=791&amp;height=507&amp;hl=en&amp;q=Margaryan%2045/2%20St%20Yerevan+()&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
 </section>
