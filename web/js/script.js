@@ -21,20 +21,27 @@ $(document).ready(function() {
     });
 });
 
-
 // active nav link
 
-$(document).ready(function() {
-    let nav = $(".navbar");
-    let navLinks = $("li");
-    let currentUrl = window.location.href;
+const navLinks = document.querySelectorAll(".navbar li a");
+const currentUrl = window.location.href;
 
-    navLinks.each(function() {
-        if ($(this).find("a").attr("href") === currentUrl) {
-            $(this).addClass("activeLink");
-        }
-    });
+navLinks.forEach((link) => {
+    if (link.href === currentUrl) {
+        link.classList.add("activeLink");
+    }
 });
+
+// $(document).ready(function() {
+//     var currentUrl = window.location.href;
+
+//     $(".navbar li a").each(function() {
+//         if ($(this).attr("href") === currentUrl) {
+//             $(this).addClass("activeLink");
+//         }
+//     });
+// });
+
 
 // mobile menu
 
@@ -95,14 +102,10 @@ document.addEventListener("DOMContentLoaded",function() {
         // },
       
     });
-
     AOS.init();
-
 })
 
 // header title animate
-
-
 
 // Cilents slider
 
@@ -134,32 +137,57 @@ var clientSwiper = new Swiper(".clients-slide", {
 
 // question answer 
 
-const questions = document.querySelectorAll('.question');
+// const questions = document.querySelectorAll('.question');
 
-questions.forEach(question => {
-    question.addEventListener('click', () => {
-        const currentQuestion = question.parentElement;
-        const currentAnswer = currentQuestion.querySelector('.answer');
-        const currentPlusIcon = currentQuestion.querySelector('.plus i');
+// questions.forEach(question => {
+//     question.addEventListener('click', () => {
+//         const currentQuestion = question.parentElement;
+//         const currentAnswer = currentQuestion.querySelector('.answer');
+//         const currentPlusIcon = currentQuestion.querySelector('.plus i');
 
-        document.querySelectorAll('.quest-ans-item').forEach(item => {
-            if (item !== currentQuestion && item.classList.contains('show')) {
-                item.classList.remove('show');
-                const otherPlusIcon = item.querySelector('.plus i');
-                otherPlusIcon.classList.remove('bi-dash-lg');
-                otherPlusIcon.classList.add('bi-plus-lg');
+//         document.querySelectorAll('.quest-ans-item').forEach(item => {
+//             if (item !== currentQuestion && item.classList.contains('show')) {
+//                 item.classList.remove('show');
+//                 const otherPlusIcon = item.querySelector('.plus i');
+//                 otherPlusIcon.classList.remove('bi-dash-lg');
+//                 otherPlusIcon.classList.add('bi-plus-lg');
+//             }
+//         });
+
+//         currentQuestion.classList.toggle('show');
+//         currentAnswer.classList.toggle('show');
+
+//         if (currentQuestion.classList.contains('show')) {
+//             currentPlusIcon.classList.remove('bi-plus-lg');
+//             currentPlusIcon.classList.add('bi-dash-lg');
+//         } else {
+//             currentPlusIcon.classList.remove('bi-dash-lg');
+//             currentPlusIcon.classList.add('bi-plus-lg');
+//         }
+//     });
+// });
+
+$(document).ready(function() {
+    $('.question').click(function() {
+        var currentQuestion = $(this).parent();
+        var currentAnswer = currentQuestion.find('.answer');
+        var currentPlusIcon = currentQuestion.find('.plus i');
+
+        $('.quest-ans-item').each(function() {
+            if (!$(this).is(currentQuestion) && $(this).hasClass('show')) {
+                $(this).removeClass('show');
+                var otherPlusIcon = $(this).find('.plus i');
+                otherPlusIcon.removeClass('bi-dash-lg').addClass('bi-plus-lg');
             }
         });
 
-        currentQuestion.classList.toggle('show');
-        currentAnswer.classList.toggle('show');
+        currentQuestion.toggleClass('show');
+        currentAnswer.toggleClass('show');
 
-        if (currentQuestion.classList.contains('show')) {
-            currentPlusIcon.classList.remove('bi-plus-lg');
-            currentPlusIcon.classList.add('bi-dash-lg');
+        if (currentQuestion.hasClass('show')) {
+            currentPlusIcon.removeClass('bi-plus-lg').addClass('bi-dash-lg');
         } else {
-            currentPlusIcon.classList.remove('bi-dash-lg');
-            currentPlusIcon.classList.add('bi-plus-lg');
+            currentPlusIcon.removeClass('bi-dash-lg').addClass('bi-plus-lg');
         }
     });
 });

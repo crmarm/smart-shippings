@@ -1,13 +1,13 @@
-<?php $this->params['title'] = $GLOBALS['text']['Contact-Us_Title']; ?>
+<?php $this->params['title'] = $GLOBALS['text']['Contact_Us_Title']; ?>
 <a  data-aos="fade-right" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
     </button>
 </a>
 
-<section class="con-page-form-img">
+<section class="con-page-form-img ">
     <div class="container">
-        <div class="con-page-form-img-sec d-flex justify-content-between">
+        <div class="con-page-form-img-sec d-flex justify-content-between ">
             <div class="con-page-form">
                 <?php 
                     if($_COOKIE['language'] == "am") {

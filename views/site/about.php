@@ -1,4 +1,4 @@
-<?php $this->params['title'] = $GLOBALS['text']['ABOUT_US']; ?>
+<?php $this->params['title'] = $GLOBALS['text']['About_Us_Title']; ?>
 <a  data-aos="fade-right" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>

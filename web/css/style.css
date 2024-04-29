@@ -29,7 +29,6 @@ a {
     border-radius: 3px;
     width: 42px;
     height: 42px;
-   
     border: none;
     background-color: rgba(42, 44, 50, 0.8);
 }
@@ -90,7 +89,7 @@ a {
     flex-direction: column-reverse; 
     position: absolute;
     top:0;
-    right: 0;
+    right: 0px;
     background-color: #2a2c32;
     border-radius: 0 0 5px 5px;
     box-shadow: 0px 0px 12px 0px rgba(42,44,50,0.75);
@@ -114,13 +113,6 @@ a {
 
 .lang-item:hover {
     background-color: #424242;
-}
-
-
-.lang-item.selected {
-    pointer-events: none;
-    cursor: default;
-    background-color: transparent;
 }
 
 .lang-item img {
@@ -203,18 +195,21 @@ nav .navbar li {
     transition: 0.1s ease;
 }
 
-nav .navbar li:hover {
+.navbar li:hover,
+.navbar li.activeLink{
+    color: #038ed3;
+    background-color: white;
+}
+
+.navbar li a.activeLink {
     color: #038ed3;
 }
 
-nav .nav-down a:is(:link , :active, :visited).active-linkPage {
-    color: #038ed3;
+.navbar .drop-div .drop-item.activeLink,
+.navbar .drop-div .drop-item-2.activeLink,
+.navbar .drop-div .drop-item-3.activeLink {
+ background-color: white;
 }
-
-nav .nav-down a:is(:link , :active, :visited).active-linkPage {
-    color: #038ed3;
-}
-
 
 .nav-up {
     background-color: #F2F3F6;
@@ -244,7 +239,6 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 .nav-up .contact-info li  a {
     color: black;
     transition: 0.3s ease;
-    
 }
 
 .nav-up .contact-info li a:hover {
@@ -290,7 +284,10 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 .nav-down .navbar {
     gap: 32px;
     position: relative;
+}
 
+.am .nav-down .navbar {
+    gap: 20px !important;
 }
 
 .nav-down .nav-item {
@@ -327,13 +324,10 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     left: -50px;
     top: 180%;
     background-color: #f2f3f6;
-    max-width: 185px;
     border-radius: 3px;
     padding: 15px 0;
     opacity: 0;
-    /* Start with opacity 0 */
     visibility: hidden;
-    /* Initially hidden */
     transition: opacity 0.3s ease;
     z-index: 1000;
 }
@@ -344,9 +338,7 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     top: 110%;
     left: -20px;
     opacity: 1;
-    /* Fade in */
     visibility: visible;
-    /* Make visible */
     animation: fadeInLeft 0.3s ease forwards;
 }
 
@@ -360,12 +352,9 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     }
 }
 
-/* Apply fade-out animation when not hovered */
 .navbar .nav-item:not(:hover) .drop-div {
     opacity: 0;
-    /* Fade out */
     visibility: hidden;
-    /* Hide */
     animation: fadeOutLeft 0.3s ease forwards;
 }
 
@@ -373,7 +362,6 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     0% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
     }
@@ -389,22 +377,14 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     position: relative;
 }
 
-.navbar .drop-link {
+.navbar .drop-menu .drop-link {
     font-family: 'Heebo', sans-serif;
-    white-space: pre;
+    white-space: nowrap !important;
     position: relative;
-    font-size: 14px;
+    font-size: 14px;    
     line-height: 1rem;
     color: #2a2c32;
     transition: 0.1s ease;
-}
-
-.navbar .drop-link:hover {
-    color: #038ed3;
-}
-
-.navbar .drop-link-2:hover {
-    color: #038ed3;
 }
 
 .navbar .drop-div-2::before {
@@ -424,26 +404,20 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     left: 160px;
     top: 0%;
     background-color: #f2f3f6;
-    max-width: 185px;
     border-radius: 3px;
     padding: 15px 0;
     opacity: 0;
-    /* Start with opacity 0 */
     visibility: hidden;
-    /* Initially hidden */
     transition: 0.3s ease, visibility 0.3s ease;
-    /* Add transition for opacity and visibility */
     z-index: 1000;
 }
 
 .navbar .drop-item:hover .drop-div-2 {
     display: block;
     top: -45%;
-    left: 190px;
+    left: 195px;
     opacity: 1;
-    /* Fade in */
     visibility: visible;
-    /* Make visible */
     animation: fadeInLeft 0.3s ease;
 }
 
@@ -459,7 +433,6 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     }
 }
 
-
 .navbar .drop-menu-2 {
     padding-left: 0;
 }
@@ -468,33 +441,44 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     padding: 5px 90px 5px 20px;
 }
 
-.navbar .drop-item-2:hover {
-    background-color: white;
-}
-
 .navbar .drop-item:hover,
 .navbar .drop-item-2:hover,
 .navbar .drop-item-3:hover {
     background-color: white;
 }
 
-.navbar .drop-link {
-    transition: 0.3s ease;
+.drop-item:hover .drop-link {
+    color: #038ed3 !important;
 }
 
-.navbar .drop-link:hover {
+.drop-item-2:hover .drop-link-2 {
+    color: #038ed3 !important;
+}
+
+.drop-item-3:hover .drop-link-3 {
+    color: #038ed3 !important;
+}
+
+.navbar .drop-div i {
+    color: #2a2c32;
+}
+
+.navbar .drop-div li:hover i {
     color: #038ed3;
 }
 
 
+.navbar .drop-link {
+    transition: 0.3s ease;
+}
+
 .navbar .drop-link-2 {
     font-family: 'Heebo', sans-serif;
-    white-space: pre;
+    white-space: nowrap;
     position: relative;
     font-size: 14px;
     line-height: 1rem;
     color: #2a2c32;
-    vertical-align: baseline;
     --webkit-transition: all 5s ease;
 }
 
@@ -531,7 +515,7 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     position: absolute;
     display: block;
     top: -60%;
-    left: 190px;
+    left: 195px;
     animation: fadeInLeft 0.3s ease forwards;
     /* Apply fade-in animation */
 }
@@ -545,14 +529,9 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     padding: 8px 15px 8px 20px;
 }
 
-.navbar .drop-link-3:hover {
-    color: #038ed3;
-}
-
-
 .navbar .drop-link-3 {
     font-family: 'Heebo', sans-serif;
-    white-space: pre;
+    white-space: nowrap;
     font-size: 14px;
     line-height: 1rem;
     color: #2a2c32;
@@ -580,7 +559,7 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 .navbar .drop-menu .drop-link {
     font-family: 'Heebo', sans-serif;
     display: block;
-    white-space: pre;
+    white-space: nowrap;
     position: relative;
     font-size: 14px;
     line-height: 1rem;
@@ -622,7 +601,17 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 .header-title {
     padding-top: 170px;
     width: 100%;
+    gap: 5px;
 }
+
+.am .header-title-1 .first-h1 {
+    font-size: 80px;
+}
+
+/* .ru .header-title-1 h2 {
+    padding-bottom: 5px;
+} */
+
 
 .header-title-1 .first-h1 {
     height: auto;
@@ -637,13 +626,13 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 
 .header-title-1 .second-h1 {
     line-height: 0;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-weight: 700;
     font-size: 70px;
     margin: 0;
     padding: 0;
     color: white;
-
+    font-family: 'Assistant', sans-serif;
 }
 
 .header-title-1 h2 {
@@ -671,7 +660,7 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
     margin: 0;
     white-space: nowrap;
     text-align: right;
-    width: 377px;
+    width:100%;
     height: auto;
     padding-top: 50px;
     /* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
@@ -886,10 +875,10 @@ nav .nav-down a:is(:link , :active, :visited).active-linkPage {
 
 header .headerSwiper .header-pagination {
     opacity: 1 !important;
-    visibility: inherit !important;
+    /*visibility: inherit !important;*/
     z-index: 1 !important;
     overflow: visible;
-    transform: translateY(0) !important;
+   
 }
 
 .header-pagination .swiper-pagination-bullet {
@@ -951,8 +940,9 @@ header .headerSwiper .header-pagination {
 
 .header-pagination {
     text-align: center;
-    margin-top: -40px;
+    
     position: absolute !important;
+    bottom: 0 !important;
 }
 
 /* header slide finish */
@@ -1016,6 +1006,18 @@ header .headerSwiper .header-pagination {
     font-family: 'Assistant', sans-serif;
     font-size: 14px;
     font-weight: 700;
+    transition:  0.3s ease !important;
+    position: relative;
+}
+
+.Departure .first-div a:hover::after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -2px;
+    width: 100%;
+    height: 0.5px;
+    background-color: #038ed3;
 }
 
 .Departure .second-div {
@@ -1080,6 +1082,30 @@ header .headerSwiper .header-pagination {
     z-index: -1;
 }
 
+.am .Departure .second-div .licon-quote::before {
+    content: '66';
+    position: absolute;
+    color: #d7e8f2;
+    font-size: 180px;
+    height: 400px;
+    right: -40px;
+    top: 50px;
+    transform: rotate(5deg);
+    z-index: -1;
+}
+
+.ru .Departure .second-div .licon-quote::before {
+    content: '66';
+    position: absolute;
+    color: #d7e8f2;
+    font-size: 180px;
+    height: 400px;
+    right: -40px;
+    top: 80px;
+    transform: rotate(5deg);
+    z-index: -1;
+}
+
 .Departure .third-div {
     width: 360px;
     height: auto;
@@ -1100,6 +1126,26 @@ header .headerSwiper .header-pagination {
     height: 400px;
     right: -40px;
     top: 50px;
+    z-index: -1;
+}
+
+.am .Departure .third-div i {
+    position: absolute;
+    color: #d7e8f2;
+    font-size: 180px;
+    height: 400px;
+    right: -40px;
+    top: 70px;
+    z-index: -1;
+}
+
+.ru .Departure .third-div i {
+    position: absolute;
+    color: #d7e8f2;
+    font-size: 180px;
+    height: 400px;
+    right: -40px;
+    top: 95px;
     z-index: -1;
 }
 
@@ -1202,27 +1248,44 @@ header .headerSwiper .header-pagination {
 }
 
 .Services .iconsItems .iconsItem {
+    position: relative;
     width: 265px;
     background-color: white;
     border: 2px solid transparent;
+    border-radius: 3px;
     border-image: linear-gradient(90deg, #80c645, #048ed2);
     border-image-slice: 1;
-    transition: all 0.5s ease-in !important;
+    z-index:2;
+
 }
 
-.Services .iconsItems .iconsItem:hover {
+.Services .iconsItems .iconsItem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(to right, #80c645 0%, #048ed2 100%), linear-gradient(to right, #80c645 0%, #048ed2 100%);
-    transition: all 0.5s ease-in !important;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.Services .iconsItems .iconsItem:hover::before {
+    opacity: 1;
+    visibility: visible;
 }
 
 .Services .iconsItems .iconsItem:hover h5 {
     color: white;
 }
 
-.Services .iconsItems .iconsItem:hover i {
-    color: white;
+.Services .iconsItems .iconsItem:hover i, 
+.Services .iconsItems .iconsItem:hover img {
+    color: white !important;
 }
-
 
 .Services .iconsItems .iconsItem:hover p {
     color: white;
@@ -1240,7 +1303,6 @@ header .headerSwiper .header-pagination {
 .Services .iconsItem i,
 .Services .iconsItem img {
     width: 35px;
-    mix-blend-mode: darken;
     margin-bottom: 25px;
     font-size: 36px;
     color: #aab3b6;
@@ -1253,22 +1315,21 @@ header .headerSwiper .header-pagination {
 
 
 .Services .iconsItem h5 {
-    display: contents;
+    /* display: contents; */
     font-size: 24px;
     color: #2a2c32;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 25px;
     word-break: break-word;
     word-wrap: break-word;
-    transition: all 0.3s ease-in;
 }
 
 .Services .iconsItem p {
     color: #7b8285;
     margin-top: 15px !important;
     margin-bottom: 15px !important;
-    transition: all 0.3s ease-in;
     font-size: 14px;
+    font-weight: 400;
 }
 
 .Services .iconsItem a {
@@ -1277,19 +1338,15 @@ header .headerSwiper .header-pagination {
     line-height: 1rem;
     padding-top: 10px;
     display: inline-block;
-    /* transition: all 0.3s ease-in; */
 }
 
 .Services .iconsItem a:hover {
     border-bottom: 1px solid white;
     padding-bottom: 2px;
 }
-
 /* services home page finish */
 
 /* services page */
-
-
 .serv-page-header {
     background-image:  linear-gradient(to right, #80c645 0%, #048ed2 100%), linear-gradient(to right, #80c645 0%, #048ed2 100%); 
 }
@@ -1327,14 +1384,21 @@ header .headerSwiper .header-pagination {
     margin-bottom: 20px;
     font-size: 42px;
     font-family: 'Assistant', sans-serif;
-    line-height: 1.25;
+    line-height: 1.25em;
     font-weight: normal;
     color: #2a2c32;
+    white-space: normal;
 }
 
-.serv-page-first-sec .title-div p:first-child {
+.serv-page-first-sec .title-div .first-p {
     margin-bottom: 10px;
     font-size: 18px;
+    line-height: 30px;
+}
+
+.serv-page-first-sec .title-div .second-p {
+    margin-bottom: 10px;
+    font-size: 14px;
     line-height: 30px;
 }
 
@@ -1357,6 +1421,11 @@ header .headerSwiper .header-pagination {
 
 .ser-page-contact-us .contact-info button:first-child {
     margin-right: 8px;
+}
+
+.am .ser-page-contact-us .contact-info p br,
+.ru .ser-page-contact-us .contact-info p br {
+    display: none !important;
 }
 
 
@@ -1401,6 +1470,8 @@ header .headerSwiper .header-pagination {
 .who-we-are .who-we-are-dis {
     padding-top: 70px;
     padding-bottom: 30px;
+    padding-left: 0;
+    margin-left: 0;
 }
 .who-we-are .who-we-are-dis h2 {
     margin-bottom: 30px;
@@ -1700,8 +1771,13 @@ header .headerSwiper .header-pagination {
 }
 
 .advantages-sec {
-    gap: 130px;
+    gap: 110px;
 }
+
+.ru .advantages-sec {
+    gap: 60px !important;
+}
+
 
 .advantages-sec .title-div h6 {
     color: #e9f4e2;
@@ -1722,9 +1798,31 @@ header .headerSwiper .header-pagination {
     letter-spacing: 0;
 }
 
+.ru .advantages-sec .title-div h2 {
+    white-space: nowrap;
+}
+
+.advantages-sec .advanList {
+    gap: 5rem !important;
+}
+
 .advantages-sec .advanList .advanItem p {
     color: #e9f4e2;
     font-family: 'Assistant', sans-serif;
+    font-size: 14px;
+}
+
+.ru .advantages-sec .advanList .advanItem p {
+    white-space: nowrap;
+}
+
+.am .advantages-sec .advanList .advanItem:nth-child(1) p,
+.am .advantages-sec .advanList .advanItem:nth-child(2) p {
+    white-space: nowrap !important;
+}
+
+.advantages-sec .advanList .advanItem i {
+    padding-bottom: 10px;
 }
 
 /* question answer */
@@ -1759,7 +1857,7 @@ header .headerSwiper .header-pagination {
 
 
 .quest-ans-item {
-    border: 1px solid #f2f3f6;
+    border: 2px solid #f2f3f6;
     border-radius: 2px;
 }
 
@@ -1807,6 +1905,7 @@ header .headerSwiper .header-pagination {
     border: 1.5px solid #4b4e50b0;
     transition: transform 0.5s ease-in;
     border-radius: 2px;
+    margin-right: 5px;
 }
 
 .plus i {
@@ -1825,140 +1924,13 @@ header .headerSwiper .header-pagination {
 
 /* question answer finish */
 
-/* request form */
-
-.requestForm input {
-    width: 100% !important;
-    height: 42px;
-    font-size: 14px;
-    padding-left: 20px;
-    color: #7b8285;
-    font-family: inherit;
-    line-height: inherit;
-    border-radius: 3px;
-    border: 2px solid #f2f3f6;
-    font-family: 'Assistant', sans-serif;
-
+.request-div .requestForm .b24-form-header-description {
+    font-size: 18px !important;
 }
 
-.requestForm input::placeholder {
-    transition: 0.3s ease-in;
+.request-div .requestForm .b24-form-field-agreement .b24-form-field-agreement-link {
+    font-size: 16px !important;
 }
-
-.requestForm input:focus::placeholder {
-    opacity: 0;
-    transition: 0.3s ease-in;
-    transform: translateX(100px);
-}
-
-
-.requestForm input:not(:focus)::placeholder {
-    opacity: 1;
-    /* Make it visible again when not focused */
-    transform: translateX(0);
-    /* Reset transform */
-}
-
-.requestForm input:focus,
-.requestForm select:focus,
-.requestForm textarea:focus {
-    border: none !important;
-    outline: 2px solid #6cb2eb !important;
-    box-shadow: 0px 0px 8px #6cb2eb;
-}
-
-.requestForm select {
-    appearance: none;
-    padding-left: 20px;
-    padding-bottom: 5px;
-    width: 100%;
-    color: #7b8285;
-    display: flex;
-    border-radius: 3px;
-    border: 2px solid #f2f3f6;
-    cursor: pointer;
-    font-family: 'Assistant', sans-serif;
-}
-
-.requestForm select::selection {
-    background-color: #038ed3;
-    color: white;
-}
-
-.requestForm select option {
-    padding: 50px !important;
-}
-
-.requestForm .sel-input  {
-    position: relative;
-}
-
-.requestForm .icon-con {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: start;
-}
-
-.requestForm .icon-con i {
-    color: #7b8285;
-    font-size: 10px;
-}
-
-.requestForm textarea {
-    padding-left: 20px;
-    padding-top: 10px;
-    border: 2px solid #f2f3f6;
-    border-radius: 3px;
-    color: #7b8285;
-}
-
-.requestForm textarea::placeholder {
-    transition: 0.3s ease-in;
-}
-
-.requestForm textarea:focus::placeholder {
-    opacity: 0;
-    transition: 0.3s ease-in;
-    transform: translateX(100px);
-}
-
-
-.requestForm textarea:not(:focus)::placeholder {
-    opacity: 1;
-    /* Make it visible again when not focused */
-    transform: translateX(0);
-    /* Reset transform */
-}
-
-.requestForm textarea:focus {
-    border: none !important;
-    outline: 2px solid #6cb2eb !important;
-    box-shadow: 0px 0px 1px #6cb2eb;
-}
-
-.requestForm button {
-    line-height: 24px;
-    padding: 9px 10px;
-    width: 150px;
-    font-size: 15px;
-    font-weight: 500;
-    border: none;
-    background-color: #038ed3;
-    color: white;
-    border-radius: 3px;
-    transition: 0.3s ease-in;
-    font-family: 'Assistant', sans-serif;
-}
-
-.requestForm button:hover {
-    background-color: #80c644;
-}
-
-/* request form finish */
 
 /* brands section */
 
@@ -1973,6 +1945,7 @@ header .headerSwiper .header-pagination {
     width: 100%;
     height: 100%;
     cursor: pointer;
+    background-color: #F8F9FB;
 }
 
 .brands .swiper-slide {
@@ -2004,11 +1977,13 @@ header .headerSwiper .header-pagination {
 }
 
 .brands .swiper-button-next {
-    right: 150px; /* Adjust this value as needed */
+    right: 130px; /* Adjust this value as needed */
+    padding-left: 20px;
 }
 
 .brands .swiper-button-prev {
-    left: 150px; /* Adjust this value as needed */
+    left: 130px; /* Adjust this value as needed */
+    padding-right: 20px;
 }
 
 .brands .brandsSwiper .swiper-slide  {
@@ -2043,15 +2018,21 @@ header .headerSwiper .header-pagination {
     text-wrap: balance;
 }
 
+.am .Contact-Us .contact-dis {
+    padding-right: 20px;
+}
+
 .Contact-Us .contact-info button {
     margin-bottom: 3px;
     padding: 14px 20px;
     color: white;
+    white-space: nowrap;
     background-color: #038ed3;
     border: none;
     border-radius: 3px;
     line-height: 24px;
     font-family: 'Assistant', sans-serif;
+    transition: all 0.3s ease;
 }
 
 .Contact-Us .contact-info button:hover {
@@ -2068,6 +2049,14 @@ header .headerSwiper .header-pagination {
     font-size: 15px;
     line-height: 28px;
     font-family: 'Assistant', sans-serif;
+}
+
+.Contact-Us .contact-info {
+    text-align: center !important;
+}
+
+.ru .Contact-Us .contact-info {
+    text-align: center !important;
 }
 
 .Contact-Us .contact-info p span {
@@ -2121,7 +2110,7 @@ footer .footer-con-info {
 
 footer .footer-con-info li {
     color: white;
-    font-size: 15px !important;
+    font-size: 14px !important;
 }
 
 footer .footer-con-info li i {
@@ -2188,6 +2177,50 @@ footer .footer-con-copyright p {
     font-family: 'Assistant', sans-serif;
 }
 
+footer .footer-about-us {
+    padding-left: 50px;
+}
+
+footer .footer-about-us ul {
+    padding-left: 0;
+}
+
+footer .footer-about-us ul li {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 500;
+    font-family:'Assistant', sans-serif ;
+}
+
+footer .footer-about-us ul li a {
+    color: white;
+    position: relative;
+}
+
+footer .footer-about-us ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1px;
+    background-color: white;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+footer .footer-about-us ul li a:hover::before {
+    transform: scale(1);
+}
+
+footer .footer-serv {
+    padding-left: 100px;
+}
+
+.am footer .footer-serv,
+.ru footer .footer-serv {
+    padding-left: 30px !important;
+}
 
 footer .footer-serv ul li {
     line-height: 30px;
@@ -2229,7 +2262,7 @@ footer .footer-subcribe p {
     height: 42px;
     border-radius: 3px;
     border: none;
-    padding-left: 20px;
+    padding-left: 15px;
     font-size: 14px;
     color: #7b8285;
     border: 5px solid white;
@@ -2259,6 +2292,14 @@ footer .footer-subcribe p {
     /* Make it visible again when not focused */
     transform: translateX(0);
     /* Reset transform */
+}
+
+.am .footer-subcribe form input{
+    padding-left: 15px !important;
+}
+
+.ru .footer-subcribe form input{
+    padding-left: 15px !important;
 }
 
 .footer-subcribe button {
@@ -2412,115 +2453,12 @@ footer .footer-subcribe p {
     gap: 30px;
 }
 
-
-.con-page-form-img-sec .con-page-form-dis h2 {
-    margin-bottom: 20px;
-    color: #2a2c32;
-    font-size: 42px;
-    font-family: 'Assistant', sans-serif;
-    line-height: 1.25;
-    font-weight: normal;
-    
+.con-page-form .b24-form-field-agreement .b24-form-field-agreement-link {
+    font-size: 16px !important;
 }
 
-.con-page-form-img-sec .con-page-form-dis p {
-    margin-bottom: 30px;
-    color: #4b4e50;
-    font-family: 'Assistant', sans-serif;
-    font-size: 14px;   
-    width: 100%; 
-}
-
-.con-page-form-img-sec form input {
-    width: 100% !important;
-    height: 42px;
-    padding-left: 20px;
-    color: #7b8285;
-    font-family: inherit;
-    line-height: inherit;
-    border-radius: 3px;
-    border: 2px solid #f2f3f6;
-    font-family: 'Assistant', sans-serif;
-    font-size: 14px;
-}
-
-.con-page-form-img-sec form input::placeholder {
-    transition: 0.3s ease-in;
-}
-
-.con-page-form-img-sec form input:focus::placeholder {
-    opacity: 0;
-    transition: 0.3s ease-in;
-    transform: translateX(100px);
-}
-
-
-.con-page-form-img-sec form input:not(:focus)::placeholder {
-    opacity: 1;
-    /* Make it visible again when not focused */
-    transform: translateX(0);
-    /* Reset transform */
-}
-
-.con-page-form-img-sec form input:focus,
-.con-page-form-img-sec form textarea:focus {
-    border: none !important;
-    outline: 2px solid #6cb2eb !important;
-    box-shadow: 0px 0px 10px #6cb2eb;
-}
-
-.con-page-form-img-sec form textarea {
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 100%;
-    padding-top: 10px;
-    border: 2px solid #f2f3f6;
-    border-radius: 3px;
-    color: #7b8285;
-    font-family: 'Assistant', sans-serif;
-    font-size: 14px;
-}
-
-.con-page-form-img-sec form textarea::placeholder {
-    transition: 0.3s ease-in;
-}
-
-.con-page-form-img-sec form textarea:focus::placeholder {
-    opacity: 0;
-    transition: 0.3s ease-in;
-    transform: translateX(100px);
-}
-
-
-.con-page-form-img-sec form textarea:not(:focus)::placeholder {
-    opacity: 1;
-    /* Make it visible again when not focused */
-    transform: translateX(0);
-    /* Reset transform */
-}
-
-.con-page-form-img-sec form textarea:focus {
-    border: none !important;
-    border: 1px solid #038ed3 !important;
-    box-shadow: 0px 0px 10px #038ed3;
-}
-
-.con-page-form-img-sec form button {
-    line-height: 24px;
-    padding: 9px 0;
-    width: 130px;
-    font-size: 14px;
-    font-weight: 500;
-    border: none;
-    background-color: #038ed3;
-    color: white;
-    border-radius: 3px;
-    transition: 0.3s ease-in;
-    font-family: 'Assistant', sans-serif;
-}
-
-.con-page-form-img-sec form button:hover {
-    background-color: #80c644;
+.con-page-form .b24-form-header-title  {
+    font-size: 30px !important;
 }
 
 .con-page-form-img-sec .con-page-img img{
@@ -2730,8 +2668,8 @@ footer .footer-subcribe p {
     line-height: 1.25;
     color: #2a2c32;
     font-family: 'Assistant', sans-serif;
-}
 
+}
 .services-drop-pages-sec .second-div h6 {
     padding-top: 5px;
     margin-bottom: 18px;
@@ -2760,10 +2698,136 @@ footer .footer-subcribe p {
     margin-right: 5px;
     font-family: 'Assistant', sans-serif;
 }
-
-
-
 /* Servcies-drop-pages finish */
+
+/* news page  */
+.all-news {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* text-align: center; */
+    row-gap: 50px;
+}
+
+.all-news s {
+    display: none;
+}
+
+.news-block {
+    width: 500px;
+    border-radius:10px 10px 0 0 !important;
+    -webkit-box-shadow: 0px 3px 10px -1px rgba(0,0,0,0.65);
+    box-shadow: 0px 3px 10px -1px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px 3px 10px -1px rgba(0,0,0,0.65);
+}
+
+.news-img-parent {
+    width: 100%;
+    height: 300px;
+}
+
+.news-img-parent .news-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.news-block h4 {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 1.25;
+    color: #2a2c32;
+}
+
+.news-dis {
+    padding: 20px;
+}
+
+.news-dis p {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #7b8285;
+}
+
+.news-dis button {
+    background-color: rgba(42, 44, 50, 0.8);
+    line-height: 24px;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-size: 18px;
+    border: none;
+    color: rgb(255, 255, 255);
+    white-space: nowrap;
+    padding: 14px 20px;
+    border-radius: 3px;
+}
+/* news page finish */
+/* news uniq page */
+.uniq-news-page .uniq-news-img-parent .uniq-news-img {
+    width: 100%;
+    height: 500px;
+}
+/* news uniq page finish */
+
+@media (min-width:1750px) and (max-width:1921px) {
+    .am .header-title-1 .first-h1 {
+        font-size: 90px !important;
+    }
+
+    .am .header-title-1 h2 {
+        line-height: 1.8 !important;
+    }
+
+    .who-we-are {
+        display: flex;
+    }
+
+    .who-we-are-img-2 {
+       display: block;
+       width: 100% !important;
+    }
+
+    .who-we-are-img-2 img {
+        width:100%;
+        height: 520px!important;
+    }
+
+    .who-we-are-img {
+        display: none;
+    }
+
+    .who-we-are .container {
+        margin-left: 0px;
+    }
+
+    .who-we-are .who-we-are-dis {
+        padding-top: 70px;
+        padding-bottom: 0px;
+        padding-left: 0;
+        margin-left: 300px;
+        padding-right: 50px;
+        width: 100%;
+    }
+
+    .who-we-are-dis p {
+        width: 540px!important;
+    }
+}
+
+@media (min-width:1550px) and (max-width:1750px) {
+
+     .who-we-are .who-we-are-dis {
+        margin-left: -100px !important;
+    }
+
+    .who-we-are-dis p {
+        width: 500px !important;
+    }
+}
+
 
 @media (max-width: 1496px) {
     .headerSwiper {
@@ -2773,9 +2837,20 @@ footer .footer-subcribe p {
     .header-title {
         padding-top: 120px;
     }
+    .en .header-title {
+        padding-top: 200px !important;
+    }
 
     .header-pagination {
-        transform: translateY(100px) !important;
+        bottom: -80px !important;
+    }
+
+    .am .header-title {
+        padding-top: 200px;
+    }
+
+    .ru .header-title {
+        padding-top: 200px;
     }
 }
 
@@ -2789,6 +2864,22 @@ footer .footer-subcribe p {
         gap: 20px;
     }
 
+    .am .nav-down .navbar {
+        gap: 10px !important;
+    }
+
+    .am .header-title-1 .second-h1{
+        font-size: 60px !important;
+    }
+
+    .am .header-title-2 h1 {
+        font-size: 50px;
+    }
+
+    .am .header-title-3 h1 {
+        font-size: 50px;
+    }
+
     .Departure-div {
         display: grid;
         grid-template-areas:
@@ -2797,13 +2888,16 @@ footer .footer-subcribe p {
             'd d d';
     }
 
-    .Departure .first-div .second-p {
-        width: 100%;
+    .Departure .first-div p {
+        width: 100% !important;
     }
+
+
 
     .Departure-div .first-div {
         grid-area: a;
         margin-bottom: 20px;
+        width: 100% !important;
 
     }
 
@@ -2844,13 +2938,8 @@ footer .footer-subcribe p {
         gap: 70px !important;
     }
 
-    .advanItem:first-child {
-        flex-direction: column;
-    }
-
-    .advanItem:first-child p {
-        margin-top: -10px !important;
-        /* margin-top: 0 !important; */
+    .advantages-sec .advanList {
+        flex-direction: wrap;
     }
 
     .advantages-sec .advanItem p {
@@ -2874,13 +2963,42 @@ footer .footer-subcribe p {
         width: 340px;
     }
 
+/*  about page res  */
+
+    .who-we-are-dis {
+        padding-right: 50px;
+    }
+    
+/*  about page res finish  */
+
 
     /* gallery page res finish */
+}
+
+
+@media (max-width:1290px) {
+    .brands .swiper-button-next {
+        right: 80px; /* Adjust this value as needed */
+        padding-left: 20px;
+    }
+
+    .brands .swiper-button-prev {
+        left: 80px; /* Adjust this value as needed */
+        padding-right: 20px;
+    }
 }
 
 @media (max-width:1200px) {
     .container {
         padding: 0 20px !important;
+    }
+
+    .am .header-title-1 .second-h1 {
+        font-size: 50px !important;
+    }
+
+    .ru .nav-down .navbar {
+        gap: 8px !important;
     }
 
     .nav-down .navbar {
@@ -2899,6 +3017,19 @@ footer .footer-subcribe p {
         width: 450px !important;
     }
 
+    .ru .advantages-sec .advanItem p{
+        white-space: normal !important;
+    }
+
+    .ru .advantages-sec .title-div h2{
+        white-space: normal !important;
+    }
+    
+    .am .advantages-sec .advanItem p {
+        white-space: normal !important;
+    }
+
+
     /* gallery page res */
 
         
@@ -2916,13 +3047,48 @@ footer .footer-subcribe p {
 
     .con-page-form-img-sec .con-page-img {
         display: flex !important;
-        justify-content: end !important;
+        justify-content: center !important;
+    }
+    /* contact page res finish */
+    /* news page  */
+
+    .all-news {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 50px;
     }
 
-    /* contact page res finish */
+    .news-block {
+        width: 400px;
+    }
+    /* news page res finish */
 }
 
+@media (max-width:1100px) {
+    .am .header-title-3 h1 {
+        font-size: 40px;
+    }
 
+    /* about pages  */
+    .am .Our-Advantages .advantages-sec {
+        gap: 30px !important;
+    }
+    /* about pages res finish */
+
+}
+
+@media (max-width:1090px) {
+    .brands .swiper-button-next {
+        right: 50px; /* Adjust this value as needed */
+        padding-left: 20px;
+    }
+
+    .brands .swiper-button-prev {
+        left: 50px; /* Adjust this value as needed */
+        padding-right: 20px;
+    }
+}
 
 @media (max-width:992px) {
     .container {
@@ -2996,7 +3162,7 @@ footer .footer-subcribe p {
 
     .sidebar .drop-mob-link{
         font-family: 'Heebo', sans-serif;
-        white-space: pre;
+/*        white-space: pre;*/
         font-size: 14px;
         line-height: 1em;
         padding: 15px 0 15px 30px !important;
@@ -3008,7 +3174,7 @@ footer .footer-subcribe p {
     .sidebar .drop-mob-link-2,
     .sidebar .drop-mob-link-3 {
         font-family: 'Heebo', sans-serif;
-        white-space: pre;
+/*        white-space: pre;*/
         font-size: 14px;
         line-height: 1em;
         padding: 11px 0 11px 50px !important;
@@ -3046,11 +3212,12 @@ footer .footer-subcribe p {
 
     .drop-mob-div {
         display: none;
-        transition: 0.3s ease-in-out;
+        transition: all .3s ease;
     }
 
     .drop-mob-div.open {
         display: block;
+
     }
 
     .navbar-search .nav-menu i {
@@ -3062,6 +3229,44 @@ footer .footer-subcribe p {
     .navbar-div {
         display: flex;
         align-items: center;
+    }
+
+    .header-pagination {
+        bottom: -60px !important;
+    }
+
+    .am .header-title-1 .second-h1 {
+        font-size: 40px !important;
+    }
+
+
+    .am .header-title-2 h1 {
+        font-size: 40px !important;
+    }
+
+    .am .header-title-2 p br {
+        display: none;
+    } 
+
+     .am .header-title-3 h1 {
+        font-size: 35px;
+    }
+
+    .am .header-title-3 p br {
+        display: none;
+    } 
+
+    .ru .header-title-3 h1 {
+        font-size: 50px;
+    }
+
+    .ru .header-title-2 h1 {
+        font-size: 50px;
+    }
+
+    .ru .header-title-2 h2 {
+        font-size: 30px;
+        white-space: normal;
     }
 
     .Departure-div .first-div {
@@ -3087,12 +3292,16 @@ footer .footer-subcribe p {
     .Our-Services-sec .iconsItems {
         flex-wrap: wrap;
         column-gap: 30px !important;
-        row-gap: 30px !important;
+        gap: 30px !important;
         justify-content: center !important;
     }
 
     .Our-Services-sec .iconsItems .iconsItem {
          width: 345px;
+    }
+
+    .Our-Services-sec .iconsItems .iconsItem p br {
+        display: none;
     }
 
     .Our-Clients {
@@ -3118,29 +3327,19 @@ footer .footer-subcribe p {
         gap: 50px !important;
     }
 
-    /* .advantages-sec {
-        gap: 80px !important;
-    } */
-
-
-    .advanItem:first-child {
-        flex-direction: row !important;
-        padding-right: 42px;
-        gap: 20px !important;
-        font-size: 14px !important;
-        margin-top: 0 !important;
+    .am .Our-Advantages .advantages-sec {
+        gap: 50px !important;
     }
 
-    .advantages-sec .advanList .advanItem:nth-child(2) ,
-    .advantages-sec .advanList .advanItem:nth-child(3) ,
-    .advantages-sec .advanList .advanItem:nth-child(4) {
-        display: flex;
-        gap: 20px;
+    .ru .Our-Advantages .advanList .advanItem:nth-child(3){
+        padding-right: 40px;
     }
 
-    .advantages-sec .advanList .advanItem:nth-child(2) p,
-    .advantages-sec .advanList .advanItem:nth-child(3) p,
-    .advantages-sec .advanList .advanItem:nth-child(4) p{
+    .advantages-sec .advanList .advanItem:nth-child(2) {
+        padding-left: 45px;
+    }
+
+    .advantages-sec .advanList .advanItem p {
         font-size: 14px !important;
         padding-top: 0 !important;
         /* margin-top: -5px; */
@@ -3170,6 +3369,20 @@ footer .footer-subcribe p {
 
     .contact-dis p br {
         display: none;
+    }
+
+    footer .footer-serv {
+        padding-left: 10px;
+    }
+
+    .am footer .footer-serv, 
+    .ru footer .footer-serv {
+        padding-left: 10px!important;
+    }
+
+    footer .footer-about-us {
+        padding-top: 80px;
+        padding-left: 10px;
     }
 
     footer .footer-subcribe {
@@ -3257,9 +3470,42 @@ footer .footer-subcribe p {
     .services-drop-pages-sec .second-div ul li a {
         font-size: 14px;
     }
-
-
     /* services-drop-pages res finsih */
+    /* news page res */
+    .news-block {
+        width: 100%;
+    }
+    /* news page res finish*/
+}
+
+@media (max-width:860px) {
+    .brands .swiper-slide {
+        margin-right: 0;
+        flex-shrink: 1;
+    }
+
+    .brands .swiper-slide img {
+        width: 120px;
+    }
+    .brandsSwipe {
+        grid-gap: 0 !important;
+    }
+
+     .brands .swiper-button-next {
+        right: 25px; /* Adjust this value as needed */
+       
+    }
+
+    .brands .swiper-button-prev {
+        left: 10px; /* Adjust this value as needed */
+        
+    }
+}
+
+@media (max-width:800px) {
+    .ru .header-title-3 h1 {
+        font-size: 40px !important;
+    }
 }
 
 @media (max-width:768px) {
@@ -3284,7 +3530,7 @@ footer .footer-subcribe p {
     } 
 
     .header-pagination {
-        transform: translateY(130px) !important;
+        bottom: -100px !important;
     }
 
     .Departure-div .second-div {
@@ -3308,14 +3554,28 @@ footer .footer-subcribe p {
     }
 
     .advantages-sec {
-        gap: 20px !important;
+        gap: 70px !important;
     }
 
-    .Our-Advantages .advantages-sec .advanList .advanItem:first-child {
-        padding-right: 45px;
+    .am .advantages-sec .advanList {
+        gap: 30px !important;
+    }
+
+       
+    .brands .swiper-button-next,
+    .brands .swiper-button-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(0, -50%);
+        z-index: -1;
+        display: none;
     }
 
     footer .footer-serv {
+        padding-top: 40px;
+    }
+    
+    footer .footer-about-us {
         padding-top: 40px;
     }
 
@@ -3331,6 +3591,10 @@ footer .footer-subcribe p {
 
     .about-careers-sec {
         flex-direction: column;
+    }
+
+    .about-careers-sec .careers-dis {
+        margin-bottom: 40px;
     }
 
     .about-careers-sec .name-lastname  input {
@@ -3368,6 +3632,10 @@ footer .footer-subcribe p {
         max-width: 95% !important;
     }
 
+    .headerSlider:hover .header-swiper-arrow {
+        display: none !important;
+    }
+
     .Departure-div .second-div {
         width: 345px !important;
     }
@@ -3386,6 +3654,14 @@ footer .footer-subcribe p {
 
     .Our-Advantages .advantages-sec {
         flex-direction: column;
+    }
+
+    .advantages-sec .advanItem:nth-child(2) {
+        padding-left: 0 !important;
+    }
+
+    .ru .Our-Advantages .advanList .advanItem:nth-child(3){
+        padding-right:0;
     }
 
     /* gallery page res */
@@ -3455,7 +3731,96 @@ footer .footer-subcribe p {
 
 }
 
+@media (max-width:700px) {
+
+    .am .header-title-1 .first-h1 {
+        font-size: 50px;
+    }
+
+    .am .header-title-1 .second-h1 {
+        font-size: 30px !important;
+    }
+
+    .am .header-title-1 h2 {
+        font-size: 25px !important;
+    }
+
+    .am .header-title-2 h1 {
+        font-size: 30px !important;
+    }
+
+    .am .header-title-2 h2 {
+        font-size: 25px;
+        line-height: 0;
+    }
+
+    .am .header-title-2 p br {
+        display: none;
+    }
+
+    .am .header-title-2 button {
+        margin-top: 30px;
+    }
+
+    .am .header-title-3 h1 {
+        font-size: 30px;
+    }
+
+    .am .header-title-3 h2 {
+        font-size: 25px;
+    }
+
+    .am .header-title-3 p br {
+        display: none;
+    }
+
+    .am .header-title-3 p {
+        height: 0;
+    }
+
+    .am .header-title-3 button {
+        margin-top: 80px !important;
+    }
+
+    .ru .header-title-1 .first-h1 {
+        font-size: 55px;
+    }
+
+    .ru .header-title-1 .second-h1 {
+        font-size: 55px;
+    }
+
+    .ru .header-title-1 h2 {
+        font-size: 35px;
+    }
+
+    .ru .header-title-2 h1  {
+        font-size: 40px;
+    }
+
+    .ru .header-title-2 h2 {
+        font-size: 25px;
+    }
+
+    .ru .header-title-3 h1  {
+        font-size: 35px !important;
+    }
+}
+
+
 @media (max-width:692px) {
+
+    .advantages-sec .advanList {
+        column-gap: 130px !important;
+    }
+
+    .ru .Our-Advantages .advanList .advanItem:nth-child(3){
+        padding-right: 0;
+    }
+
+    .am .advantages-sec .advanList {
+        column-gap: 80px !important;
+    }
     
     /* shipment page res */
     
@@ -3467,23 +3832,22 @@ footer .footer-subcribe p {
 
 }
 
-@media (max-width:656px) {
-    .advantages-sec .advanList   {
-       justify-content: start ;
-       column-gap: 100px !important;
-    }
-}
+@media (max-width:593px) {
+       /* about pages */
+       .am .Our-Advantages .advantages-sec .advanList .advanItem:nth-child(1),
+       .en .Our-Advantages .advantages-sec .advanList .advanItem:nth-child(1) {
+        padding-right: 45px !important;
+    } 
+    /* about pages res */
+} 
 
 @media (max-width:581px) {
     /* contact page res */
         
-    /* nav .nav-down .nav-menu {
-        position: fixed;
-        right: 40px;
-        top: 50px;
-        z-index: 1000;
-
-    } */
+     .am .header-title-3 h1 {
+        font-size: 25px !important;
+    }
+            
     .con-page-form-img-sec .con-page-img img{
         width: 100%;
         height: auto;
@@ -3583,13 +3947,66 @@ footer .footer-subcribe p {
         height: 30px;
     }
 
-
     .header-title-3 p.header-title-2 p br, .header-title-3 p br {
         display: none;
     }
 
-    /* shipment page res */
+    .am .header-title-1 .first-h1 {
+        font-size: 50px;
+    }
 
+    .am .header-title-1 .second-h1 {
+        font-size: 30px !important;
+    }
+
+    .am .header-title-1 h2 {
+        padding-top: 0 !important;
+        font-size: 25px !important;
+    }
+
+    .am .header-title-2 h1 {
+        font-size: 30px !important;
+    }
+    
+    .am .header-title-2 h2 {
+        font-size: 25px;
+        line-height: 0;
+    }
+
+    .am .header-title-2 p br {
+        display: none;
+    }
+    
+    .am .header-title-2 button {
+        margin-top: 30px;
+    }
+    
+    .am .header-title-3 h1 {
+        font-size: 30px;
+    }
+    
+    .am .header-title-3 h2 {
+        font-size: 25px;
+    }
+    
+    .am .header-title-3 p br {
+        display: none;
+    }
+    
+    .am .header-title-3 p {
+        height: 0;
+    }
+    
+    .am .header-title-3 button {
+        margin-top: 80px !important;
+    }
+    
+    .am .Services-drop-pages-header .title-div h1 {
+        font-size: 30px  !important;
+    }
+
+    /* shipment page res */
+    
     .Shipment-page .container {
         padding: 0 !;
         width: 95% !important;
@@ -3600,20 +4017,91 @@ footer .footer-subcribe p {
 
 }
 
+@media (max-width:560px) {
+    .am .header-title-1 p {
+        padding-top: 20px !important;
+/*        margin-top: 0 !important;*/
+    }
+
+    .am .header-title-1 .first-h1 {
+        padding-bottom: 10px;
+        font-size: 50px !important;
+    }
+}
+
+@media (max-width:530px) {
+    .am .header-title-1 .first-h1 {
+        font-size: 50px !important;
+        padding-bottom: 10px;
+    }
+
+    .am .header-title-2 h1 {
+        font-size: 25px !important;
+    }
+
+    .am .header-title-2 h2 {
+        font-size: 20px !important;
+    }
+
+    .ru .header-title-2 h1 {
+        font-size: 30px;
+    }
+
+    .ru .header-title-2 h2 {
+        font-size: 25px;
+    }
+
+    .ru .header-title-3 h1 {
+        font-size: 30px !important;
+    }
+}
+
 @media (max-width:500px) {
     nav .contact-info {
         flex-direction: column;
         margin-bottom: 0;
-        gap: 0 !important;
+        grid-gap: 0 !important;
     }
 
 
+    .header-pagination {
+        bottom: -130px !important;
+    }
+
    .Departure .second-div p {
-    width: 100%;
+        width: 100%;
    }
 
    .Departure .third-div p {
-    width: 100%;
+        width: 100%;
+   }
+
+   .am .header-title-1 .first-h1 {
+        font-size:40px !important ;
+   }
+
+   .am .header-title-1 .second-h1 {
+        font-size:25px !important ;
+   }
+
+   .am .header-title-1 h2 {
+        font-size:20px !important ;
+   }
+
+   .am .header-title-2 h1  {
+        font-size:20px !important ;
+   }
+
+    .am .header-title-2 h2  {
+        font-size:15px !important ;
+   }
+
+   .am .header-title-3 h1 {
+        font-size: 20px !important;
+   }
+
+   .am .header-title-3 h2 {
+        font-size: 20px;
    }
     
 }
@@ -3636,6 +4124,30 @@ footer .footer-subcribe p {
         font-size: 12px;
         width: 100% !important;
         /* width: 100%; */
+    }
+
+    .ru .header-title-1 .first-h1 {
+        font-size: 30px;
+    }
+
+    .ru .header-title-1 .second-h1 {
+        font-size: 40px !important;
+    }
+
+    .ru .header-title-1 h2 {
+        font-size: 25px !important;
+    }
+
+    .ru .header-title-2 h1 {
+        font-size: 27px !important;
+    }
+
+    .ru .header-title-2 h2 {
+        font-size: 17px !important;
+    }
+
+    .ru .header-title-3 h1 {
+        font-size: 25px !important;
     }
 
     .question-answer-request-sec .requestForm div  {
@@ -3666,14 +4178,11 @@ footer .footer-subcribe p {
     /* contact page res */
     .Map .con-page-info-smart .phone-email {
         flex-direction: column;
+        gap: 5px !important;
     }
     /* contact page res finish */
 }
 @media (max-width:430px) {
-    
-    .Our-Advantages .advanList {
-        gap: 20px !important;
-    }
     .Our-Advantages .advanList .advanItem i {
         font-size: 40px !important;
     } 
@@ -3684,7 +4193,24 @@ footer .footer-subcribe p {
 }
 
 @media (max-width:410px) {
-    
+
+    .ru .header-title-1 .first-h1 {
+        font-size: 35px !important;
+    }
+
+    .ru .header-title-1 .second-h1 {
+        font-size: 35px !important;
+    }
+
+    .ru .header-title-1 h2{
+        font-size: 20px !important;
+    }
+
+    .ru .header-title-1 p {
+        width:100% !important;
+        white-space: normal;
+    }
+        
     .Departure .second-div {
         width: 99% !important;
     }
@@ -3698,48 +4224,91 @@ footer .footer-subcribe p {
 }
 
 @media (max-width:400px) {
+
+    .am .header-title-1 .second-h1 {
+        font-size: 20px !important;
+    }
+
+    .am .header-title-2 h1 {
+        font-size: 17px !important;
+    }
+
+    .am .header-title-3 h1 {
+        font-size: 17px !important ;
+    }
+
     .Departure-div {
         width: 100%;
     }
     
     .Departure .second-div {
-        width: 99% !important;
+        width: 100% !important;
         height: auto !important;
     }
 
     .Departure .third-div {
-        width: 99% !important;
+        width: 100% !important;
         height: auto !important;
     }
     .Departure .fourth-div {
-        width: 99% !important ;
+        width: 100% !important ;
         height: auto !important;
     }
 }
 
 @media (max-width:380px) {
 
-    /* .Departure .second-div {
-        width: 97.5% !important;
+    .am .serv-page-header .title-div h1 {
+        font-size: 30px !important;
     }
 
-    .Departure .third-div {
-        width: 97.5% !important;
+    .ru .header-title-3 h1 {
+        font-size: 20px !important;
     }
-    .Departure .fourth-div {
-        width: 97.5% !important ;
-    } */
-/* services page res */
 
-.ser-page-contact-us .contact-info button:first-child {
-    margin-right: 0;
-    margin-bottom: 8px;
-}
+    .ru .header-title-2 h1 {
+        font-size: 20px !important;
+    }
 
-.Map ,.con-page-info-smart .phone-email .email-info a {
-    width: 100%;
-}
-/* services page res finish */
+       /* about pages */
+
+    .Our-Advantages .advantages-sec .advanList .advanItem {
+        display: flex;
+        gap: 20px;
+    } 
+
+    .am .advantages-sec .advanList {
+        row-gap: 50px !important;
+    }
+
+    /* about pages res */
+
+    /* services page res */
+
+    .ser-page-contact-us .contact-info button:first-child {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+    .Map ,.con-page-info-smart .phone-email .email-info a {
+        width: 100%;
+    }
+    /* services page res finish */
+
+    }
+
+@media (max-width:340px) {
+    .header-title-1 .first-h1 {
+        font-size: 30px !important;
+        line-height: 0 !important;
+        margin: 0;
+    }
+    
+    .header-title-1 .second-h1 {
+        font-size: 35px !important;
+        line-height: 0 !important;
+        letter-spacing: 0;
+    }
 
 }
 

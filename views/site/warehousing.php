@@ -1,4 +1,7 @@
 <?php $this->params['title'] = $GLOBALS['text']['Warehousing&_Distribution_']; ?>
+<?php $this->params['second'] =  $GLOBALS['text']['__SERVICES__']; ?>
+<?php $this->params['href'] =  '/services' ?>
+
 <a  data-aos="fade-right" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
