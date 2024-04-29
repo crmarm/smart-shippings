@@ -1,11 +1,11 @@
-<?php $this->params['title'] = $GLOBALS['text']['News_Footer']; ?>
+<?php $this->params['title'] = @$GLOBALS['text']['News_Footer']; ?>
 
 <div class="fs-breadcrumbs-wrapper">
     <div class="fs-container">
         <ul class="fs-breadcrumbs-list">
-            <li class="fs-breadcrumbs-el"><a href="/"><?=$GLOBALS['text']['__home__page__']?></a></li>
+            <li class="fs-breadcrumbs-el"><a href="/"><?=@$GLOBALS['text']['__home__page__']?></a></li>
             <li class="fs-breadcrumbs-el" ></li>
-            <li class="fs-breadcrumbs-el"><?=$GLOBALS['text']['__news__']?></li>
+            <li class="fs-breadcrumbs-el"><?=@$GLOBALS['text']['__news__']?></li>
         </ul>
     </div>
 </div>
@@ -34,9 +34,9 @@
                             </p>
                         </div>
                         <div class="read-more-news m-0">
-                            <a href="news/<?= $item->url ?>"><?= $GLOBALS['text']['__read__more__'] ?>
+                            <a href="news/<?= $item->url ?>"><?= @$GLOBALS['text']['__read__more__'] ?>
                                 <button>
-                                    <?= @$GLOBALS['text']['READ_MORE__'] ?>
+                                    <?= @@$GLOBALS['text']['READ_MORE__'] ?>
                                 </button>
                             </a>
                         </div>

@@ -1,13 +1,13 @@
-<?php $this->params['title'] = $GLOBALS['text']['News_Footer']; ?>
-<?php $this->params['second'] =  $GLOBALS['text']['__NEWS__']; ?>
+<?php $this->params['title'] = @$GLOBALS['text']['News_Footer']; ?>
+<?php $this->params['second'] =  @$GLOBALS['text']['__NEWS__']; ?>
 <?php $this->params['href'] =  '/news' ?>
 
 <div class="fs-breadcrumbs-wrapper">
     <div class="fs-container">
         <ul class="fs-breadcrumbs-list">
-            <li class="fs-breadcrumbs-el"><a  href="/"><?=$GLOBALS['text']['__home__page__']?></a></li>
+            <li class="fs-breadcrumbs-el"><a  href="/"><?=@$GLOBALS['text']['__home__page__']?></a></li>
             <li class="fs-breadcrumbs-el" ></li>
-            <li class="fs-breadcrumbs-el"><?=$GLOBALS['text']['__news__']?></li>
+            <li class="fs-breadcrumbs-el"><?=@$GLOBALS['text']['__news__']?></li>
         </ul>
     </div>
 </div>

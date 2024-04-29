@@ -1,4 +1,4 @@
-<?php $this->params['title'] = $GLOBALS['text']['About_Us_Title']; ?>
+<?php $this->params['title'] = @$GLOBALS['text']['About_Us_Title']; ?>
 <a  data-aos="fade-right" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
@@ -9,19 +9,19 @@
         <div class="who-we-are-sec d-flex justify-content-between">
             <div class="who-we-are-dis w-50">
                 <h2>
-                    <?= $GLOBALS['text']['Who_We_Are_'] ?>
+                    <?= @$GLOBALS['text']['Who_We_Are_'] ?>
                 </h2>
                 <p>
-                    <?= $GLOBALS['text']['Our_company_is_'] ?>
+                    <?= @$GLOBALS['text']['Our_company_is_'] ?>
                 </p>
                 <p>
-                   <?= $GLOBALS['text']['Our_clients_also_'] ?>
+                   <?= @$GLOBALS['text']['Our_clients_also_'] ?>
                 </p>
                 <p>                    
-                    <?= $GLOBALS['text']['Trust_us__'] ?>
+                    <?= @$GLOBALS['text']['Trust_us__'] ?>
                 </p>
                 <p>                
-                    <?= $GLOBALS['text']['Our_mission_is_to_provide_'] ?>
+                    <?= @$GLOBALS['text']['Our_mission_is_to_provide_'] ?>
                 </p>
             </div>
             <div class="who-we-are-img">
@@ -39,35 +39,35 @@
         <div class="advantages-sec d-flex justify-content-start  ">
             <div class="title-div">
                 <h6>
-                    <?= $GLOBALS['text']['WHY_CHOOSE_US_'] ?>
+                    <?= @$GLOBALS['text']['WHY_CHOOSE_US_'] ?>
                 </h6>
                 <h2>
-                    <?= $GLOBALS['text']['Our_Advantages__'] ?>
+                    <?= @$GLOBALS['text']['Our_Advantages__'] ?>
                 </h2>
             </div>
             <div class="advanList d-flex align-items-start gap-5">
                 <div class="advanItem">
                     <i class="fas fa-hand-holding-usd fs-1 text-white"></i>
                     <p>
-                       <?= $GLOBALS['text']['cost_effective__'] ?>
+                       <?= @$GLOBALS['text']['cost_effective__'] ?>
                     </p>
                 </div>
                 <div class="advanItem">
                     <i class="fas fa-user-shield fs-1 text-white"></i>
                     <p>
-                        <?= $GLOBALS['text']['safe_and_secure_'] ?>
+                        <?= @$GLOBALS['text']['safe_and_secure_'] ?>
                     </p>
                 </div>
                 <div class="advanItem">
                     <i class="fas fa-shipping-fast fs-1 text-white"></i>
                     <p>
-                        <?= $GLOBALS['text']['fast_and_convenient_'] ?>
+                        <?= @$GLOBALS['text']['fast_and_convenient_'] ?>
                     </p>
                 </div>
                 <div class="advanItem">
                     <i class="fas fa-headset fs-1 text-white"></i>
                     <p>
-                        <?= $GLOBALS['text']['high_quality_service_'] ?>
+                        <?= @$GLOBALS['text']['high_quality_service_'] ?>
                     </p>
                 </div>
             </div>
@@ -80,38 +80,38 @@
         <div class="about-careers-sec d-flex justify-content-between">
             <div class="careers-dis">
                 <h6 >
-                    <?= $GLOBALS['text']['CAREERS__'] ?>
+                    <?= @$GLOBALS['text']['CAREERS__'] ?>
                 </h6>
                 <h2>
-                    <?= $GLOBALS['text']['Interested_join'] ?>
+                    <?= @$GLOBALS['text']['Interested_join'] ?>
                 </h2>
                 <p>
-                    <?= $GLOBALS['text']['Would_you_like'] ?>
+                    <?= @$GLOBALS['text']['Would_you_like'] ?>
                 </p>
                 <p>
-                    <?= $GLOBALS['text']['Then_hurry_up_to'] ?>
+                    <?= @$GLOBALS['text']['Then_hurry_up_to'] ?>
                 </p>
                 <p>
-                    <?= $GLOBALS['text']['If_we_have_free_vacancies'] ?>
+                    <?= @$GLOBALS['text']['If_we_have_free_vacancies'] ?>
                 </p>
             </div>
             <div class="careers-form">
                 <form class="d-flex flex-column gap-3">
                     <div class="name-lastname d-flex gap-3">
-                        <input type="text" name="name" placeholder="<?= $GLOBALS['text']['first-name'] ?>">
-                        <input type="text" name="lastName" placeholder="<?= $GLOBALS['text']['last-name'] ?>">
+                        <input type="text" name="name" placeholder="<?= @$GLOBALS['text']['first-name'] ?>">
+                        <input type="text" name="lastName" placeholder="<?= @$GLOBALS['text']['last-name'] ?>">
                     </div>
                     <div class="email">
-                        <input type="email" name="email" placeholder="<?= $GLOBALS['text']['email'] ?>">
+                        <input type="email" name="email" placeholder="<?= @$GLOBALS['text']['email'] ?>">
                     </div>
                     <div class="department">
-                        <input type="text" name="text" placeholder="<?= $GLOBALS['text']['department'] ?>">
+                        <input type="text" name="text" placeholder="<?= @$GLOBALS['text']['department'] ?>">
                     </div>
                     <div class="message">
-                        <textarea name="message" rows="4" placeholder="<?= $GLOBALS['text']['Message'] ?>"></textarea>
+                        <textarea name="message" rows="4" placeholder="<?= @$GLOBALS['text']['Message'] ?>"></textarea>
                     </div>
                     <button type="submit">
-                        <?= $GLOBALS['text']['Submit'] ?>
+                        <?= @$GLOBALS['text']['Submit'] ?>
                     </button>
                 </form>
             </div>
@@ -124,19 +124,19 @@
         <div class="contact-sec  d-flex justify-content-between">
             <div class="contact-dis " >
                 <h3>
-                    <?= $GLOBALS['text']['Let_Us_Help'] ?>
+                    <?= @$GLOBALS['text']['Let_Us_Help'] ?>
                 </h3>
                 <p>
-                    <?= $GLOBALS['text']['Please_feel__'] ?>
+                    <?= @$GLOBALS['text']['Please_feel__'] ?>
                 </p>
             </div>
             <div class="contact-info   " >
                 <button>
                     <a href="/contact">
-                        <?= $GLOBALS['text']['Contact_Us_Now_'] ?>
+                        <?= @$GLOBALS['text']['Contact_Us_Now_'] ?>
                     </a>
                 </button>
-                <p ><?= $GLOBALS['text']['Or_Call_'] ?> <span>+374 91 919188</span></p>
+                <p ><?= @$GLOBALS['text']['Or_Call_'] ?> <span>+374 91 919188</span></p>
             </div>
         </div>
     </div>
