@@ -106,7 +106,7 @@
                         </ul>
                         <button class="border-0"  type="submit">
                             <a href="../Html/contact.html">
-                                <?= $GLOBALS['text']['Contact-Us_Title'] ?>
+                                <?= $GLOBALS['text']['Contact_Us_Title'] ?>
                             </a>
                         </button>
                     </div>

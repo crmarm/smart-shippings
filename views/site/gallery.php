@@ -7,7 +7,7 @@
 </a>
 <section class="gallery-figures">
     <div class="container">
-        <div class="gallery-figures-sec d-flex flex-wrap justify-content-center column-gap-3 w-100 pt-4 pb-5">
+        <div class="gallery-figures-sec d-flex flex-wrap justify-content-center gap-3 w-100 pt-4 pb-5">
             <figure>
                 <img src="../images/gallery-img-1.jpg" alt="">
             </figure>

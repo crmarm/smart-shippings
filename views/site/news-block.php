@@ -29,7 +29,7 @@
                 <div class="about-news py-3 w-100 ">
                     <p class="">
                         <?= $_COOKIE['language'] === 'hy' ? $item->page_content_am : (($_COOKIE['language'] === 'ru') ? $item->page_content_ru : $item->page_title_en) ?>
-                        <?= ($item->page_content_am) ; ?>
+                        <?= $item->page_content_am  ?>
                     </p>
                 </div>
             </div>

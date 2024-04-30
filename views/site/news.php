@@ -9,14 +9,21 @@
         </ul>
     </div>
 </div>
-<?php $_COOKIE['language'] = 'am'; ?>
 <section class="news-sec" style="margin:50px 0">
     <div class="container ">
-        <div class="all-news">
+        <div class="title-div">
+            <h2>
+                <?= @$GLOBALS['text']['Latest_News_'] ?>
+            </h2>                          
+            <p>
+               <?= @$GLOBALS['text']['Get_An_Owerveiw_'] ?>
+            </p>                
+        </div>
+        <div class="all-news ">
         <?php
         if(isset($news) && !empty($news)) {
             foreach ($news as $index => $item) { ?>
-                <div class="news-block">
+                <div class="news-block ">
                     <div class="news-img-parent">
                         <a href="news/<?= $item->url ?>">
                             <div class="news-img" style="background:url('<?= $item->img ?>') no-repeat center/cover">

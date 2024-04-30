@@ -42,9 +42,11 @@
                 <p>
                     <?= @$GLOBALS['text']['Feel_free_'] ?>
                 </p>
-                <button type="button">
-                    <?= @$GLOBALS['text']['Contact_Us_'] ?>
-                </button>
+                <a href="/contact">
+                    <button type="button">
+                        <?= @$GLOBALS['text']['Contact_Us_'] ?>
+                    </button>
+                </a>
                 <i class="bi bi-question-circle"></i>
             </div>
             <div class="fourth-div">
