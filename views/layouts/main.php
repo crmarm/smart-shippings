@@ -81,7 +81,7 @@ $action = Yii::$app->controller->action->id;
     <div class="search-up d-flex align-items-center " id="searchUpForm">
         <div class="container ">
             <form class="input-group form-search w-50 my-3 m-auto d-flex justify-content-center">   
-                <input type="text" class="input-search w-100 p-2 border-0" placeholder="<?= $GLOBALS['text']['Search'] ?>"  aria-describedby="button-addon2">
+                <input type="text" class="input-search w-100 p-2 border-0 text-white" placeholder="<?= $GLOBALS['text']['Search'] ?>"  aria-describedby="button-addon2">
                 <button class="submit-search border-0 bg-transparent " type="submit" id="button-addon2"><i class='bx bx-search'></i></button>
             </form>
         </div>
@@ -170,7 +170,7 @@ $action = Yii::$app->controller->action->id;
                                                         </a>
                                                     </li>
                                                     <li class="drop-item-3 ">
-                                                        <a href="/cargoinsurance" class="drop-link-3">
+                                                        <a href="/cargoinsuranc" class="drop-link-3">
                                                             <?= $GLOBALS['text']['Cargo_Insurance_'] ?>
                                                         </a>
                                                     </li>
@@ -280,13 +280,13 @@ $action = Yii::$app->controller->action->id;
                                 <div class="drop-mob-div-3">
                                     <ul class="drop-mob-menu-3">
                                         <li class="drop-mob-item-3 ">
-                                            <a href="/customs" class="drop-mob-link-3">
+                                            <a href="/customsbrokerage" class="drop-mob-link-3">
                                                 <i class='bx bx-chevron-right'></i>
                                                 <?= $GLOBALS['text']['Customs_Brokerag_'] ?>
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-3 ">
-                                            <a href="/customs" class="drop-mob-link-3">
+                                            <a href="/cargoinsuranc" class="drop-mob-link-3">
                                                 <i class='bx bx-chevron-right'></i>
                                                 <?= $GLOBALS['text']['Cargo_Insurance_'] ?>
                                             </a>
@@ -464,7 +464,7 @@ $action = Yii::$app->controller->action->id;
                     </ul>
                     <ul class="social-icons px-0 d-flex justify-content-start gap-2">
                         <li>
-                            <a href="">
+                            <a href="https://www.facebook.com/smartshippings/">
                                 <i class='bx bxl-facebook'></i>
                             </a>
                         </li>
@@ -479,12 +479,12 @@ $action = Yii::$app->controller->action->id;
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="https://am.linkedin.com/company/smartshippings">
                                 <i class='bx bxl-linkedin' ></i>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="info@smartshippings.com">
                                 <i class='bx bx-envelope'></i>
                             </a>
                         </li>

@@ -212,4 +212,8 @@ class SiteController extends Controller
             return $this->render('news', ['news' => $news]);
         }
     }
+    public function actionQuestAnswer()
+    {
+        return $this->render('quest-answer');
+    }
 }

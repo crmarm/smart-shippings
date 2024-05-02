@@ -49,7 +49,7 @@
                                 </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
+                                <i style="color:#80c644;display:block; " class="bi bi-check-circle"></i>
                                 <p>
                                     <?= $GLOBALS['text']['Auto_Trans'] ?>
                                 </p>
@@ -79,7 +79,7 @@
                 <ul class="phone-email  px-0 gap-4">
                     <li class="phone-info">
                         <i class="bi bi-telephone"></i>
-                        <a href="callto:+374 91 919122">+374 91 919122</a>
+                        <a href="tel:+374 91 919122">+374 91 919122</a>
                     </li>
                     <li class="email-info">
                         <i class="fa-sharp fa-thin fa-at"></i>

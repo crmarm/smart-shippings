@@ -39,7 +39,26 @@ class AdminController extends Controller
             ],
         ];
     }
-
+    public function beforeAction($action)
+    {
+        if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
+            setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
+            $this->refresh();
+            Yii::$app->end();
+            return false;
+        }
+        $lng = $_COOKIE['language'] ?? 'am';
+        if($lng !== 'am' && $lng !== 'ru' && $lng !== 'en'){
+            setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
+            $this->refresh();
+            Yii::$app->end();
+            return false;
+        }
+        $txt = Texts::find()->select(['text_'.$lng.' as text'])->asArray()->indexBy('slug')->column();
+        $GLOBALS['text'] = $txt;
+        $this->enableCsrfValidation = false;
+        return parent::beforeAction($action);
+    }
     /**
      * {@inheritdoc}
      */
@@ -80,6 +99,7 @@ class AdminController extends Controller
         $blogs = SmNews::find()->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('news', ['blogs' => $blogs]);
     }
+    
     public function actionNewsEdite() {
         $id = intval($_GET['id']);
         $blog = SmNews::findOne(['id' => $id]);

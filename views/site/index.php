@@ -30,9 +30,11 @@
                 <p>
                     <?= @$GLOBALS['text']['Do_you_want_'] ?>
                 </p>
-                <button type="button">
-                    <?= @$GLOBALS['text']['Start_a_Quote_'] ?>
-                </button>
+                <a href="/quest-answer">
+                    <button type="button">
+                        <?= @$GLOBALS['text']['Start_a_Quote_'] ?>
+                    </button>
+                </a>
                 <span class="licon-quote"></span>
             </div>
             <div class="third-div">
@@ -85,7 +87,7 @@
                                 <p>
                                     <?= @$GLOBALS['text']['Our_Air_'] ?>
                                 </p>
-                                <a href="" >
+                                <a href="/airfreght" >
                                     <?= @$GLOBALS['text']['READ_MORE__'] ?>
                                 </a>
                             </div>
@@ -103,7 +105,7 @@
                             <p>
                                 <?= @$GLOBALS['text']['Our_Sea_'] ?>
                             </p>
-                            <a href="">
+                            <a href="/seafreght">
                                 <?= @$GLOBALS['text']['READ_MORE__'] ?>
                             </a>
                         </div>
@@ -119,7 +121,7 @@
                             <p>
                                 <?= @$GLOBALS['text']['When_rail_'] ?>
                             </p>
-                            <a href="">
+                            <a href="/railfreght">
                                 <?= @$GLOBALS['text']['READ_MORE__'] ?>
                             </a>
                         </div>
@@ -135,7 +137,7 @@
                             <p>
                                 <?= @$GLOBALS['text']['Our_Road__'] ?>
                             </p>
-                            <a href="">
+                            <a href="roadfreght">
                                 <?= @$GLOBALS['text']['READ_MORE__'] ?>
                             </a>
                         </div>
@@ -153,7 +155,7 @@
                             <p>
                                 <?= @$GLOBALS['text']['Customs_Services_'] ?>
                             </p>
-                            <a href="" >
+                            <a href="/customsbrokerage" >
                                 <?= @$GLOBALS['text']['READ_MORE__'] ?>
                             </a>
                         </div>
@@ -169,7 +171,7 @@
                             <p>
                                 <?= @$GLOBALS['text']['Our_Cargo__'] ?>
                             </p>
-                            <a href="">
+                            <a href="/cargoinsurance">
                                 <?= @$GLOBALS['text']['READ_MORE__'] ?>
                             </a>
                         </div>
@@ -185,7 +187,7 @@
                             <p>
                                 <?= @$GLOBALS['text']['Our_Warehousing__'] ?>
                             </p>
-                            <a href="">
+                            <a href="/warehousing">
                                 <?= @$GLOBALS['text']['READ_MORE__'] ?>
                             </a>
                         </div>
@@ -201,7 +203,7 @@
                             <p>
                                 <?= @$GLOBALS['text']['Our_Project__'] ?>
                             </p>
-                            <a href="">
+                            <a href="/project-logistics">
                                 <?= @$GLOBALS['text']['READ_MORE__'] ?>
                             </a>
                         </div>
