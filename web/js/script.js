@@ -107,11 +107,9 @@ document.addEventListener("DOMContentLoaded",function() {
           el: ".header-pagination",
           clickable: true,      
         },
-
-        // autoplay: {
-        //     delay: 5000, 
-        // },
-      
+        autoplay: {
+            delay: 5000, 
+        },      
     });
     AOS.init();
 })
@@ -147,36 +145,6 @@ var clientSwiper = new Swiper(".clients-slide", {
 
 
 // question answer 
-
-// const questions = document.querySelectorAll('.question');
-
-// questions.forEach(question => {
-//     question.addEventListener('click', () => {
-//         const currentQuestion = question.parentElement;
-//         const currentAnswer = currentQuestion.querySelector('.answer');
-//         const currentPlusIcon = currentQuestion.querySelector('.plus i');
-
-//         document.querySelectorAll('.quest-ans-item').forEach(item => {
-//             if (item !== currentQuestion && item.classList.contains('show')) {
-//                 item.classList.remove('show');
-//                 const otherPlusIcon = item.querySelector('.plus i');
-//                 otherPlusIcon.classList.remove('bi-dash-lg');
-//                 otherPlusIcon.classList.add('bi-plus-lg');
-//             }
-//         });
-
-//         currentQuestion.classList.toggle('show');
-//         currentAnswer.classList.toggle('show');
-
-//         if (currentQuestion.classList.contains('show')) {
-//             currentPlusIcon.classList.remove('bi-plus-lg');
-//             currentPlusIcon.classList.add('bi-dash-lg');
-//         } else {
-//             currentPlusIcon.classList.remove('bi-dash-lg');
-//             currentPlusIcon.classList.add('bi-plus-lg');
-//         }
-//     });
-// });
 
 $(document).ready(function() {
     $('.question').click(function() {
@@ -232,7 +200,7 @@ var swiper = new Swiper('.brandsSwiper', {
 });
 
 
-
+///////////////////
 
 $('body').on('click', '#editeBlog', function(e) {
     e.preventDefault(e);

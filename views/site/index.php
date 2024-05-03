@@ -76,7 +76,6 @@
                 </div>
             </div>
             <div class=" iconsItems d-flex justify-content-between gap-4">
-                <div  >
                     <div class="iconsItem" >
                         <div class="iconsItemChild">
                             <div>
@@ -93,8 +92,6 @@
                             </div>
                         </div>
                     </div>
-
-                </div>
                 <div class="iconsItem  ">
                     <div class="iconsItemChild">
                         <div>

@@ -28,7 +28,7 @@
                         <p>
                             <?= $GLOBALS['text']['Our_Air_'] ?>
                         </p>
-                        <a href="" >
+                        <a href="/airfreght" >
                             <?= $GLOBALS['text']['READ_MORE__'] ?>
                         </a>
                     </div>
