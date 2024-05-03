@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\SmNews;
 use app\models\Texts;
+use app\models\Tracking;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -164,9 +165,22 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-    public function actionShippment()
-    {
-        return $this->render('shippment');
+    public function actionShippment(){
+        $tracks = '';
+        if(@$_GET['search']){
+            $type = ['=','tracking.id',$_GET['search']];
+            $tracks = Tracking::find()
+                ->joinWith(['points' => function ($query){
+                    $query->onCondition(['or',
+                        ['track_points.id' => $query->min('track_points.id')],
+                    ]);
+                },'item','cordinator']);
+            if(@$type){
+                $tracks->andWhere($type);
+            }
+            $tracks = $tracks->asArray()->all();
+        }
+        return $this->render('shippment',['tracks' => $tracks]);
     }
     public function actionAirfreght()
     {
