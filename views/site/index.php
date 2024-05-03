@@ -533,7 +533,6 @@
                 <div class="swiper-slide">
                     <img src="/images/warehouswTrade-img.png" alt="">
                 </div>
-
             </div>
         </div>
     </div>

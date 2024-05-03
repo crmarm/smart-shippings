@@ -107,9 +107,11 @@ document.addEventListener("DOMContentLoaded",function() {
           el: ".header-pagination",
           clickable: true,      
         },
-        autoplay: {
-            delay: 5000, 
-        },      
+
+        // autoplay: {
+        //     delay: 5000, 
+        // },
+      
     });
     AOS.init();
 })
@@ -145,7 +147,6 @@ var clientSwiper = new Swiper(".clients-slide", {
 
 
 // question answer 
-
 $(document).ready(function() {
     $('.question').click(function() {
         var currentQuestion = $(this).parent();
@@ -194,19 +195,19 @@ var swiper = new Swiper('.brandsSwiper', {
             slidesPerView:3,
             spaceBetween:30,
         }
-    }
-  
- 
+    } 
 });
 
 
-///////////////////
+
 
 $('body').on('click', '#editeBlog', function(e) {
     e.preventDefault(e);
     var id = $('.sortableTable tr.active').attr('data-id');
     editeBlog(id);
 });
+
+
 function editeBlog(id) {
     if (id) {
         jQuery.ajax({

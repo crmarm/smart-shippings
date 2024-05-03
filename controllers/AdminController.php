@@ -102,7 +102,10 @@ class AdminController extends Controller
         $blogs = SmNews::find()->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('news', ['blogs' => $blogs]);
     }
-    
+    public function actionDeleteNews($id) {
+        $d= SmNews::findOne(intval($id));
+        $d->delete();
+    }
     public function actionNewsEdite() {
         $id = intval($_GET['id']);
         $blog = SmNews::findOne(['id' => $id]);
