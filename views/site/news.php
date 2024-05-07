@@ -30,8 +30,7 @@
                 <div class="news-block ">
                     <div class="news-img-parent">
                         <a href="news/<?= $item->url ?>">
-                            <div class="news-img" style="background:url('<?= $item->img ?>') no-repeat center/cover">
-                            </div>
+                            <img class="news-img" src="<?= $item->img ?>" alt="Image">
                         </a>
                     </div>
                     <div class="news-dis">

@@ -200,7 +200,7 @@
                             <p>
                                 <?= @$GLOBALS['text']['Our_Project__'] ?>
                             </p>
-                            <a href="/project-logistics">
+                            <a href="/projectlogistics">
                                 <?= @$GLOBALS['text']['READ_MORE__'] ?>
                             </a>
                         </div>
