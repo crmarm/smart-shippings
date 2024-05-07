@@ -169,7 +169,7 @@ $action = Yii::$app->controller->action->id;
                                                         </a>
                                                     </li>
                                                     <li class="drop-item-3 ">
-                                                        <a href="/cargoinsuranc" class="drop-link-3">
+                                                        <a href="/cargoinsurance" class="drop-link-3">
                                                             <?= $GLOBALS['text']['Cargo_Insurance_'] ?>
                                                         </a>
                                                     </li>
