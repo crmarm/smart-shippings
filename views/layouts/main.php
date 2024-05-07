@@ -468,14 +468,10 @@ $action = Yii::$app->controller->action->id;
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="https://www.instagram.com/smart.shippings/">
                                 <i class='bx bxl-twitter' ></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="">
-                                <i class='bx bxl-google-plus'></i>
-                            </a>
                         </li>
                         <li>
                             <a href="https://am.linkedin.com/company/smartshippings">
@@ -483,7 +479,7 @@ $action = Yii::$app->controller->action->id;
                             </a>
                         </li>
                         <li>
-                            <a href="info@smartshippings.com">
+                            <a href="mailto:info@smartshippings.com">
                                 <i class='bx bx-envelope'></i>
                             </a>
                         </li>
