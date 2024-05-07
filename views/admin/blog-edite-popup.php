@@ -15,9 +15,9 @@
                     <span style="margin-bottom: 4px;color: #878787;">Նկար</span>
                     <?php if(!empty($blog->img)){?>
                         <br>
-                        <img src="/<?php echo $blog->img;?>" height="60" alt="">
+                        <img src="../<?php echo $blog->img;?>" height="60" alt="">
                         <br>
-                        <input type="hidden" name="old_img" value="<?php echo $blog->img;?>">
+                        <input type="hidden" name="old_img" value="<?php echo $blog->img?>">
                     <?php } ?>
                     <input type="file" name="img">
                     <br>

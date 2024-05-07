@@ -127,7 +127,7 @@
                 <div class="iconsItem ">
                     <div  class="iconsItemChild">
                         <div>
-                            <img src="../images/road-img.png" alt="">
+                            <i class="fa-solid fa-road"></i>
                             <h5>
                                 <?= @$GLOBALS['text']['Road_Freight_'] ?>
                             </h5>

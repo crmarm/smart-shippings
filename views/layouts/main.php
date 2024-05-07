@@ -36,10 +36,10 @@ $action = Yii::$app->controller->action->id;
 </head>
 <body class="d-flex flex-column h-100  <?= $_COOKIE['language'] ?>">
 <?php $this->beginBody() ?>
-<div class="language-sec ">
-    <div class="container position-relative ">
-        <div class="d-flex justify-content-end hover-div   ">
-            <div class="language position-fixed end-10 top-0 z-2   ">
+<div class="language-sec">
+    <div class="container position-relative">
+        <div class="d-flex justify-content-end hover-div">
+            <div class="language position-fixed end-10 top-0 z-2">
                 <div class="selected-lang ">
                     <div class="lang-item-child d-flex justify-content-between align-items-center gap-1 pb-2">
                         <img src="<?= $lan_imgs[$_COOKIE['language']]  ?>" alt="">
@@ -55,7 +55,6 @@ $action = Yii::$app->controller->action->id;
                             </a>
                         </div>
                     </div>
-
                     <div class="lang-item">
                         <div  class="lang-item-child d-flex justify-content-between align-items-center gap-1">
                             <a href="/switch-language?lang=am" style="display: contents;">

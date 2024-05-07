@@ -96,6 +96,12 @@ class AdminController extends Controller
             $blog = SmNews::findOne(['id' => intval($post['id']) ]);
             $blog->load($post);
             $blog->url =  $this->transLateURRL($blog->page_name_am);
+            if (!empty($_FILES['img']) && $_FILES['img']['tmp_name']) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "uploads/$name");
+                $blog->img = "uploads/$name";
+            }
             $blog->save(false);
             $this->redirect(['news', 'success' => 'true', 'id' => 'key' .  $blog->id]);
         }

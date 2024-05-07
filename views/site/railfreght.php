@@ -2,7 +2,7 @@
 <?php $this->params['second'] =  $GLOBALS['text']['__SERVICES__']; ?>
 <?php $this->params['href'] =  '/services' ?>
 
-<a  data-aos="fade-right" class="go-to-up" href="#top">
+<a  data-aos="fade-right" data-aos-duration="2000" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
     </button>
