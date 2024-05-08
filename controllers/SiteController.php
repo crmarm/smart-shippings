@@ -105,7 +105,7 @@ class SiteController extends Controller
         if($_POST){
             $model->load(Yii::$app->request->post(), '');
             if($model->login()){
-                return $this->redirect('index');
+                return $this->redirect('admin/news');
             }else{
                 return $this->redirect('login');
             }

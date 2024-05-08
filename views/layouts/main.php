@@ -80,7 +80,7 @@ $action = Yii::$app->controller->action->id;
     <div class="search-up d-flex align-items-center " id="searchUpForm">
         <div class="container ">
             <form class="input-group form-search w-50 my-3 m-auto d-flex justify-content-center">   
-                <input type="text" class="input-search w-100 p-2 border-0 text-white" placeholder="<?= $GLOBALS['text']['Search'] ?>"  aria-describedby="button-addon2">
+                <input type="text" class="input-search w-100 p-2 border-0 text-white" placeholder="<?= @$GLOBALS['text']['Search'] ?>"  aria-describedby="button-addon2">
                 <button class="submit-search border-0 bg-transparent " type="submit" id="button-addon2"><i class='bx bx-search'></i></button>
             </form>
         </div>
@@ -90,10 +90,10 @@ $action = Yii::$app->controller->action->id;
             <div class="container d-flex">
                 <div class=" d-flex align-items-center justify-content-start pt-0 ">
                     <ul class="contact-info d-flex list-unstyled" >
-                        <li><?= $GLOBALS['text']['Phone__'] ?>:
+                        <li><?= @$GLOBALS['text']['Phone__'] ?>:
                             <a class="text-decoration-none" href="tel:+374 91 919122"> +374 91 919122</a>
                         </li>
-                        <li><?= $GLOBALS['text']['Email__'] ?>:
+                        <li><?= @$GLOBALS['text']['Email__'] ?>:
                             <a class="text-decoration-none" href="mailto:h.hovhannisyan@smartshippings.com"> h.hovhannisyan@smartshippings.com</a>
                         </li>
                     </ul>
@@ -113,7 +113,7 @@ $action = Yii::$app->controller->action->id;
                         <ul class="navbar d-flex" style="<?php if ($_COOKIE['language'] == 'am') { echo "gap: 20px"; }?>" >
                         
                             <li class="nav-item d-flex align-items-center">
-                                <a class="nav-link <?= $action === 'services' ? 'active-linkPage' : '' ?>" href="/services "><?= $GLOBALS['text']['__SERVICES__'] ?>
+                                <a class="nav-link <?= $action === 'services' ? 'active-linkPage' : '' ?>" href="/services "><?= @$GLOBALS['text']['__SERVICES__'] ?>
                                 </a>
                                 <i class='bx bx-chevron-down'></i>
                                 
@@ -124,7 +124,7 @@ $action = Yii::$app->controller->action->id;
                                             <?php if ($_COOKIE['language'] == 'en') {
                                                 echo "padding-right: 30px !important";
                                             } ?>>
-                                                <?= $GLOBALS['text']['Freight_Forwarding_'] ?>
+                                                <?= @$GLOBALS['text']['Freight_Forwarding_'] ?>
                                                 <i class='bx bx-chevron-right'></i>
                                             </a>
                                             
@@ -132,22 +132,22 @@ $action = Yii::$app->controller->action->id;
                                                 <ul class="drop-menu-2">
                                                     <li class="drop-item-2">
                                                         <a href="/airfreght" class="drop-link-2">
-                                                          <?= $GLOBALS['text']['Air_Freight_'] ?>
+                                                          <?= @$GLOBALS['text']['Air_Freight_'] ?>
                                                         </a>
                                                     </li>
                                                     <li class="drop-item-2 ">
                                                         <a href="/seafreght" class="drop-link-2">
-                                                            <?= $GLOBALS['text']['Sea_Freight_'] ?>
+                                                            <?= @$GLOBALS['text']['Sea_Freight_'] ?>
                                                         </a>
                                                     </li>
                                                     <li class="drop-item-2 ">
                                                         <a href="/railfreght" class="drop-link-2">
-                                                            <?= $GLOBALS['text']['Rail_Freight_'] ?>
+                                                            <?= @$GLOBALS['text']['Rail_Freight_'] ?>
                                                         </a>
                                                     </li>
                                                     <li class="drop-item-2">
                                                         <a href="/roadfreght" class="drop-link-2">
-                                                            <?= $GLOBALS['text']['Road_Freight_'] ?>
+                                                            <?= @$GLOBALS['text']['Road_Freight_'] ?>
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -157,7 +157,7 @@ $action = Yii::$app->controller->action->id;
                                             <a class="drop-link" href="#" style="padding-right: 2px; <?php if (@$_COOKIE['language'] == 'ru'){echo "padding-right: 55px";} {
                                                 // code...
                                             } ?>">
-                                                <?= $GLOBALS['text']['Value_added_Services'] ?>
+                                                <?= @$GLOBALS['text']['Value_added_Services'] ?>
                                                 <i class='bx bx-chevron-right'></i>
                                             </a>
                                             
@@ -165,17 +165,17 @@ $action = Yii::$app->controller->action->id;
                                                 <ul class="drop-menu-3">
                                                     <li class="drop-item-3 ">
                                                         <a href="/customsbrokerage" class="drop-link-3">
-                                                            <?= $GLOBALS['text']['Customs_Brokerag_'] ?>
+                                                            <?= @$GLOBALS['text']['Customs_Brokerag_'] ?>
                                                         </a>
                                                     </li>
                                                     <li class="drop-item-3 ">
                                                         <a href="/cargoinsurance" class="drop-link-3">
-                                                            <?= $GLOBALS['text']['Cargo_Insurance_'] ?>
+                                                            <?= @$GLOBALS['text']['Cargo_Insurance_'] ?>
                                                         </a>
                                                     </li>
                                                     <li class="drop-item-3 ">
                                                         <a href="/warehousing" class="drop-link-3">
-                                                            <?= $GLOBALS['text']['Warehousing&_Distribution_'] ?>
+                                                            <?= @$GLOBALS['text']['Warehousing&_Distribution_'] ?>
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -183,7 +183,7 @@ $action = Yii::$app->controller->action->id;
                                         </li>
                                         <li class="drop-item">
                                             <a class="drop-link" href="/projectlogistics">
-                                                <?= $GLOBALS['text']['Project_Logistics_'] ?>
+                                                <?= @$GLOBALS['text']['Project_Logistics_'] ?>
                                             </a>
                                         </li>
                                     </ul>
@@ -191,27 +191,27 @@ $action = Yii::$app->controller->action->id;
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link <?= $action === 'about' ? 'active-linkPage' : '' ?>" href="/about">
-                                    <?= $GLOBALS['text']['ABOUT_US'] ?>
+                                    <?= @$GLOBALS['text']['ABOUT_US'] ?>
                                 </a>
                             </li>
                              <li class="nav-item">
                                 <a class="nav-link <?= $action === 'news' ? 'active-linkPage' : '' ?>" href="/news">
-                                   <?= $GLOBALS['text']['__NEWS__'] ?>
+                                   <?= @$GLOBALS['text']['__NEWS__'] ?>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link <?= $action === 'gallery' ? 'active-linkPage' : '' ?>" href="/gallery">
-                                    <?= $GLOBALS['text']['GALLERY_'] ?>
+                                    <?= @$GLOBALS['text']['GALLERY_'] ?>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link <?= $action === 'contact' ? 'active-linkPage' : '' ?>" href="/contact">
-                                    <?= $GLOBALS['text']['CONTACT_'] ?>
+                                    <?= @$GLOBALS['text']['CONTACT_'] ?>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link <?= $action === 'shippment' ? 'active-linkPage' : '' ?>" href="/shippment">
-                                    <?= $GLOBALS['text']['TRACK_YOUR_SHIPPMENT'] ?>
+                                    <?= @$GLOBALS['text']['TRACK_YOUR_SHIPPMENT'] ?>
                                 </a>
                             </li>
                         </ul>
@@ -233,39 +233,39 @@ $action = Yii::$app->controller->action->id;
             <ul class="navbar-mobile ">
                 <li class="nav-mob-item " id="dropMobItem">
                     <a class="nav-mob-link" href="/services">
-                        <?= $GLOBALS['text']['__SERVICES__'] ?>
+                        <?= @$GLOBALS['text']['__SERVICES__'] ?>
                     </a>
                     <div class="drop-mob-div">
                         <ul class="drop-mob-menu">
                             <li class="drop-mob-item">
                                 <a class="drop-mob-link" href="#">
                                     <i class='bx bx-chevron-right'></i>
-                                    <?= $GLOBALS['text']['Freight_Forwarding_'] ?>
+                                    <?= @$GLOBALS['text']['Freight_Forwarding_'] ?>
                                 </a>
                                 <div class="drop-mob-div-2">
                                     <ul class="drop-mob-menu-2">
                                         <li class="drop-mob-item-2">
                                             <a href="/airfreght" class="drop-mob-link-2">
                                                 <i class='bx bx-chevron-right'></i>
-                                                <?= $GLOBALS['text']['Air_Freight_'] ?>
+                                                <?= @$GLOBALS['text']['Air_Freight_'] ?>
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-2 ">
                                             <a href="/Seafreght" class="drop-mob-link-2">
                                                 <i class='bx bx-chevron-right'></i>
-                                                <?= $GLOBALS['text']['Sea_Freight_'] ?>
+                                                <?= @$GLOBALS['text']['Sea_Freight_'] ?>
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-2 ">
                                             <a href="/railfreight" class="drop-mob-link-2">
                                                 <i class='bx bx-chevron-right'></i>
-                                                <?= $GLOBALS['text']['Rail_Freight_'] ?>
+                                                <?= @$GLOBALS['text']['Rail_Freight_'] ?>
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-2">
                                             <a href="/roadfreight" class="drop-mob-link-2">
                                                 <i class='bx bx-chevron-right'></i>
-                                                <?= $GLOBALS['text']['Road_Freight_'] ?>
+                                                <?= @$GLOBALS['text']['Road_Freight_'] ?>
                                             </a>
                                         </li>
                                     </ul>
@@ -274,26 +274,26 @@ $action = Yii::$app->controller->action->id;
                             <li class="drop-mob-item ">
                                 <a class="drop-mob-link" href="#">
                                     <i class='bx bx-chevron-right'></i>
-                                    <?= $GLOBALS['text']['Value_added_Services'] ?>
+                                    <?= @$GLOBALS['text']['Value_added_Services'] ?>
                                 </a>
                                 <div class="drop-mob-div-3">
                                     <ul class="drop-mob-menu-3">
                                         <li class="drop-mob-item-3 ">
                                             <a href="/customsbrokerage" class="drop-mob-link-3">
                                                 <i class='bx bx-chevron-right'></i>
-                                                <?= $GLOBALS['text']['Customs_Brokerag_'] ?>
+                                                <?= @$GLOBALS['text']['Customs_Brokerag_'] ?>
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-3 ">
                                             <a href="/cargoinsuranc" class="drop-mob-link-3">
                                                 <i class='bx bx-chevron-right'></i>
-                                                <?= $GLOBALS['text']['Cargo_Insurance_'] ?>
+                                                <?= @$GLOBALS['text']['Cargo_Insurance_'] ?>
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-3">
                                             <a href="/warehousing" class="drop-mob-link-3">
                                                 <i class='bx bx-chevron-right'></i>
-                                                <?= $GLOBALS['text']['Warehousing&_Distribution_'] ?>
+                                                <?= @$GLOBALS['text']['Warehousing&_Distribution_'] ?>
                                             </a>
                                         </li>
                                     </ul>
@@ -302,7 +302,7 @@ $action = Yii::$app->controller->action->id;
                             <li class="drop-mob-item d-flex ">
                                 <a class="drop-mob-link" href="/projectlogistics">
                                     <i class='bx bx-chevron-right'></i>
-                                     <?= $GLOBALS['text']['Project_Logistics_'] ?>
+                                     <?= @$GLOBALS['text']['Project_Logistics_'] ?>
                                 </a>
                             </li>
                         </ul>
@@ -310,27 +310,27 @@ $action = Yii::$app->controller->action->id;
                 </li>
                 <li class="nav-mob-item">         
                     <a class="nav-mob-link" href="/about">
-                        <?= $GLOBALS['text']['ABOUT_US'] ?>
+                        <?= @$GLOBALS['text']['ABOUT_US'] ?>
                     </a>
                 </li>
                 <li class="nav-mob-item">      
                     <a class="nav-mob-link" href="/news">
-                        <?= $GLOBALS['text']['__NEWS__'] ?>
+                        <?= @$GLOBALS['text']['__NEWS__'] ?>
                     </a>
                 </li>
                 <li class="nav-mob-item">    
                     <a class="nav-mob-link" href="/gallery">
-                        <?= $GLOBALS['text']['GALLERY_'] ?>
+                        <?= @$GLOBALS['text']['GALLERY_'] ?>
                     </a>
                 </li>
                 <li class="nav-mob-item">        
                     <a class="nav-mob-link" href="/contact">
-                        <?= $GLOBALS['text']['CONTACT_'] ?>
+                        <?= @$GLOBALS['text']['CONTACT_'] ?>
                     </a>       
                 </li>
                 <li class="nav-mob-item">
                     <a class="nav-mob-link" href="/shippment">
-                        <?= $GLOBALS['text']['TRACK_YOUR_SHIPPMENT'] ?>
+                        <?= @$GLOBALS['text']['TRACK_YOUR_SHIPPMENT'] ?>
                     </a>              
                 </li>
             </ul>
@@ -348,20 +348,20 @@ $action = Yii::$app->controller->action->id;
                         <div class="container">
                             <div class="header-title header-title-1 d-flex flex-column align-items-end text-white">
                                 <h1 data-aos="fade-up" data-aos-duration="1000" class="first-h1 " >
-                                    <?= $GLOBALS['text']['ACCELERATE_'] ?>
+                                    <?= @$GLOBALS['text']['ACCELERATE_'] ?>
                                 </h1>
                                 <h2 data-aos="fade-up" data-aos-duration="1500">
-                                    <?= $GLOBALS['text']['YOUR_FREGHIT_WITH'] ?>
+                                    <?= @$GLOBALS['text']['YOUR_FREGHIT_WITH'] ?>
                                 </h2>
                                 <h1 data-aos="fade-up" data-aos-duration="2000" class="second-h1">
-                                     <?= $GLOBALS['text']['Title_Air_Freight_'] ?>
+                                     <?= @$GLOBALS['text']['Title_Air_Freight_'] ?>
                                 </h1>
                                 <p data-aos="fade-up" data-aos-duration="2000">
-                                    <?= $GLOBALS['text']['Trust_us_your_'] ?>       
+                                    <?= @$GLOBALS['text']['Trust_us_your_'] ?>
                                 </p>
                                 <a href="/airfreght">
                                     <button data-aos="fade-right" data-aos-duration="2500" type="button" class="btn-lg">
-                                        <?= $GLOBALS['text']['Read_More_'] ?>
+                                        <?= @$GLOBALS['text']['Read_More_'] ?>
                                     </button>
                                 </a>
                             </div>
@@ -371,17 +371,17 @@ $action = Yii::$app->controller->action->id;
                         <div class="container">
                             <div class="header-title header-title-2 d-flex flex-column align-items-start text-white ">
                                 <h1>
-                                    <?= $GLOBALS['text']['Sea_Freight_'] ?>
+                                    <?= @$GLOBALS['text']['Sea_Freight_'] ?>
                                 </h1>
                                 <h2>
-                                    <?= $GLOBALS['text']['Global_Solutions__'] ?>
+                                    <?= @$GLOBALS['text']['Global_Solutions__'] ?>
                                 </h2>
                                 <p class=" pt-0 text-start">
-                                    <?= $GLOBALS['text']['Are_you_looking'] ?>
+                                    <?= @$GLOBALS['text']['Are_you_looking'] ?>
                                 </p>
                                 <a href="/seafreght">
                                     <button type="button" class="btn-lg ">
-                                        <?= $GLOBALS['text']['Read_More_'] ?>
+                                        <?= @$GLOBALS['text']['Read_More_'] ?>
                                     </button>
                                 </a>
                             </div>
@@ -391,17 +391,17 @@ $action = Yii::$app->controller->action->id;
                         <div class="container">
                             <div class="header-title header-title-3 d-flex flex-column align-items-end  text-white ">
                                 <h1>
-                                    <?= $GLOBALS['text']['Road_Freight_'] ?>
+                                    <?= @$GLOBALS['text']['Road_Freight_'] ?>
                                 </h1>
                                 <h2>
-                                    <?= $GLOBALS['text']['Shortens_Transit__'] ?>
+                                    <?= @$GLOBALS['text']['Shortens_Transit__'] ?>
                                 </h2>
                                 <p class="text-end pt-0 mt-0">
-                                    <?= $GLOBALS['text']['Choose_our_road'] ?>
+                                    <?= @$GLOBALS['text']['Choose_our_road'] ?>
                                 </p>
                                 <a href="roadfreght">
                                     <button type="button" class="btn-lg ">
-                                        <?= $GLOBALS['text']['Read_More_'] ?>
+                                        <?= @$GLOBALS['text']['Read_More_'] ?>
                                     </button>
                                 </a>
                             </div>
@@ -417,10 +417,10 @@ $action = Yii::$app->controller->action->id;
         <div class="Services-drop-pages-header">
             <div class="container">
                 <div class="title-div">
-                    <h1><?= $this->params['title'] ?> </h1>
-                    <p><a href="/"><?= $GLOBALS['text']['__home__'] ?></a>
-                        <?php if(isset($this->params['second'])){ ?>
-                        / <a href="<?= $this->params['href']  ?>"><span> <?= $this->params['second'] ?></span></a>
+                    <h1><?= @$this->params['title'] ?> </h1>
+                    <p><a href="/"><?= @$GLOBALS['text']['__home__'] ?></a>
+                        <?php if(isset($this->params) && isset($this->params['second'])){ ?>
+                        / <a href="<?= @$this->params['href']  ?>"><span> <?= @$this->params['second'] ?></span></a>
                         <?php } ?>
                     </p>
                     <?= '';//$_SERVER['REDIRECT_URL'] != '/services' ? 'asdfghgfd' : ''?>
@@ -443,13 +443,13 @@ $action = Yii::$app->controller->action->id;
             <div class="row">
                 <div class="footer-con col-lg-3 col-md-6">
                     <h6>
-                        <?= $GLOBALS['text']['CONTACT_US'] ?>
+                        <?= @$GLOBALS['text']['CONTACT_US'] ?>
                     </h6>
                     <p>
-                        <?= $GLOBALS['text']['Smart_Shippings_LLC_'] ?><br>
-                        <?= $GLOBALS['text']['Address:__'] ?>
-                        <?= $GLOBALS['text']['Working_days:_'] ?><br>
-                        <?= $GLOBALS['text']['9.00_am_to_'] ?>
+                        <?= @$GLOBALS['text']['Smart_Shippings_LLC_'] ?><br>
+                        <?= @$GLOBALS['text']['Address:__'] ?>
+                        <?= @$GLOBALS['text']['Working_days:_'] ?><br>
+                        <?= @$GLOBALS['text']['9.00_am_to_'] ?>
                     </p>
                     <ul class="footer-con-info">
                         <li class="phone-info">
@@ -488,46 +488,46 @@ $action = Yii::$app->controller->action->id;
 
                 <div class="footer-serv col-lg-3 col-md-6" >
                     <h6>
-                        <?= $GLOBALS['text']['__SERVICES__'] ?>
+                        <?= @$GLOBALS['text']['__SERVICES__'] ?>
                     </h6>
                     <ul class="px-0">
                         <li>
                             <a href="/airfreght">
-                                <?= $GLOBALS['text']['Air_Freight_'] ?>
+                                <?= @$GLOBALS['text']['Air_Freight_'] ?>
                             </a>
                         </li>
                         <li>
                             <a href="/seafreght">
-                                <?= $GLOBALS['text']['Sea_Freight_'] ?>
+                                <?= @$GLOBALS['text']['Sea_Freight_'] ?>
                             </a>
                         </li>
                         <li>
                             <a href="/roadfreght">
-                                <?= $GLOBALS['text']['Road_Freight_'] ?>
+                                <?= @$GLOBALS['text']['Road_Freight_'] ?>
                             </a>
                         </li>
                         <li>
                             <a href="/railfreght">
-                                <?= $GLOBALS['text']['Rail_Freight_']?>
+                                <?= @$GLOBALS['text']['Rail_Freight_']?>
                         </li>
                         <li>
                             <a href="/customsbrokerage">
-                                <?= $GLOBALS['text']['Customs_Brokerag_'] ?>
+                                <?= @$GLOBALS['text']['Customs_Brokerag_'] ?>
                             </a>
                         </li>
                         <li>
                             <a href="/cargoinsurance">
-                                <?= $GLOBALS['text']['Cargo_Insurance_'] ?>
+                                <?= @$GLOBALS['text']['Cargo_Insurance_'] ?>
                             </a>
                         </li>
                         <li>
                             <a href="warehousing">
-                                <?= $GLOBALS['text']['Air_Freight_'] ?>
+                                <?= @$GLOBALS['text']['Air_Freight_'] ?>
                             </a>
                         </li>
                         <li>
                             <a href="/projectlogistics">
-                                <?= $GLOBALS['text']['Warehousing&_Distribution_'] ?>
+                                <?= @$GLOBALS['text']['Warehousing&_Distribution_'] ?>
                             </a>
                         </li>
                     </ul>
@@ -535,22 +535,22 @@ $action = Yii::$app->controller->action->id;
 
                 <div class="footer-about-us col-lg-3 col-md-6">
                     <h6>
-                        <?= $GLOBALS['text']['__COMPANY__'] ?>
+                        <?= @$GLOBALS['text']['__COMPANY__'] ?>
                     </h6>
                     <ul>
                         <li>
                             <a href="/about">
-                                <?= $GLOBALS['text']['About_Us_Footer'] ?>
+                                <?= @$GLOBALS['text']['About_Us_Footer'] ?>
                             </a>
                         </li>
                         <li>
                             <a href="/news">
-                                <?= $GLOBALS['text']['News_Footer'] ?>
+                                <?= @$GLOBALS['text']['News_Footer'] ?>
                             </a>
                         </li>
                         <li>
                             <a href="gallery">
-                                <?= $GLOBALS['text']['Gallery_Footer'] ?>
+                                <?= @$GLOBALS['text']['Gallery_Footer'] ?>
                             </a>
                         </li>
                     </ul>
@@ -558,15 +558,15 @@ $action = Yii::$app->controller->action->id;
 
                 <div class="footer-subcribe col-lg-3 col-md-6">
                     <h6>
-                        <?= $GLOBALS['text']['SUBSCRIBE__'] ?>
+                        <?= @$GLOBALS['text']['SUBSCRIBE__'] ?>
                     </h6>
                     <p>
-                     <?= @$GLOBALS['text']['Sign_Up_to'] ?>
+                     <?= @@$GLOBALS['text']['Sign_Up_to'] ?>
                     </p>
                     <form class="d-flex flex-column align-items-start">
-                        <input class="w-100"  placeholder="<?= $GLOBALS['text']['Enter_your_email'] ?>">
+                        <input class="w-100"  placeholder="<?= @$GLOBALS['text']['Enter_your_email'] ?>">
                         <button  type="submit">
-                            <?= $GLOBALS['text']['Sign_Up_'] ?>
+                            <?= @$GLOBALS['text']['Sign_Up_'] ?>
                         </button>
                     </form>
                 </div>
@@ -574,7 +574,7 @@ $action = Yii::$app->controller->action->id;
             <div class="row">
                 <div class=" footer-con-copyright col-lg-12">
                     <p>
-                        <?= $GLOBALS['text']['Copyright_Expeditor_'] ?>
+                        <?= @$GLOBALS['text']['Copyright_Expeditor_'] ?>
                     </p>
                 </div>
             </div>

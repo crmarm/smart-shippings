@@ -36,7 +36,7 @@
     </script>
 <?php } ?>
 <div class="products">
-    <div class="clearfix"></div>g
+    <div class="clearfix"></div>
     <div class="pages">
         <div class="row">
             <div class="col-xl-12">

@@ -1,5 +1,5 @@
-<?php $this->params['title'] = $GLOBALS['text']['Cargo_Insurance_']; ?>
-<?php $this->params['second'] =  $GLOBALS['text']['__SERVICES__']; ?>
+<?php $this->params['title'] = @$GLOBALS['text']['Cargo_Insurance_']; ?>
+<?php $this->params['second'] =  @$GLOBALS['text']['__SERVICES__']; ?>
 <?php $this->params['href'] =  '/services' ?>
 <a  data-aos="fade-right" data-aos-duration="2000" class="go-to-up" href="#top">
     <button >
@@ -16,54 +16,54 @@
                     </div>
                     <div class="p-under-img">
                         <p>
-                            <?= $GLOBALS['text']['Our_team_of_'] ?>
+                            <?= @$GLOBALS['text']['Our_team_of_'] ?>
                         </p>
                     </div>
                     <div class="green-box text-white d-flex justify-content-between ">
                         <div class="green-box-item">
                             <h5>
-                                <?= $GLOBALS['text']['Easy_&_Convenient__'] ?>
+                                <?= @$GLOBALS['text']['Easy_&_Convenient__'] ?>
                             </h5>
                             <p>
-                                <?= $GLOBALS['text']['You’ll_find__'] ?>
+                                <?= @$GLOBALS['text']['You’ll_find__'] ?>
                             </p>
                         </div>
                         <div class="green-box-item">
                             <h5>
-                                <?= $GLOBALS['text']['Save_Secure'] ?>
+                                <?= @$GLOBALS['text']['Save_Secure'] ?>
                             </h5>
                             <p>
-                                <?= $GLOBALS['text']['You_benefit_from_'] ?>
+                                <?= @$GLOBALS['text']['You_benefit_from_'] ?>
                             </p>
                         </div>
                     </div>
                     <div class="services-include">
                         <h4>
-                            <?= $GLOBALS['text']['Our_Cargo_Insurance_'] ?>
+                            <?= @$GLOBALS['text']['Our_Cargo_Insurance_'] ?>
                         </h4>
                         <ul class="px-0">
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
                                 <p>
-                                    <?= $GLOBALS['text']['All_Risk'] ?>
+                                    <?= @$GLOBALS['text']['All_Risk'] ?>
                                 </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i style="color:#80c644;display:block; " class="bi bi-check-circle"></i>
                                 <p>
-                                    <?= $GLOBALS['text']['Auto_Trans'] ?>
+                                    <?= @$GLOBALS['text']['Auto_Trans'] ?>
                                 </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
                                 <p>
-                                    <?= $GLOBALS['text']['High_value'] ?>
+                                    <?= @$GLOBALS['text']['High_value'] ?>
                                 </p>
                             </li>
                         </ul>
                         <button class="border-0"  type="submit">
                             <a href="/contact">
-                                <?= $GLOBALS['text']['Contact_Us_Title'] ?>
+                                <?= @$GLOBALS['text']['Contact_Us_Title'] ?>
                             </a>
                         </button>
                     </div>
@@ -71,10 +71,10 @@
             </div>
             <div class="second-div">
                 <h5>
-                    <?= $GLOBALS['text']['Contact-Us_Title'] ?>
+                    <?= @$GLOBALS['text']['Contact-Us_Title'] ?>
                 </h5>
                 <h6><a href="#">
-                    <?= $GLOBALS['text']['Smart_Shippings_LLC_'] ?>
+                    <?= @$GLOBALS['text']['Smart_Shippings_LLC_'] ?>
                 </a></h6>
                 <ul class="phone-email  px-0 gap-4">
                     <li class="phone-info">

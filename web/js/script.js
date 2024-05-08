@@ -206,6 +206,13 @@ $('body').on('click', '#editeBlog', function(e) {
     var id = $('.sortableTable tr.active').attr('data-id');
     editeBlog(id);
 });
+$('body').on('click', '#disableBlog', function(e) {
+    e.preventDefault(e);
+    if(confirm('Վստա՞հ եք որ ուզում եք ջնջել')) {
+        var id = $('.sortableTable tr.active').attr('data-id');
+    }
+    deleteBlog(id);
+});
 
 
 function editeBlog(id) {
@@ -214,6 +221,16 @@ function editeBlog(id) {
             url: "/admin/news-edite?id=" + id,
             success: function(result) {
                 jQuery(".modals").html(result);
+            }
+        });
+    }
+}
+function deleteBlog(id) {
+    if (id) {
+        jQuery.ajax({
+            url: "/admin/delete-news?id=" + id,
+            success: function(result) {
+                $('.sortableTable tr.active').remove();
             }
         });
     }
