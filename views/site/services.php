@@ -233,7 +233,7 @@
             </div>
             <div class="contact-info   " >
                 <button  type="submit">
-                    <a href="#">
+                    <a href="/quest-answer">
                         <?= $GLOBALS['text']['Get_a_Free_'] ?>
                     </a>
                 </button>

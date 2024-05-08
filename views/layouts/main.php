@@ -469,7 +469,7 @@ $action = Yii::$app->controller->action->id;
                         </li>
                         <li>
                             <a href="https://www.instagram.com/smart.shippings/">
-                                <i class='bx bxl-twitter' ></i>
+                                <i class='bx bxl-instagram'></i>
                             </a>
                         </li>
                         </li>
