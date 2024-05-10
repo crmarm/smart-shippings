@@ -79,7 +79,7 @@
             <div class="request-div col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <div class="requestForm ">
                     <?php 
-                    if($_COOKIE['language'] == "am") {
+                    if($_COOKIE['language'] == "hy") {
                     ?>
                         <script data-b24-form="inline/18/gbwpq5" data-skip-moving="true">
                             (function(w,d,u){var s=d.createElement('script');

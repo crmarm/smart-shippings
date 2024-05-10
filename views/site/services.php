@@ -28,7 +28,7 @@
                         <p>
                             <?= $GLOBALS['text']['Our_Air_'] ?>
                         </p>
-                        <a href="/airfreght" >
+                        <a href="<?= Yii::$app->urlManager->createUrl('airfreght') ?>/<?= $_COOKIE['language'] ?>" >
                             <?= $GLOBALS['text']['READ_MORE__'] ?>
                         </a>
                     </div>
@@ -44,7 +44,7 @@
                         <p>
                             <?= $GLOBALS['text']['Our_Sea_'] ?>
                         </p>
-                        <a href="/seafreght">
+                        <a href="<?= Yii::$app->urlManager->createUrl('seafreght') ?>/<?= $_COOKIE['language'] ?>">
                             <?= $GLOBALS['text']['READ_MORE__'] ?>
                         </a>
                     </div>
@@ -60,7 +60,7 @@
                         <p>
                             <?= $GLOBALS['text']['When_rail_'] ?>
                         </p>
-                        <a href="/railfreght">
+                        <a href="<?= Yii::$app->urlManager->createUrl('railfreght') ?>/<?= $_COOKIE['language'] ?>">
                             <?= $GLOBALS['text']['READ_MORE__'] ?>
                         </a>
                     </div>
@@ -76,7 +76,7 @@
                         <p>
                             <?= $GLOBALS['text']['Our_Road__'] ?>
                         </p>
-                        <a href="/roadfreght">
+                        <a href="<?= Yii::$app->urlManager->createUrl('roadfreght') ?>/<?= $_COOKIE['language'] ?>">
                             <?= $GLOBALS['text']['READ_MORE__'] ?>
                         </a>
                     </div>
@@ -94,7 +94,7 @@
                         <p>
                             <?= $GLOBALS['text']['Customs_Services_'] ?>
                         </p>
-                        <a href="/customsbrokerage" >
+                        <a href="<?= Yii::$app->urlManager->createUrl('customsbrokerage') ?>/<?= $_COOKIE['language'] ?>" >
                             <?= $GLOBALS['text']['READ_MORE__'] ?>
                         </a>
                     </div>
@@ -110,7 +110,7 @@
                         <p>
                             <?= $GLOBALS['text']['Our_Cargo__'] ?>
                         </p>
-                        <a href="/cargoinsurance">
+                        <a href="<?= Yii::$app->urlManager->createUrl('cargoinsurance') ?>/<?= $_COOKIE['language'] ?>">
                             <?= $GLOBALS['text']['READ_MORE__'] ?>
                         </a>
                     </div>
@@ -126,7 +126,7 @@
                         <p>
                             <?= $GLOBALS['text']['Our_Warehousing__'] ?>
                         </p>
-                        <a href="/warehousing">
+                        <a href="<?= Yii::$app->urlManager->createUrl('warehousing') ?>/<?= $_COOKIE['language'] ?>">
                             <?= $GLOBALS['text']['READ_MORE__'] ?>
                         </a>
                     </div>
@@ -142,7 +142,7 @@
                         <p>
                             <?= $GLOBALS['text']['Our_Project__'] ?>
                         </p>
-                        <a href="/projectlogistics">
+                        <a href="<?= Yii::$app->urlManager->createUrl('projectlogistics') ?>/<?= $_COOKIE['language'] ?>">
                             <?= $GLOBALS['text']['READ_MORE__'] ?>
                         </a>
                     </div>
@@ -233,12 +233,12 @@
             </div>
             <div class="contact-info   " >
                 <button  type="submit">
-                    <a href="/quest-answer">
+                    <a href="<?= Yii::$app->urlManager->createUrl('quest-answer') ?>/<?= $_COOKIE['language'] ?>">
                         <?= $GLOBALS['text']['Get_a_Free_'] ?>
                     </a>
                 </button>
                 <button >
-                    <a href="/contact">
+                    <a href="<?= Yii::$app->urlManager->createUrl('contact')  ?>/<?= $_COOKIE['language'] ?>">
                         <?= $GLOBALS['text']['Contact_Us_Now_'] ?>
                     </a>
                 </button>

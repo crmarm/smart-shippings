@@ -1,6 +1,6 @@
 <?php $this->params['title'] = $GLOBALS['text']['Air_Freight']; ?>
 <?php $this->params['second'] =  $GLOBALS['text']['__SERVICES__']; ?>
-<?php $this->params['href'] =  '/services' ?>
+<?php $this->params['href'] = Yii::$app->urlManager->createUrl('services')  ?>/<?= $_COOKIE['language'] ?>
 
 <a  data-aos="fade-right" data-aos-duration="2000" class="go-to-up" href="#top">
     <button >
@@ -70,7 +70,7 @@
 
                         </ul>
                         <button class="border-0"  type="submit">
-                            <a href="/contact">
+                            <a href="<?= Yii::$app->urlManager->createUrl('contact')  ?>/<?= $_COOKIE['language'] ?>">
                                 <?= $GLOBALS['text']['Contact_Us_Title'] ?>
                             </a>
                         </button>
