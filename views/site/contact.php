@@ -10,7 +10,7 @@
         <div class="con-page-form-img-sec d-flex justify-content-between ">
             <div class="con-page-form">
                 <?php 
-                    if($_COOKIE['language'] == "am") {
+                    if($_COOKIE['language'] == "hy") {
                 ?>
                     <script data-b24-form="inline/14/h29flh" data-skip-moving="true">
                          (function(w,d,u){

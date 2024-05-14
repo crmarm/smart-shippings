@@ -6,6 +6,7 @@
 use app\assets\AppAsset;
 use app\widgets\Alert;
 use yii\bootstrap5\Html;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 
@@ -16,22 +17,59 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 //$this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
 $lan_imgs = [];
-$lan_imgs['am'] = '../images/hy-img.png';
+$lan_imgs['hy'] = '../images/hy-img.png';
 $lan_imgs['ru'] = '../images/ru_RU.png';
 $lan_imgs['en'] = '../images/en_US.png';
 
-$lan_imgs['text']['am'] = 'Armenian';
+$lan_imgs['text']['hy'] = 'Armenian';
 $lan_imgs['text']['ru'] = 'Russian';
 $lan_imgs['text']['en'] = 'English';
 
 $controller = Yii::$app->controller->id;
 $action = Yii::$app->controller->action->id;
+
+switch ($_COOKIE['language']) {
+    case 'en':
+        $regionCode = 'US';
+        $placeName = 'New York';
+        break;
+    case 'hy':
+        $regionCode = 'AM';
+        $placeName = 'Yerevan';
+        break;
+    case 'ru':
+        $regionCode = 'RU';
+        $placeName = 'Moscow';
+        break;
+    default:
+        break;
+}
+$meteRegion = '<meta name="geo.region" content="' . $regionCode . '">';
+$metePName = '<meta name="geo.placename" content="' . $placeName . '">';
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>" class="h-100">
 <head>
     <title><?= Html::encode($this->title) ?></title>
+
+    <?= $meteRegion ?>
+    <?= $metePName ?>
+    <meta name="description" lang="<?= $_COOKIE['language'] ?>" content="Welcome to SmartShipping, a leading logistics company providing reliable transportation, warehousing, and supply chain solutions. We specialize in warehouseing, shipping, rail, road, sea , offering efficient delivery, cost-effective storage, and streamlined logistics management. Contact us today to optimize your supply chain and enhance your business operations.">
+    <meta name="keywords" content="SmartShipping, logistics, transportation, warehousing, supply chain, shipping, freight, rail, cargo, delivery, logistics services">
+
+    <meta property="og:title" content="SmartShipping">
+    <meta property="og:description" content="Ваше мета-описание">
+    <meta property="og:image" content="../x/SmartShipping_s_logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.facebook.com/smartshippings/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="SmartShipping">
+    <meta name="twitter:description" content="Welcome to SmartShipping, a leading logistics company providing reliable transportation, warehousing, and supply chain solutions. We specialize in warehousing, shipping, rail, road, sea , offering efficient delivery, cost-effective storage, and streamlined logistics management. Contact us today to optimize your supply chain and enhance your business operations.">
+    <meta name="twitter:image" content="x.png">
+
     <?php $this->head() ?>
 </head>
 <body class="d-flex flex-column h-100  <?= $_COOKIE['language'] ?>">
@@ -49,7 +87,7 @@ $action = Yii::$app->controller->action->id;
                 <div class="lang-list  z-3">
                     <div class="lang-item selected">
                         <div class="lang-item-child d-flex justify-content-between align-items-center gap-1">
-                            <a href="/switch-language?lang=en">
+                            <a href="<?= Yii::$app->urlManager->createUrl('switch-language') ?>?lang=en">
                                 <img src="../images/en_US.png" alt="">
                                 <span>English</span>
                             </a>
@@ -57,7 +95,7 @@ $action = Yii::$app->controller->action->id;
                     </div>
                     <div class="lang-item">
                         <div  class="lang-item-child d-flex justify-content-between align-items-center gap-1">
-                            <a href="/switch-language?lang=am" style="display: contents;">
+                            <a href="<?= Yii::$app->urlManager->createUrl('switch-language') ?>?lang=am" style="display: contents;">
                                 <img src="../images/hy-img.png" width="50 " alt="">
                                 <span>Armenian</span>
                             </a>
@@ -65,7 +103,7 @@ $action = Yii::$app->controller->action->id;
                     </div>
                     <div class="lang-item">
                         <div  class="lang-item-child d-flex justify-content-between align-items-center gap-1">
-                            <a href="/switch-language?lang=ru" style="display: contents;">
+                            <a href="<?= Yii::$app->urlManager->createUrl('switch-language') ?>?lang=ru" style="display: contents;">
                                 <img src="../images/ru_RU.png" width="50" alt="">
                                 <span>Russian</span>
                             </a>
@@ -110,10 +148,10 @@ $action = Yii::$app->controller->action->id;
                         </a>
                     </div>
                     <div class="navbar-search">
-                        <ul class="navbar d-flex" style="<?php if ($_COOKIE['language'] == 'am') { echo "gap: 20px"; }?>" >
+                        <ul class="navbar d-flex" style="<?php if ($_COOKIE['language'] == 'hy') { echo "gap: 20px"; }?>" >
                         
                             <li class="nav-item d-flex align-items-center">
-                                <a class="nav-link <?= $action === 'services' ? 'active-linkPage' : '' ?>" href="/services "><?= @$GLOBALS['text']['__SERVICES__'] ?>
+                                <a class="nav-link <?= $action === 'services' ? 'active-linkPage' : '' ?>" href="<?= Yii::$app->urlManager->createUrl('services') ?>/<?= $_COOKIE['language'] ?>"><?= @$GLOBALS['text']['__SERVICES__'] ?>
                                 </a>
                                 <i class='bx bx-chevron-down'></i>
                                 
@@ -131,22 +169,22 @@ $action = Yii::$app->controller->action->id;
                                             <div class="drop-div-2">
                                                 <ul class="drop-menu-2">
                                                     <li class="drop-item-2">
-                                                        <a href="/airfreght" class="drop-link-2">
+                                                        <a href="<?= Yii::$app->urlManager->createUrl('airfreght') ?>/<?= $_COOKIE['language'] ?>" class="drop-link-2">
                                                           <?= @$GLOBALS['text']['Air_Freight_'] ?>
                                                         </a>
                                                     </li>
                                                     <li class="drop-item-2 ">
-                                                        <a href="/seafreght" class="drop-link-2">
+                                                        <a href="<?= Yii::$app->urlManager->createUrl('seafreght') ?>/<?= $_COOKIE['language'] ?>" class="drop-link-2">
                                                             <?= @$GLOBALS['text']['Sea_Freight_'] ?>
                                                         </a>
                                                     </li>
                                                     <li class="drop-item-2 ">
-                                                        <a href="/railfreght" class="drop-link-2">
+                                                        <a href="<?= Yii::$app->urlManager->createUrl('railfreght') ?>/<?= $_COOKIE['language'] ?>" class="drop-link-2">
                                                             <?= @$GLOBALS['text']['Rail_Freight_'] ?>
                                                         </a>
                                                     </li>
                                                     <li class="drop-item-2">
-                                                        <a href="/roadfreght" class="drop-link-2">
+                                                        <a href="<?= Yii::$app->urlManager->createUrl('roadfreght') ?>/<?= $_COOKIE['language'] ?>" class="drop-link-2">
                                                             <?= @$GLOBALS['text']['Road_Freight_'] ?>
                                                         </a>
                                                     </li>
@@ -164,17 +202,17 @@ $action = Yii::$app->controller->action->id;
                                             <div class="drop-div-3">
                                                 <ul class="drop-menu-3">
                                                     <li class="drop-item-3 ">
-                                                        <a href="/customsbrokerage" class="drop-link-3">
+                                                        <a href="<?= Yii::$app->urlManager->createUrl('customsbrokerage') ?>/<?= $_COOKIE['language'] ?>" class="drop-link-3">
                                                             <?= @$GLOBALS['text']['Customs_Brokerag_'] ?>
                                                         </a>
                                                     </li>
                                                     <li class="drop-item-3 ">
-                                                        <a href="/cargoinsurance" class="drop-link-3">
+                                                        <a href="<?= Yii::$app->urlManager->createUrl('cargoinsurance') ?>/<?= $_COOKIE['language'] ?>" class="drop-link-3">
                                                             <?= @$GLOBALS['text']['Cargo_Insurance_'] ?>
                                                         </a>
                                                     </li>
                                                     <li class="drop-item-3 ">
-                                                        <a href="/warehousing" class="drop-link-3">
+                                                        <a href="<?= Yii::$app->urlManager->createUrl('warehousing') ?>/<?= $_COOKIE['language'] ?>" class="drop-link-3">
                                                             <?= @$GLOBALS['text']['Warehousing&_Distribution_'] ?>
                                                         </a>
                                                     </li>
@@ -182,7 +220,7 @@ $action = Yii::$app->controller->action->id;
                                             </div>
                                         </li>
                                         <li class="drop-item">
-                                            <a class="drop-link" href="/projectlogistics">
+                                            <a class="drop-link" href="<?= Yii::$app->urlManager->createUrl('projectlogistics') ?>/<?= $_COOKIE['language'] ?>">
                                                 <?= @$GLOBALS['text']['Project_Logistics_'] ?>
                                             </a>
                                         </li>
@@ -190,27 +228,27 @@ $action = Yii::$app->controller->action->id;
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <?= $action === 'about' ? 'active-linkPage' : '' ?>" href="/about">
+                                <a class="nav-link <?= $action === 'about' ? 'active-linkPage' : '' ?>" href="<?= Yii::$app->urlManager->createUrl('about') ?>/<?= $_COOKIE['language'] ?>">
                                     <?= @$GLOBALS['text']['ABOUT_US'] ?>
                                 </a>
                             </li>
                              <li class="nav-item">
-                                <a class="nav-link <?= $action === 'news' ? 'active-linkPage' : '' ?>" href="/news">
+                                <a class="nav-link <?= $action === 'news' ? 'active-linkPage' : '' ?>" href="<?= Yii::$app->urlManager->createUrl('news') ?>/<?= $_COOKIE['language'] ?>">
                                    <?= @$GLOBALS['text']['__NEWS__'] ?>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <?= $action === 'gallery' ? 'active-linkPage' : '' ?>" href="/gallery">
+                                <a class="nav-link <?= $action === 'gallery' ? 'active-linkPage' : '' ?>" href="<?= Yii::$app->urlManager->createUrl('gallery') ?>/<?= $_COOKIE['language'] ?>">
                                     <?= @$GLOBALS['text']['GALLERY_'] ?>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <?= $action === 'contact' ? 'active-linkPage' : '' ?>" href="/contact">
+                                <a class="nav-link <?= $action === 'contact' ? 'active-linkPage' : '' ?>" href="<?= Yii::$app->urlManager->createUrl('contact') ?>/<?= $_COOKIE['language'] ?>">
                                     <?= @$GLOBALS['text']['CONTACT_'] ?>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <?= $action === 'shippment' ? 'active-linkPage' : '' ?>" href="/shippment">
+                                <a class="nav-link <?= $action === 'shippment' ? 'active-linkPage' : '' ?>" href="<?= Yii::$app->urlManager->createUrl('shippment') ?>/<?= $_COOKIE['language'] ?>">
                                     <?= @$GLOBALS['text']['TRACK_YOUR_SHIPPMENT'] ?>
                                 </a>
                             </li>
@@ -232,7 +270,7 @@ $action = Yii::$app->controller->action->id;
             <!-- Your navigation menu -->
             <ul class="navbar-mobile ">
                 <li class="nav-mob-item " id="dropMobItem">
-                    <a class="nav-mob-link" href="/services">
+                    <a class="nav-mob-link" href="<?= Yii::$app->urlManager->createUrl('services') ?>/<?= $_COOKIE['language'] ?>">
                         <?= @$GLOBALS['text']['__SERVICES__'] ?>
                     </a>
                     <div class="drop-mob-div">
@@ -245,25 +283,25 @@ $action = Yii::$app->controller->action->id;
                                 <div class="drop-mob-div-2">
                                     <ul class="drop-mob-menu-2">
                                         <li class="drop-mob-item-2">
-                                            <a href="/airfreght" class="drop-mob-link-2">
+                                            <a href="<?= Yii::$app->urlManager->createUrl('airfreght') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-2">
                                                 <i class='bx bx-chevron-right'></i>
                                                 <?= @$GLOBALS['text']['Air_Freight_'] ?>
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-2 ">
-                                            <a href="/Seafreght" class="drop-mob-link-2">
+                                            <a href="<?= Yii::$app->urlManager->createUrl('Seafreght') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-2">
                                                 <i class='bx bx-chevron-right'></i>
                                                 <?= @$GLOBALS['text']['Sea_Freight_'] ?>
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-2 ">
-                                            <a href="/railfreight" class="drop-mob-link-2">
+                                            <a href="<?= Yii::$app->urlManager->createUrl('railfreight') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-2">
                                                 <i class='bx bx-chevron-right'></i>
                                                 <?= @$GLOBALS['text']['Rail_Freight_'] ?>
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-2">
-                                            <a href="/roadfreight" class="drop-mob-link-2">
+                                            <a href="<?= Yii::$app->urlManager->createUrl('roadfreight') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-2">
                                                 <i class='bx bx-chevron-right'></i>
                                                 <?= @$GLOBALS['text']['Road_Freight_'] ?>
                                             </a>
@@ -279,19 +317,19 @@ $action = Yii::$app->controller->action->id;
                                 <div class="drop-mob-div-3">
                                     <ul class="drop-mob-menu-3">
                                         <li class="drop-mob-item-3 ">
-                                            <a href="/customsbrokerage" class="drop-mob-link-3">
+                                            <a href="<?= Yii::$app->urlManager->createUrl('customsbrokerage') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-3">
                                                 <i class='bx bx-chevron-right'></i>
                                                 <?= @$GLOBALS['text']['Customs_Brokerag_'] ?>
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-3 ">
-                                            <a href="/cargoinsuranc" class="drop-mob-link-3">
+                                            <a href="<?= Yii::$app->urlManager->createUrl('cargoinsuranc') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-3">
                                                 <i class='bx bx-chevron-right'></i>
                                                 <?= @$GLOBALS['text']['Cargo_Insurance_'] ?>
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-3">
-                                            <a href="/warehousing" class="drop-mob-link-3">
+                                            <a href="<?= Yii::$app->urlManager->createUrl('warehousing') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-3">
                                                 <i class='bx bx-chevron-right'></i>
                                                 <?= @$GLOBALS['text']['Warehousing&_Distribution_'] ?>
                                             </a>
@@ -300,7 +338,7 @@ $action = Yii::$app->controller->action->id;
                                 </div>
                             </li>
                             <li class="drop-mob-item d-flex ">
-                                <a class="drop-mob-link" href="/projectlogistics">
+                                <a class="drop-mob-link" href="<?= Yii::$app->urlManager->createUrl('projectlogistics') ?>/<?= $_COOKIE['language'] ?>">
                                     <i class='bx bx-chevron-right'></i>
                                      <?= @$GLOBALS['text']['Project_Logistics_'] ?>
                                 </a>
@@ -309,27 +347,27 @@ $action = Yii::$app->controller->action->id;
                     </div>
                 </li>
                 <li class="nav-mob-item">         
-                    <a class="nav-mob-link" href="/about">
+                    <a class="nav-mob-link" href="<?= Yii::$app->urlManager->createUrl('about') ?>/<?= $_COOKIE['language'] ?>">
                         <?= @$GLOBALS['text']['ABOUT_US'] ?>
                     </a>
                 </li>
                 <li class="nav-mob-item">      
-                    <a class="nav-mob-link" href="/news">
+                    <a class="nav-mob-link" href="<?= Yii::$app->urlManager->createUrl('news') ?>/<?= $_COOKIE['language'] ?>">
                         <?= @$GLOBALS['text']['__NEWS__'] ?>
                     </a>
                 </li>
                 <li class="nav-mob-item">    
-                    <a class="nav-mob-link" href="/gallery">
+                    <a class="nav-mob-link" href="<?= Yii::$app->urlManager->createUrl('gallery') ?>/<?= $_COOKIE['language'] ?>">
                         <?= @$GLOBALS['text']['GALLERY_'] ?>
                     </a>
                 </li>
                 <li class="nav-mob-item">        
-                    <a class="nav-mob-link" href="/contact">
+                    <a class="nav-mob-link" href="<?= Yii::$app->urlManager->createUrl('contact') ?>/<?= $_COOKIE['language'] ?>">
                         <?= @$GLOBALS['text']['CONTACT_'] ?>
                     </a>       
                 </li>
                 <li class="nav-mob-item">
-                    <a class="nav-mob-link" href="/shippment">
+                    <a class="nav-mob-link" href="<?= Yii::$app->urlManager->createUrl('shippment') ?>/<?= $_COOKIE['language'] ?>">
                         <?= @$GLOBALS['text']['TRACK_YOUR_SHIPPMENT'] ?>
                     </a>              
                 </li>
@@ -359,7 +397,7 @@ $action = Yii::$app->controller->action->id;
                                 <p data-aos="fade-up" data-aos-duration="2000">
                                     <?= @$GLOBALS['text']['Trust_us_your_'] ?>
                                 </p>
-                                <a href="/airfreght">
+                                <a href="<?= Yii::$app->urlManager->createUrl('airfreght') ?>/<?= $_COOKIE['language'] ?>">
                                     <button data-aos="fade-right" data-aos-duration="2500" type="button" class="btn-lg">
                                         <?= @$GLOBALS['text']['Read_More_'] ?>
                                     </button>
@@ -379,7 +417,7 @@ $action = Yii::$app->controller->action->id;
                                 <p class=" pt-0 text-start">
                                     <?= @$GLOBALS['text']['Are_you_looking'] ?>
                                 </p>
-                                <a href="/seafreght">
+                                <a href="<?= Yii::$app->urlManager->createUrl('seafreght') ?>/<?= $_COOKIE['language'] ?>">
                                     <button type="button" class="btn-lg ">
                                         <?= @$GLOBALS['text']['Read_More_'] ?>
                                     </button>
@@ -399,7 +437,7 @@ $action = Yii::$app->controller->action->id;
                                 <p class="text-end pt-0 mt-0">
                                     <?= @$GLOBALS['text']['Choose_our_road'] ?>
                                 </p>
-                                <a href="roadfreght">
+                                <a href="<?= Yii::$app->urlManager->createUrl('roadfreght') ?>/<?= $_COOKIE['language'] ?>">
                                     <button type="button" class="btn-lg ">
                                         <?= @$GLOBALS['text']['Read_More_'] ?>
                                     </button>
@@ -418,7 +456,7 @@ $action = Yii::$app->controller->action->id;
             <div class="container">
                 <div class="title-div">
                     <h1><?= @$this->params['title'] ?> </h1>
-                    <p><a href="/"><?= @$GLOBALS['text']['__home__'] ?></a>
+                    <p><a href="<?= Yii::$app->urlManager->createUrl('"') ?>/<?= $_COOKIE['language'] ?>><?= @$GLOBALS['text']['__home__'] ?>"></a>
                         <?php if(isset($this->params) && isset($this->params['second'])){ ?>
                         / <a href="<?= @$this->params['href']  ?>"><span> <?= @$this->params['second'] ?></span></a>
                         <?php } ?>
@@ -492,31 +530,31 @@ $action = Yii::$app->controller->action->id;
                     </h6>
                     <ul class="px-0">
                         <li>
-                            <a href="/airfreght">
+                            <a href="<?= Yii::$app->urlManager->createUrl('airfreght') ?>/<?= $_COOKIE['language'] ?>">
                                 <?= @$GLOBALS['text']['Air_Freight_'] ?>
                             </a>
                         </li>
                         <li>
-                            <a href="/seafreght">
+                            <a href="<?= Yii::$app->urlManager->createUrl('seafreght') ?>/<?= $_COOKIE['language'] ?>">
                                 <?= @$GLOBALS['text']['Sea_Freight_'] ?>
                             </a>
                         </li>
                         <li>
-                            <a href="/roadfreght">
+                            <a href="<?= Yii::$app->urlManager->createUrl('roadfreght') ?>/<?= $_COOKIE['language'] ?>">
                                 <?= @$GLOBALS['text']['Road_Freight_'] ?>
                             </a>
                         </li>
                         <li>
-                            <a href="/railfreght">
+                            <a href="<?= Yii::$app->urlManager->createUrl('railfreght') ?>/<?= $_COOKIE['language'] ?>">
                                 <?= @$GLOBALS['text']['Rail_Freight_']?>
                         </li>
                         <li>
-                            <a href="/customsbrokerage">
+                            <a href="<?= Yii::$app->urlManager->createUrl('customsbrokerage') ?>/<?= $_COOKIE['language'] ?>">
                                 <?= @$GLOBALS['text']['Customs_Brokerag_'] ?>
                             </a>
                         </li>
                         <li>
-                            <a href="/cargoinsurance">
+                            <a href="<?= Yii::$app->urlManager->createUrl('cargoinsurance') ?>/<?= $_COOKIE['language'] ?>">
                                 <?= @$GLOBALS['text']['Cargo_Insurance_'] ?>
                             </a>
                         </li>
@@ -526,7 +564,7 @@ $action = Yii::$app->controller->action->id;
                             </a>
                         </li>
                         <li>
-                            <a href="/projectlogistics">
+                            <a href="<?= Yii::$app->urlManager->createUrl('projectlogistics') ?>/<?= $_COOKIE['language'] ?>">
                                 <?= @$GLOBALS['text']['Warehousing&_Distribution_'] ?>
                             </a>
                         </li>
@@ -539,17 +577,17 @@ $action = Yii::$app->controller->action->id;
                     </h6>
                     <ul>
                         <li>
-                            <a href="/about">
+                            <a href="<?= Yii::$app->urlManager->createUrl('about') ?>/<?= $_COOKIE['language'] ?>">
                                 <?= @$GLOBALS['text']['About_Us_Footer'] ?>
                             </a>
                         </li>
                         <li>
-                            <a href="/news">
+                            <a href="<?= Yii::$app->urlManager->createUrl('news') ?>/<?= $_COOKIE['language'] ?>">
                                 <?= @$GLOBALS['text']['News_Footer'] ?>
                             </a>
                         </li>
                         <li>
-                            <a href="gallery">
+                            <a href="<?= Yii::$app->urlManager->createUrl('gallery') ?>/<?= $_COOKIE['language'] ?>">
                                 <?= @$GLOBALS['text']['Gallery_Footer'] ?>
                             </a>
                         </li>
@@ -583,7 +621,7 @@ $action = Yii::$app->controller->action->id;
 
 <?php }  ?>
        <?php 
-        if($_COOKIE['language'] == "am") {
+        if($_COOKIE['language'] == "hy") {
         ?>
             <script>
                 (function(w,d,u){

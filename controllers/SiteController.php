@@ -61,14 +61,14 @@ class SiteController extends Controller
     public function beforeAction($action)
     {
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
-            setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
+            setcookie('language', 'hy', time() + (365 * 24 * 60 * 60));
             $this->refresh();
             Yii::$app->end();
             return false;
         }
-        $lng = $_COOKIE['language'] ?? 'am';
-        if($lng !== 'am' && $lng !== 'ru' && $lng !== 'en'){
-            setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
+        $lng = $_COOKIE['language'] ?? 'hy';
+        if($lng !== 'hy' && $lng !== 'ru' && $lng !== 'en'){
+            setcookie('language', 'hy', time() + (365 * 24 * 60 * 60));
             $this->refresh();
             Yii::$app->end();
             return false;

@@ -1,6 +1,6 @@
 <?php $this->params['title'] = @$GLOBALS['text']['News_Footer']; ?>
 <?php $this->params['second'] =  @$GLOBALS['text']['__NEWS__']; ?>
-<?php $this->params['href'] =  '/news' ?>
+<?php $this->params['href'] =  Yii::$app->urlManager->createUrl('news')  ?>/<?= $_COOKIE['language'] ?>
 
 <div class="fs-breadcrumbs-wrapper">
     <div class="fs-container">
@@ -15,7 +15,7 @@
     <div class="container">
         <div class="">
             <h2 class="mb-3">
-                <?= $_COOKIE['language'] === 'am' ? $item->page_name_am : (($_COOKIE['language'] === 'ru') ? $item->page_name_ru : $item->page_name_en) ?>
+                <?= $_COOKIE['language'] === 'hy' ? $item->page_name_am : (($_COOKIE['language'] === 'ru') ? $item->page_name_ru : $item->page_name_en) ?>
             </h2>
         </div>
         <div class="uniq-news-more-block d-flex justify-content-between column-gap-5 ">
@@ -24,11 +24,11 @@
             </div>
             <div class="uniq-news-dis  ">
                 <h4 class="m-0 title">
-                    <?= $_COOKIE['language'] === 'am' ? $item->page_title_am : (($_COOKIE['language'] === 'ru') ? $item->page_title_ru : $item->page_title_en) ?>
+                    <?= $_COOKIE['language'] === 'hy' ? $item->page_title_am : (($_COOKIE['language'] === 'ru') ? $item->page_title_ru : $item->page_title_en) ?>
                 </h4>
                 <div class="about-news py-3 w-100 ">
                     <p class="">
-                        <?= $_COOKIE['language'] === 'am' ? $item->page_content_am : (($_COOKIE['language'] === 'ru') ? $item->page_content_ru : $item->page_content_en) ?>
+                        <?= $_COOKIE['language'] === 'hy' ? $item->page_content_am : (($_COOKIE['language'] === 'ru') ? $item->page_content_ru : $item->page_content_en) ?>
                     </p>
                 </div>
             </div>

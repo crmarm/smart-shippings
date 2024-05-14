@@ -130,9 +130,9 @@
                     <?= @$GLOBALS['text']['Please_feel__'] ?>
                 </p>
             </div>
-            <div class="contact-info   " >
+            <div class="contact-info">
                 <button>
-                    <a href="/contact">
+                    <a href="<?= Yii::$app->urlManager->createUrl('contact')  ?>/<?= $_COOKIE['language'] ?>">
                         <?= @$GLOBALS['text']['Contact_Us_Now_'] ?>
                     </a>
                 </button>

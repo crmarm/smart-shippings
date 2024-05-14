@@ -47,9 +47,10 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 'switch-language' => 'site/switch-language',
-                '<action:\w+>' => 'site/<action>',
-                'news' => 'site/news',
                 'quest-answer' => 'site/quest-answer',
+
+                '<action:\w+>' => 'site/<action>',
+                '<action:\w+>/<language:\w+>' => 'site/<action>',
                 'news/<url:\w+>' => 'site/news',
                 'tracking/<url:\w+>' => 'site/tracking',
             ],
