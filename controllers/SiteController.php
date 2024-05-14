@@ -12,6 +12,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\Crest;
 
 class SiteController extends Controller
 {
@@ -166,18 +167,26 @@ class SiteController extends Controller
     }
     public function actionShippment(){
         $tracks = '';
+//        $_GET['search'] = 'IMP-A-1/24';
+//        $_GET['search'] = "IMP-A-2/24";
+//        $_GET['search'] = "IMP-O-3/24";
         if(@$_GET['search']){
-            $type = ['=','tracking.id',$_GET['search']];
-            $tracks = Tracking::find()
-                ->joinWith(['points' => function ($query){
-                    $query->onCondition(['or',
-                        ['track_points.id' => $query->min('track_points.id')],
-                    ]);
-                },'item','cordinator']);
-            if(@$type){
-                $tracks->andWhere($type);
-            }
-            $tracks = $tracks->asArray()->all();
+            $tracks = Crest::call('crm.deal.list',[
+                'filter'=>['UF_CRM_1709904415487'=> $_GET['search']],
+                'select'=>['UF_*','*'],
+            ]);
+//            echo '<pre>';
+//            var_dump($tracks);
+//            die;
+            $tracks = $tracks['result']['0'];
+            $tracks['weight'] = $tracks['UF_CRM_6570260DD8AC0'];
+            $tracks['item'] = $tracks['UF_CRM_65BA6BF941C4B'];
+            $tracks['address'] = $tracks['UF_CRM_1706774890'];
+            $tracks['comment'] = $tracks['COMMENTS'];
+
+//            var_dump($tracks['result'][0]['UF_CRM_1706774890']);//address ++
+//            var_dump($tracks['result'][0]['UF_CRM_6570260E2BC67']);//address 2
+//            var_dump($tracks['result'][0]['UF_CRM_1706774843']);//address 3
         }
         return $this->render('shippment',['tracks' => $tracks]);
     }
@@ -228,5 +237,18 @@ class SiteController extends Controller
     public function actionQuestAnswer()
     {
         return $this->render('quest-answer');
+    }
+
+
+    public function actionTracking(){
+        $data = Crest::call('crm.deal.list',[
+            'filter'=>['UF_CRM_1709904415487'=>'IMP-A-1/24'],
+            'select'=>['UF_*','*'],
+        ]);
+        //IMP-A-1/24    CRM job number  / Site tracking number
+        //$data  tracking info 
+        echo  '<pre>';
+        var_dump($data);die();
+
     }
 }

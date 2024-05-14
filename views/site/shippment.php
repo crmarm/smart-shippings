@@ -1,3 +1,9 @@
+<style>
+    .track-blocks .block span{
+        display: block;
+        width:max-content !important;
+    }
+</style>
 <?php $this->params['title'] = $GLOBALS['text']['Track_Your_Shipment_Title'];  ?>
 <section class="shipment-serach Shipment-page pt-4">
     <div class="container">
@@ -7,9 +13,8 @@
     </div>
 </section>
 <?php $alphabet = range('A', 'Z'); ?>
-<section class="container">
-    <?php if(isset($tracks) && !empty($tracks)){
-        foreach ($tracks as $index => $track) { ?>
+<section class="container" style="padding-bottom: 50px !important; ">
+    <?php if(isset($tracks) && !empty($tracks)){ ?>
         <div class="track-blocks " >
             <div class="block">
                 <div>
@@ -21,13 +26,13 @@
                             <div>
                                 <span>
                                     Loading date
-                                    <p><?= himd($track['loading_date'])  ?></p>
+                                    <p><?= himd($tracks['BEGINDATE'])  ?></p>
                                 </span>
                             </div>
                             <div class="Estimated" style="width:59%; padding: 0 32px 0 0;">
                                 <span style="width:100%;">
                                     Estimated unloading date
-                                    <p><?= himd($track['unloading_date'])  ?></p>
+                                    <p><?= himd($tracks['CLOSEDATE'])  ?></p>
                                 </span>
                             </div>
                         </div>
@@ -36,43 +41,32 @@
                             <div class="pl-40p m-m-width170">
                                 <div>
                                     <span>Item Description</span>
-                                    <p><?= $track['item']['description'] ?></p>
+                                    <p><?= $tracks['item'] ?></p>
                                 </div>
                                 <div>
                                     <span>Item Weight</span>
-                                    <p><?= $track['item']['weight'] ?></p>
+                                    <p><?= $tracks['weight'] ?></p>
                                 </div>
                                 <div>
                                     <span>Item Parameters</span>
-                                    <p><?= $track['item']['parameters'] ?></p>
+                                    <p><?= @$tracks['parameters'] ?></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="last-part d-flex" style="gap:17px;">
                         <div class="d-flex flex-column">
-                            <?php
-                            if(isset($track['points']) && !empty($track['points'])){
-                                foreach ($track['points'] as $index => $point) { ?>
-                                    <div class="activePoints">
-                                        <h4>POINT</h4>
-                                        <span><?= $point['city'] ?></span>
-                                        <p><?= himd($point['date']) ?></p>
-                                    </div>
-                                <?php       }
-                            }
-                            ?>
-                            <!-- <div class="w-100">
-                                <div class="viewMore" data-id="<?= $track['id'] ?>">
-                                    <img src="/Images/treangleDown.png" alt="">
-                                </div>
-                            </div> -->
-                            <div class="moreInfo d-none">
+                        <?php if(@$tracks['address']){ ?>
+                            <div class="activePoints">
+                                <h4>ADDRESS</h4>
+                                <span style="width: auto !important;"><?= @$tracks['address'] ?></span>
+<!--                                <p>--><?php //= himd($point['date']) ?><!--</p>-->
                             </div>
+                        <?php }?>
                         </div>
                     </div>
                 </div>
-                <div>
+                <!--<div>
                     <div>
                         <h5>Service cordinator</h5>
                     </div>
@@ -82,30 +76,26 @@
                         </div>
                         <div>
                             <span>Manager Name</span>
-                            <p class="m-0"><?= $track['cordinator']['name'] ?></p>
+                            <p class="m-0"><?php /*= @$tracks['cordinator']['name'] */?></p>
 
                             <span>Manager Phone</span>
-                            <p class="m-0"><?= $track['cordinator']['phone'] ?></p>
+                            <p class="m-0"><?php /*= @$tracks['cordinator']['phone'] */?></p>
 
                             <span>Manager Mail</span>
-                            <p class="m-0"><?= $track['cordinator']['mail'] ?></p>
+                            <p class="m-0"><?php /*= @$tracks['cordinator']['mail'] */?></p>
                         </div>
                     </div>                   
-                </div>
+                </div>-->
                 <form class="comment-form " style="padding-top: 35px; width:100% !important; ">
-                <textarea placeholder="Comment" name="" id="" cols="42" rows="4" style="padding:10px 20px; width:100%;">
-                </textarea>
-                        <div class="submit">Add Comment</div>
+                    <textarea placeholder="Comment" name="" id="" cols="42" rows="4" style="padding:10px 20px; width:100%;">
+                    </textarea>
+                    <div class="submit">Add Comment</div>
                 </form>
             </div>
         </div>
-<?php   }
-    } ?>
+<?php } ?>
     <div class="position-absolute background-map-tracking"></div>
 </section>
-<div class="TrackInfos">
-
-</div>
 
 <?php
 function himd($date){

@@ -51,6 +51,7 @@ $config = [
                 'news' => 'site/news',
                 'quest-answer' => 'site/quest-answer',
                 'news/<url:\w+>' => 'site/news',
+                'tracking/<url:\w+>' => 'site/tracking',
             ],
         ],
         'assetManager' => [
