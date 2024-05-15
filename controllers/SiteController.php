@@ -61,14 +61,14 @@ class SiteController extends Controller
     public function beforeAction($action)
     {
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
-            setcookie('language', 'hy', time() + (365 * 24 * 60 * 60));
+            setcookie('language', 'hy', time() + (365 * 24 * 60 * 60),'/');
             $this->refresh();
             Yii::$app->end();
             return false;
         }
         $lng = $_COOKIE['language'] ?? 'hy';
         if($lng !== 'hy' && $lng !== 'ru' && $lng !== 'en'){
-            setcookie('language', 'hy', time() + (365 * 24 * 60 * 60));
+            setcookie('language', 'hy', time() + (365 * 24 * 60 * 60),'/');
             $this->refresh();
             Yii::$app->end();
             return false;
@@ -145,8 +145,7 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-    public function actionServices()
-    {
+    public function actionServices(){
         return $this->render('services');
     }
     public function actionGallery()
@@ -170,23 +169,24 @@ class SiteController extends Controller
 //        $_GET['search'] = 'IMP-A-1/24';
 //        $_GET['search'] = "IMP-A-2/24";
 //        $_GET['search'] = "IMP-O-3/24";
+//        $_GET['search'] = "IMP-A-38/24";
         if(@$_GET['search']){
             $tracks = Crest::call('crm.deal.list',[
                 'filter'=>['UF_CRM_1709904415487'=> $_GET['search']],
                 'select'=>['UF_*','*'],
             ]);
-//            echo '<pre>';
-//            var_dump($tracks);
-//            die;
             $tracks = $tracks['result']['0'];
-            $tracks['weight'] = $tracks['UF_CRM_6570260DD8AC0'];
+//            $tracks = $tracks['result']['37'];
+            $tracks['loadingDate'] = $tracks['UF_CRM_6570260E0B783'];
+            $tracks['unloadinDate'] = $tracks['UF_CRM_6570260E3DF23'];
+            $tracks['weight'] = $tracks['UF_CRM_1711031316'];
             $tracks['item'] = $tracks['UF_CRM_65BA6BF941C4B'];
-            $tracks['address'] = $tracks['UF_CRM_1706774890'];
-            $tracks['comment'] = $tracks['COMMENTS'];
-
-//            var_dump($tracks['result'][0]['UF_CRM_1706774890']);//address ++
-//            var_dump($tracks['result'][0]['UF_CRM_6570260E2BC67']);//address 2
-//            var_dump($tracks['result'][0]['UF_CRM_1706774843']);//address 3
+            if(!empty($tracks['UF_CRM_1715768153'])){
+                $tracks['address'] = $tracks['UF_CRM_1715768153'][count($tracks['UF_CRM_1715768153']) - 1];
+            }else{
+                $tracks['address'] = '';
+            }
+            $tracks['parameters'] = $tracks['UF_CRM_1711031413'];
         }
         return $this->render('shippment',['tracks' => $tracks]);
     }

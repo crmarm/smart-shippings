@@ -1,10 +1,7 @@
 <?php $this->params['title'] = @$GLOBALS['text']['Sea_Freight_'] ; ?>
 <?php $this->params['second'] =  @$GLOBALS['text']['__SERVICES__']; ?>
-<<<<<<< Updated upstream
-<?php $this->params['href'] =  Yii::$app->urlManager->createUrl('services')  ?>/<?= $_COOKIE['language'] ?>
-=======
-<?php $this->params['href'] =  '/services' ?>
->>>>>>> Stashed changes
+<?php $this->params['href'] =  Yii::$app->urlManager->createUrl('services')  . '/' . $_COOKIE['language'] ?>
+
 <a  data-aos="fade-right" data-aos-duration="2000" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
@@ -110,17 +107,8 @@
                         </ul>
                         <button class="border-0"  type="submit">
                             <a href="../Html/contact.html">
-<<<<<<< Updated upstream
-                                <?= @$GLOBALS['text']['Contact-Us_Title'] ?>
-                                </a>
-=======
-<<<<<<< Updated upstream
-                                <?= $GLOBALS['text']['Contact_Us_Title'] ?>
-=======
-                                <?= @$GLOBALS['text']['Contact-Us_Title'] ?>
->>>>>>> Stashed changes
+                                <?= @$GLOBALS['text']['CONTACT_US_'] ?>
                             </a>
->>>>>>> Stashed changes
                         </button>
                     </div>
                 </div>

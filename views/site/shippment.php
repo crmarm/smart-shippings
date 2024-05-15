@@ -12,7 +12,6 @@
         </form>
     </div>
 </section>
-<?php $alphabet = range('A', 'Z'); ?>
 <section class="container" style="padding-bottom: 50px !important; ">
     <?php if(isset($tracks) && !empty($tracks)){ ?>
         <div class="track-blocks " >
@@ -26,13 +25,13 @@
                             <div>
                                 <span>
                                     Loading date
-                                    <p><?= himd($tracks['BEGINDATE'])  ?></p>
+                                    <p><?= himd($tracks['loadingDate'])  ?></p>
                                 </span>
                             </div>
                             <div class="Estimated" style="width:59%; padding: 0 32px 0 0;">
                                 <span style="width:100%;">
                                     Estimated unloading date
-                                    <p><?= himd($tracks['CLOSEDATE'])  ?></p>
+                                    <p><?= $tracks['unloadinDate']  ?></p>
                                 </span>
                             </div>
                         </div>

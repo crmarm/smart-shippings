@@ -73,6 +73,11 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
     <?php $this->head() ?>
 </head>
 <body class="d-flex flex-column h-100  <?= $_COOKIE['language'] ?>">
+<?php
+//echo '<pre>';
+//var_dump($_COOKIE);
+//die;
+?>
 <?php $this->beginBody() ?>
 <div class="language-sec">
     <div class="container position-relative">
@@ -95,7 +100,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                     </div>
                     <div class="lang-item">
                         <div  class="lang-item-child d-flex justify-content-between align-items-center gap-1">
-                            <a href="<?= Yii::$app->urlManager->createUrl('switch-language') ?>?lang=am" style="display: contents;">
+                            <a href="<?= Yii::$app->urlManager->createUrl('switch-language') ?>?lang=hy" style="display: contents;">
                                 <img src="../images/hy-img.png" width="50 " alt="">
                                 <span>Armenian</span>
                             </a>
@@ -244,7 +249,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link <?= $action === 'contact' ? 'active-linkPage' : '' ?>" href="<?= Yii::$app->urlManager->createUrl('contact') ?>/<?= $_COOKIE['language'] ?>">
-                                    <?= @$GLOBALS['text']['CONTACT_'] ?>
+                                    <?= @$GLOBALS['text']['CONTACT_US_'] ?>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -456,22 +461,17 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
             <div class="container">
                 <div class="title-div">
                     <h1><?= @$this->params['title'] ?> </h1>
-                    <p><a href="<?= Yii::$app->urlManager->createUrl('"') ?>/<?= $_COOKIE['language'] ?>><?= @$GLOBALS['text']['__home__'] ?>"></a>
+                    <p><a href="<?= Yii::$app->urlManager->createUrl('"') ?>/<?= $_COOKIE['language'] ?>"><?= @$GLOBALS['text']['__home__'] ?></a>
                         <?php if(isset($this->params) && isset($this->params['second'])){ ?>
-                        / <a href="<?= @$this->params['href']  ?>"><span> <?= @$this->params['second'] ?></span></a>
+                        / <a href="<?= @$this->params['href'] ?>"><span> <?= @$this->params['second'] ?></span></a>
                         <?php } ?>
                     </p>
-                    <?= '';//$_SERVER['REDIRECT_URL'] != '/services' ? 'asdfghgfd' : ''?>
                 </div>
             </div>
         </div>
     <?php } ?>
 </header>
 <main id="main" class="flex-shrink-0" role="main">
-
-        <?php if (!empty($this->params['breadcrumbs'])): ?>
-            <?= ''// Breadcrumbs::widget(['links' => @$this->params['breadcrumbs']]) ?>
-        <?php endif ?>
         <?= Alert::widget() ?>
         <?= $content ?>
 </main>

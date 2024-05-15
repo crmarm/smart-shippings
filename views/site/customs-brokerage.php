@@ -1,6 +1,6 @@
 <?php $this->params['title'] = $GLOBALS['text']['Customs_Brokerag_'] ; ?>
 <?php $this->params['second'] =  $GLOBALS['text']['__SERVICES__']; ?>
-<?php $this->params['href'] =  Yii::$app->urlManager->createUrl('services')  ?>/<?= $_COOKIE['language'] ?>
+<?php $this->params['href'] =  Yii::$app->urlManager->createUrl('services')  . '/' . $_COOKIE['language'] ?>
 
 <a  data-aos="fade-right" data-aos-duration="2000" class="go-to-up" href="#top">
     <button >
