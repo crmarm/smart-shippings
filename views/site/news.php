@@ -29,8 +29,8 @@
             foreach ($news as $index => $item) { ?>
                 <div class="news-block ">
                     <div class="news-img-parent">
-                        <a href="<?= Yii::$app->urlManager->createUrl('news/'. $item->url) ?>/<?= $_COOKIE['language'] ?>">
-                            <img class="news-img" src="<?= $item->img ?>" alt="Image">
+                        <a href="<?= Yii::$app->urlManager->createUrl('../news/'. $item->url) ?>/<?= $_COOKIE['language'] ?>">
+                            <img class="news-img" src="../<?= $item->img ?>" alt="Image">
                         </a>
                     </div>
                     <div class="news-dis">

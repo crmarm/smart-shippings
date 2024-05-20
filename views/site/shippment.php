@@ -12,32 +12,48 @@
         </form>
     </div>
 </section>
+<?php $alphabet = range('A', 'Z'); ?>
 <section class="container" style="padding-bottom: 50px !important; ">
     <?php if(isset($tracks) && !empty($tracks)){ ?>
-        <div class="track-blocks " >
+        <div class="track-blocks" >
             <div class="block">
-                <div>
+                <div class="h5">
                     <h5>Load Details</h5>
                 </div>
                 <div class="d-flex media-first-wrap gap-29" >
-                    <div>
-                        <div class="d-flex justify-content-between" style="gap:8.09%">
+                    <div class="load-all d-flex w-100" style="justify-content: space-between; text-wrap: nowrap;">
+                        <div class=" item-div d-flex justify-content-between align-items-center">
                             <div>
-                                <span>
-                                    Loading date
-                                    <p><?= himd($tracks['loadingDate'])  ?></p>
-                                </span>
-                            </div>
-                            <div class="Estimated" style="width:59%; padding: 0 32px 0 0;">
-                                <span style="width:100%;">
-                                    Estimated unloading date
-                                    <p><?= $tracks['unloadinDate']  ?></p>
-                                </span>
+                                <img  style="margin-bottom: 10px;" src="../images/photo_shippment2.jpg" alt="">
+                                <div class="last-part d-flex" style="gap:17px;">
+                                    <div class="d-flex flex-column">
+                                    <?php if(@$tracks['address']){ ?>
+                                        <div class="activePoints">
+                                            <h4>ADDRESS</h4>
+                                            <span id="addressSpan" style="width: auto !important;"><?= @$tracks['address'] ?></span>
+            <!--                                <p>--><?php //= himd($point['date']) ?><!--</p>-->
+                                        </div>
+                                    <?php }?>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class=" item-div d-flex justify-content-between align-items-center">
-                            <div><img src="../images/photo_shippment2.jpg" alt=""></div>
-                            <div class="pl-40p m-m-width170">
+                        <div class="d-grid justify-content-between" style="gap:8.09%">
+                            <div class="load-part1">
+                                <div>
+                                    <span>
+                                        Loading date
+                                        <p><?= himd($tracks['BEGINDATE'])  ?></p>
+                                    </span>
+                                </div>
+                                <div class="Estimated" style="width:59%; padding: 0 32px 0 0;">
+                                    <span style="width:100%;">
+                                        Estimated unloading date
+                                        <p><?= himd($tracks['CLOSEDATE'])  ?></p>
+                                    </span>
+                                </div>
+                            </div>    
+                            <div class="load-part2">    
                                 <div>
                                     <span>Item Description</span>
                                     <p><?= $tracks['item'] ?></p>
@@ -51,17 +67,7 @@
                                     <p><?= @$tracks['parameters'] ?></p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="last-part d-flex" style="gap:17px;">
-                        <div class="d-flex flex-column">
-                        <?php if(@$tracks['address']){ ?>
-                            <div class="activePoints">
-                                <h4>ADDRESS</h4>
-                                <span style="width: auto !important;"><?= @$tracks['address'] ?></span>
-<!--                                <p>--><?php //= himd($point['date']) ?><!--</p>-->
-                            </div>
-                        <?php }?>
+
                         </div>
                     </div>
                 </div>
@@ -101,3 +107,16 @@ function himd($date){
     $date = new DateTime($date);
     return $date->format('d M Y');
 } ?>
+<script>
+    var addressSpan = document.getElementById("addressSpan");
+    var addressText = addressSpan.textContent;
+
+    for (var i = 0; i < addressText.length; ++i) {
+        if (i == 20) {
+            addressText = addressText.replace('|', '<br>|');
+        }
+    }
+
+    addressSpan.innerHTML = addressText;
+</script>
+

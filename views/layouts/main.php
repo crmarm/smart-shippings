@@ -17,10 +17,9 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 //$this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
 $lan_imgs = [];
-$lan_imgs['hy'] = '../images/hy-img.png';
-$lan_imgs['ru'] = '../images/ru_RU.png';
-$lan_imgs['en'] = '../images/en_US.png';
-
+$lan_imgs['hy'] = '/../images/hy-img.png';
+$lan_imgs['ru'] = '/../images/ru_RU.png';
+$lan_imgs['en'] = '/../images/en_US.png';
 $lan_imgs['text']['hy'] = 'Armenian';
 $lan_imgs['text']['ru'] = 'Russian';
 $lan_imgs['text']['en'] = 'English';
@@ -73,11 +72,6 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
     <?php $this->head() ?>
 </head>
 <body class="d-flex flex-column h-100  <?= $_COOKIE['language'] ?>">
-<?php
-//echo '<pre>';
-//var_dump($_COOKIE);
-//die;
-?>
 <?php $this->beginBody() ?>
 <div class="language-sec">
     <div class="container position-relative">
@@ -85,7 +79,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
             <div class="language position-fixed end-10 top-0 z-2">
                 <div class="selected-lang ">
                     <div class="lang-item-child d-flex justify-content-between align-items-center gap-1 pb-2">
-                        <img src="<?= $lan_imgs[$_COOKIE['language']]  ?>" alt="">
+                        <img src="/../<?= $lan_imgs[$_COOKIE['language']]  ?>" alt="">
                         <span> <?= $lan_imgs['text'][$_COOKIE['language']]  ?></span>
                     </div>
                 </div>
@@ -93,15 +87,15 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                     <div class="lang-item selected">
                         <div class="lang-item-child d-flex justify-content-between align-items-center gap-1">
                             <a href="<?= Yii::$app->urlManager->createUrl('switch-language') ?>?lang=en">
-                                <img src="../images/en_US.png" alt="">
+                                <img src="/../images/en_US.png" alt="">
                                 <span>English</span>
                             </a>
                         </div>
                     </div>
                     <div class="lang-item">
                         <div  class="lang-item-child d-flex justify-content-between align-items-center gap-1">
-                            <a href="<?= Yii::$app->urlManager->createUrl('switch-language') ?>?lang=hy" style="display: contents;">
-                                <img src="../images/hy-img.png" width="50 " alt="">
+                            <a href="<?= Yii::$app->urlManager->createUrl('switch-language') ?>?lang=am" style="display: contents;">
+                                <img src="/../images/hy-img.png" width="50 " alt="">
                                 <span>Armenian</span>
                             </a>
                         </div>
@@ -109,7 +103,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                     <div class="lang-item">
                         <div  class="lang-item-child d-flex justify-content-between align-items-center gap-1">
                             <a href="<?= Yii::$app->urlManager->createUrl('switch-language') ?>?lang=ru" style="display: contents;">
-                                <img src="../images/ru_RU.png" width="50" alt="">
+                                <img src="/../images/ru_RU.png" width="50" alt="">
                                 <span>Russian</span>
                             </a>
                         </div>
@@ -149,7 +143,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                 <div class="navbar-div d-flex justify-content-between ">
                     <div class="logo">
                         <a href="/">
-                            <img src="../images/smart-logo.png" alt="logo">
+                            <img src="/../images/smart-logo.png" alt="logo">
                         </a>
                     </div>
                     <div class="navbar-search">
@@ -249,7 +243,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link <?= $action === 'contact' ? 'active-linkPage' : '' ?>" href="<?= Yii::$app->urlManager->createUrl('contact') ?>/<?= $_COOKIE['language'] ?>">
-                                    <?= @$GLOBALS['text']['CONTACT_US_'] ?>
+                                    <?= @$GLOBALS['text']['CONTACT_'] ?>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -294,19 +288,19 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-2 ">
-                                            <a href="<?= Yii::$app->urlManager->createUrl('Seafreght') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-2">
+                                            <a href="<?= Yii::$app->urlManager->createUrl('seafreght') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-2">
                                                 <i class='bx bx-chevron-right'></i>
                                                 <?= @$GLOBALS['text']['Sea_Freight_'] ?>
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-2 ">
-                                            <a href="<?= Yii::$app->urlManager->createUrl('railfreight') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-2">
+                                            <a href="<?= Yii::$app->urlManager->createUrl('railfreght') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-2">
                                                 <i class='bx bx-chevron-right'></i>
                                                 <?= @$GLOBALS['text']['Rail_Freight_'] ?>
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-2">
-                                            <a href="<?= Yii::$app->urlManager->createUrl('roadfreight') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-2">
+                                            <a href="<?= Yii::$app->urlManager->createUrl('roadfreght') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-2">
                                                 <i class='bx bx-chevron-right'></i>
                                                 <?= @$GLOBALS['text']['Road_Freight_'] ?>
                                             </a>
@@ -328,7 +322,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-3 ">
-                                            <a href="<?= Yii::$app->urlManager->createUrl('cargoinsuranc') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-3">
+                                            <a href="<?= Yii::$app->urlManager->createUrl('cargoinsurance') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-3">
                                                 <i class='bx bx-chevron-right'></i>
                                                 <?= @$GLOBALS['text']['Cargo_Insurance_'] ?>
                                             </a>
@@ -461,17 +455,22 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
             <div class="container">
                 <div class="title-div">
                     <h1><?= @$this->params['title'] ?> </h1>
-                    <p><a href="<?= Yii::$app->urlManager->createUrl('"') ?>/<?= $_COOKIE['language'] ?>"><?= @$GLOBALS['text']['__home__'] ?></a>
+                    <p><a href="<?= Yii::$app->urlManager->createUrl('"') ?>/<?= $_COOKIE['language'] ?>><?= @$GLOBALS['text']['__home__'] ?>"></a>
                         <?php if(isset($this->params) && isset($this->params['second'])){ ?>
-                        / <a href="<?= @$this->params['href'] ?>"><span> <?= @$this->params['second'] ?></span></a>
+                        / <a href="<?= @$this->params['href']  ?>"><span> <?= @$this->params['second'] ?></span></a>
                         <?php } ?>
                     </p>
+                    <?= '';//$_SERVER['REDIRECT_URL'] != '/services' ? 'asdfghgfd' : ''?>
                 </div>
             </div>
         </div>
     <?php } ?>
 </header>
 <main id="main" class="flex-shrink-0" role="main">
+
+        <?php if (!empty($this->params['breadcrumbs'])): ?>
+            <?= ''// Breadcrumbs::widget(['links' => @$this->params['breadcrumbs']]) ?>
+        <?php endif ?>
         <?= Alert::widget() ?>
         <?= $content ?>
 </main>
@@ -481,7 +480,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
             <div class="row">
                 <div class="footer-con col-lg-3 col-md-6">
                     <h6>
-                        <?= @$GLOBALS['text']['CONTACT_US'] ?>
+                        <?= @$GLOBALS['text']['Contact_Us_'] ?>
                     </h6>
                     <p>
                         <?= @$GLOBALS['text']['Smart_Shippings_LLC_'] ?><br>

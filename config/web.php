@@ -51,8 +51,10 @@ $config = [
 
                 '<action:\w+>' => 'site/<action>',
                 '<action:\w+>/<language:\w+>' => 'site/<action>',
-                'news/<url:\w+>' => 'site/news',
+                // '<action:\w+>/<language:\w+>/<news:\w+>' => 'site/<action>',
+                'news/<url:\w+>/<news:\w+>' => 'site/news',
                 'tracking/<url:\w+>' => 'site/tracking',
+                'quest-answer/<url:\w+>' => 'site/quest-answer',
             ],
         ],
         'assetManager' => [

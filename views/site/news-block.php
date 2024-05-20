@@ -1,6 +1,6 @@
 <?php $this->params['title'] = @$GLOBALS['text']['News_Footer']; ?>
 <?php $this->params['second'] =  @$GLOBALS['text']['__NEWS__']; ?>
-<?php $this->params['href'] =  Yii::$app->urlManager->createUrl('news')  ?>/<?= $_COOKIE['language'] ?>
+<?php $this->params['href'] =  Yii::$app->urlManager->createUrl('news') . '/' . $_COOKIE['language'] ?>
 
 <div class="fs-breadcrumbs-wrapper">
     <div class="fs-container">
@@ -20,7 +20,7 @@
         </div>
         <div class="uniq-news-more-block d-flex justify-content-between column-gap-5 ">
             <div class="uniq-news-img-parent">
-                <img class="uniq-news-img" src="../<?= $item->img ?>" alt="">
+                <img class="uniq-news-img" src="../../<?= $item->img ?>" alt="">
             </div>
             <div class="uniq-news-dis  ">
                 <h4 class="m-0 title">
