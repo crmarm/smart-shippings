@@ -154,7 +154,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                                 </a>
                                 <i class='bx bx-chevron-down'></i>
                                 
-                                <div class="drop-div">
+                                <div class="drop-div <?= $_COOKIE['language'] ?>">
                                     <ul class="drop-menu">
                                         <li class="drop-item" >
                                             <a class="drop-link" href="#" 
