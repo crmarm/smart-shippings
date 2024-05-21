@@ -58,8 +58,7 @@ class SiteController extends Controller
     }
 
 
-    public function beforeAction($action)
-    {
+    public function beforeAction($action){
         setcookie('language', 'hy', time() ,'/'.$action->id);
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'hy', time() + (30 * 24 * 60 * 60),'/');
@@ -82,7 +81,7 @@ class SiteController extends Controller
 
     public function actionSwitchLanguage($lang)
     {
-        setcookie('language', $lang, time() + (365 * 24 * 60 * 60),"/");
+        setcookie('language', $lang, time() + (30 * 24 * 60 * 60),"/");
         return $this->goBack(Yii::$app->request->referrer);
     }
 
@@ -91,6 +90,18 @@ class SiteController extends Controller
      *
      * @return string
      */
+    public function actionGetUrls($text = null){
+        if($text) {
+            $urls = Texts::find()
+                ->where(['like','text_'.$_COOKIE['language'] , $text])
+                ->andWhere(['!=','page' , 'all'])
+                ->andWhere(['is not','page' , null])
+                ->groupBy('page')
+                ->asArray()
+                ->all();
+            return $this->renderAjax('search-file', ['urls' => $urls]);
+        }
+    }
     public function actionIndex()
     {
         return $this->render('index');
@@ -239,10 +250,10 @@ class SiteController extends Controller
             return $this->render('news', ['news' => $news]);
         }
     }
-    public function actionQuestAnswer()
-    {
-        return $this->render('quest-answer');
-    }
+//    public function actionQuestAnswer()
+//    {
+//        return $this->render('quest-answer');
+//    }
 
 
     public function actionTracking(){

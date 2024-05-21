@@ -51,7 +51,7 @@
                     <div class="read-more-news ">
                         <a href="<?= Yii::$app->urlManager->createUrl('news/'. $item->url) ?>/<?= $_COOKIE['language'] ?>">
                             <button>
-                                <?= @@$GLOBALS['text']['READ_MORE__'] ?>
+                                <?= @$GLOBALS['text']['READ_MORE__'] ?>
                             </button>
                         </a>
                     </div>

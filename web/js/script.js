@@ -77,7 +77,12 @@ $(document).ready(function() {
     const $searchToggleIcon = $("#searchToggleIcon");
 
     function toggleSearchUp() {
+        if($searchUpForm.hasClass('active-search')){
+            $('body').find('.urlsInfo').removeClass('d-flex');
+            $('body').find('.urlsInfo').addClass('d-none');
+        }
         $searchUpForm.toggleClass("active-search");
+
     }
 
     $searchToggleIcon.on("click", function() {
@@ -86,6 +91,10 @@ $(document).ready(function() {
 
     $(document).on("click", function(event) {
         if (!$searchUpForm.is(event.target) && !$searchToggleIcon.is(event.target) && $searchUpForm.has(event.target).length === 0 && $searchToggleIcon.has(event.target).length === 0) {
+            if($searchUpForm.hasClass('active-search')){
+                $('body').find('.urlsInfo').removeClass('d-flex');
+                $('body').find('.urlsInfo').addClass('d-none');
+            }
             $searchUpForm.removeClass("active-search");
         }
     });
@@ -239,4 +248,23 @@ $('body').on('click','.table tr',function(){
     $('body').find('.table-bordered').find('tr').removeClass('active');
     $(this).addClass('active');
 })
-
+$('body').on('keyup','.input-search',function(){
+    if($(this).val()){
+        let url = $(this).val();
+        jQuery.ajax({
+            url: "/site/get-urls?text=" + url,
+            success: function(result) {
+                $('body').find('.urlsInfo').html('');
+                if(result){
+                    $('body').find('.urlsInfo').html(result);
+                    $('body').find('.urlsInfo').removeClass('d-none')
+                    $('body').find('.urlsInfo').addClass('d-flex')
+                }else{
+                    $('body').find('.urlsInfo').addClass('d-none')
+                }
+            }
+        });
+    }else{
+        $('body').find('.urlsInfo').addClass('d-none')
+    }
+})

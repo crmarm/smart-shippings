@@ -92,8 +92,7 @@
                     </div>                   
                 </div>-->
                 <form class="comment-form " style="padding-top: 35px; width:100% !important; ">
-                    <textarea placeholder="Comment" name="" id="" cols="42" rows="4" style="padding:10px 20px; width:100%;">
-                    </textarea>
+                    <textarea placeholder="Comment" name="" id="" cols="42" rows="4" style="padding:10px 20px; width:100%;"></textarea>
                     <div class="submit">Add Comment</div>
                 </form>
             </div>

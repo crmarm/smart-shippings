@@ -15,12 +15,12 @@
                     <?= @$GLOBALS['text']['Our_company_is_'] ?>
                 </p>
                 <p>
-                   <?= @$GLOBALS['text']['Our_clients_also_'] ?>
+                    <?= @$GLOBALS['text']['Our_clients_also_'] ?>
                 </p>
-                <p>                    
+                <p>
                     <?= @$GLOBALS['text']['Trust_us__'] ?>
                 </p>
-                <p>                
+                <p>
                     <?= @$GLOBALS['text']['Our_mission_is_to_provide_'] ?>
                 </p>
             </div>
@@ -49,7 +49,7 @@
                 <div class="advanItem">
                     <i class="fas fa-hand-holding-usd fs-1 text-white"></i>
                     <p>
-                       <?= @$GLOBALS['text']['cost_effective__'] ?>
+                        <?= @$GLOBALS['text']['cost_effective__'] ?>
                     </p>
                 </div>
                 <div class="advanItem">

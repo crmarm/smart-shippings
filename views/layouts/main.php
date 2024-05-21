@@ -113,14 +113,18 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
         </div>
     </div>
 </div>
+
 <header>
-    <div class="search-up d-flex align-items-center " id="searchUpForm">
+    <div class="search-up d-flex align-items-center  position-relative" id="searchUpForm" style="overflow:unset !important;">
         <div class="container ">
-            <form class="input-group form-search w-50 my-3 m-auto d-flex justify-content-center">   
+            <form class="input-group form-search w-50 my-3 m-auto d-flex justify-content-center">
                 <input type="text" class="input-search w-100 p-2 border-0 text-white" placeholder="<?= @$GLOBALS['text']['Search'] ?>"  aria-describedby="button-addon2">
                 <button class="submit-search border-0 bg-transparent " type="submit" id="button-addon2"><i class='bx bx-search'></i></button>
+
             </form>
         </div>
+    </div>
+    <div class="urlsInfo position-absolute d-none" style="padding: 40px;width: 40%;height: max-content;background: white;top: 60px;left: 30%;z-index: 2;margin: auto;}">
     </div>
     <nav>
         <div class="nav-up">
@@ -148,28 +152,28 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                     </div>
                     <div class="navbar-search">
                         <ul class="navbar d-flex" style="<?php if ($_COOKIE['language'] == 'hy') { echo "gap: 20px"; }?>" >
-                        
+
                             <li class="nav-item d-flex align-items-center">
                                 <a class="nav-link <?= $action === 'services' ? 'active-linkPage' : '' ?>" href="<?= Yii::$app->urlManager->createUrl('services') ?>/<?= $_COOKIE['language'] ?>"><?= @$GLOBALS['text']['__SERVICES__'] ?>
                                 </a>
                                 <i class='bx bx-chevron-down'></i>
-                                
+
                                 <div class="drop-div <?= $_COOKIE['language'] ?>">
                                     <ul class="drop-menu">
                                         <li class="drop-item" >
-                                            <a class="drop-link" href="#" 
-                                            <?php if ($_COOKIE['language'] == 'en') {
-                                                echo "padding-right: 30px !important";
-                                            } ?>>
+                                            <a class="drop-link" href="#"
+                                                <?php if ($_COOKIE['language'] == 'en') {
+                                                    echo "padding-right: 30px !important";
+                                                } ?>>
                                                 <?= @$GLOBALS['text']['Freight_Forwarding_'] ?>
                                                 <i class='bx bx-chevron-right'></i>
                                             </a>
-                                            
+
                                             <div class="drop-div-2">
                                                 <ul class="drop-menu-2">
                                                     <li class="drop-item-2">
                                                         <a href="<?= Yii::$app->urlManager->createUrl('airfreght') ?>/<?= $_COOKIE['language'] ?>" class="drop-link-2">
-                                                          <?= @$GLOBALS['text']['Air_Freight_'] ?>
+                                                            <?= @$GLOBALS['text']['Air_Freight_'] ?>
                                                         </a>
                                                     </li>
                                                     <li class="drop-item-2 ">
@@ -197,7 +201,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                                                 <?= @$GLOBALS['text']['Value_added_Services'] ?>
                                                 <i class='bx bx-chevron-right'></i>
                                             </a>
-                                            
+
                                             <div class="drop-div-3">
                                                 <ul class="drop-menu-3">
                                                     <li class="drop-item-3 ">
@@ -231,9 +235,9 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                                     <?= @$GLOBALS['text']['ABOUT_US'] ?>
                                 </a>
                             </li>
-                             <li class="nav-item">
+                            <li class="nav-item">
                                 <a class="nav-link <?= $action === 'news' ? 'active-linkPage' : '' ?>" href="<?= Yii::$app->urlManager->createUrl('news') ?>/<?= $_COOKIE['language'] ?>">
-                                   <?= @$GLOBALS['text']['__NEWS__'] ?>
+                                    <?= @$GLOBALS['text']['__NEWS__'] ?>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -339,36 +343,36 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                             <li class="drop-mob-item d-flex ">
                                 <a class="drop-mob-link" href="<?= Yii::$app->urlManager->createUrl('projectlogistics') ?>/<?= $_COOKIE['language'] ?>">
                                     <i class='bx bx-chevron-right'></i>
-                                     <?= @$GLOBALS['text']['Project_Logistics_'] ?>
+                                    <?= @$GLOBALS['text']['Project_Logistics_'] ?>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-mob-item">         
+                <li class="nav-mob-item">
                     <a class="nav-mob-link" href="<?= Yii::$app->urlManager->createUrl('about') ?>/<?= $_COOKIE['language'] ?>">
                         <?= @$GLOBALS['text']['ABOUT_US'] ?>
                     </a>
                 </li>
-                <li class="nav-mob-item">      
+                <li class="nav-mob-item">
                     <a class="nav-mob-link" href="<?= Yii::$app->urlManager->createUrl('news') ?>/<?= $_COOKIE['language'] ?>">
                         <?= @$GLOBALS['text']['__NEWS__'] ?>
                     </a>
                 </li>
-                <li class="nav-mob-item">    
+                <li class="nav-mob-item">
                     <a class="nav-mob-link" href="<?= Yii::$app->urlManager->createUrl('gallery') ?>/<?= $_COOKIE['language'] ?>">
                         <?= @$GLOBALS['text']['GALLERY_'] ?>
                     </a>
                 </li>
-                <li class="nav-mob-item">        
+                <li class="nav-mob-item">
                     <a class="nav-mob-link" href="<?= Yii::$app->urlManager->createUrl('contact') ?>/<?= $_COOKIE['language'] ?>">
                         <?= @$GLOBALS['text']['CONTACT_'] ?>
-                    </a>       
+                    </a>
                 </li>
                 <li class="nav-mob-item">
                     <a class="nav-mob-link" href="<?= Yii::$app->urlManager->createUrl('shippment') ?>/<?= $_COOKIE['language'] ?>">
                         <?= @$GLOBALS['text']['TRACK_YOUR_SHIPPMENT'] ?>
-                    </a>              
+                    </a>
                 </li>
             </ul>
             <!-- Close button for sidebar -->
@@ -391,7 +395,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                                     <?= @$GLOBALS['text']['YOUR_FREGHIT_WITH'] ?>
                                 </h2>
                                 <h1 data-aos="fade-up" data-aos-duration="2000" class="second-h1">
-                                     <?= @$GLOBALS['text']['Title_Air_Freight_'] ?>
+                                    <?= @$GLOBALS['text']['Title_Air_Freight_'] ?>
                                 </h1>
                                 <p data-aos="fade-up" data-aos-duration="2000">
                                     <?= @$GLOBALS['text']['Trust_us_your_'] ?>
@@ -457,7 +461,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                     <h1><?= @$this->params['title'] ?> </h1>
                     <p><a href="<?= Yii::$app->urlManager->createUrl('/') ?>/<?= $_COOKIE['language'] ?>"><?= @$GLOBALS['text']['__home__'] ?></a>
                         <?php if(isset($this->params) && isset($this->params['second'])){ ?>
-                        / <a href="<?= @$this->params['href']  ?>"><span> <?= @$this->params['second'] ?></span></a>
+                            / <a href="<?= @$this->params['href']  ?>"><span> <?= @$this->params['second'] ?></span></a>
                         <?php } ?>
                     </p>
                     <?= '';//$_SERVER['REDIRECT_URL'] != '/services' ? 'asdfghgfd' : ''?>
@@ -468,11 +472,11 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
 </header>
 <main id="main" class="flex-shrink-0" role="main">
 
-        <?php if (!empty($this->params['breadcrumbs'])): ?>
-            <?= ''// Breadcrumbs::widget(['links' => @$this->params['breadcrumbs']]) ?>
-        <?php endif ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
+    <?php if (!empty($this->params['breadcrumbs'])): ?>
+        <?= ''// Breadcrumbs::widget(['links' => @$this->params['breadcrumbs']]) ?>
+    <?php endif ?>
+    <?= Alert::widget() ?>
+    <?= $content ?>
 </main>
 <?php if($action !== 'shippment'){ ?>
     <footer>
@@ -598,7 +602,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                         <?= @$GLOBALS['text']['SUBSCRIBE__'] ?>
                     </h6>
                     <p>
-                     <?= @@$GLOBALS['text']['Sign_Up_to'] ?>
+                        <?= @@$GLOBALS['text']['Sign_Up_to'] ?>
                     </p>
                     <form class="d-flex flex-column align-items-start">
                         <input class="w-100"  placeholder="<?= @$GLOBALS['text']['Enter_your_email'] ?>">
@@ -619,45 +623,45 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
     </footer>
 
 <?php }  ?>
-       <?php 
-        if($_COOKIE['language'] == "hy") {
-        ?>
-            <script>
-                (function(w,d,u){
-                    var s=d.createElement('script');
-                    s.async=true;
-                    s.src=u+'?'+(Date.now()/60000|0);
-                    var h=d.getElementsByTagName('script')[0];
-                    h.parentNode.insertBefore(s,h);
-                })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/site_button/loader_6_m4suvh.js');
-            </script>
-        <?php 
-        } elseif ($_COOKIE['language'] == 'ru') {
-        ?>
-            <script>
-                (function(w,d,u){
-                    var s=d.createElement('script');
-                    s.async=true;
-                    s.src=u+'?'+(Date.now()/60000|0);
-                    var h=d.getElementsByTagName('script')[0];
-                    h.parentNode.insertBefore(s,h);
-                })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/site_button/loader_2_muyflr.js');
-            </script>
-        <?php 
-        } elseif ($_COOKIE['language'] == 'en') {
-        ?>
-            <script>
-                (function(w,d,u){
-                    var s=d.createElement('script');
-                    s.async=true;
-                    s.src=u+'?'+(Date.now()/60000|0);
-                    var h=d.getElementsByTagName('script')[0];
-                    h.parentNode.insertBefore(s,h);
-                })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/site_button/loader_4_1bahbi.js');
-            </script>
-        <?php 
-        }
-        ?>
+<?php
+if($_COOKIE['language'] == "hy") {
+    ?>
+    <script>
+        (function(w,d,u){
+            var s=d.createElement('script');
+            s.async=true;
+            s.src=u+'?'+(Date.now()/60000|0);
+            var h=d.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/site_button/loader_6_m4suvh.js');
+    </script>
+<?php
+} elseif ($_COOKIE['language'] == 'ru') {
+?>
+    <script>
+        (function(w,d,u){
+            var s=d.createElement('script');
+            s.async=true;
+            s.src=u+'?'+(Date.now()/60000|0);
+            var h=d.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/site_button/loader_2_muyflr.js');
+    </script>
+<?php
+} elseif ($_COOKIE['language'] == 'en') {
+?>
+    <script>
+        (function(w,d,u){
+            var s=d.createElement('script');
+            s.async=true;
+            s.src=u+'?'+(Date.now()/60000|0);
+            var h=d.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.ru/b27778314/crm/site_button/loader_4_1bahbi.js');
+    </script>
+    <?php
+}
+?>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
