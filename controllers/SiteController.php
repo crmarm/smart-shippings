@@ -60,15 +60,16 @@ class SiteController extends Controller
 
     public function beforeAction($action)
     {
+        setcookie('language', 'hy', time() ,'/'.$action->id);
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
-            setcookie('language', 'hy', time() + (365 * 24 * 60 * 60),'/');
+            setcookie('language', 'hy', time() + (30 * 24 * 60 * 60),'/');
             $this->refresh();
             Yii::$app->end();
             return false;
         }
         $lng = $_COOKIE['language'] ?? 'hy';
         if($lng !== 'hy' && $lng !== 'ru' && $lng !== 'en'){
-            setcookie('language', 'hy', time() + (365 * 24 * 60 * 60),'/');
+            setcookie('language', 'hy', time() + (30 * 24 * 60 * 60),'/');
             $this->refresh();
             Yii::$app->end();
             return false;
@@ -106,7 +107,7 @@ class SiteController extends Controller
         if($_POST){
             $model->load(Yii::$app->request->post(), '');
             if($model->login()){
-                return $this->redirect('admin/news');
+                return $this->redirect('admin/news/');
             }else{
                 return $this->redirect('login');
             }
@@ -175,18 +176,22 @@ class SiteController extends Controller
                 'filter'=>['UF_CRM_1709904415487'=> $_GET['search']],
                 'select'=>['UF_*','*'],
             ]);
-            $tracks = $tracks['result']['0'];
-//            $tracks = $tracks['result']['37'];
-            $tracks['loadingDate'] = $tracks['UF_CRM_6570260E0B783'];
-            $tracks['unloadinDate'] = $tracks['UF_CRM_6570260E3DF23'];
-            $tracks['weight'] = $tracks['UF_CRM_1711031316'];
-            $tracks['item'] = $tracks['UF_CRM_65BA6BF941C4B'];
-            if(!empty($tracks['UF_CRM_1715768153'])){
-                $tracks['address'] = $tracks['UF_CRM_1715768153'][count($tracks['UF_CRM_1715768153']) - 1];
+            if(count($tracks['result'])) {
+                $tracks = $tracks['result']['0'];
+                $tracks['loadingDate'] = $tracks['UF_CRM_6570260E0B783'];
+                $tracks['unloadinDate'] = $tracks['UF_CRM_6570260E3DF23'];
+                $tracks['weight'] = $tracks['UF_CRM_1711031316'];
+                $tracks['item'] = $tracks['UF_CRM_65BA6BF941C4B'];
+                if(!empty($tracks['UF_CRM_1715768153'])){
+                    $tracks['address'] = $tracks['UF_CRM_1715768153'][count($tracks['UF_CRM_1715768153']) - 1];
+                }else{
+                    $tracks['address'] = '';
+                }
+                $tracks['parameters'] = $tracks['UF_CRM_1711031413'];
             }else{
-                $tracks['address'] = '';
+                $tracks = [];
             }
-            $tracks['parameters'] = $tracks['UF_CRM_1711031413'];
+
         }
         return $this->render('shippment',['tracks' => $tracks]);
     }

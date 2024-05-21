@@ -243,7 +243,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link <?= $action === 'contact' ? 'active-linkPage' : '' ?>" href="<?= Yii::$app->urlManager->createUrl('contact') ?>/<?= $_COOKIE['language'] ?>">
-                                    <?= @$GLOBALS['text']['CONTACT_'] ?>
+                                    <?= @$GLOBALS['text']['CONTACT_US_'] ?>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -455,7 +455,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
             <div class="container">
                 <div class="title-div">
                     <h1><?= @$this->params['title'] ?> </h1>
-                    <p><a href="<?= Yii::$app->urlManager->createUrl('"') ?>/<?= $_COOKIE['language'] ?>><?= @$GLOBALS['text']['__home__'] ?>"></a>
+                    <p><a href="<?= Yii::$app->urlManager->createUrl('/') ?>/<?= $_COOKIE['language'] ?>"><?= @$GLOBALS['text']['__home__'] ?></a>
                         <?php if(isset($this->params) && isset($this->params['second'])){ ?>
                         / <a href="<?= @$this->params['href']  ?>"><span> <?= @$this->params['second'] ?></span></a>
                         <?php } ?>

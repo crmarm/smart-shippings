@@ -43,16 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <span style="padding: 8px 0;display: block;"><span class="text-white">By continuing, you agree to the</span> <a class="hrefs "  href="">Terms of use</a> <span class="text-white">and</span> <a class="hrefs" href="">Privacy Policy.</a> </span>
                                 <button type="submit" >Log in</button>
                             </div>
-                            <div class="d-flex align-items-center"><span class="m-auto"><a href="" class="hrefs" style="">Forgot your password</a></span></div>
-                            <div class="d-flex justify-content-center">
-                                <span class="text-white">Don’t have an acount? <a href="" class="hrefs"> Sign up  </a></span>
-                            </div>
-
                         </form>
-                    <div class="pt-4 text-white">
-                        You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
-                        To modify the username/password, please check out the code <code>app\models\User::$users</code>.
-                    </div>
                 </div>
             </div>
         </div>       

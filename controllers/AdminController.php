@@ -90,7 +90,7 @@ class AdminController extends Controller
                 $blog->img = "uploads/$name";
             }
             $blog->save(false);
-            $this->redirect(['news', 'success' => 'true', 'id' => 'key' .$blog->id]);
+            $this->goBack(Yii::$app->request->referrer);
         }
         else if ($post && $post['edite']) {
             $blog = SmNews::findOne(['id' => intval($post['id']) ]);
@@ -103,7 +103,7 @@ class AdminController extends Controller
                 $blog->img = "uploads/$name";
             }
             $blog->save(false);
-            $this->redirect(['news', 'success' => 'true', 'id' => 'key' .  $blog->id]);
+            $this->goBack(Yii::$app->request->referrer);
         }
         $blogs = SmNews::find()->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('news', ['blogs' => $blogs]);
@@ -115,7 +115,7 @@ class AdminController extends Controller
     public function actionNewsEdite() {
         $id = intval($_GET['id']);
         $blog = SmNews::findOne(['id' => $id]);
-        return $this->renderAjax('blog-edite-popup', ['blog' => $blog,'categories'=>$categories]);
+        return $this->renderAjax('blog-edite-popup', ['blog' => $blog]);
     }
 
 

@@ -162,15 +162,15 @@ define('C_REST_WEB_HOOK_URL','https://smartshippings.bitrix24.ru/rest/24/rlf0hhq
 						$result[ 'error_information' ] = $info[ 'curl_error' ];
 					}
 
-					static::setLog(
-						[
-							'url'    => $url,
-							'info'   => $info,
-							'params' => $arParams,
-							'result' => $result
-						],
-						'callCurl'
-					);
+					// static::setLog(
+					// 	[
+					// 		'url'    => $url,
+					// 		'info'   => $info,
+					// 		'params' => $arParams,
+					// 		'result' => $result
+					// 	],
+					// 	'callCurl'
+					// );
 
 					return $result;
 				}
