@@ -96,13 +96,13 @@
                 </p>
             </div>
             <div class="careers-form">
-                <form class="d-flex flex-column gap-3">
+                <form class="d-flex flex-column gap-3" method="post">
                     <div class="name-lastname d-flex gap-3">
                         <input type="text" name="name" placeholder="<?= @$GLOBALS['text']['first-name'] ?>">
                         <input type="text" name="lastName" placeholder="<?= @$GLOBALS['text']['last-name'] ?>">
                     </div>
                     <div class="email">
-                        <input type="email" name="email" placeholder="<?= @$GLOBALS['text']['email'] ?>">
+                        <input type="email" name="email" required placeholder="<?= @$GLOBALS['text']['email'] ?>">
                     </div>
                     <div class="department">
                         <input type="text" name="text" placeholder="<?= @$GLOBALS['text']['department'] ?>">

@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\JoinReq;
 use app\models\SmNews;
 use app\models\Texts;
 use app\models\Tracking;
@@ -155,6 +156,16 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
+        if($_POST){
+            $joinUs = new JoinReq();
+            $joinUs->name = $_POST['name'];
+            $joinUs->lastname = $_POST['lastName'];
+            $joinUs->email = $_POST['email'];
+            $joinUs->department = $_POST['text'];
+            $joinUs->message = $_POST['message'];
+            $joinUs->save();
+            return $this->goBack(Yii::$app->request->referrer);
+        }
         return $this->render('about');
     }
     public function actionServices(){

@@ -79,11 +79,11 @@ class AdminController extends Controller
     }
     public function actionNews(){
         $post = Yii::$app->request->post();
-        if ($post && $post['add']) {
+        if ($post && @$post['add']) {
             $blog = new SmNews();
             $blog->load($post);
             $blog->url =  $this->transLateURRL($blog->page_name_am);
-            if (!empty($_FILES['img']) && $_FILES['img']['tmp_name']) {
+            if (!empty($_FILES['img']) && @$_FILES['img']['tmp_name']) {
                 $tmp_name = $_FILES["img"]["tmp_name"];
                 $name = time() . basename($_FILES["img"]["name"]);
                 move_uploaded_file($tmp_name, "uploads/$name");
@@ -92,7 +92,7 @@ class AdminController extends Controller
             $blog->save(false);
             $this->goBack(Yii::$app->request->referrer);
         }
-        else if ($post && $post['edite']) {
+        else if ($post && @$post['edite']) {
             $blog = SmNews::findOne(['id' => intval($post['id']) ]);
             $blog->load($post);
             $blog->url =  $this->transLateURRL($blog->page_name_am);

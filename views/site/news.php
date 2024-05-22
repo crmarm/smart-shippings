@@ -27,26 +27,25 @@
         <?php
         if(isset($news) && !empty($news)) {
             foreach ($news as $index => $item) { ?>
-                <div class="news-block ">
+                <div class="news-block d-flex flex-column gap-3">
                     <div class="news-img-parent">
                         <a href="<?= Yii::$app->urlManager->createUrl('../news/'. $item->url) ?>/<?= $_COOKIE['language'] ?>">
                             <img class="news-img" src="../<?= $item->img ?>" alt="Image">
                         </a>
                     </div>
                     <div class="news-dis">
-                        <!-- <h4 class="m-0">
-                            <?= $_COOKIE['language'] === 'hy' ? $item->page_name_am : (($_COOKIE['language'] === 'ru') ? $item->page_name_ru : $item->page_name_en) ?>
-                        </h4> -->
+                        <?= $_COOKIE['language'] === 'hy' ? $item->page_name_am : (($_COOKIE['language'] === 'ru') ? $item->page_name_ru : $item->page_name_en) ?>
                         <h4 class="mt-3">
-                            <?= $_COOKIE['language'] === 'hy' ? $item->page_title_am : (($_COOKIE['language'] === 'ru') ? $item->page_title_ru : $item->page_title_en) ?>
+                            <a href="<?= Yii::$app->urlManager->createUrl('news/'. $item->url) ?>/<?= $_COOKIE['language'] ?>">
+                                <?= $_COOKIE['language'] === 'hy' ? $item->page_title_am : (($_COOKIE['language'] === 'ru') ? $item->page_title_ru : $item->page_title_en) ?>
+                            </a>
                         </h4>
                          <div class="about-news m-0" >
-                            <p >
+                            <p>
                                 <?= $_COOKIE['language'] === 'hy' ? mb_substr($item->page_content_am, 0, 100) : (($_COOKIE['language'] === 'ru') ? mb_substr($item->page_content_ru, 0, 100) : mb_substr($item->page_content_en, 0, 100)) ?>
                                 <?= (strlen($item->page_content_am) > 100) ? '...' : ''; ?>
                             </p>
                         </div>
-
                     </div>
                     <div class="read-more-news ">
                         <a href="<?= Yii::$app->urlManager->createUrl('news/'. $item->url) ?>/<?= $_COOKIE['language'] ?>">
