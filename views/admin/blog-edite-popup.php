@@ -1,3 +1,11 @@
+<style type="text/css">
+    .close {
+        border: none!important;
+        width: 20px!important;
+        border-radius: 4px!important;
+    }
+
+</style>
 <div class="modal fade add-new" id="edite-page" tabindex="-1" role="dialog" aria-labelledby="edite-page" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">

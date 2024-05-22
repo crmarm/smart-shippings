@@ -61,6 +61,7 @@ class SiteController extends Controller
 
     public function beforeAction($action){
         setcookie('language', 'hy', time() ,'/'.$action->id);
+        //var_dump(Yii::$app->request->referrer);
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'hy', time() + (30 * 24 * 60 * 60),'/');
             $this->refresh();

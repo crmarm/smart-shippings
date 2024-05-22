@@ -433,7 +433,7 @@ nav .navbar li {
 .ru .navbar .drop-item:hover .drop-div-2 {
     position: absolute;
     display: block;
-    left: 305px !important;
+    left: 100% !important;
 }
 @keyframes fadeInLeft {
     0% {
@@ -1226,7 +1226,7 @@ header .headerSwiper .header-pagination {
     color: #aab3b6;
     display: contents;
     display: block;
-    font-family: 'Linearicons';
+    font-family: 'Font Awesome 6 Free';
     line-height: 1;
     transition: all 0.3s ease-in;
 }
@@ -1300,6 +1300,9 @@ header .headerSwiper .header-pagination {
     font-weight: 900;
     line-height: 1;
     font-family: 'Assistant', sans-serif;
+}
+textarea.form-control {
+    height: 45px!important;
 }
 
 .Clients-sec .clientBox .clientDis h6 {
@@ -2459,6 +2462,7 @@ footer .footer-subcribe p {
     gap:1rem !important;
 }
 .form-control{
+    height: 45px!important;
     color: #212529;
     background-color: #fff;
     outline: 0;
@@ -3229,6 +3233,8 @@ footer .footer-subcribe p {
     /* news page  */
 
     .all-news {
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 50px;
     }
 
@@ -3408,7 +3414,7 @@ footer .footer-subcribe p {
         line-height: 38px;
         vertical-align: middle;
     }
-
+    
     .navbar-search .nav-menu i {
         font-size: 30px;
         color: #80c644;
@@ -3679,7 +3685,7 @@ footer .footer-subcribe p {
     /* login page res finish */
      /* news page res */
      .news-block {
-        width: 100%;
+        width: 323px;
     }
     /* news page res finish*/
     /* uniq news page */
@@ -4581,7 +4587,5 @@ footer .footer-subcribe p {
     }
 
 }
-
-
 
 
