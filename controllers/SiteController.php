@@ -58,8 +58,17 @@ class SiteController extends Controller
     }
 
 
+<<<<<<< Updated upstream
     public function beforeAction($action){
+=======
+    public function beforeAction($action)
+    {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
         setcookie('language', 'hy', time() ,'/'.$action->id);
+=======
+        //var_dump(Yii::$app->request->referrer);
+>>>>>>> Stashed changes
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'hy', time() + (30 * 24 * 60 * 60),'/');
             $this->refresh();
