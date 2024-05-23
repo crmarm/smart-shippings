@@ -1,3 +1,10 @@
+<style>
+    .second-title-news a{
+        color:#000000;
+        font-size: 15px;
+        font-weight: 500;
+    }
+</style>
 <?php $this->params['title'] = @$GLOBALS['text']['News_Footer']; ?>
 <a data-aos="fade-right" data-aos-duration="2000" class="go-to-up" href="#top">
     <button >
@@ -35,7 +42,7 @@
                     </div>
                     <div class="news-dis">
                         <?= $_COOKIE['language'] === 'hy' ? $item->page_name_am : (($_COOKIE['language'] === 'ru') ? $item->page_name_ru : $item->page_name_en) ?>
-                        <h4 class="mt-3">
+                        <h4 class="mt-3 second-title-news">
                             <a href="<?= Yii::$app->urlManager->createUrl('news/'. $item->url) ?>/<?= $_COOKIE['language'] ?>">
                                 <?= $_COOKIE['language'] === 'hy' ? $item->page_title_am : (($_COOKIE['language'] === 'ru') ? $item->page_title_ru : $item->page_title_en) ?>
                             </a>
