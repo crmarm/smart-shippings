@@ -89,7 +89,7 @@ class AdminController extends Controller
                 move_uploaded_file($tmp_name, "uploads/$name");
                 $blog->img = "uploads/$name";
             }
-            $blog->save(false);
+            $blog->save();
             $this->goBack(Yii::$app->request->referrer);
         }
         else if ($post && @$post['edite']) {
@@ -102,7 +102,7 @@ class AdminController extends Controller
                 move_uploaded_file($tmp_name, "uploads/$name");
                 $blog->img = "uploads/$name";
             }
-            $blog->save(false);
+            $blog->save();
             $this->goBack(Yii::$app->request->referrer);
         }
         $blogs = SmNews::find()->orderBy(['order_num' => SORT_ASC])->all();

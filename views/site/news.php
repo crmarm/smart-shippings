@@ -4,6 +4,9 @@
         font-size: 15px;
         font-weight: 500;
     }
+    .news-dis{
+        height:200px;
+    }
 </style>
 <?php $this->params['title'] = @$GLOBALS['text']['News_Footer']; ?>
 <a data-aos="fade-right" data-aos-duration="2000" class="go-to-up" href="#top">
