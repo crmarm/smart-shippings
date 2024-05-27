@@ -14,17 +14,20 @@ ul li {
 a {
     text-decoration: none;
 }
-
+.last-for-3{
+    display: none;
+    border: none;
+    background: none;   
+    opacity:0;
+}
 .go-to-up {
     position: fixed;
-    right: 40px;
+    left: 40px;
     bottom: 50px;
     text-align: right !important;
     /* margin-right: 40px; */
     z-index: 10;
 }
-
-
 .go-to-up button {
     border-radius: 3px;
     width: 42px;
@@ -32,12 +35,10 @@ a {
     border: none;
     background-color: rgba(42, 44, 50, 0.8);
 }
-
 .go-to-up button i {
     color: #e2e2e3;
     font-size: 17px;
 }
-
 .container {
     padding: 0 90px !important;
 }
@@ -3042,11 +3043,13 @@ footer .footer-subcribe p {
 }
 /* shippment page res finish */
 @media (max-width: 1400px) {
-
     .container {
         padding: 0 40px !important;
     }
-
+    .last-for-3{
+        display: block;
+        
+    }
     .nav-down .navbar {
         gap: 20px;
     }
@@ -3172,7 +3175,15 @@ footer .footer-subcribe p {
     .container {
         padding: 0 20px !important;
     }
-
+    .hy header navbar .nav-down .nav-item .nav-link{
+        font-size: 13px;
+    }
+    .Our-Services-sec .iconsItems {
+        flex-wrap: wrap;
+        column-gap: 30px !important;
+        gap: 30px !important;
+        justify-content: center !important;
+    }
     .header-title-1 .second-h1 {
         font-size: 42px !important;
     }

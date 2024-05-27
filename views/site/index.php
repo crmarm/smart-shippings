@@ -11,7 +11,7 @@
                     <?= @$GLOBALS['text']['From_Departure_'] ?>
                 </h2>
                 <p class="mb-3">
-                    <?= @$GLOBALS['text']['Our_company_'] ?>
+                    <?= @$GLOBALS['text']['Our_company_'] ?> 
                 </p>
                 <p class="mb-3 second-p">
                     <?= @$GLOBALS['text']['Our_clients_'] ?>
@@ -75,24 +75,24 @@
                     </p>
                 </div>
             </div>
-            <div class=" iconsItems d-flex justify-content-between gap-4">
-                    <div class="iconsItem" >
-                        <div class="iconsItemChild">
-                            <div>
-                                <i class="bi bi-airplane"></i>
-                                <h5>
-                                    <?= @$GLOBALS['text']['Air_Freight'] ?>
-                                </h5>
-                                <p>
-                                    <?= @$GLOBALS['text']['Our_Air_'] ?>
-                                </p>
-                                <a href="<?= Yii::$app->urlManager->createUrl('airfreght') ?>/<?= $_COOKIE['language'] ?>" >
-                                    <?= @$GLOBALS['text']['READ_MORE__'] ?>
-                                </a>
-                            </div>
+            <div class=" iconsItems d-flex justify-content-between gap-4 flex-wrap">
+                <div class="iconsItem" >
+                    <div class="iconsItemChild">
+                        <div>
+                            <i class="bi bi-airplane"></i>
+                            <h5>
+                                <?= @$GLOBALS['text']['Air_Freight'] ?>
+                            </h5>
+                            <p>
+                                <?= @$GLOBALS['text']['Our_Air_'] ?>
+                            </p>
+                            <a href="<?= Yii::$app->urlManager->createUrl('airfreght') ?>/<?= $_COOKIE['language'] ?>" >
+                                <?= @$GLOBALS['text']['READ_MORE__'] ?>
+                            </a>
                         </div>
                     </div>
-                <div class="iconsItem  ">
+                </div>
+                <div class="iconsItem">
                     <div class="iconsItemChild">
                         <div>
                             <i class='bx bxs-ship'></i>
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="iconsItem  ">
+                <div class="iconsItem">
                     <div class="iconsItemChild">
                         <div>
                             <i class='bx bx-train'></i>
@@ -124,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="iconsItem ">
+                <div class="iconsItem">
                     <div  class="iconsItemChild">
                         <div>
                             <i class="fa-solid fa-road"></i>
@@ -140,9 +140,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="iconsItems d-flex justify-content-between   gap-4  pt-4">
-                <div class=" iconsItem   ">
+                <div class="iconsItem">
                     <div class="iconsItemChild">
                         <div>
                             <i class="bi bi-cash-coin"></i>
@@ -174,7 +172,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="iconsItem  ">
+                <div class="iconsItem">
                     <div class="iconsItemChild">
                         <div>
                             <i class="bi bi-archive"></i>
@@ -190,7 +188,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="iconsItem  ">
+                <div class="iconsItem">
                     <div class="iconsItemChild">
                         <div>
                             <i class="bi bi-gear"></i>
@@ -205,6 +203,8 @@
                             </a>
                         </div>
                     </div>
+                </div>
+                <div class="iconsItem last-for-3">
                 </div>
             </div>
         </div>

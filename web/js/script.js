@@ -268,3 +268,13 @@ $('body').on('keyup','.input-search',function(){
         $('body').find('.urlsInfo').addClass('d-none')
     }
 })
+$('body').on('click','.close',function(){
+    closeModalEdite();
+})
+$('body').on('click','.closeModal',function(){
+    closeModalEdite();
+})
+function closeModalEdite(){
+    $('.modals').html(' ');
+    $('.modal-backdrop').remove();
+}

@@ -46,7 +46,7 @@
                         <h4 class="box-title">Նորություններ
                             <span class="buttons">
                                 <span class="overlay show_" style="width:99px;"></span>
-                                <button class="btn btn-sm btn-default" style="margin-left:30px;" id="copyBlog" ><i class="fa fa-copy"></i></button>
+<!--                                <button class="btn btn-sm btn-default" style="margin-left:30px;" id="copyBlog" ><i class="fa fa-copy"></i></button>-->
                                 <button class="btn btn-sm btn-default" id="editeBlog"><i class="fa fa-pencil"></i></button>
                                 <button class="btn btn-sm btn-danger" id="disableBlog"><i class="fa fa-trash"></i></button>
                             </span>

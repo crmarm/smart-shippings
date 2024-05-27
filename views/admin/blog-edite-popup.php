@@ -77,7 +77,7 @@
                         </div>
 
                     </div>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Փակել</button>
+                    <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Փակել</button>
                     <button type="submit" class="btn btn-succ" name="edite" value="true">Գրանցել</button>
                 </form>
             </div>

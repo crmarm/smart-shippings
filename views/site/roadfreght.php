@@ -12,7 +12,7 @@
             <div class="border-div">
                 <div class="first-div">
                     <div class="img-div">
-                        <img src="../images/Sea-Freight-img.jpg" alt="">
+                        <img src="../images/road-AA.jpg" alt="">
                     </div>
                     <div class="p-under-img">
                         <p>
