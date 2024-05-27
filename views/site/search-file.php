@@ -5,9 +5,14 @@
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
             overflow: hidden;
-            text-overflow: ellipsis;a
+            text-overflow: ellipsis;
+            height:max-content !important;
         }
-
+        .urlsInfo .searchBlockDiv{
+            gap: 8px;
+            display: flex;
+            flex-direction: column;
+        }
         @media (max-width: 1150px) {
             .urlsInfo{
                 width:60% !important;
@@ -23,7 +28,7 @@
             }
         }
     </style>
-    <div class="m-auto" >
+    <div class="m-auto searchBlockDiv" >
         <?php foreach ($urls as $index => $url) { ?>
             <a class="links-new form-control border d-flex align-items-center justify-content-left" href="<?= Yii::$app->urlManager->createUrl($url['page'])  . '/' . $_COOKIE['language'] ?>">
                 <?= $url['text_'.$_COOKIE['language']] ?>

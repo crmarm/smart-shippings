@@ -1,3 +1,8 @@
+<style>
+    .products{
+        overflow:hidden;
+    }
+</style>
 </a>
 </a>
 </a>

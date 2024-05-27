@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 <?php
 
 /** @var yii\web\View $this */
@@ -632,6 +623,15 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
     </footer>
 
 <?php }  ?>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!--<script  src="../script.js"></script>-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<?php $this->endBody() ?>
 <?php
 if($_COOKIE['language'] == "hy") {
     ?>
@@ -672,14 +672,6 @@ if($_COOKIE['language'] == "hy") {
 }
 ?>
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<!--<script  src="../script.js"></script>-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-<?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage() ?>
