@@ -109,7 +109,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade add-new" id="addnew" tabindex="-1" role="dialog" aria-labelledby="addnew" aria-hidden="true">
+    <div class="modal fade add-new add-news1" id="addnew" tabindex="-1" role="dialog" aria-labelledby="addnew" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -123,6 +123,10 @@
 
                         <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
 
+                        <div class="d-grid img-add">    
+                            <span style="margin-bottom: 4px;color: #878787;">Նկար</span>
+                            <input type="file" name="img">
+                        </div>
                         <div class="custom-tab">
                             <nav>
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -131,11 +135,7 @@
                                     <a class="nav-item nav-link " id="custom-nav-product-en-tab" data-toggle="tab" href="#custom-nav-product-en" role="tab" aria-controls="custom-nav-product-en" aria-selected="false">Անգլ</a>
                                 </div>
                             </nav>
-                            <span style="margin-bottom: 4px;color: #878787;">Նկար</span>
-                            <input type="file" name="img">
-                            <br>
-
-                            <br>
+                            
                             <div class="tab-content" id="nav-tabContent"><br>
                                 <div class="tab-pane fade active show" id="custom-nav-product-am" role="tabpanel" aria-labelledby="custom-nav-product-am-tab">
                                     <div class="form-group ">
@@ -145,7 +145,7 @@
                                         <input type="text" name="SmNews[page_title_am]"   placeholder="Վերնագիր" class="form-control">
                                         <span>Բանալի Բառեր</span>
                                         <textarea name="SmNews[page_keywords_am]" class="form-control" placeholder="Բանալի Բառեր" rows="3"></textarea>
-                                        <span>Պարունակություն</span>
+                                        <span class="">Պարունակություն</span>
                                         <textarea name="SmNews[page_content_am]" class="form-control" id="editor_am" placeholder="Պարունակություն" rows="3"></textarea>
                                     </div>
                                 </div>

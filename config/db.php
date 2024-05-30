@@ -3,7 +3,7 @@ return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=smart_shippings',
     'username' => 'root',
-    'password' => '16piOnJRNCMe',
+    'password' => '',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
