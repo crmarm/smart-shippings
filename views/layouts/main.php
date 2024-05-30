@@ -26,8 +26,10 @@ $lan_imgs['text']['en'] = 'English';
 
 $controller = Yii::$app->controller->id;
 $action = Yii::$app->controller->action->id;
-
-switch ($_COOKIE['language']) {
+if(!@$_COOKIE['language']){
+    $_COOKIE['language'] = 'hy';
+}
+switch (@$_COOKIE['language']) {
     case 'en':
         $regionCode = 'US';
         $placeName = 'New York';
@@ -41,6 +43,8 @@ switch ($_COOKIE['language']) {
         $placeName = 'Moscow';
         break;
     default:
+        $regionCode = 'AM';
+        $placeName = 'Yerevan';
         break;
 }
 $meteRegion = '<meta name="geo.region" content="' . $regionCode . '">';
@@ -132,7 +136,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                 <div class=" d-flex align-items-center justify-content-start pt-0 ">
                     <ul class="contact-info d-flex list-unstyled" >
                         <li><?= @$GLOBALS['text']['Phone__'] ?>:
-                            <a class="text-decoration-none" href="tel:+374 91 919122"> +374 91 919122</a>
+                                <a class="text-decoration-none" href="tel:+374 91 919122"> +374 91 919122</a>
                         </li>
                         <li><?= @$GLOBALS['text']['Email__'] ?>:
                             <a class="text-decoration-none" href="mailto:h.hovhannisyan@smartshippings.com"> h.hovhannisyan@smartshippings.com</a>
@@ -366,7 +370,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                 </li>
                 <li class="nav-mob-item">
                     <a class="nav-mob-link" href="<?= Yii::$app->urlManager->createUrl('contact') ?>/<?= $_COOKIE['language'] ?>">
-                        <?= @$GLOBALS['text']['CONTACT_'] ?>
+                        <?= @$GLOBALS['text']['CONTACT_US_'] ?>
                     </a>
                 </li>
                 <li class="nav-mob-item">
@@ -497,9 +501,17 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                             <i class="bi bi-telephone"></i>
                             <a href="tel:+374 91 919122">+374 91 919122</a>
                         </li>
+                        <li class="phone-info">
+                            <i class="bi bi-telephone"></i>
+                            <a href="tel:+374 91 516231"> +374 91 516231</a>
+                        </li>
                         <li class="email-info">
                             <i class="fa-sharp fa-thin fa-at"></i>
                             <a href="mailto:h.hovhannisyan@smartshippings.com">h.hovhannisyan@smartshippings.com</a>
+                        </li>
+                        <li class="email-info">
+                            <i class="fa-sharp fa-thin fa-at"></i>
+                            <a  href="mailto:info@smartshippings.com"> info@smartshippings.com</a>
                         </li>
                     </ul>
                     <ul class="social-icons px-0 d-flex justify-content-start gap-2">
@@ -614,9 +626,11 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
             </div>
             <div class="row">
                 <div class=" footer-con-copyright col-lg-12">
-                    <p>
-                        <?= @$GLOBALS['text']['Copyright_Expeditor_'] ?>
-                    </p>
+                    <a href="https://codewave.am/" target="_blank">
+                        <p>
+                            <?= @$GLOBALS['text']['Copyright_Expeditor_'] ?>
+                        </p>
+                    </a>
                 </div>
             </div>
         </div>

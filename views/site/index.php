@@ -1,3 +1,14 @@
+<style>
+    .icon-item-child-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .Services .iconsItems .iconsItem .iconsItemChild{
+        height:100%;
+    }
+</style>
 <a  data-aos="fade-right" data-aos-duration="2000" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
@@ -78,7 +89,7 @@
             <div class=" iconsItems d-flex justify-content-between gap-4 flex-wrap">
                 <div class="iconsItem" >
                     <div class="iconsItemChild">
-                        <div>
+                        <div class="icon-item-child-div">
                             <i class="bi bi-airplane"></i>
                             <h5>
                                 <?= @$GLOBALS['text']['Air_Freight'] ?>
@@ -94,7 +105,7 @@
                 </div>
                 <div class="iconsItem">
                     <div class="iconsItemChild">
-                        <div>
+                        <div class="icon-item-child-div">
                             <i class='bx bxs-ship'></i>
                             <h5>
                                 <?= @$GLOBALS['text']['Sea_Freight__'] ?>
@@ -110,7 +121,7 @@
                 </div>
                 <div class="iconsItem">
                     <div class="iconsItemChild">
-                        <div>
+                        <div class="icon-item-child-div">
                             <i class='bx bx-train'></i>
                             <h5>
                                 <?= @$GLOBALS['text']['Rail_Freight__'] ?>
@@ -126,7 +137,7 @@
                 </div>
                 <div class="iconsItem">
                     <div  class="iconsItemChild">
-                        <div>
+                        <div class="icon-item-child-div">
                             <i class="fa-solid fa-road"></i>
                             <h5>
                                 <?= @$GLOBALS['text']['Road_Freight_'] ?>
@@ -142,7 +153,7 @@
                 </div>
                 <div class="iconsItem">
                     <div class="iconsItemChild">
-                        <div>
+                        <div class="icon-item-child-div">
                             <i class="bi bi-cash-coin"></i>
                             <h5>
                                 <?= @$GLOBALS['text']['Customs_Brokerage__'] ?>
@@ -158,7 +169,7 @@
                 </div>
                 <div class="iconsItem">
                     <div class="iconsItemChild">
-                        <div>
+                        <div class="icon-item-child-div">
                             <i class="bi bi-shield-check"></i>
                             <h5>
                                 <?= @$GLOBALS['text']['Cargo_Insurance_'] ?>
@@ -174,7 +185,7 @@
                 </div>
                 <div class="iconsItem">
                     <div class="iconsItemChild">
-                        <div>
+                        <div class="icon-item-child-div">
                             <i class="bi bi-archive"></i>
                             <h5>
                                 <?= @$GLOBALS['text']['Warehousing__'] ?>
@@ -190,7 +201,7 @@
                 </div>
                 <div class="iconsItem">
                     <div class="iconsItemChild">
-                        <div>
+                        <div class="icon-item-child-div">
                             <i class="bi bi-gear"></i>
                             <h5>
                                 <?= @$GLOBALS['text']['Project_Logistics_'] ?>
@@ -478,7 +489,7 @@
         </div>
     </div>
 </section>
-<section class="brands">
+<!--<section class="brands">
     <div class="container">
         <div class="swiper brandsSwiper">
             <div class="swiper-wrapper">
@@ -538,7 +549,7 @@
     </div>
     <div class="swiper-button-next brands-swiper-arrow"></div>
     <div class="swiper-button-prev brands-swiper-arrow"></div>
-</section>
+</section>-->
 <section class="Contact-Us">
     <div class="container">
         <div class=" contact-sec  d-flex justify-content-between">
@@ -550,13 +561,13 @@
                     <?= @$GLOBALS['text']['Please_feel__'] ?>
                 </p>
             </div>
-            <div class="contact-info   " >
+            <div class="contact-info" >
                 <button>
                     <a href="<?= Yii::$app->urlManager->createUrl('contact')  ?>/<?= $_COOKIE['language'] ?>">
                         <?= @$GLOBALS['text']['Contact_Us_Now_'] ?>
                     </a>
                 </button>
-                <p><?= @$GLOBALS['text']['Or_Call_'] ?> <span>+374 91 919188</span></p>
+                <p><?= @$GLOBALS['text']['Or_Call_'] ?> <a href="tel:+37491919122"><span>+374 91 919122</span></a></p>
             </div>
         </div>
     </div>

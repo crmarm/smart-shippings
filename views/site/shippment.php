@@ -3,6 +3,15 @@
         display: block;
         width:max-content !important;
     }
+    @media (max-width:530px) {
+        .shipment-serach .container{
+            padding:0 !important;
+        }
+        .shipment-serach form{
+            width:100% !important;
+        }
+
+    }
 </style>
 <?php $this->params['title'] = $GLOBALS['text']['Track_Your_Shipment_Title'];  ?>
 <section class="shipment-serach Shipment-page pt-4">

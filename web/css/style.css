@@ -3743,7 +3743,6 @@ footer .footer-subcribe p {
 }
 
 @media (max-width:768px) {
-
     .container {
         padding: 0 !important;
         max-width: 90% !important;
@@ -3751,7 +3750,7 @@ footer .footer-subcribe p {
 
     nav .contact-info {
         flex-direction: row;
-        gap: 30px !important;
+        gap: 30px;
     }
 
     nav .nav-down {
@@ -4276,7 +4275,7 @@ footer .footer-subcribe p {
     /* shipment page res */
     
     .Shipment-page .container {
-        padding: 0 !;
+        padding: 0 ;
         width: 95% !important;
     }
 
@@ -4291,6 +4290,18 @@ footer .footer-subcribe p {
 }
 
 @media (max-width:530px) {
+     .bx-touch .b24-widget-button-position-bottom-right .b24-widget-button-popup {
+         left: -230px !important;
+     }
+     .bx-touch .b24-widget-button-popup {
+         width: 330px !important;
+     }
+    .contact-info{
+        flex-direction: column !important;
+        justify-content: start !important;
+        gap: 0px !important;
+        align-items: start !important;
+    }
     .en .header-title {
         padding-top: 100px !important;
     }

@@ -42,7 +42,7 @@ class AdminController extends Controller
     public function beforeAction($action)
     {
         if(!@Yii::$app->user->identity->id) {
-            return $this->redirect('/');
+            return $this->redirect('/login');
         }
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'hy', time() + (365 * 24 * 60 * 60));

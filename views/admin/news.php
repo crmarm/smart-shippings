@@ -62,8 +62,8 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="tbl">
-                                        <table class="table table-bordered ">
+                                    <div class="tbl" style="overflow:scroll">
+                                        <table class="table table-bordered">
                                             <thead>
                                             <tr>
                                                 <th scope="col">#</th>

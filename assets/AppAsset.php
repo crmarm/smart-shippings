@@ -26,10 +26,10 @@ class AppAsset extends AssetBundle
         'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css',
         'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css',
         'https://unpkg.com/aos@2.3.1/dist/aos.css',
-        'css/style.css?v=149',
+        'css/style.css?v=dasdfasdfsa;duhsdln',
     ];
     public $js = [
-        'js/script.js?v=5',
+        'js/script.js?v=54',
     ];
     public $depends = [
         'yii\web\YiiAsset',
