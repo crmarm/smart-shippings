@@ -708,6 +708,7 @@ nav .navbar li {
     white-space: normal;
 }
 
+
 .header-title-3 h1 {
     /* line-height: 60px; */
     letter-spacing: 1px;
@@ -718,7 +719,9 @@ nav .navbar li {
     margin-bottom: 0;
     font-family: 'Assistant', sans-serif;
 }
-
+.hy .header-title-3 h1 {
+    font-size: calc(1.375rem + 1.5vw);
+}
 .header-title-3 h2 {
     line-height: 0;
     letter-spacing: -1px;
@@ -728,8 +731,6 @@ nav .navbar li {
     /* margin-top: 0; */
     font-family: 'Assistant', sans-serif;
 }
-
-
 .header-title-3 p {
     width: 100%;
     white-space: normal;
@@ -1257,6 +1258,7 @@ header .headerSwiper .header-pagination {
     line-height: 1rem;
     padding-top: 10px;
     display: inline-block;
+    width:max-content;
 }
 
 .Services .iconsItem a:hover {
@@ -3178,6 +3180,9 @@ footer .footer-subcribe p {
     .hy header navbar .nav-down .nav-item .nav-link{
         font-size: 13px;
     }
+    .hy header .navbar .nav-item .nav-link{
+        font-size: 13px;
+    }
     .Our-Services-sec .iconsItems {
         flex-wrap: wrap;
         column-gap: 30px !important;
@@ -4052,7 +4057,7 @@ footer .footer-subcribe p {
     }
 
     .ru .header-title-3 h1  {
-        font-size: 35px !important;
+        font-size: 33px !important;
     }
 }
 

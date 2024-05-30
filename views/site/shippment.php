@@ -3,6 +3,9 @@
         display: block;
         width:max-content !important;
     }
+    .load-part1{
+        padding-top: 5px;
+    }
     @media (max-width:530px) {
         .shipment-serach .container{
             padding:0 !important;
@@ -31,7 +34,12 @@
                 </div>
                 <div class="d-flex media-first-wrap gap-29" >
                     <div class="load-all d-flex w-100" style="justify-content: space-between; text-wrap: nowrap;">
-                        <div class=" item-div d-flex justify-content-between align-items-center">
+                        <div class="item-div d-flex flex-column justify-content-start  gap-4">
+                            <div class="d-flex flex-column gap-1">
+                                <label style="color:white">Shipping direction</label>
+                                <span style="font-size:15px;">- <?= $tracks['origin_city'] ?></span>
+                                <span style="font-size:15px;">- <?= $tracks['destination_city'] ?></span>
+                            </div>
                             <div>
                                 <img  style="margin-bottom: 10px;" src="../images/photo_shippment2.jpg" alt="">
                                 <div class="last-part d-flex" style="gap:17px;">

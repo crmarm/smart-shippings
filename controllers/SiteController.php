@@ -199,12 +199,25 @@ class SiteController extends Controller
                 'filter'=>['UF_CRM_1709904415487'=> $_GET['search']],
                 'select'=>['UF_*','*'],
             ]);
+//            echo '<pre>';
+//            var_dump($tracks['result']);
+//            die;
             if(count($tracks['result'])) {
                 $tracks = $tracks['result']['0'];
                 $tracks['loadingDate'] = $tracks['UF_CRM_6570260E0B783'];
                 $tracks['unloadinDate'] = $tracks['UF_CRM_6570260E3DF23'];
                 $tracks['weight'] = $tracks['UF_CRM_1711031316'];
                 $tracks['item'] = $tracks['UF_CRM_65BA6BF941C4B'];
+
+                $tracks['origin_country'] = $tracks['UF_CRM_1711095727'];//start point
+                $tracks['origin_city'] = $tracks['UF_CRM_1706774843'];
+                $tracks['origin_address'] = $tracks['UF_CRM_6570260E2BC67'];
+
+                $tracks['destination_country'] = $tracks['UF_CRM_1711794595']; //end point
+                $tracks['destination_city'] = $tracks['UF_CRM_1706774890'];
+                $tracks['destination_address'] = $tracks['UF_CRM_65BA026CA0250'];
+
+
                 if(!empty($tracks['UF_CRM_1715768153'])){
                     $tracks['address'] = $tracks['UF_CRM_1715768153'][count($tracks['UF_CRM_1715768153']) - 1];
                 }else{
