@@ -27,7 +27,7 @@
                         <br>
                         <input type="hidden" name="old_img" value="<?php echo $blog->img?>">
                     <?php } ?>
-                    <input type="file" name="img">
+                    <input type="file" name="img" class="img_inp1">
                     <br>
                     <div class="custom-tab">
                         <nav>

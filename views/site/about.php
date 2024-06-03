@@ -45,30 +45,34 @@
                     <?= @$GLOBALS['text']['Our_Advantages__'] ?>
                 </h2>
             </div>
-            <div class="advanList d-flex align-items-start gap-5">
-                <div class="advanItem">
-                    <i class="fas fa-hand-holding-usd fs-1 text-white"></i>
-                    <p>
-                        <?= @$GLOBALS['text']['cost_effective__'] ?>
-                    </p>
+            <div class="advanList d-flex align-items-start">
+                <div>
+                    <div class="advanItem ">
+                        <i class="fas fa-hand-holding-usd fs-1 text-white"></i>
+                        <p>
+                           <?= @$GLOBALS['text']['cost_effective__'] ?>
+                        </p>
+                    </div>
+                    <div class="advanItem">
+                        <i class="fas fa-user-shield fs-1 text-white"></i>
+                        <p>
+                            <?= @$GLOBALS['text']['safe_and_secure_'] ?>
+                        </p>
+                    </div>
                 </div>
-                <div class="advanItem">
-                    <i class="fas fa-user-shield fs-1 text-white"></i>
-                    <p>
-                        <?= @$GLOBALS['text']['safe_and_secure_'] ?>
-                    </p>
-                </div>
-                <div class="advanItem">
-                    <i class="fas fa-shipping-fast fs-1 text-white"></i>
-                    <p>
-                        <?= @$GLOBALS['text']['fast_and_convenient_'] ?>
-                    </p>
-                </div>
-                <div class="advanItem">
-                    <i class="fas fa-headset fs-1 text-white"></i>
-                    <p>
-                        <?= @$GLOBALS['text']['high_quality_service_'] ?>
-                    </p>
+                <div>
+                    <div class="advanItem">
+                        <i class="fas fa-shipping-fast fs-1 text-white"></i>
+                        <p>
+                            <?= @$GLOBALS['text']['fast_and_convenient_'] ?>
+                        </p>
+                    </div>
+                    <div class="advanItem">
+                        <i class="fas fa-headset fs-1 text-white"></i>
+                        <p>
+                            <?= @$GLOBALS['text']['high_quality_service_'] ?>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

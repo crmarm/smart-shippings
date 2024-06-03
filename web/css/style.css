@@ -98,7 +98,36 @@ a {
     -moz-box-shadow: 0px 0px 12px 0px rgba(42,44,50,0.75);;
     /* padding: 10px; */
 }
+.modal-dialog .form-group {
+    background-color: #e9e9e9 !important;
+    padding: 0 10px 0 10px;
+}
+.nav-tabs .active{
+    background-color: #e9e9e9 !important;
+}
+.modal-dialog .tab-content {
+    background-color: #e9e9e9 !important;
+}
+.modal-dialog .form-group input,
+.modal-dialog .form-group textarea,
+.img_inp1{
+    padding-top: 9px;
+    margin: 5px 0 10px 0;
+}
+.cke_inner{
+    margin-top: 5px!important;
+}
+.modal-dialog form button{
+    margin: 10px 0 0px 0;
+}
 
+.add-news1 .img-add{
+    margin: 0px 0 10px 0;
+}
+.add-news1 .close{
+    border: none;
+    width: 20px;
+}
 .selected-lang:hover + .lang-list,
 .lang-list:hover {
     display: flex;
@@ -153,7 +182,9 @@ a {
     outline: 1px solid #2a2c32;
     box-shadow: 0px 0px 10px #038ed3;
 }
-
+.tbl .table-bordered{
+    min-width: 421px;
+}
 .form-search .input-search:focus::placeholder {
     opacity: 0;
     transform: translateX(180px);
@@ -1386,7 +1417,7 @@ textarea.form-control {
 }
 
 .ru .advantages-sec {
-    gap: 60px !important;
+    gap: 27px !important;
 }
 
 
@@ -1414,7 +1445,15 @@ textarea.form-control {
 }
 
 .advantages-sec .advanList {
-    gap: 5rem !important;
+    display: flex;
+}
+.advantages-sec .advanList div{
+    display: flex;
+}
+.advantages-sec .advanList div div{
+    width: 180px;
+    display: grid;
+    margin-right: 20px;
 }
 
 .advantages-sec .advanList .advanItem p {
@@ -3046,7 +3085,7 @@ footer .footer-subcribe p {
 /* shippment page res finish */
 @media (max-width: 1400px) {
     .container {
-        padding: 0 40px !important;
+        padding: 0px 0px !important;
     }
     .last-for-3{
         display: block;
@@ -3188,6 +3227,12 @@ footer .footer-subcribe p {
         column-gap: 30px !important;
         gap: 30px !important;
         justify-content: center !important;
+    }
+    .advantages-sec{
+        justify-content: center!important;
+    }
+    .advantages-sec .advanList div{
+        display: grid!important;
     }
     .header-title-1 .second-h1 {
         font-size: 42px !important;
@@ -3533,8 +3578,7 @@ footer .footer-subcribe p {
     }
 
     .Our-Advantages .advanList {
-        flex-wrap: wrap;
-        gap: 50px !important;
+        gap: 34px !important;
     }
 
     .am .Our-Advantages .advantages-sec {
@@ -3546,7 +3590,6 @@ footer .footer-subcribe p {
     }
 
     .advantages-sec .advanList .advanItem:nth-child(2) {
-        padding-left: 45px;
     }
 
     .advantages-sec .advanList .advanItem p {
@@ -3792,7 +3835,7 @@ footer .footer-subcribe p {
     }
 
     .advantages-sec {
-        gap: 70px !important;
+        gap: 24px !important;
     }
 
     .am .advantages-sec .advanList {
@@ -4066,7 +4109,7 @@ footer .footer-subcribe p {
 
     .advantages-sec .advanList {
         justify-content: center;
-        column-gap: 130px !important;
+        column-gap: 44px !important;
     }
 
     .ru .Our-Advantages .advanList .advanItem:nth-child(3){
@@ -4288,9 +4331,19 @@ footer .footer-subcribe p {
 }
 
 @media (max-width:560px) {
+    .advantages-sec .advanList{
+        display: grid!important;
+        gap: unset!important;
+    }
+    .advantages-sec .advanList .advanItem{
+        margin-bottom: 10px!important;
+    }
     .am .header-title-1 .first-h1 {
         padding-bottom: 10px;
         font-size: 50px !important;
+    }
+    .Clients-sec .title-div div{
+        --bs-gutter-x:none!important; 
     }
 }
 
