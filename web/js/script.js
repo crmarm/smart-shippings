@@ -278,3 +278,7 @@ function closeModalEdite(){
     $('.modals').html(' ');
     $('.modal-backdrop').remove();
 }
+
+    $('body').on('click', '.viewMore', function (){
+        $('body').find('.Toggler').toggleClass('d-none d-block');
+    })

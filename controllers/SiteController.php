@@ -189,6 +189,9 @@ class SiteController extends Controller
         ]);
     }
     public function actionShippment(){
+//        $users = Crest::call('user.search');
+//        var_dump($users);
+//        die;
         $tracks = '';
 //        $_GET['search'] = 'IMP-A-1/24';
 //        $_GET['search'] = "IMP-A-2/24";
@@ -199,8 +202,14 @@ class SiteController extends Controller
                 'filter'=>['UF_CRM_1709904415487'=> $_GET['search']],
                 'select'=>['UF_*','*'],
             ]);
+            
+            $user = Crest::call('user.get',[
+                'filter'=>['UF_CRM_1709904415487'=> $_GET['search']],
+                'select'=>['UF_*','*'],
+            ]);
 //            echo '<pre>';
-//            var_dump($tracks['result']);
+//            var_dump($user);
+//            var_dump($tracks);
 //            die;
             if(count($tracks['result'])) {
                 $tracks = $tracks['result']['0'];
@@ -216,20 +225,27 @@ class SiteController extends Controller
                 $tracks['destination_country'] = $tracks['UF_CRM_1711794595']; //end point
                 $tracks['destination_city'] = $tracks['UF_CRM_1706774890'];
                 $tracks['destination_address'] = $tracks['UF_CRM_65BA026CA0250'];
-
-
+                $cordinatior = [];
+                if(@$tracks['ASSIGNED_BY_ID']){
+                    $cordinatior = Crest::call('user.get',[
+                        'filter'=>['ID'=> $tracks['ASSIGNED_BY_ID']],
+                        'select'=>['UF_*','*'],
+                    ]);
+                    $cordinatior = @$cordinatior['result'][0];
+                }
                 if(!empty($tracks['UF_CRM_1715768153'])){
-                    $tracks['address'] = $tracks['UF_CRM_1715768153'][count($tracks['UF_CRM_1715768153']) - 1];
+                    $tracks['address'] = $tracks['UF_CRM_1711089287'][count($tracks['UF_CRM_1711089287']) - 1];
                 }else{
                     $tracks['address'] = '';
                 }
                 $tracks['parameters'] = $tracks['UF_CRM_1711031413'];
+                $tracks['history'] = $tracks['UF_CRM_1717056875642'];//history addresses where the item was
             }else{
                 $tracks = [];
             }
 
         }
-        return $this->render('shippment',['tracks' => $tracks]);
+        return $this->render('shippment',['tracks' => $tracks , 'cordinatior' => $cordinatior]);
     }
     public function actionAirfreght()
     {
