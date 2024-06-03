@@ -112,7 +112,7 @@
                                                 </div>
                                                 <div class="w-100">
                                                     <div class="viewMore" data-id="2566">
-                                                        <img src="/Images/treangleDown.png" alt="">
+                                                        <img src="../images/treangleDown.png" alt="">
                                                     </div>
                                                 </div>
                                                 <div class="moreInfo d-none">
@@ -121,9 +121,6 @@
                                         </div>
                                     </div>
                                 <?php } ?>
-
-
-
                             </div>
                         </div>
                         <div class="d-grid justify-content-between" >

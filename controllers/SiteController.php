@@ -193,6 +193,7 @@ class SiteController extends Controller
 //        var_dump($users);
 //        die;
         $tracks = '';
+        $cordinatior = '';
 //        $_GET['search'] = 'IMP-A-1/24';
 //        $_GET['search'] = "IMP-A-2/24";
 //        $_GET['search'] = "IMP-O-3/24";
@@ -225,7 +226,6 @@ class SiteController extends Controller
                 $tracks['destination_country'] = $tracks['UF_CRM_1711794595']; //end point
                 $tracks['destination_city'] = $tracks['UF_CRM_1706774890'];
                 $tracks['destination_address'] = $tracks['UF_CRM_65BA026CA0250'];
-                $cordinatior = [];
                 if(@$tracks['ASSIGNED_BY_ID']){
                     $cordinatior = Crest::call('user.get',[
                         'filter'=>['ID'=> $tracks['ASSIGNED_BY_ID']],
