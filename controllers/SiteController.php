@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\GaGallery;
 use app\models\JoinReq;
 use app\models\SmNews;
 use app\models\Texts;
@@ -79,6 +80,26 @@ class SiteController extends Controller
         $GLOBALS['text'] = $txt;
         $this->enableCsrfValidation = false;
         return parent::beforeAction($action);
+    }
+
+    public function pagination($model , $tableName){
+        $total_count = clone $model;
+        $total_count = $total_count->select("count($tableName.id)");
+        $total_count->asArray();
+        $total_count = $total_count->one();
+        $total_count = $total_count["count($tableName.id)"];
+        if(@intval($_GET['page'])){
+            if($_GET['page'] !== 'all') {
+                $pageSize = 20;
+                $model->limit(20);
+                $offset = ($_GET['page']) * $pageSize;
+                $model->offset($offset);
+            }
+        }else{
+            $model->limit(20);
+        }
+        $model = $model->all();
+        return ['count' => $total_count,'model' => $model];
     }
 
     public function actionSwitchLanguage($lang)
@@ -174,7 +195,11 @@ class SiteController extends Controller
     }
     public function actionGallery()
     {
-        return $this->render('gallery');
+        $pictures = GaGallery::find()->asArray();
+        $resp = $this->pagination($pictures,'ga_gallery');
+        $pictures = @$resp['model'];
+        $total = $resp['count'];
+        return $this->render('gallery',['pictures' => $pictures,'total' => $total]);
     }
     public function actionContact()
     {

@@ -8,7 +8,12 @@
 <section class="gallery-figures">
     <div class="container">
         <div class="gallery-figures-sec d-flex flex-wrap justify-content-center gap-3 w-100 pt-4 pb-5">
-            <figure>
+            <?php foreach ($pictures as $index => $picture) { ?>
+                <figure>
+                    <img src="../<?= $picture['img'] ?>" alt="">
+                </figure>
+            <?php } ?>
+            <!--<figure>
                 <img src="../images/gallery-img-1.jpg" alt="">
             </figure>
             <figure>
@@ -34,7 +39,7 @@
             </figure>
             <figure>
                 <img src="../images/gallery-img-9.jpg" alt="">
-            </figure>
+            </figure>-->
         </div>
     </div>
 </section>

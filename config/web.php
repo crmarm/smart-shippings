@@ -55,6 +55,10 @@ $config = [
                 'news/<url:\w+>/<news:\w+>' => 'site/news',
                 'tracking/<url:\w+>' => 'site/tracking',
                 'quest-answer/<url:\w+>' => 'site/quest-answer',
+
+
+                'galleryy/<action:\w+>/<id:\d+>' => 'galleryy/<action>',  // Rule for GalleryController
+                'galleryy/<action:\w+>' => 'galleryy/<action>',
             ],
         ],
         'assetManager' => [
