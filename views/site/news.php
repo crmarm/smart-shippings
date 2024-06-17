@@ -29,9 +29,9 @@
             <h2>
                 <?= @$GLOBALS['text']['Latest_News_'] ?>
             </h2>                          
-            <p>
-               <?= @$GLOBALS['text']['Get_An_Owerveiw_'] ?>
-            </p>                
+            <!--<p>
+               <?php /*= @$GLOBALS['text']['Get_An_Owerveiw_'] */?>
+            </p>-->
         </div>
         <div class="all-news ">
         <?php

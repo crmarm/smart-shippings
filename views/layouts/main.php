@@ -392,14 +392,14 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                     <div class="swiper-slide" style="background-image: url(../images/header-slide-img1.jpg);">
                         <div class="container">
                             <div class="header-title header-title-1 d-flex flex-column align-items-end text-white">
-                                <h1 data-aos="fade-up" data-aos-duration="1000" class="first-h1 " >
-                                    <?= @$GLOBALS['text']['ACCELERATE_'] ?>
+                                <h1 data-aos="fade-up" data-aos-duration="1000" class="first-h1 " style="text-transform:uppercase;">
+                                    <?= @$GLOBALS['text']['new_ACCELERATE_'] ?>
                                 </h1>
                                 <h2 data-aos="fade-up" data-aos-duration="1500">
-                                    <?= @$GLOBALS['text']['YOUR_FREGHIT_WITH'] ?>
+                                    <?= @$GLOBALS['text']['new_YOUR_FREGHIT_WITH'] ?>
                                 </h2>
                                 <h1 data-aos="fade-up" data-aos-duration="2000" class="second-h1">
-                                    <?= @$GLOBALS['text']['Title_Air_Freight_'] ?>
+                                    <?= @$GLOBALS['text']['__new_Title_Air_Freight_'] ?>
                                 </h1>
                                 <p data-aos="fade-up" data-aos-duration="2000">
                                     <?= @$GLOBALS['text']['Trust_us_your_'] ?>

@@ -148,6 +148,7 @@ class AdminController extends Controller
         $rdata = str_replace("'", '_', $rdata);
         $rdata = str_replace('՞', '', $rdata);
         $rdata = str_replace(':', '', $rdata);
+        $rdata = str_replace('.', '', $rdata);
         /*$cyr = [
             'ա','բ','վ','գ','դ','ե','ժ','զ','ի','յ','կ','լ','մ','ն','օ','պ',
             'ռ','ս','տ','ու','փ','խ','ց','չ','շ','է','ը','ո','ր','և','ք','ջ','ծ','ղ','հ','ճ','թ','ֆ','ձ','ւ',

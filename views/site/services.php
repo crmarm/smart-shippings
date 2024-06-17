@@ -1,3 +1,10 @@
+<style>
+    .hy .Services .iconsItem h5 {
+        font-size: 18px;
+        word-break: normal;
+        word-wrap: normal;
+    }
+</style>
 <?php $this->params['title'] = $GLOBALS['text']['Services_Title']; ?>
 <a  data-aos="fade-right" data-aos-duration="2000" class="go-to-up" href="#top">
     <button >
@@ -152,11 +159,11 @@
     </div>
 </section>
 
-<section class="brands">
+<!--<section class="brands">
     <div class="container">
         <div class="title-div">
             <h2>
-                <?= $GLOBALS['text']['Our_Partners'] ?>
+                <?php /*= $GLOBALS['text']['Our_Partners'] */?>
             </h2>
         </div>
         <div class="swiper brandsSwiper">
@@ -218,7 +225,7 @@
     </div>
     <div class="swiper-button-next brands-swiper-arrow" style="padding-top: 38px;"></div>
     <div class="swiper-button-prev brands-swiper-arrow" style="padding-top: 38px;"></div>
-</section>
+</section>-->
 
 <section class="Contact-Us ser-page-contact-us ">
     <div class="container">

@@ -8,6 +8,13 @@
     .Services .iconsItems .iconsItem .iconsItemChild{
         height:100%;
     }
+    .hy .Services .iconsItem h5 {
+        font-size: 18px;
+        word-break: normal;
+        word-wrap: normal;
+    }
+
+
 </style>
 <a  data-aos="fade-right" data-aos-duration="2000" class="go-to-up" href="#top">
     <button >
