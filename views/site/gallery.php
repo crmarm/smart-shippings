@@ -41,5 +41,6 @@
                 <img src="../images/gallery-img-9.jpg" alt="">
             </figure>-->
         </div>
+        <?= $this->renderFile('@app/views/site/pagination.php', ['total' => $total]) ?>
     </div>
 </section>
