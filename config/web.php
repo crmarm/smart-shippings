@@ -59,6 +59,10 @@ $config = [
 
                 'galleryy/<action:\w+>/<id:\d+>' => 'galleryy/<action>',  // Rule for GalleryController
                 'galleryy/<action:\w+>' => 'galleryy/<action>',
+
+                'texts/<action:\w+>/<id:\d+>' => 'texts/<action>',  // Rule for GalleryController
+                'texts/<action:\w+>' => 'texts/<action>',
+
             ],
         ],
         'assetManager' => [
@@ -88,7 +92,8 @@ if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['127.0.0.1', '::1'],
+//        'allowedIPs' => ['*', '::1'],
     ];
 }
 

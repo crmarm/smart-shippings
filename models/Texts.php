@@ -9,9 +9,10 @@ use Yii;
  *
  * @property int $id
  * @property string|null $slug
- * @property string|null $text_am
+ * @property string|null $text_hy
  * @property string|null $text_ru
  * @property string|null $text_en
+ * @property string|null $page
  */
 class Texts extends \yii\db\ActiveRecord
 {
@@ -29,7 +30,7 @@ class Texts extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['slug', 'text_am', 'text_ru', 'text_en'], 'string', 'max' => 255],
+            [['slug', 'text_hy', 'text_ru', 'text_en','page'], 'string', 'max' => 1000],
         ];
     }
 
@@ -41,7 +42,7 @@ class Texts extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'slug' => 'Slug',
-            'text_am' => 'Text Am',
+            'text_hy' => 'Text Hy',
             'text_ru' => 'Text Ru',
             'text_en' => 'Text En',
         ];

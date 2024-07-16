@@ -16,7 +16,10 @@
                     </div>
                     <div class="p-under-img">
                         <p>
-                            <?= $GLOBALS['text']['Smart_Shippings_is_'] ?>   
+                            <?= $GLOBALS['text']['__road__text__1__'] ?>
+                        </p>
+                        <p>
+                            <?= $GLOBALS['text']['__road__text__2__'] ?>
                         </p>
                     </div>
                     <div class="green-box text-white d-flex justify-content-between ">
@@ -45,64 +48,33 @@
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
                                 <p>
-                                    <?= $GLOBALS['text']['FCL_and_LCL'] ?>
-                                </p>
-                            </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= $GLOBALS['text']['issuance_and__'] ?>
-                                </p>
-                            </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= $GLOBALS['text']['export_and__'] ?>
-                                </p>
-                            </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= $GLOBALS['text']['certified_industrial__'] ?>
-                                </p>
-                            </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= $GLOBALS['text']['warehousing_assembly__'] ?>
-                                </p>
-                            </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= $GLOBALS['text']['part_&_full__'] ?>
-                                </p>
-                            </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= $GLOBALS['text']['conventional_shipments__'] ?> 
-                                </p>
-                            </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= $GLOBALS['text']['Sea/Air__'] ?>
-                                </p>
-                            </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= $GLOBALS['text']['Sea/Road_and__'] ?>
-                                </p>
-                            </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= $GLOBALS['text']['Transport_and_Marina_'] ?>
+                                    <?= @$GLOBALS['text']['__road__li_t_1__'] ?>
                                 </p>
                             </li>
 
+                            <li class="d-flex align-items-center gap-4">
+                                <i class="bi bi-check-circle"></i>
+                                <p>
+                                    <?= @$GLOBALS['text']['__road__li_t_2__'] ?>
+                                </p>
+                            </li><li class="d-flex align-items-center gap-4">
+                                <i class="bi bi-check-circle"></i>
+                                <p>
+                                    <?= @$GLOBALS['text']['__road__li_t_3__'] ?>
+                                </p>
+                            </li>
+                            <li class="d-flex align-items-center gap-4">
+                                <i class="bi bi-check-circle"></i>
+                                <p>
+                                    <?= @$GLOBALS['text']['__road__li_t_4__'] ?>
+                                </p>
+                            </li>
+                            <li class="d-flex align-items-center gap-4">
+                                <i class="bi bi-check-circle"></i>
+                                <p>
+                                    <?= @$GLOBALS['text']['__road__li_t_5__'] ?>
+                                </p>
+                            </li>
                         </ul>
                         <button class="border-0"  type="submit">
                             <a href="<?= Yii::$app->urlManager->createUrl('contact')  ?>/<?= $_COOKIE['language'] ?>">

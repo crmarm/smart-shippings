@@ -20,10 +20,9 @@
                 <p>
                     <?= @$GLOBALS['text']['Trust_us__'] ?>
                 </p>
-                <p>
-                    <?= @$GLOBALS['text']['Our_mission_is_to_provide_'] ?>
-                </p>
+
             </div>
+
             <div class="who-we-are-img">
                 <img  src="../images/aboutImg.png" alt="">
             </div>
@@ -31,6 +30,22 @@
     </div>
     <div class="who-we-are-img-2 ">
         <img  src="../images/aboutImg.png" alt="">
+    </div>
+</section>
+<section>
+    <div class="container">
+        <p>
+            <?= @$GLOBALS['text']['Our_mission_is_to_provide_'] ?>
+        </p>
+        <p>
+            <?= @$GLOBALS['text']['__about_text_5__'] ?>
+        </p>
+        <p>
+            <?= @$GLOBALS['text']['__about_text_6__'] ?>
+        </p>
+        <p>
+            <?= @$GLOBALS['text']['__about__page__end__'] ?>
+        </p>
     </div>
 </section>
 

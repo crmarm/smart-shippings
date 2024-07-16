@@ -19,6 +19,9 @@
                         <p>
                            <?= @$GLOBALS['text']['Smart_Shippings_is_'] ?>
                         </p>
+                        <p>
+                           <?= @$GLOBALS['text']['__sea__text__2__'] ?>
+                        </p>
                     </div>
                     <div class="green-box text-white d-flex justify-content-between ">
                         <div class="green-box-item">
@@ -46,61 +49,38 @@
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
                                 <p>
-                                    <?= @$GLOBALS['text']['FCL_and_LCL'] ?>
+                                    <?= @$GLOBALS['text']['__sea_li_t_1__'] ?>
                                 </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
                                 <p>
-                                    <?= @$GLOBALS['text']['issuance_and__'] ?>
+                                    <?= @$GLOBALS['text']['__sea_li_t_2__'] ?>
                                 </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
                                 <p>
-                                    <?= @$GLOBALS['text']['export_and__'] ?>
+                                    <?= @$GLOBALS['text']['__sea_li_t_3__'] ?>
+                                </p>
+                            </li>
+
+                            <li class="d-flex align-items-center gap-4">
+                                <i class="bi bi-check-circle"></i>
+                                <p>
+                                    <?= @$GLOBALS['text']['__sea_li_t_4__'] ?>
                                 </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
                                 <p>
-                                    <?= @$GLOBALS['text']['certified_industrial__'] ?>
+                                    <?= @$GLOBALS['text']['__sea_li_t_5__'] ?>
                                 </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
                                 <p>
-                                    <?= @$GLOBALS['text']['warehousing_assembly__'] ?>
-                                </p>
-                            </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= @$GLOBALS['text']['part_&_full__'] ?>
-                                </p>
-                            </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= @$GLOBALS['text']['conventional_shipments__'] ?>
-                                </p>
-                            </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= @$GLOBALS['text']['Sea/Air__'] ?>
-                                </p>
-                            </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= @$GLOBALS['text']['Sea/Road_and__'] ?>
-                                </p>
-                            </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= @$GLOBALS['text']['Transport_and_Marina_'] ?>
+                                    <?= @$GLOBALS['text']['__sea_li_t_6__'] ?>
                                 </p>
                             </li>
 

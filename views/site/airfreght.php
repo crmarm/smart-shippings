@@ -19,20 +19,26 @@
                         <p>
                             <?= $GLOBALS['text']['Our_team_of_'] ?>
                         </p>
+                        <p>
+                            <?= $GLOBALS['text']['__air_new__text2__'] ?>
+                        </p>
+                        <p>
+                            <?= $GLOBALS['text']['__air_new__text3__'] ?>
+                        </p>
                     </div>
                     <div class="green-box text-white d-flex justify-content-between ">
                         <div class="green-box-item">
-                            <h5>
-                                <?= $GLOBALS['text']['Easy_&_Convenient__'] ?>
-                            </h5>
+<!--                            <h5>-->
+<!--                                --><?php //= $GLOBALS['text']['Easy_&_Convenient__'] ?>
+<!--                            </h5>-->
                             <p>
                                 <?= $GLOBALS['text']['You’ll_find__'] ?>
                             </p>
                         </div>
                         <div class="green-box-item">
-                            <h5>
-                                <?= $GLOBALS['text']['Save_Secure'] ?>
-                            </h5>
+<!--                            <h5>-->
+<!--                                --><?php //= $GLOBALS['text']['Save_Secure'] ?>
+<!--                            </h5>-->
                             <p>
                                 <?= $GLOBALS['text']['You_benefit_from_'] ?>
                             </p>
@@ -52,7 +58,7 @@
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
                                 <p>
-                                    <?= $GLOBALS['text']['Fashion_Luxury'] ?>
+                                    <?= $GLOBALS['text']['Medical_cargo'] ?>
                                 </p>
                             </li>
                             <li class="d-flex align-items-center gap-4">
@@ -65,6 +71,24 @@
                                 <i class="bi bi-check-circle"></i>
                                 <p>
                                     <?= $GLOBALS['text']['Pharmaceutical_Cargo'] ?>
+                                </p>
+                            </li>
+
+
+                            <li class="d-flex align-items-center gap-4">
+                                <i class="bi bi-check-circle"></i>
+                                <p>
+                                    <?= $GLOBALS['text']['__air_cargo_5_li__'] ?>
+                                </p>
+                            </li> <li class="d-flex align-items-center gap-4">
+                                <i class="bi bi-check-circle"></i>
+                                <p>
+                                    <?= $GLOBALS['text']['__air_cargo_6_li__'] ?>
+                                </p>
+                            </li> <li class="d-flex align-items-center gap-4">
+                                <i class="bi bi-check-circle"></i>
+                                <p>
+                                    <?= $GLOBALS['text']['__air_cargo_7_li__'] ?>
                                 </p>
                             </li>
 

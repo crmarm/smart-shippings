@@ -18,7 +18,7 @@ class TextsSearch extends Texts
     {
         return [
             [['id'], 'integer'],
-            [['slug', 'text_am', 'text_ru', 'text_en'], 'safe'],
+            [['slug', 'text_hy', 'text_ru', 'text_en'], 'safe'],
         ];
     }
 
@@ -62,7 +62,7 @@ class TextsSearch extends Texts
         ]);
 
         $query->andFilterWhere(['like', 'slug', $this->slug])
-            ->andFilterWhere(['like', 'text_am', $this->text_am])
+            ->andFilterWhere(['like', 'text_hy', $this->text_hy])
             ->andFilterWhere(['like', 'text_ru', $this->text_ru])
             ->andFilterWhere(['like', 'text_en', $this->text_en]);
 
