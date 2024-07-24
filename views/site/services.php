@@ -24,12 +24,12 @@
                 <?= $GLOBALS['text']['You_Benefit_From'] ?>
             </p>
         </div>
-        <div class=" iconsItems d-flex justify-content-between gap-4">
+        <div class=" iconsItems d-flex justify-content-evenly gap-4">
             <div class="iconsItem">
                 <div class="iconsItemChild">
                     <div>
                         <i class="bi bi-airplane"></i>
-                        <h5>  
+                        <h5>
                             <?= $GLOBALS['text']['Air_Freight'] ?>
                         </h5>
                         <p>
@@ -57,22 +57,22 @@
                     </div>
                 </div>
             </div>
-            <div class="iconsItem  ">
-                <div class="iconsItemChild">
-                    <div>
-                        <i class='bx bx-train'></i>
-                        <h5>
-                            <?= $GLOBALS['text']['Rail_Freight__'] ?>
-                        </h5>
-                        <p>
-                            <?= $GLOBALS['text']['When_rail_'] ?>
-                        </p>
-                        <a href="<?= Yii::$app->urlManager->createUrl('railfreght') ?>/<?= $_COOKIE['language'] ?>">
-                            <?= $GLOBALS['text']['READ_MORE__'] ?>
-                        </a>
-                    </div>
-                </div>
-            </div>
+<!--            <div class="iconsItem  ">-->
+<!--                <div class="iconsItemChild">-->
+<!--                    <div>-->
+<!--                        <i class='bx bx-train'></i>-->
+<!--                        <h5>-->
+<!--                            --><?php //= $GLOBALS['text']['Rail_Freight__'] ?>
+<!--                        </h5>-->
+<!--                        <p>-->
+<!--                            --><?php //= $GLOBALS['text']['When_rail_'] ?>
+<!--                        </p>-->
+<!--                        <a href="--><?php //= Yii::$app->urlManager->createUrl('railfreght') ?><!--/--><?php //= $_COOKIE['language'] ?><!--">-->
+<!--                            --><?php //= $GLOBALS['text']['READ_MORE__'] ?>
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
             <div class="iconsItem ">
                 <div class="iconsItemChild">
                     <div>

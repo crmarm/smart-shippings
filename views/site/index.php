@@ -93,7 +93,7 @@
                     </p>
                 </div>
             </div>
-            <div class=" iconsItems d-flex justify-content-between gap-4 flex-wrap">
+            <div class=" iconsItems d-flex justify-content-evenly gap-4 flex-wrap">
                 <div class="iconsItem" >
                     <div class="iconsItemChild">
                         <div class="icon-item-child-div">
@@ -126,22 +126,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="iconsItem">
+                <!--<div class="iconsItem">
                     <div class="iconsItemChild">
                         <div class="icon-item-child-div">
                             <i class='bx bx-train'></i>
                             <h5>
-                                <?= @$GLOBALS['text']['Rail_Freight__'] ?>
+                                <?php /*= @$GLOBALS['text']['Rail_Freight__'] */?>
                             </h5>
                             <p>
-                                <?= @$GLOBALS['text']['When_rail_'] ?>
+                                <?php /*= @$GLOBALS['text']['When_rail_'] */?>
                             </p>
-                            <a href="<?= Yii::$app->urlManager->createUrl('railfreght') ?>/<?= $_COOKIE['language'] ?>">
-                                <?= @$GLOBALS['text']['READ_MORE__'] ?>
+                            <a href="<?php /*= Yii::$app->urlManager->createUrl('railfreght') */?>/<?php /*= $_COOKIE['language'] */?>">
+                                <?php /*= @$GLOBALS['text']['READ_MORE__'] */?>
                             </a>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="iconsItem">
                     <div  class="iconsItemChild">
                         <div class="icon-item-child-div">

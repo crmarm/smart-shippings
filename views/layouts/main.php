@@ -185,16 +185,17 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                                                             <?= @$GLOBALS['text']['Sea_Freight_'] ?>
                                                         </a>
                                                     </li>
-                                                    <li class="drop-item-2 ">
-                                                        <a href="<?= Yii::$app->urlManager->createUrl('railfreght') ?>/<?= $_COOKIE['language'] ?>" class="drop-link-2">
-                                                            <?= @$GLOBALS['text']['Rail_Freight_'] ?>
-                                                        </a>
-                                                    </li>
                                                     <li class="drop-item-2">
                                                         <a href="<?= Yii::$app->urlManager->createUrl('roadfreght') ?>/<?= $_COOKIE['language'] ?>" class="drop-link-2">
                                                             <?= @$GLOBALS['text']['Road_Freight_'] ?>
                                                         </a>
                                                     </li>
+                                                    <li class="drop-item-2 ">
+                                                         <a href="<?= Yii::$app->urlManager->createUrl('conditions') ?>/<?= $_COOKIE['language'] ?>" class="drop-link-2">
+                                                          <?= @$GLOBALS['text']['Rail_Freight_'] ?>
+                                                        </a>
+                                                    </li>
+                                                    
                                                 </ul>
                                             </div>
                                         </li>
@@ -302,9 +303,9 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-2 ">
-                                            <a href="<?= Yii::$app->urlManager->createUrl('railfreght') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-2">
+                                            <a href="<?= Yii::$app->urlManager->createUrl('conditions') ?>/<?= $_COOKIE['language'] ?>" class="drop-mob-link-2">
                                                 <i class='bx bx-chevron-right'></i>
-                                                <?= @$GLOBALS['text']['Rail_Freight_'] ?>
+                                              <?= @$GLOBALS['text']['Rail_Freight_'] ?>
                                             </a>
                                         </li>
                                         <li class="drop-mob-item-2">
@@ -560,8 +561,8 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                             </a>
                         </li>
                         <li>
-                            <a href="<?= Yii::$app->urlManager->createUrl('railfreght') ?>/<?= $_COOKIE['language'] ?>">
-                                <?= @$GLOBALS['text']['Rail_Freight_']?>
+                            <a href="<?= Yii::$app->urlManager->createUrl('conditions') ?>/<?= $_COOKIE['language'] ?>">
+                              <?= @$GLOBALS['text']['Rail_Freight_']?>
                         </li>
                         <li>
                             <a href="<?= Yii::$app->urlManager->createUrl('customsbrokerage') ?>/<?= $_COOKIE['language'] ?>">

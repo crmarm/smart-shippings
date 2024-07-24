@@ -280,7 +280,7 @@ class SiteController extends Controller
     {
         return $this->render('seafreght');
     }
-    public function actionRailfreght()
+    public function actionConditions()
     {
         return $this->render('railfreght');
     }
