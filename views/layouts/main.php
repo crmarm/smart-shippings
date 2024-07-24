@@ -232,6 +232,13 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                                                 <?= @$GLOBALS['text']['Project_Logistics_'] ?>
                                             </a>
                                         </li>
+
+
+                                        <li class="drop-item">
+                                            <a class="drop-link" href="<?= Yii::$app->urlManager->createUrl('useful') ?>/<?= $_COOKIE['language'] ?>">
+                                                <?= @$GLOBALS['text']['__USEFUL__INFORMATION__'] ?>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
@@ -314,7 +321,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                                                 <?= @$GLOBALS['text']['Road_Freight_'] ?>
                                             </a>
                                         </li>
-                                    </ul>
+                                    </ul> 
                                 </div>
                             </li>
                             <li class="drop-mob-item ">
@@ -349,6 +356,12 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                                 <a class="drop-mob-link" href="<?= Yii::$app->urlManager->createUrl('projectlogistics') ?>/<?= $_COOKIE['language'] ?>">
                                     <i class='bx bx-chevron-right'></i>
                                     <?= @$GLOBALS['text']['Project_Logistics_'] ?>
+                                </a>
+                            </li>
+                            <li class="drop-mob-item d-flex ">
+                                <a class="drop-mob-link" href="<?= Yii::$app->urlManager->createUrl('useful') ?>/<?= $_COOKIE['language'] ?>">
+                                    <i class='bx bx-chevron-right'></i>
+                                    <?= @$GLOBALS['text']['__USEFUL__INFORMATION__'] ?>
                                 </a>
                             </li>
                         </ul>
@@ -466,7 +479,7 @@ $metePName = '<meta name="geo.placename" content="' . $placeName . '">';
                     <h1><?= @$this->params['title'] ?> </h1>
                     <p><a href="<?= Yii::$app->urlManager->createUrl('"') ?>/<?= $_COOKIE['language'] ?>"><?= @$GLOBALS['text']['__home__'] ?></a>
                         <?php if(isset($this->params) && isset($this->params['second'])){ ?>
-                            / <a href="<?= @$this->params['href']  ?>"><span> <?= @$this->params['second'] ?></span></a>
+                            / <a href="<?= @$this->params['href']  ?>"><span class="text-uppercase"> <?= @$this->params['second'] ?></span></a>
                         <?php } ?>
                     </p>
                     <?= '';//$_SERVER['REDIRECT_URL'] != '/services' ? 'asdfghgfd' : ''?>

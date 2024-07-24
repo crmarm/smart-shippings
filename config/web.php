@@ -48,13 +48,27 @@ $config = [
             'rules' => [
                 'switch-language' => 'site/switch-language',
                 'quest-answer' => 'site/quest-answer',
+                'quest-answer/<url:\w+>' => 'site/quest-answer',
+
+                'trailer-dimensions' => 'site/trailer-dimensions',
+                'trailer-dimensions/<url:\w+>' => 'site/trailer-dimensions',
+
+                'truck-dimensions' => 'site/truck-dimensions',
+                'truck-dimensions/<url:\w+>' => 'site/truck-dimensions',
+
+                'container-dimensions' => 'site/container-dimensions',
+                'container-dimensions/<url:\w+>' => 'site/container-dimensions',
+
+                'pallet-dimensions' => 'site/pallet-dimensions',
+                'pallet-dimensions/<url:\w+>' => 'site/pallet-dimensions',
 
                 '<action:\w+>' => 'site/<action>',
                 '<action:\w+>/<language:\w+>' => 'site/<action>',
                 // '<action:\w+>/<language:\w+>/<news:\w+>' => 'site/<action>',
                 'news/<url:\w+>/<news:\w+>' => 'site/news',
                 'tracking/<url:\w+>' => 'site/tracking',
-                'quest-answer/<url:\w+>' => 'site/quest-answer',
+
+
 
 
                 'galleryy/<action:\w+>/<id:\d+>' => 'galleryy/<action>',  // Rule for GalleryController

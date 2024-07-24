@@ -305,6 +305,27 @@ class SiteController extends Controller
     {
         return $this->render('project-logistics');
     }
+    public function actionUseful()
+    {
+        return $this->render('useful');
+    }
+    public function actionTrailerDimensions()
+    {
+        return $this->render('useful/trailer-dimensions');
+    }
+    public function actionTruckDimensions()
+    {
+        return $this->render('useful/truck-dimensions');
+    }
+    public function actionPalletDimensions()
+    {
+        return $this->render('useful/pallet-dimensions');
+    }
+    public function actionContainerDimensions()
+    {
+        return $this->render('useful/container-dimensions');
+    }
+
 
     public function actionNews($url = null)
     {
