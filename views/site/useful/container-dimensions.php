@@ -1,4 +1,4 @@
-<?php $this->params['title'] = $GLOBALS['text']['__Track__Dimensions__']; ?>
+<?php $this->params['title'] =  $GLOBALS['text']['__Container__Dimensions__'] ; ?>
 <?php $this->params['second'] =  $GLOBALS['text']['__USEFUL__INFORMATION__']; ?>
 <?php $this->params['href'] = Yii::$app->urlManager->createUrl('useful') . '/' . $_COOKIE['language'] ?>
 
@@ -24,7 +24,7 @@
 <section class="container mt-5 mb-5 overflow-auto w-100">
 
 
-    <h4><?= $GLOBALS['text']['__Container__Dimensions__Table__']  ?></h4>
+    <h4 class="text-center mb-5" ><?= $GLOBALS['text']['__Container__Dimensions__Table__']  ?></h4>
     <table  class="table table-bordered ">
         <tbody>
         <tr>
@@ -275,7 +275,7 @@
 
             <tr>
                 <th rowspan="2" ><img  src="../images/cars/cd2.3.svg" width="255" height="auto"   ></th>
-                <th rowspan="4">40 FT STANDARD CONTAINER</th>
+                <th rowspan="4" class="text-center">40 FT STANDARD CONTAINER</th>
                 <td rowspan="2">21 Standard Pallet 1,2 x 1,0 m</td>
             </tr>
             <tr>
@@ -290,7 +290,7 @@
 
             <tr>
                 <th rowspan="2" ><img  src="../images/cars/cd2.5.svg" width="255" height="auto"   ></th>
-                <th rowspan="4">40 FT PALLET WIDE CONTAINER</th>
+                <th rowspan="4" class="text-center">40 FT PALLET WIDE CONTAINER</th>
                 <td rowspan="2">24 Standard Pallet 1,2 x 1,0 m</td>
             </tr>
             <tr>
@@ -305,7 +305,7 @@
 
             <tr>
                 <th rowspan="2" ><img  src="../images/cars/cd2.7.svg" width="255" height="auto"   ></th>
-                <th rowspan="4">45 FT STANDARD CONTAINER</th>
+                <th rowspan="4" class="text-center">45 FT STANDARD CONTAINER</th>
                 <td>24 Standard Pallet 1,2 x 1,0 m</td>
             </tr>
             <tr>
@@ -319,7 +319,7 @@
             </tr>
             <tr>
                 <th rowspan="2" ><img  src="../images/cars/cd2.9.svg" width="255" height="auto"   ></th>
-                <th rowspan="4">45 FT PALLET WIDE CONTAINER</th>
+                <th rowspan="4" class="text-center">45 FT PALLET WIDE CONTAINER</th>
                 <td rowspan="2">26 Standard Pallet 1,2 x 1,0 m</td>
             </tr>
             <tr>

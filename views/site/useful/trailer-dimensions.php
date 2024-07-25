@@ -1,10 +1,10 @@
-<?php $this->params['title'] = $GLOBALS['text']['Track_Your_Shipment_Title']; ?>
+<?php $this->params['title'] = $GLOBALS['text']['__Trailer__Dimensions__']; ?>
 <?php $this->params['second'] =  $GLOBALS['text']['__USEFUL__INFORMATION__']; ?>
 <?php $this->params['href'] = Yii::$app->urlManager->createUrl('useful') . '/' . $_COOKIE['language'] ?>
 
 <style>
     thead tr th{
-         background: #0a90eb !important;
+         background: #80c645 !important;
          color:white !important;
     }
     tbody tr img{
@@ -22,7 +22,7 @@
     }
 </style>
 <section class="container mt-5 mb-5 overflow-auto w-100">
-    <h4 class="text-center"><?= $GLOBALS['text']['__Truck__and__Trailer__'] ?></h4>
+    <h4 class="text-center mb-5"><?= $GLOBALS['text']['__Truck__and__Trailer__'] ?></h4>
     <table  class="table table-bordered ">
         <thead>
             <tr class="row-1">

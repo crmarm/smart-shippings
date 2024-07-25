@@ -16,7 +16,7 @@
 
 </style>
 <section class="container mt-5 mb-5">
-    <h4 class="text-center"><?= $GLOBALS['text']['__Truck_Dimensions_Table__'] ?></h4>
+    <h4 class="text-center mb-5"><?= $GLOBALS['text']['__Truck_Dimensions_Table__'] ?></h4>
     <table  class="table table-bordered">
         <tbody>
             <tr>

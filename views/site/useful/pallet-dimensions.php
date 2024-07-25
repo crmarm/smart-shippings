@@ -16,7 +16,7 @@
 </style>
 <section class="container mt-5 mb-5 overflow-auto">
     <h4 class="text-center text-uppercase"><?= $GLOBALS['text']['__Container__Dimensions__Table__']  ?></h4>
-    <h4 class="mt-5 mb-5"><?= $GLOBALS['text']['__PALLET__TYPES__AND__DIMENSIONS__'] ?></h4>
+    <h4 class="mt-5 mb-5 text-center"><?= $GLOBALS['text']['__PALLET__TYPES__AND__DIMENSIONS__'] ?></h4>
     <span style="font-size: 18px; font-weight: bolder">
         <?=  $GLOBALS['text']['__EURO__PALLET__'] ?><br>( 800 x 1200 mm )
     </span>

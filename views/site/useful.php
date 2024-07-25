@@ -1,4 +1,4 @@
-<?php $this->params['title'] = $GLOBALS['text']['Track_Your_Shipment_Title'];  ?>
+<?php $this->params['title'] = $GLOBALS['text']['__USEFUL__INFORMATION__'];  ?>
 <style>
     figcaption{
         color:#80c645;
@@ -6,6 +6,9 @@
         text-align: center;
         font-size: 20px;
         padding-top: 30px;
+    }
+    .blog{
+        width: 30%;
     }
     .blog img{
         width: 260px;
@@ -34,7 +37,7 @@
         }
     }
 </style>
-<section class='d-flex justify-content-between container mt-5 mb-5 flex-wrap bBlock' style="row-gap: 50px" >
+<section class='d-flex justify-content-evenly container mt-5 mb-5 flex-wrap bBlock' style="row-gap: 50px" >
     <div class="blog d-flex align-items-center flex-column">
         <figure>
             <img src="../images/us1.webp" alt="Trulli" style="width:100%">
@@ -63,5 +66,13 @@
             <figcaption><?= $GLOBALS['text']['__Palet__Dimensions__'] ?></figcaption>
         </figure>
         <a href="<?= Yii::$app->urlManager->createUrl('pallet-dimensions') ?>/<?= $_COOKIE['language'] ?>" ><button class="btn btn-success"><?= $GLOBALS['text']['__to_view__'] ?></button></a>
+    </div>
+
+    <div class="blog d-flex align-items-center flex-column">
+        <figure>
+            <img src="../images/airplane.avif" alt="Trulli" style="width:100%">
+            <figcaption><?= $GLOBALS['text']['__aircraft-specification__'] ?></figcaption>
+        </figure>
+        <a href="<?= Yii::$app->urlManager->createUrl('aircraft-specification') ?>/<?= $_COOKIE['language'] ?>" ><button class="btn btn-success"><?= $GLOBALS['text']['__to_view__'] ?></button></a>
     </div>
 </section>

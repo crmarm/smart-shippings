@@ -325,6 +325,10 @@ class SiteController extends Controller
     {
         return $this->render('useful/container-dimensions');
     }
+    public function actionAircraftSpecification()
+    {
+        return $this->render('useful/aircraft-specification');
+    }
 
 
     public function actionNews($url = null)

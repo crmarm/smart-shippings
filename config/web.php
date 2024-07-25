@@ -62,6 +62,9 @@ $config = [
                 'pallet-dimensions' => 'site/pallet-dimensions',
                 'pallet-dimensions/<url:\w+>' => 'site/pallet-dimensions',
 
+                'aircraft-specification' => 'site/aircraft-specification',
+                'aircraft-specification/<url:\w+>' => 'site/aircraft-specification',
+
                 '<action:\w+>' => 'site/<action>',
                 '<action:\w+>/<language:\w+>' => 'site/<action>',
                 // '<action:\w+>/<language:\w+>/<news:\w+>' => 'site/<action>',
