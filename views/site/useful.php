@@ -75,4 +75,12 @@
         </figure>
         <a href="<?= Yii::$app->urlManager->createUrl('aircraft-specification') ?>/<?= $_COOKIE['language'] ?>" ><button class="btn btn-success"><?= $GLOBALS['text']['__to_view__'] ?></button></a>
     </div>
+
+    <div class="blog d-flex align-items-center flex-column">
+        <figure>
+            <img src="../images/incoterms.jpg" alt="Trulli" style="width:100%">
+            <figcaption><?= @$GLOBALS['text']['Rail_Freight_'] ?></figcaption>
+        </figure>
+        <a href="<?= Yii::$app->urlManager->createUrl('conditions') ?>/<?= $_COOKIE['language'] ?>" ><button class="btn btn-success"><?= $GLOBALS['text']['__to_view__'] ?></button></a>
+    </div>
 </section>

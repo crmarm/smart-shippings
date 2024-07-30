@@ -16,7 +16,7 @@
                     </div>
                     <div class="p-under-img">
                         <p>
-                            <?= @$GLOBALS['text']['Our_team_of_'] ?>
+                            <?= @$GLOBALS['text']['__Cargo__long__1__'] ?>
                         </p>
                     </div>
                     <div class="green-box text-white d-flex justify-content-between ">
@@ -58,6 +58,25 @@
                                 <i class="bi bi-check-circle"></i>
                                 <p>
                                     <?= @$GLOBALS['text']['High_value'] ?>
+                                </p>
+                            </li>
+
+                            <li class="d-flex align-items-center gap-4">
+                                <i class="bi bi-check-circle"></i>
+                                <p>
+                                    <?= @$GLOBALS['text']['__cargo__li__3__'] ?>
+                                </p>
+                            </li>
+                            <li class="d-flex align-items-center gap-4">
+                                <i class="bi bi-check-circle"></i>
+                                <p>
+                                    <?= @$GLOBALS['text']['__cargo__li__4__'] ?>
+                                </p>
+                            </li>
+                            <li class="d-flex align-items-center gap-4">
+                                <i class="bi bi-check-circle"></i>
+                                <p>
+                                    <?= @$GLOBALS['text']['__cargo__li__5__'] ?>
                                 </p>
                             </li>
                         </ul>

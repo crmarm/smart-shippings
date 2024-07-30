@@ -85,12 +85,12 @@
                                     <?= $GLOBALS['text']['Temporary_import_export'] ?>
                                 </p>
                             </li>
-                            <li class="d-flex align-items-center gap-4">
-                                <i class="bi bi-check-circle"></i>
-                                <p>
-                                    <?= $GLOBALS['text']['Permanent_import_export_procedures'] ?>
-                                </p>
-                            </li>
+                            <!-- <li class="d-flex align-items-center gap-4"> -->
+                                <!-- <i class="bi bi-check-circle"></i> -->
+                                <!-- <p> -->
+                                    <!-- <?= '';// $GLOBALS['text']['Permanent_import_export_procedures'] ?> -->
+                                <!-- </p> -->
+                            <!-- </li> -->
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
                                 <p>

@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Texts;
 use app\models\TextsSearch;
+use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -31,6 +32,32 @@ class TextsController extends Controller
         );
     }
 
+
+    public function beforeAction($action)
+    {
+        $type = @Yii::$app->user->identity->type;
+        if(@$type !== 3){
+            return $this->redirect(Yii::$app->urlManager->createUrl('login'));
+        }
+        setcookie('language', 'hy', time() ,'/'.$action->id);//for removing cookie from partial url
+        if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
+            setcookie('language', 'en', time() + (365 * 24 * 60 * 60) , '/');
+            $this->refresh();
+            Yii::$app->end();
+            return false;
+        }
+        $lng = $_COOKIE['language'] ?? 'en';
+        if($lng !== 'hy' && $lng !== 'ru' && $lng !== 'en'){
+            setcookie('language', 'en', time() + (365 * 24 * 60 * 60) ,'/');
+            $this->refresh();
+            Yii::$app->end();
+            return false;
+        }
+        $txt = Texts::find()->select(['text_'.$lng.' as text'])->asArray()->indexBy('slug')->column();
+        $GLOBALS['text'] = $txt;
+        $this->enableCsrfValidation = false;
+        return parent::beforeAction($action);
+    }
     /**
      * Lists all Texts models.
      *

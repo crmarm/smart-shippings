@@ -249,7 +249,7 @@
                         <?= $GLOBALS['text']['Contact_Us_Now_'] ?>
                     </a>
                 </button>
-                <p ><?= $GLOBALS['text']['Or_Call_'] ?> <span>+374 91 919188</span></p>
+                <p ><?= $GLOBALS['text']['Or_Call_'] ?> <span>+374 91 919122</span></p>
             </div>
         </div>
     </div>

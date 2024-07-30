@@ -2,6 +2,11 @@
 <?php $this->params['second'] =  $GLOBALS['text']['__SERVICES__']; ?>
 <?php $this->params['href'] =  Yii::$app->urlManager->createUrl('services')  . '/' . $_COOKIE['language'] ?>
 
+<style type="text/css">
+    .Services-drop-pages ul li{
+        text-transform: capitalize;
+    }
+</style>
 <a  data-aos="fade-right" data-aos-duration="2000" class="go-to-up" href="#top">
     <button >
         <i class="bi bi-chevron-up"></i>
@@ -40,7 +45,7 @@
                     </div>
                     <div class="services-include">
                         <h4>
-                            <?= $GLOBALS['text']['Our_Warehousing__'] ?>
+                            <?= $GLOBALS['text']['Our_Warehousing__warehouse__'] ?>
                         </h4>
                         <ul class="px-0">
                             <li class="d-flex align-items-center gap-4">
