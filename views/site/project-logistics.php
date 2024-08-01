@@ -16,7 +16,7 @@
                     </div>
                     <div class="p-under-img">
                         <p>
-                         <?= $GLOBALS['text']['Managing_Complex'] ?>
+                            <?= $GLOBALS['text']['Managing_Complex'] ?>
                         </p>
                     </div>
                     <div class="green-box text-white d-flex justify-content-between ">
@@ -25,7 +25,7 @@
                                 <?= $GLOBALS['text']['Easy_&_Convenient__'] ?>
                             </h5>
                             <p>
-                                <?= $GLOBALS['text']['You’ll_find__'] ?>
+                                <?= $GLOBALS['text']['You’ll_find__Save_Secureprojectlogistics'] ?>
                             </p>
                         </div>
                         <div class="green-box-item">
@@ -33,13 +33,13 @@
                                 <?= $GLOBALS['text']['Save_Secure'] ?>
                             </h5>
                             <p>
-                                <?= $GLOBALS['text']['You_benefit_from_'] ?>
+                                <?= $GLOBALS['text']['You_benefit_from_Save_Secureprojectlogistics'] ?>
                             </p>
                         </div>
                     </div>
                     <div class="services-include">
                         <h4>
-                            <?= $GLOBALS['text']['Our_Project__'] ?>
+                            <?= $GLOBALS['text']['Our_Project__projectlogistics__'] ?>
                         </h4>
                         <ul class="px-0">
                             <li class="d-flex align-items-center gap-4">
@@ -54,6 +54,7 @@
                                     <?= $GLOBALS['text']['road_studies__'] ?>
                                 </p>
                             </li>
+                            
                             <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
                                 <p>
@@ -102,7 +103,7 @@
                                     <?= $GLOBALS['text']['heavy_loads__'] ?>
                                 </p>
                             </li>
-                            <li class="d-flex align-items-center gap-4">
+                            <!-- <li class="d-flex align-items-center gap-4">
                                 <i class="bi bi-check-circle"></i>
                                 <p>
                                     <?= $GLOBALS['text']['pre_shipment_inspection_'] ?>
@@ -119,7 +120,7 @@
                                 <p>
                                     <?= $GLOBALS['text']['customs_and__'] ?>
                                 </p>
-                            </li>
+                            </li> -->
                         </ul>
                         <button class="border-0"  type="submit">
                             <a href="<?= Yii::$app->urlManager->createUrl('contact')  ?>/<?= $_COOKIE['language'] ?>">

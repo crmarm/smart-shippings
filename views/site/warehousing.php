@@ -31,7 +31,7 @@
                                 <?= $GLOBALS['text']['Easy_&_Convenient__'] ?>
                             </h5>
                             <p>
-                                <?= $GLOBALS['text']['You’ll_find__'] ?>
+                                <?= $GLOBALS['text']['You’ll_find__warehouing'] ?>
                             </p>
                         </div>
                         <div class="green-box-item">
@@ -39,7 +39,7 @@
                                 <?= $GLOBALS['text']['Save_Secure'] ?>
                             </h5>
                             <p>
-                                <?= $GLOBALS['text']['You_benefit_from_'] ?>
+                                <?= $GLOBALS['text']['You_benefit_from_warehouing'] ?>
                             </p>
                         </div>
                     </div>
